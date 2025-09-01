@@ -1,0 +1,164 @@
+#!/bin/bash
+#===============================================================================
+#
+#          FILE:  generate-resources
+#
+#         USAGE:  ./generate-resources
+#                 To be run from the root directory of the ProLUG course mdBook
+#                 project.  
+#
+#   DESCRIPTION:  This script generates a list of all external resources used in a
+#                 ProLUG course book.
+#                 It parses all markdown files in the /src directory and extracts
+#                 any links to external resources. It then formats those resources
+#                 into $RESOURCES_FILE (/src/resources.md by default) under their
+#                 respective unit headers, determined by the name of the file they
+#                 came from.
+#
+#       OPTIONS:  There are currently no options for this script.
+#  REQUIREMENTS:  bash >= 4.0, GNU coreutils (md5sum, cut) GNU grep, GNU sed,
+#                 GNU findutils (find), perl >= 5.10 
+#        AUTHOR:  Connor W. (https://github.com/kolkhis)
+#       CREATED:  2025-03-29
+#
+#===============================================================================
+
+declare -r RESOURCES_FILE='./src/resources.md'
+declare -r SEARCH_DIR="./src"
+declare -r FILE_PATTERN="*.md"
+declare -A ADDED_LINKS
+
+declare -a FILES
+IFS=$'\n' read -r -d '' -a FILES < <(
+    find "$SEARCH_DIR" -maxdepth 1 -mindepth 1 -name "$FILE_PATTERN"
+)
+
+
+# TODO(fix): Handle instances of closing parens inside links (e.g., wikipedia)
+
+pull-links() {
+    local -i COUNT_MD_LINKS=0
+    local -i COUNT_REG_LINKS=0
+    local -i COUNT_UF_LINKS=0
+    local -i TOTAL_LINK_COUNT=0
+    local -i DUPLICATES=0
+
+    for file in "${FILES[@]}"; do
+        printf "Pulling links from file: %s...\n" "$file"
+        [[ "$file" =~ (unitindex\.md|resources\.md) ]] && continue  
+        local UNIT=
+        local -a RESOURCES=()
+
+        IFS=$'\n' read -r -d '' -a RESOURCES < <(
+            grep -i -E '\<https://' "$file" |
+                grep -v -E '(img)? ?src=|discord\.(gg|com)|user-attachments'
+        )
+
+        [[ -n "${RESOURCES[*]}" ]] || continue
+
+        for resource in "${RESOURCES[@]}"; do
+            local MARKDOWN_LINK=
+            local LINK_HASH=
+            [[ $file =~ .*u([0-9]+).*\.md ]] && UNIT="${BASH_REMATCH[1]}"
+
+            # extract markdown link from the line
+            MARKDOWN_LINK="$(perl -pe 's/.*(\[.*?\]\(.*?\)).*/\1/' <<< "$resource")" 
+
+            if [[ $MARKDOWN_LINK =~ .*(<.*>).* ]]; then
+                # Link is formatted as: <http://example.com>
+                MARKDOWN_LINK="${BASH_REMATCH[1]}"
+                (( COUNT_REG_LINKS++ ))
+            elif [[ $MARKDOWN_LINK =~ .*[^[\<\(](https://[^ \)]+).* ]]; then
+                # Link is unformatted: http://example.com
+                MARKDOWN_LINK="${BASH_REMATCH[1]}"
+                (( COUNT_UF_LINKS++ ))
+                continue
+            else
+                # Link is formatted as: [Link](http://example.com)
+                (( COUNT_MD_LINKS++ ))
+            fi
+            [[ -z $MARKDOWN_LINK ]] && continue
+
+            # Fix duplicate problem
+            # Using grep to check for duplicates created a race condition
+            # - Add associative array containing links already added
+            #   - Bash can't parse markdown links as associative array keys
+            #   - use md5sum hashes
+            LINK_HASH=$(
+                sed -E 's/\/([>\)])?$/\1/' <<< "${MARKDOWN_LINK,,}" |
+                    md5sum |
+                    cut -d ' ' -f1
+            )
+
+            if [[ -z "${ADDED_LINKS["$LINK_HASH"]}" ]]; then
+                [[ -n $UNIT ]] && sed -i "/^## Unit $UNIT\>/a- $MARKDOWN_LINK" "$RESOURCES_FILE"
+                [[ -z $UNIT ]] && sed -i "/^## Misc$/a- $MARKDOWN_LINK" "$RESOURCES_FILE"
+                ADDED_LINKS["$LINK_HASH"]=1
+            else
+                (( DUPLICATES++ ))
+            fi
+
+        done
+
+    done
+
+    TOTAL_LINK_COUNT=$(( COUNT_MD_LINKS + COUNT_UF_LINKS + COUNT_REG_LINKS ))
+    cat <<- EOF
+
+	REPORT:
+	- Markdown Links        $COUNT_MD_LINKS
+	- Regular Links         $COUNT_REG_LINKS
+	- Unformatted Links     $COUNT_UF_LINKS
+	Total Links: $TOTAL_LINK_COUNT
+	Total links added: ${#ADDED_LINKS[@]}
+	
+	Duplicates: $DUPLICATES
+	EOF
+
+}
+
+format-resources() {
+    # truncate file
+    : > "$RESOURCES_FILE"
+    cat <<- EOF >> "$RESOURCES_FILE"
+	<div class="flex-container">
+	        <img src="https://github.com/ProfessionalLinuxUsersGroup/img/blob/main/Assets/Logos/ProLUG_Round_Transparent_LOGO.png?raw=true" width="64" height="64"></img>
+	    <p>
+	        <h1>Course Resources</h1>
+	    </p>
+	</div>
+	This is a comprehensive list of all external resources used in this course.
+
+	EOF
+
+    if [[ -f ./src/unitindex.md ]]; then
+        perl -ne 'print "## Unit $1 - $2\n\n" if s/^[|]\s*(\d+)\s*[|]\s*[[](.*?)[]].*$/\1 \2/' \
+            < src/unitindex.md  >> "$RESOURCES_FILE"
+    else
+        local unit_count=
+        case "${GITHUB_REPOSITORY##*/}" in
+            lac|pcae) unit_count=16 ;;
+            psc)      unit_count=10 ;;
+        esac
+
+        # Gather number of units from filenames if repo is not in 'case'
+        if [[ -z $unit_count && -n "${FILES[*]}" ]]; then 
+            unit_count="$(grep -oP '(\d+)' <<< "${FILES[*]}" | uniq | wc -l)"
+        fi
+
+        [[ -z $unit_count ]] && {
+            printf >&2 "Could not determine number of units. Defaulting to 16.\n"
+            unit_count=16
+        }
+        for ((i = 1; i <= unit_count; i++)); do
+            printf "## Unit %s\n\n" "$i" >> "$RESOURCES_FILE"
+        done
+    fi
+
+    if ! grep -qi -E "^## Misc$" "$RESOURCES_FILE"; then
+        printf "## Misc\n\n" >> $RESOURCES_FILE
+    fi
+}
+
+format-resources
+pull-links
