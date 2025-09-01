@@ -1,0 +1,182 @@
+site_name: ProLUG Courses
+site_url: http://localhost
+repo_name: ProLUG MkDocs Testing
+repo_url: https://github.com/cmckee786/prolug-mkdocs
+edit_uri: edit/main/docs
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+  features:
+    - navigation.indexes
+    - navigation.top
+    - navigation.path
+    - navigation.tabs
+    - navigation.footer
+    - toc.follow
+    - content.tabs.link
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
+    - content.code.select
+
+nav:
+  - Home: index.md
+  - Linux Admin Course:
+    - Course Syllabus: lac/syllabus.md
+    - Unit 1:
+      - Linux File Operations: lac/u1intro.md
+      - Worksheet: lac/u1ws.md
+      - Lab: lac/u1lab.md
+      - Bonus: lac/u1b.md
+    - Unit 2:
+      - Essential Tools: lac/u2intro.md
+      - Worksheet: lac/u2ws.md
+      - Lab: lac/u2lab.md
+    - Unit 3:
+      - Storage: lac/u3intro.md
+      - Worksheet: lac/u3ws.md
+      - Lab: lac/u3lab.md
+      - Bonus: lac/u3b.md
+    - Unit 4:
+      - Operating Running Systems: lac/u4intro.md
+      - Worksheet: lac/u4ws.md
+      - Lab: lac/u4lab.md
+    - Unit 5:
+      - Managing Users and Groups: lac/u5intro.md
+      - Worksheet: lac/u5ws.md
+      - Lab: lac/u5lab.md
+    - Unit 6:
+      - Firewalls: lac/u6intro.md
+      - Worksheet: lac/u6ws.md
+      - Lab: lac/u6lab.md
+    - Unit 7:
+      - Package Management & Patching: lac/u7intro.md
+      - Worksheet: lac/u7ws.md
+      - Lab: lac/u7lab.md
+      - Bonus: lac/u7b.md
+    - Unit 8:
+      - Scripting: lac/u8intro.md
+      - Worksheet: lac/u8ws.md
+      - Lab: lac/u8lab.md
+      - Bonus: lac/u8b.md
+    - Unit 9:
+      - Containerization on Linux: lac/u9intro.md
+      - Worksheet: lac/u9ws.md
+      - Lab: lac/u9lab.md
+    - Unit 10:
+      - Kubernetes: lac/u10intro.md
+      - Worksheet: lac/u10ws.md
+      - Lab: lac/u10lab.md
+      - Bonus: lac/u10b.md
+    - Unit 11:
+      - Monitoring: lac/u11intro.md
+      - Worksheet: lac/u11ws.md
+      - Lab: lac/u11lab.md
+    - Unit 12:
+      - Baselines & Benchmarks: lac/u12intro.md
+      - Worksheet: lac/u12ws.md
+      - Lab: lac/u12lab.md
+    - Unit 13:
+      - System Hardening: lac/u13intro.md
+      - Worksheet: lac/u13ws.md
+      - Lab: lac/u13lab.md
+      - Bonus: lac/u13b.md
+    - Unit 14:
+      - Ansible Automation: lac/u14intro.md
+      - Worksheet: lac/u14ws.md
+      - Lab: lac/u14lab.md
+    - Unit 15:
+      - Troubleshooting: lac/u15intro.md
+      - Worksheet: lac/u15ws.md
+      - Lab: lac/u15lab.md
+    - Unit 16:
+      - Incident Response: lac/u16intro.md
+      - Worksheet: lac/u16ws.md
+      - Lab: lac/u16lab.md
+  - Linux Security Course:
+    - Course Syallabus: psc/syllabus.md
+    - Unit 1:
+      - Build Standards and Compliance: psc/u1intro.md
+      - Worksheet: psc/u1ws.md
+      - Lab: psc/u1lab.md
+
+
+extra:
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.com/invite/m6VPPD9usw
+      name: ProLUG on Discord
+
+    - icon: fontawesome/brands/github
+      link: https://github.com/ProfessionalLinuxUsersGroup
+      name: ProLUG GitHub Repositories
+
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@het_tanis8213
+      name: Het_Tanis Youtube
+
+    - icon: material/web
+      link: https://www.prolug.org/
+      name: ProLUG.org
+
+copyright: Copyright &copy; 2025 Professional Linux Users Group
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.blocks.caption
+  - tables
+  - attr_list
+  - md_in_html
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - glightbox
+  - search
+  - git-revision-date-localized:
+      enable_creation_date: true
+  - git-committers:
+      repository: ProfessionalLinuxUsersGroup/course-books
+      branch: main
+
+extra:
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences.
+      With your consent, you're helping us to make our documentation better.
+    cookies:
+      analytics:
+        checked: false
+      github:
+        checked: false
+      actions:
+        - accept
+        - manage
+        - reject
