@@ -34,7 +34,12 @@ theme:
     - content.code.select
 
 nav:
-  - Home: index.md
+  - Home:
+    - index.md
+    - Get ProLUG Certified: certify.md
+    - Contributing to ProLUG MkDocs:
+      - Contributing to GitHub: contributing.md
+      - Locally Developing: development.md
   - Linux Admin Course:
     - Course Syllabus: lac/syllabus.md
     - Unit 1:
@@ -165,4 +170,5 @@ plugins:
   #     repository: ProfessionalLinuxUsersGroup/course-books
   #     branch: main
 
-# extra:
+extra_css:
+  - stylesheets/extra.css

@@ -1,9 +1,4 @@
-<div class="flex-container">
-        <img src="https://github.com/ProfessionalLinuxUsersGroup/img/blob/main/Assets/Logos/ProLUG_Round_Transparent_LOGO.png?raw=true" width="64" height="64"></img>
-    <p>
-        <h1>Contributing and Local Development</h1>
-    </p>
-</div>
+# Contributing and Local Development
 
 It is strongly encouraged that contributors test their changes before making
 commits. To help facilitate this process a set of instructions and guidelines
@@ -26,11 +21,7 @@ Utilizing mdBook this course then deploys the exported web structure to a
 
 Below is the current workflow that deploys the Git Page for the course:
 
-<div style="text-align: center;">
-
-<img src="./assets/images/workflow.png" style="border-radius:2%"></img>
-
-</div>
+![workflow](assets/images/workflow.png)
 
 To achieve this deployment locally the following environment and dependencies are
 required:
@@ -124,4 +115,4 @@ scp src/development.md 172.16.15.8:/root/lac/src/
 ssh 172.16.15.8 "cd /root/lac && /root/lac/mdbook build -d /var/www/html && systemctl restart httpd"
 ```
 
-<img src="./assets/images/flow.png"></img>
+![flow](assets/images/flow.png)

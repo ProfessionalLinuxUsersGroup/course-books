@@ -1,9 +1,4 @@
-<div class="flex-container">
-        <img src="https://github.com/ProfessionalLinuxUsersGroup/img/blob/main/Assets/Logos/ProLUG_Round_Transparent_LOGO.png?raw=true" width="64" height="64"></img>
-    <p>
-        <h1>Contributors</h1>
-    </p>
-</div>
+# Contributors
 
 This book was made possible by a small group of dedicated contributors who worked diligently to create an accessible resource for future students enrolled in courses offered by the Professional Linux User Group.
 
