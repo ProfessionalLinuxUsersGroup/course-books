@@ -1,19 +1,50 @@
-<div class="flex-container">
-        <img src="https://github.com/ProfessionalLinuxUsersGroup/img/blob/main/Assets/Logos/ProLUG_Round_Transparent_LOGO.png?raw=true" width="64" height="64"></img>
-    <p>
-        <h1>The Professional Linux Users Group (ProLUG)</h1>
-    </p>
+# The Professional Linux Users Group (ProLUG)
+
+<div class="grid cards" markdown>
+
+-   :material-account-group:{ .lg .middle } __ProLUG__
+
+    ---
+
+    Welcome to The Professional Linux Users Group, hopefully this
+    stuff is useful to ya
+
+    [:octicons-arrow-right-24: ProLUG.org](https://prolug.org/)
+
+-   :fontawesome-solid-flask-vial:{ .lg .middle } __Killer Coda Labs__
+
+    ---
+
+    Many of the labs in the course material leverage Killer Coda
+
+
+    [:octicons-arrow-right-24: Killer Coda](https://killercoda.com/)
+
+-   :material-keyboard-close-outline:{ .lg .middle } __Linux Course__
+
+    ---
+
+    The ProLUG Linux Administration course, designed to build foundational
+    knowledge in Linux
+
+    [:octicons-arrow-right-24: Admin Course](https://cmckee786.github.io/prolug-mkdocs/lac/syllabus/)
+
+-   :material-server-security:{ .lg .middle } __Security Course__
+
+    ---
+
+    The ProLUG Linux Security course, an advanced course that focuses on
+    systems security
+
+    [:octicons-arrow-right-24: Security Course](https://cmckee786.github.io/prolug-mkdocs/psc/syllabus/)
+
 </div>
 
 ## In the Beginning
 
----
-
 Founded approximately 15 years ago, the Professional Linux User Group (ProLUG) began as a vision of Het Tanis, known by his community alias 'Scott Champine.' Het identified the need for an informal yet structured space where Linux professionals could share knowledge, collaborate, and grow together. What started as local in-person meetups quickly gained traction, thanks to the increasing demand for open-source collaboration and the widespread adoption of Linux in both enterprises and personal projects.
 
 ## Why ProLUG Started
-
----
 
 ProLUG was born out of the recognition that Linux professionals often face challenges that are best solved through peer collaboration and hands-on experience. The community’s founding principles were rooted in creating an environment where newcomers could learn from experienced professionals, and seasoned users could gain exposure to advanced topics and emerging technologies. Its core mission was simple yet impactful: to provide continuous growth opportunities in Linux system administration, automation, and cloud technologies.
 
@@ -27,8 +58,6 @@ Some of the key motivations behind ProLUG's formation include:
 
 ## The Expansion into an Online Community
 
----
-
 While initially focused on local in-person meetings, ProLUG embraced online platforms to extend its reach globally. The switch to a virtual model enabled:
 
 - **Global Networking:** Professionals and enthusiasts from around the world could now connect, learn, and collaborate without geographical limitations.
@@ -36,8 +65,6 @@ While initially focused on local in-person meetings, ProLUG embraced online plat
 - **Greater Diversity:** The online expansion diversified the member base, incorporating individuals from various industries and technical backgrounds, creating a rich environment for problem-solving.
 
 ## Interactive Labs and Training Programs
-
----
 
 One of ProLUG’s most successful expansions has been its focus on interactive, hands-on labs. To bridge the gap between theory and practice, Het Tanis launched a series of labs on platforms like Killercoda, covering a variety of topics including:
 
@@ -50,8 +77,6 @@ With over 50 interactive labs available and more being continuously developed, m
 
 ## Certification and Career Development
 
----
-
 In 2024, ProLUG launched its first structured certification course: **Enterprise Linux Administration**. This program was designed to provide a comprehensive curriculum covering topics such as:
 
 - Advanced Linux system configuration
@@ -62,8 +87,6 @@ In 2024, ProLUG launched its first structured certification course: **Enterprise
 The first cohort of graduates successfully completed the program in January 2025, marking a major milestone in ProLUG’s commitment to professional development. Many graduates have reported success stories, such as landing new jobs, securing promotions, or gaining confidence in their Linux expertise.
 
 ## What is a User Group?
-
----
 
 A **user group** is a community of individuals who come together to share common interests, typically in a specific area of technology, such as Linux. These groups can be local or online and serve as platforms for:
 
@@ -76,8 +99,6 @@ ProLUG is a prime example of how a user group can grow beyond its initial purpos
 
 ## Success Stories
 
----
-
 Being part of ProLUG has proven highly beneficial for many members, with success stories ranging from career advancements to personal growth:
 
 - **Job Opportunities:** Members have found jobs in system administration, DevOps, and cloud engineering roles through networking within ProLUG.
@@ -86,8 +107,6 @@ Being part of ProLUG has proven highly beneficial for many members, with success
 - **Mentorship Relationships:** Senior professionals have mentored newcomers, creating a cycle of continuous learning and knowledge sharing.
 
 ## Current Milestones
-
----
 
 - **3,000+ Members:** ProLUG’s global community continues to grow rapidly, attracting Linux enthusiasts and professionals from various backgrounds.
 - **50+ Interactive Labs:** Covering diverse topics, from basic Linux administration to advanced enterprise systems management.
