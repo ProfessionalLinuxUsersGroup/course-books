@@ -1,7 +1,7 @@
-site_name: ProLUG Courses
-site_url: http://localhost
-repo_name: ProLUG MkDocs Testing
-repo_url: https://github.com/cmckee786/prolug-mkdocs
+site_name: ProLUG Course Books
+site_url: http://professionallinuxusersgroup.github.io/course-books
+repo_name: ProLUG Course Books
+repo_url: https://github.com/ProfessionalLinuxUsersGroup/course-books
 edit_uri: edit/main/docs
 theme:
   name: material
