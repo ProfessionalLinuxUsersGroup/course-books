@@ -1,0 +1,175 @@
+Unit 5 Lab - Repos and Patching
+
+Required Materials
+Putty or other connection tool
+Lab Server
+Root or sudo command access
+
+PreLAB
+Download the STIG Viewer 2.18 from - https://public.cyber.mil/stigs/downloads/
+Download the STIG for Apache 2.4 and the import it into your STIG viewer
+Create a checklist from the opened STIG for Apache 2.4
+
+
+Review the software download process for Mellanox drivers:
+Linux InfiniBand Drivers
+
+Look through the available downloads and see if you can find the currently available LTS for Rocky 9.5
+x86_64. After that find a distribution of your choice and play with their tool. (You do not have to
+download or move this into our environment, I have already provided them in our lab.)
+
+
+
+LAB
+This lab is designed to have the engineer practice deploying patches in a Linux environment. The
+engineer will create repos and then deploy patches through an automated enterprise level Ansible
+playbook. But first, the engineer will review some of the Apache 2.4 STIG requirements if they want to
+run their own repo on their network.
+
+Apache STIGs Review
+1. Look at the 4 STIGs for "tls"
+    a. What file is fixed for all of them to be remediated?
+2. Install httpd on your Hammer server
+    a. systemctl stop wwclient
+    b. dnf install -y httpd
+    c. systemctl start httpd
+3. Check STIG V-214234
+    a. What is the problem?
+    b. What is the fix?
+    c. What type of control is being implemented?
+    d. Is it set properly on your system?
+4. Check STIG V-214248
+    a. What is the problem?
+    b. What is the fix?
+    c. What type of control is being implemented?
+    d. Is it set properly on your system?
+    e. How do you think SELINUX will help implement this control in an enforcing state? Or
+       will it not affect it?
+
+Building repos
+1. Start out by removing all your active repos
+    a. cd /etc/yum.repos.d
+    b. mkdir old_archive
+    c. mv *.repo old_archive
+    d. dnf repolist
+2. Mount the local repository and make a local repo
+    a. mount -o loop /lab_work/repos_and_patching/Rocky-9.5-x86_64-dvd.iso /mnt
+    b. df -h #should see the mount point
+    c. ls -l /mnt
+    d. touch /etc/yum.repos.d/rocky9.repo
+    e. vi /etc/yum.repos.d/rocky9.repo
+
+      [BaseOS]
+      name=BaseOS Packages Rocky Linux 9
+      metadata_expire=-1
+      gpgcheck=1
+      enabled=1
+      baseurl=file:///mnt/BaseOS/
+      gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+  
+      [AppStream]
+      name=AppStream Packages Rocky Linux 9
+      metadata_expire=-1
+      gpgcheck=1
+      enabled=1
+      baseurl=file:///mnt/AppStream/
+      gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+
+      # Save with esc :wq or "shift + ZZ"
+
+    i. Do the paths you're using here make sense to you based off what you saw
+       with the ls -l? Why or why not?
+    f. chmod 644 /etc/yum.repos.d/rocky9.repo
+    g. dnf clean all
+
+3. Test the local repository
+    a. dnf repolist
+    b. dnf --disablerepo="*" --enablerepo="AppStream" list available
+        i. Approximately how many are available?
+        ii. dnf --disablerepo="*" --enablerepo="AppStream" list available | nl
+        iii. dnf --disablerepo="*" --enablerepo="AppStream" list available | nl | head
+    c. dnf --disablerepo="*" --enablerepo="BaseOS" list available
+        i. Approximately how many are available?
+        ii. dnf --disablerepo="*" --enablerepo="BaseOS" list available | nl
+        iii. dnf --disablerepo="*" --enablerepo="BaseOS" list available | nl | head
+    d. Try to install something
+        i. dnf --disablerepo="*" --enablerepo="BaseOS AppStream" install gimp
+        ii. hit "n"
+
+            1. How many packages does it want to install?
+
+            2. How can you tell they're from different repos?
+
+4. Share out the local repository for your internal systems (tested on just this one system)
+    a. rpm -qa | grep -i httpd
+    b. systemctl status httpd
+    c. ss -ntulp | grep 80
+    d. lsof -i :80
+    e. cd /etc/httpd/conf.d
+    f. vi repos.conf
+
+      <Directory "/mnt">
+          Options Indexes FollowSymLinks
+          AllowOverride None
+          Require all granted
+      </Directory>
+      Alias /repo /mnt
+      <Location /repo>
+          Options Indexes FollowSymLinks
+          AllowOverride None
+          Require all granted
+      </Location>
+
+    g. systemctl restart httpd
+    h. vi /etc/yum.repos.d/rocky9.repo
+
+      ###USE YOUR HAMMER MACHINE IN BASEURL###
+      [BaseOS]
+      name=BaseOS Packages Rocky Linux 9
+      metadata_expire=-1
+      gpgcheck=1
+      enabled=1
+      #baseurl=file:///mnt/BaseOS/
+      baseurl=http://hammer25/repo/BaseOS/
+      gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+
+      [AppStream]
+      name=AppStream Packages Rocky Linux 9
+      metadata_expire=-1
+      gpgcheck=1
+      enabled=1
+      #baseurl=file:///mnt/AppStream/
+      baseurl=http://hammer25/repo/AppStream/
+      gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+
+    i. Do the paths you've modified at baseurl make sense to you? If not, what do you need to better understand?
+    i. dnf clean all
+    j. dnf repolist
+    k. Try to install something
+    i. dnf --disablerepo="*" --enablerepo="BaseOS AppStream" install gimp
+
+
+Enterprise patching
+
+1. Complete the killercoda lab found here: https://killercoda.com/het-tanis/course/Ansible-Labs/102-Enterprise-Ansible-Patching
+
+    a. Look at the roles, in the order the are run in the playbook.
+        i. Does it make sense how the custom facts are used? What other custom
+           facts might you use?
+        ii. What are the prechecks doing? What other ones might you add?
+        iii. What does the reboot task do, and how does it check for reboot to be needed?
+
+
+Digging Deeper challenge (not required for finishing lab)
+1. You've set up a local repository and you've shared that repo out to other systems that might 
+   want to connect.
+   Why might you need this if you're going to fully air-gap systems?  
+   Is it still necessary even if your enterprise patching solution is well designed? Why or why not?
+
+2. Can you add the Mellanox ISO that is included in the /lab_work/repos_and_patching section to
+   be a repository that your systems can access?
+   If you have trouble, troubleshoot and ask the group for help.
+
+3. Make a pull request to improve the enterprise patching tool that you just used. Write up, for the
+   group, why you need that change and how it improves the efficacy of the patching.
+

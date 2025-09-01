@@ -1,0 +1,47 @@
+ProLUG Security Engineering
+
+Unit 10 Worksheet
+
+Instructions
+
+Fill out this sheet as you progress through the lab and discussions. Hold your worksheets until
+the end to turn them in as a final submission packet.
+
+
+Discussion Questions:
+
+Unit 10 Discussion Post 1: Capture all the terms and concepts that we talk about in this
+week’s recording.
+1. How many new topics or concepts do you have to go read about now?
+2. What was completely new to you?
+3. What is something you heard before, but need to spend more time with?
+
+
+Unit 10 Discussion Post 2: Proof of Skills from this course.
+
+1. Think about how the course objectives apply to the things you’ve worked on.
+    a. How would you answer if I asked you for a quick rundown of how you would
+       secure a Linux system?
+    b. How would you answer if I asked you why you are a good fit as a security
+       engineer in my company?
+    c. Think about what security concepts you think bear the most weight as you
+       put these course objectives onto your resume.
+        i. Which would you include?
+        ii. Which don’t you feel comfortable including?
+
+
+Definitions/Terminology
+- Capture from this week lesson or recording
+
+
+Notes During Lecture/Class:
+
+Links:
+
+Terms:
+
+Useful tools:
+
+
+Lab and Assignment
+No lab for Unit 10, work on your project.
