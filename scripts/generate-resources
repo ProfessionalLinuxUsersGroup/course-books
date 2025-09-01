@@ -23,12 +23,6 @@
 #
 #===============================================================================
 
-# TODO(refactor):
-#   - Walk the docs/ directory
-#   - Grab *.md files from each subdirectory
-#   - Redefine FILES array for each subdir
-#   - Call pull-links on those files
-#   - Put into the correct subdir (e.g., docs/lac/resources.md)
 # TODO(fix): Handle instances of closing parens inside links (e.g., wikipedia)
 
 declare -A ADDED_LINKS
@@ -37,17 +31,12 @@ declare RESOURCES_FILE
 declare -a BOOK_DIRS
 
 get-book-dirs() {
-
+    # ignore the ./docs/deploy directory
     IFS=$'\n' read -r -d '' -a BOOK_DIRS < <(
         find 'docs/' -maxdepth 1 -mindepth 1 -type d  \! -name 'deploy'
     ) || {
         printf >&2 "[ERROR]: Failed to get book directories!\n"
     }
-
-}
-
-debug() {
-    printf '[\033[33m DEBUG \033[0m]: %s\n' "$*"
 }
 
 get-files(){
@@ -59,9 +48,8 @@ get-files(){
     }
     search_dir=$1
 
-    # ignore the ./docs/deploy directory
     IFS=$'\n' read -r -d '' -a FILES < <(
-        find "$search_dir" -maxdepth 1 -mindepth 1 -name "$file_pattern" # \! -name "deploy"
+        find "$search_dir" -maxdepth 1 -mindepth 1 -name "$file_pattern"
     )
     return 0
 }
@@ -171,21 +159,19 @@ format-resources() {
         perl -ne 'print "## Unit $1 - $2\n\n" if s/^[|]\s*(\d+)\s*[|]\s*[[](.*?)[]].*$/\1 \2/' \
             < "$unitindex_file"  >> "$RESOURCES_FILE"
     else
-        printf >&2 "No unitindex.md file in: %s\n" "$unitindex_file"
-        # return 1
+        printf >&2 "[ERROR]: No unitindex.md file in: %s\n" "$unitindex_file"
         local unit_count=
-        case "${GITHUB_REPOSITORY##*/}" in
-            lac|pcae) unit_count=16 ;;
-            psc)      unit_count=10 ;;
-        esac
-
         # Gather number of units from filenames if repo is not in 'case'
-        # if [[ -z $unit_count && -n "${FILES[*]}" ]]; then 
-        #     unit_count="$(grep -oP '(\d+)' <<< "${FILES[*]}" | uniq | wc -l)"
-        # fi
+        if [[ -z $unit_count && -d ${unitindex_file%/*} ]]; then 
+            unit_count="$(grep -oP '(\d+)' \
+                <(find "${unitindex_file%/*}" -maxdepth 1 -mindepth 1 -type f -name '*.md') |
+                    sort -n |
+                    uniq |
+                    wc -l)"
+        fi
 
         [[ -z $unit_count ]] && {
-            printf >&2 "Could not determine number of units. Defaulting to 16.\n"
+            printf >&2 "[ERROR]: Could not determine number of units. Defaulting to 16.\n"
             unit_count=16
         }
         for ((i = 1; i <= unit_count; i++)); do
@@ -194,32 +180,23 @@ format-resources() {
     fi
 
     if ! grep -qi -P "^## Misc$" "$RESOURCES_FILE"; then
-        printf "## Misc\n\n" >> $RESOURCES_FILE
+        printf "## Misc\n\n" >> "$RESOURCES_FILE"
     fi
 }
-
-# format-resources
-# pull-links
-
-# Debug dir walking and file gets
 
 get-book-dirs || {
     printf >&2 "[ERROR]: Failed to fetch book directories!\n"
     exit 1
 }
+
 for dir in "${BOOK_DIRS[@]}"; do
     printf -- "#----------------- Files for dir: %s -----------------#\n" "$dir"
     get-files "$dir" || {
         printf >&2 "Failed to get list of files from directory: %s\n" "$dir"
+        exit 1
     }
     RESOURCES_FILE="${dir}/resources.md"
-    debug "Resources file: $RESOURCES_FILE"
-    # for file in "${FILES[@]}"; do
-    #     [[ -n $file ]] || {
-    #         printf >&2 "[ERROR]: Empty file found in dir %s: %s" "$dir" "$file"
-    #     }
-    #     debug "File: $file"
-    # done
     format-resources "$dir/unitindex.md"
     pull-links
 done
+
