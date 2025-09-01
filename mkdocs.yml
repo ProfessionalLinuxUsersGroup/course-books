@@ -165,18 +165,4 @@ plugins:
       repository: ProfessionalLinuxUsersGroup/course-books
       branch: main
 
-extra:
-  consent:
-    title: Cookie consent
-    description: >-
-      We use cookies to recognize your repeated visits and preferences.
-      With your consent, you're helping us to make our documentation better.
-    cookies:
-      analytics:
-        checked: false
-      github:
-        checked: false
-      actions:
-        - accept
-        - manage
-        - reject
+# extra:
