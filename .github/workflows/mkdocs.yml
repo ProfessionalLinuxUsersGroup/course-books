@@ -13,7 +13,7 @@ permissions:
 jobs:
   build:
     name: Format and build with MkDocs
-    runs-on: ubuntu-lates
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
 
