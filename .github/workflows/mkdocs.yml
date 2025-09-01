@@ -24,7 +24,7 @@ jobs:
           cache: 'pip'
 
       - name: Install dependencies
-        run: pip install -U mkdocs mkdocs-material
+        run: pip install -U mkdocs mkdocs-material mkdocs-glightbox
 
       - name: Generate resources.md files
         run: ./scripts/generate-resources
