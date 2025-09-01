@@ -1,0 +1,202 @@
+#!/bin/bash
+#===============================================================================
+#
+#          FILE:  generate-resources
+#
+#         USAGE:  ./generate-resources
+#                 To be run from the root directory of the ProLUG course mdBook
+#                 project.  
+#
+#   DESCRIPTION:  This script generates a list of all external resources used in a
+#                 ProLUG course book.
+#                 It parses all markdown files in the /src directory and extracts
+#                 any links to external resources. It then formats those resources
+#                 into $RESOURCES_FILE (/src/resources.md by default) under their
+#                 respective unit headers, determined by the name of the file they
+#                 came from.
+#
+#       OPTIONS:  There are currently no options for this script.
+#  REQUIREMENTS:  bash >= 4.0, GNU coreutils (md5sum, cut) GNU grep, GNU sed,
+#                 GNU findutils (find), perl >= 5.10 
+#        AUTHOR:  Connor W. (https://github.com/kolkhis)
+#       CREATED:  2025-03-29
+#
+#===============================================================================
+
+# TODO(fix): Handle instances of closing parens inside links (e.g., wikipedia)
+
+declare -A ADDED_LINKS
+declare -a FILES
+declare RESOURCES_FILE
+declare -a BOOK_DIRS
+
+get-book-dirs() {
+    # ignore the ./docs/deploy directory
+    IFS=$'\n' read -r -d '' -a BOOK_DIRS < <(
+        find 'docs/' -maxdepth 1 -mindepth 1 -type d  \! -name 'deploy'
+    ) || {
+        printf >&2 "[ERROR]: Failed to get book directories!\n"
+    }
+}
+
+get-files(){
+    local search_dir
+    local -r file_pattern="*.md"
+    [[ -n $1 ]] || {
+        printf >&2 "[ERROR]: Called 'get-links' with no arguments!\n"
+        return 1
+    }
+    search_dir=$1
+
+    IFS=$'\n' read -r -d '' -a FILES < <(
+        find "$search_dir" -maxdepth 1 -mindepth 1 -name "$file_pattern"
+    )
+    return 0
+}
+
+
+
+pull-links() {
+    local -i count_md_links=0
+    local -i count_reg_links=0
+    local -i count_uf_links=0
+    local -i total_link_count=0
+    local -i duplicates=0
+
+    for file in "${FILES[@]}"; do
+        printf "Pulling links from file: %s...\n" "$file"
+        [[ "$file" =~ (unitindex\.md|resources\.md) ]] && continue  
+        local UNIT=
+        local -a RESOURCES=()
+        local link_hash=
+
+        IFS=$'\n' read -r -d '' -a RESOURCES < <(
+            grep -i -E '\<https://' "$file" |
+                grep -v -E '(img)? ?src=|discord\.(gg|com)|user-attachments'
+        )
+
+        [[ -n "${RESOURCES[*]}" ]] || continue
+
+        for resource in "${RESOURCES[@]}"; do
+            local markdown_link=
+            local link_hash=
+            [[ $file =~ .*u([0-9]+).*\.md ]] && UNIT="${BASH_REMATCH[1]}"
+
+            # extract markdown link from the line
+            markdown_link="$(perl -pe 's/.*(\[.*?\]\(.*?\)).*/\1/' <<< "$resource")" 
+
+            if [[ $markdown_link =~ .*(<.*>).* ]]; then
+                # Link is formatted as: <http://example.com>
+                markdown_link="${BASH_REMATCH[1]}"
+                (( count_reg_links++ ))
+            elif [[ $markdown_link =~ .*[^[\<\(](https://[^ \)]+).* ]]; then
+                # Link is unformatted: http://example.com
+                markdown_link="${BASH_REMATCH[1]}"
+                (( count_uf_links++ ))
+                continue
+            else
+                # Link is formatted as: [Link](http://example.com)
+                (( count_md_links++ ))
+            fi
+            [[ -z $markdown_link ]] && continue
+
+            # Fix duplicate problem
+            # Using grep to check for duplicates created a race condition
+            # - Add associative array containing links already added
+            #   - Bash can't parse markdown links as associative array keys
+            #   - use md5sum hashes
+            link_hash=$(
+                sed -E 's/\/([>\)])?$/\1/' <<< "${markdown_link,,}" |
+                    md5sum |
+                    cut -d ' ' -f1
+            )
+
+            if [[ -z "${ADDED_LINKS["$link_hash"]}" ]]; then
+                [[ -n $UNIT ]] && sed -i "/^## Unit $UNIT\>/a- $markdown_link" "$RESOURCES_FILE"
+                [[ -z $UNIT ]] && sed -i "/^## Misc$/a- $markdown_link" "$RESOURCES_FILE"
+                ADDED_LINKS["$link_hash"]=1
+            else
+                (( DUPLICATES++ ))
+            fi
+
+        done
+
+    done
+
+    total_link_count=$(( count_md_links + count_uf_links + count_reg_links ))
+    cat <<- EOF
+
+	REPORT:
+	- Markdown Links        $count_md_links
+	- Regular Links         $count_reg_links
+	- Unformatted Links     $count_uf_links
+	Total Links: $total_link_count
+	Total links added: ${#ADDED_LINKS[@]}
+	
+	Duplicates: $duplicates
+	EOF
+
+}
+
+format-resources() {
+    # truncate file
+    local unitindex_file
+    { [[ -n $1 ]] && unitindex_file="$1"; } ||
+        { printf >&2 "No argument passed to 'format-resources()'.\n"; return 1; }
+    : > "$RESOURCES_FILE"
+    cat <<- EOF >> "$RESOURCES_FILE"
+	<div class="flex-container">
+	        <img src="https://github.com/ProfessionalLinuxUsersGroup/img/blob/main/Assets/Logos/ProLUG_Round_Transparent_LOGO.png?raw=true" width="64" height="64"></img>
+	    <p>
+	        <h1>Course Resources</h1>
+	    </p>
+	</div>
+	This is a comprehensive list of all external resources used in this course.
+
+	EOF
+
+    if [[ -f $unitindex_file ]]; then
+        perl -ne 'print "## Unit $1 - $2\n\n" if s/^[|]\s*(\d+)\s*[|]\s*[[](.*?)[]].*$/\1 \2/' \
+            < "$unitindex_file"  >> "$RESOURCES_FILE"
+    else
+        printf >&2 "[ERROR]: No unitindex.md file in: %s\n" "$unitindex_file"
+        local unit_count=
+        # Gather number of units from filenames if repo is not in 'case'
+        if [[ -z $unit_count && -d ${unitindex_file%/*} ]]; then 
+            unit_count="$(grep -oP '(\d+)' \
+                <(find "${unitindex_file%/*}" -maxdepth 1 -mindepth 1 -type f -name '*.md') |
+                    sort -n |
+                    uniq |
+                    wc -l)"
+        fi
+
+        [[ -z $unit_count ]] && {
+            printf >&2 "[ERROR]: Could not determine number of units. Defaulting to 16.\n"
+            unit_count=16
+        }
+        for ((i = 1; i <= unit_count; i++)); do
+            printf "## Unit %s\n\n" "$i" >> "$RESOURCES_FILE"
+        done
+    fi
+
+    if ! grep -qi -P "^## Misc$" "$RESOURCES_FILE"; then
+        printf "## Misc\n\n" >> "$RESOURCES_FILE"
+    fi
+}
+
+get-book-dirs || {
+    printf >&2 "[ERROR]: Failed to fetch book directories!\n"
+    exit 1
+}
+
+for dir in "${BOOK_DIRS[@]}"; do
+    printf -- "#----------------- Files for dir: %s -----------------#\n" "$dir"
+    get-files "$dir" || {
+        printf >&2 "Failed to get list of files from directory: %s\n" "$dir"
+        exit 1
+    }
+    RESOURCES_FILE="${dir}/resources.md"
+    format-resources "$dir/unitindex.md"
+    pull-links
+done
+
