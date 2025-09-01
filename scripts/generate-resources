@@ -23,31 +23,64 @@
 #
 #===============================================================================
 
-declare -r RESOURCES_FILE='./src/resources.md'
-declare -r SEARCH_DIR="./src"
-declare -r FILE_PATTERN="*.md"
-declare -A ADDED_LINKS
-
-declare -a FILES
-IFS=$'\n' read -r -d '' -a FILES < <(
-    find "$SEARCH_DIR" -maxdepth 1 -mindepth 1 -name "$FILE_PATTERN"
-)
-
-
+# TODO(refactor):
+#   - Walk the docs/ directory
+#   - Grab *.md files from each subdirectory
+#   - Redefine FILES array for each subdir
+#   - Call pull-links on those files
+#   - Put into the correct subdir (e.g., docs/lac/resources.md)
 # TODO(fix): Handle instances of closing parens inside links (e.g., wikipedia)
 
+declare -A ADDED_LINKS
+declare -a FILES
+declare RESOURCES_FILE
+declare -a BOOK_DIRS
+
+get-book-dirs() {
+
+    IFS=$'\n' read -r -d '' -a BOOK_DIRS < <(
+        find 'docs/' -maxdepth 1 -mindepth 1 -type d  \! -name 'deploy'
+    ) || {
+        printf >&2 "[ERROR]: Failed to get book directories!\n"
+    }
+
+}
+
+debug() {
+    printf '[\033[33m DEBUG \033[0m]: %s\n' "$*"
+}
+
+get-files(){
+    local search_dir
+    local -r file_pattern="*.md"
+    [[ -n $1 ]] || {
+        printf >&2 "[ERROR]: Called 'get-links' with no arguments!\n"
+        return 1
+    }
+    search_dir=$1
+
+    # ignore the ./docs/deploy directory
+    IFS=$'\n' read -r -d '' -a FILES < <(
+        find "$search_dir" -maxdepth 1 -mindepth 1 -name "$file_pattern" # \! -name "deploy"
+    )
+    return 0
+}
+
+
+
 pull-links() {
-    local -i COUNT_MD_LINKS=0
-    local -i COUNT_REG_LINKS=0
-    local -i COUNT_UF_LINKS=0
-    local -i TOTAL_LINK_COUNT=0
-    local -i DUPLICATES=0
+    local -i count_md_links=0
+    local -i count_reg_links=0
+    local -i count_uf_links=0
+    local -i total_link_count=0
+    local -i duplicates=0
 
     for file in "${FILES[@]}"; do
         printf "Pulling links from file: %s...\n" "$file"
         [[ "$file" =~ (unitindex\.md|resources\.md) ]] && continue  
         local UNIT=
         local -a RESOURCES=()
+        local link_hash=
 
         IFS=$'\n' read -r -d '' -a RESOURCES < <(
             grep -i -E '\<https://' "$file" |
@@ -57,43 +90,43 @@ pull-links() {
         [[ -n "${RESOURCES[*]}" ]] || continue
 
         for resource in "${RESOURCES[@]}"; do
-            local MARKDOWN_LINK=
-            local LINK_HASH=
+            local markdown_link=
+            local link_hash=
             [[ $file =~ .*u([0-9]+).*\.md ]] && UNIT="${BASH_REMATCH[1]}"
 
             # extract markdown link from the line
-            MARKDOWN_LINK="$(perl -pe 's/.*(\[.*?\]\(.*?\)).*/\1/' <<< "$resource")" 
+            markdown_link="$(perl -pe 's/.*(\[.*?\]\(.*?\)).*/\1/' <<< "$resource")" 
 
-            if [[ $MARKDOWN_LINK =~ .*(<.*>).* ]]; then
+            if [[ $markdown_link =~ .*(<.*>).* ]]; then
                 # Link is formatted as: <http://example.com>
-                MARKDOWN_LINK="${BASH_REMATCH[1]}"
-                (( COUNT_REG_LINKS++ ))
-            elif [[ $MARKDOWN_LINK =~ .*[^[\<\(](https://[^ \)]+).* ]]; then
+                markdown_link="${BASH_REMATCH[1]}"
+                (( count_reg_links++ ))
+            elif [[ $markdown_link =~ .*[^[\<\(](https://[^ \)]+).* ]]; then
                 # Link is unformatted: http://example.com
-                MARKDOWN_LINK="${BASH_REMATCH[1]}"
-                (( COUNT_UF_LINKS++ ))
+                markdown_link="${BASH_REMATCH[1]}"
+                (( count_uf_links++ ))
                 continue
             else
                 # Link is formatted as: [Link](http://example.com)
-                (( COUNT_MD_LINKS++ ))
+                (( count_md_links++ ))
             fi
-            [[ -z $MARKDOWN_LINK ]] && continue
+            [[ -z $markdown_link ]] && continue
 
             # Fix duplicate problem
             # Using grep to check for duplicates created a race condition
             # - Add associative array containing links already added
             #   - Bash can't parse markdown links as associative array keys
             #   - use md5sum hashes
-            LINK_HASH=$(
-                sed -E 's/\/([>\)])?$/\1/' <<< "${MARKDOWN_LINK,,}" |
+            link_hash=$(
+                sed -E 's/\/([>\)])?$/\1/' <<< "${markdown_link,,}" |
                     md5sum |
                     cut -d ' ' -f1
             )
 
-            if [[ -z "${ADDED_LINKS["$LINK_HASH"]}" ]]; then
-                [[ -n $UNIT ]] && sed -i "/^## Unit $UNIT\>/a- $MARKDOWN_LINK" "$RESOURCES_FILE"
-                [[ -z $UNIT ]] && sed -i "/^## Misc$/a- $MARKDOWN_LINK" "$RESOURCES_FILE"
-                ADDED_LINKS["$LINK_HASH"]=1
+            if [[ -z "${ADDED_LINKS["$link_hash"]}" ]]; then
+                [[ -n $UNIT ]] && sed -i "/^## Unit $UNIT\>/a- $markdown_link" "$RESOURCES_FILE"
+                [[ -z $UNIT ]] && sed -i "/^## Misc$/a- $markdown_link" "$RESOURCES_FILE"
+                ADDED_LINKS["$link_hash"]=1
             else
                 (( DUPLICATES++ ))
             fi
@@ -102,23 +135,26 @@ pull-links() {
 
     done
 
-    TOTAL_LINK_COUNT=$(( COUNT_MD_LINKS + COUNT_UF_LINKS + COUNT_REG_LINKS ))
+    total_link_count=$(( count_md_links + count_uf_links + count_reg_links ))
     cat <<- EOF
 
 	REPORT:
-	- Markdown Links        $COUNT_MD_LINKS
-	- Regular Links         $COUNT_REG_LINKS
-	- Unformatted Links     $COUNT_UF_LINKS
-	Total Links: $TOTAL_LINK_COUNT
+	- Markdown Links        $count_md_links
+	- Regular Links         $count_reg_links
+	- Unformatted Links     $count_uf_links
+	Total Links: $total_link_count
 	Total links added: ${#ADDED_LINKS[@]}
 	
-	Duplicates: $DUPLICATES
+	Duplicates: $duplicates
 	EOF
 
 }
 
 format-resources() {
     # truncate file
+    local unitindex_file
+    { [[ -n $1 ]] && unitindex_file="$1"; } ||
+        { printf >&2 "No argument passed to 'format-resources()'.\n"; return 1; }
     : > "$RESOURCES_FILE"
     cat <<- EOF >> "$RESOURCES_FILE"
 	<div class="flex-container">
@@ -131,10 +167,12 @@ format-resources() {
 
 	EOF
 
-    if [[ -f ./src/unitindex.md ]]; then
+    if [[ -f $unitindex_file ]]; then
         perl -ne 'print "## Unit $1 - $2\n\n" if s/^[|]\s*(\d+)\s*[|]\s*[[](.*?)[]].*$/\1 \2/' \
-            < src/unitindex.md  >> "$RESOURCES_FILE"
+            < "$unitindex_file"  >> "$RESOURCES_FILE"
     else
+        printf >&2 "No unitindex.md file in: %s\n" "$unitindex_file"
+        # return 1
         local unit_count=
         case "${GITHUB_REPOSITORY##*/}" in
             lac|pcae) unit_count=16 ;;
@@ -142,9 +180,9 @@ format-resources() {
         esac
 
         # Gather number of units from filenames if repo is not in 'case'
-        if [[ -z $unit_count && -n "${FILES[*]}" ]]; then 
-            unit_count="$(grep -oP '(\d+)' <<< "${FILES[*]}" | uniq | wc -l)"
-        fi
+        # if [[ -z $unit_count && -n "${FILES[*]}" ]]; then 
+        #     unit_count="$(grep -oP '(\d+)' <<< "${FILES[*]}" | uniq | wc -l)"
+        # fi
 
         [[ -z $unit_count ]] && {
             printf >&2 "Could not determine number of units. Defaulting to 16.\n"
@@ -155,10 +193,33 @@ format-resources() {
         done
     fi
 
-    if ! grep -qi -E "^## Misc$" "$RESOURCES_FILE"; then
+    if ! grep -qi -P "^## Misc$" "$RESOURCES_FILE"; then
         printf "## Misc\n\n" >> $RESOURCES_FILE
     fi
 }
 
-format-resources
-pull-links
+# format-resources
+# pull-links
+
+# Debug dir walking and file gets
+
+get-book-dirs || {
+    printf >&2 "[ERROR]: Failed to fetch book directories!\n"
+    exit 1
+}
+for dir in "${BOOK_DIRS[@]}"; do
+    printf -- "#----------------- Files for dir: %s -----------------#\n" "$dir"
+    get-files "$dir" || {
+        printf >&2 "Failed to get list of files from directory: %s\n" "$dir"
+    }
+    RESOURCES_FILE="${dir}/resources.md"
+    debug "Resources file: $RESOURCES_FILE"
+    # for file in "${FILES[@]}"; do
+    #     [[ -n $file ]] || {
+    #         printf >&2 "[ERROR]: Empty file found in dir %s: %s" "$dir" "$file"
+    #     }
+    #     debug "File: $file"
+    # done
+    format-resources "$dir/unitindex.md"
+    pull-links
+done
