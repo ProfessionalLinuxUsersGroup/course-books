@@ -1,0 +1,6 @@
+#!/bin/bash
+dnf install -y httpd git python3 hostname
+git clone https://github.com/ProfessionalLinuxUsersGroup/course-books && cd course-books
+python3 -m venv . && source "$PWD"/bin/activate
+pip install -U pip && pip install -U mkdocs mkdocs-material mkdocs-glightbox
+mkdocs serve --dev-addr "$(hostname -I | awk '{print $1}'):8000"
