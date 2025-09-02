@@ -1,7 +1,5 @@
 # Qualifying for the Certification
 
----
-
 Each course run through the Professional Linux Users Group (ProLUG) allows you to earn
 a certification upon completion.
 

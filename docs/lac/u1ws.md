@@ -44,6 +44,8 @@ could be transposed to a `.md` file.
 
 Using a 0-10 system, rate yourself on how well you think you know each topic in the table below. (You do not have to post this rating).
 
+<div class="center-table" markdown>
+
 |   Skill    | High (8-10) | Mid (4-7) | Low (0-3) | Total |
 | :--------: | :---------: | :-------: | :-------: | :---: |
 |   Linux    |             |           |           |       |
@@ -57,6 +59,8 @@ Using a 0-10 system, rate yourself on how well you think you know each topic in 
 |   Cloud    |             |           |           |       |
 | Kubernetes |             |           |           |       |
 |   Total    |             |           |           |       |
+
+</div>
 
 Next, answer these questions here:
 

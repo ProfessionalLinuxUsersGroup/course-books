@@ -5,22 +5,6 @@ and guidelines to contribute to this project. Below are steps to ensure
 contributors are adhering to those guidelines and fostering a productive
 version control environment.
 
-## Table of Contents
-
-- [How to be a Successful Contributor](#how-to-be-a-successful-contributor)
-- [Signing your Git Commits with SSH](#signing-your-git-commits-with-ssh)
-- [Syncing your Fork with the Upstream ProLUG Repo](#syncing-your-fork-with-the-upstream-prolug-repo)
-- [Basic Contribution Workflow](#basic-contribution-workflow)
-  - [Comment First](#comment-first)
-  - [Create a Fork](#create-a-fork)
-  - [Clone the Fork to your Local Machine](#clone-the-fork-to-your-local-machine)
-  - [Create a New Branch](#create-a-new-branch)
-  - [Understand a few Best Practices](#understand-a-few-best-practices)
-  - [Commit and Push your Changes](#commit-and-push-your-changes)
-  - [Comment your Changes](#comment-your-changes)
-  - [Create a Pull Request](#create-a-pull-request)
-- [Supporting Material](#supporting-material)
-
 ## How to be a Successful Contributor
 
 ---
@@ -43,9 +27,9 @@ Git documentation:
 
 Git and GitHub video tutorials:
 
-- [ByteByteGo's Git Explained in 4 Minutes (4m)](https://www.youtube.com/watch?v=e9lnsKot_SQ)
-- [Fireship's How to use Git and Github (12m)](https://youtu.be/HkdAHXoRtos)
-- [freeCodeCamp's Git and GitHub Crash Course (1hr)](https://youtu.be/RGOj5yH7evk)
+- [ByteByteGo's Git Explained in 4 Minutes (4m)](https://www.youtube.com/watch?v=e9lnsKot_SQ) :fontawesome-brands-youtube:{ .youtube }
+- [Fireship's How to use Git and Github (12m)](https://youtu.be/HkdAHXoRtos) :fontawesome-brands-youtube:{ .youtube }
+- [freeCodeCamp's Git and GitHub Crash Course (1hr)](https://youtu.be/RGOj5yH7evk) :fontawesome-brands-youtube:{ .youtube }
 
 ## Signing your Git Commits with SSH
 

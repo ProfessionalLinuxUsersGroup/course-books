@@ -36,88 +36,175 @@ theme:
 nav:
   - Home:
     - index.md
-    - Get ProLUG Certified: certify.md
+    -  certify.md
     - Contributing to ProLUG MkDocs:
-      - Contributing to GitHub: contributing.md
-      - Locally Developing: development.md
+      - contributing.md
+      - development.md
   - Linux Admin Course:
-    - Course Syllabus: lac/syllabus.md
+    - lac/syllabus.md
     - Unit 1:
-      - Linux File Operations: lac/u1intro.md
-      - Worksheet: lac/u1ws.md
-      - Lab: lac/u1lab.md
-      - Bonus: lac/u1b.md
+      - lac/u1intro.md
+      - lac/u1ws.md
+      - lac/u1lab.md
+      - lac/u1b.md
     - Unit 2:
-      - Essential Tools: lac/u2intro.md
-      - Worksheet: lac/u2ws.md
-      - Lab: lac/u2lab.md
+      - lac/u2intro.md
+      - lac/u2ws.md
+      - lac/u2lab.md
     - Unit 3:
-      - Storage: lac/u3intro.md
-      - Worksheet: lac/u3ws.md
-      - Lab: lac/u3lab.md
-      - Bonus: lac/u3b.md
+      - lac/u3intro.md
+      - lac/u3ws.md
+      - lac/u3lab.md
+      - lac/u3b.md
     - Unit 4:
-      - Operating Running Systems: lac/u4intro.md
-      - Worksheet: lac/u4ws.md
-      - Lab: lac/u4lab.md
+      - lac/u4intro.md
+      - lac/u4ws.md
+      - lac/u4lab.md
     - Unit 5:
-      - Managing Users and Groups: lac/u5intro.md
-      - Worksheet: lac/u5ws.md
-      - Lab: lac/u5lab.md
+      - lac/u5intro.md
+      - lac/u5ws.md
+      - lac/u5lab.md
     - Unit 6:
-      - Firewalls: lac/u6intro.md
-      - Worksheet: lac/u6ws.md
-      - Lab: lac/u6lab.md
+      - lac/u6intro.md
+      - lac/u6ws.md
+      - lac/u6lab.md
     - Unit 7:
-      - Package Management & Patching: lac/u7intro.md
-      - Worksheet: lac/u7ws.md
-      - Lab: lac/u7lab.md
-      - Bonus: lac/u7b.md
+      - lac/u7intro.md
+      - lac/u7ws.md
+      - lac/u7lab.md
+      - lac/u7b.md
     - Unit 8:
-      - Scripting: lac/u8intro.md
-      - Worksheet: lac/u8ws.md
-      - Lab: lac/u8lab.md
-      - Bonus: lac/u8b.md
+      - lac/u8intro.md
+      - lac/u8ws.md
+      - lac/u8lab.md
+      - lac/u8b.md
     - Unit 9:
-      - Containerization on Linux: lac/u9intro.md
-      - Worksheet: lac/u9ws.md
-      - Lab: lac/u9lab.md
+      - lac/u9intro.md
+      - lac/u9ws.md
+      - lac/u9lab.md
     - Unit 10:
-      - Kubernetes: lac/u10intro.md
-      - Worksheet: lac/u10ws.md
-      - Lab: lac/u10lab.md
-      - Bonus: lac/u10b.md
+      - lac/u10intro.md
+      - lac/u10ws.md
+      - lac/u10lab.md
+      - lac/u10b.md
     - Unit 11:
-      - Monitoring: lac/u11intro.md
-      - Worksheet: lac/u11ws.md
-      - Lab: lac/u11lab.md
+      - lac/u11intro.md
+      - lac/u11ws.md
+      - lac/u11lab.md
     - Unit 12:
-      - Baselines & Benchmarks: lac/u12intro.md
-      - Worksheet: lac/u12ws.md
-      - Lab: lac/u12lab.md
+      - lac/u12intro.md
+      - lac/u12ws.md
+      - lac/u12lab.md
     - Unit 13:
-      - System Hardening: lac/u13intro.md
-      - Worksheet: lac/u13ws.md
-      - Lab: lac/u13lab.md
-      - Bonus: lac/u13b.md
+      - lac/u13intro.md
+      - lac/u13ws.md
+      - lac/u13lab.md
+      - lac/u13b.md
     - Unit 14:
-      - Ansible Automation: lac/u14intro.md
-      - Worksheet: lac/u14ws.md
-      - Lab: lac/u14lab.md
+      - lac/u14intro.md
+      - lac/u14ws.md
+      - lac/u14lab.md
     - Unit 15:
-      - Troubleshooting: lac/u15intro.md
-      - Worksheet: lac/u15ws.md
-      - Lab: lac/u15lab.md
+      - lac/u15intro.md
+      - lac/u15ws.md
+      - lac/u15lab.md
     - Unit 16:
-      - Incident Response: lac/u16intro.md
-      - Worksheet: lac/u16ws.md
-      - Lab: lac/u16lab.md
+      - lac/u16intro.md
+      - lac/u16ws.md
+      - lac/u16lab.md
   - Linux Security Course:
-    - Course Syallabus: psc/syllabus.md
+    - psc/syllabus.md
     - Unit 1:
-      - Build Standards and Compliance: psc/u1intro.md
-      - Worksheet: psc/u1ws.md
-      - Lab: psc/u1lab.md
+      - psc/u1intro.md
+      - psc/u1ws.md
+      - psc/u1lab.md
+    - Unit 2:
+      - psc/u2intro.md
+      - psc/u2ws.md
+      - psc/u2lab.md
+    - Unit 3:
+      - psc/u3intro.md
+      - psc/u3ws.md
+      - psc/u3lab.md
+      - psc/u3b.md
+    - Unit 4:
+      - psc/u4intro.md
+      - psc/u4ws.md
+      - psc/u4lab.md
+    - Unit 5:
+      - psc/u5intro.md
+      - psc/u5ws.md
+      - psc/u5lab.md
+    - Unit 6:
+      - psc/u6intro.md
+      - psc/u6ws.md
+      - psc/u6lab.md
+    - Unit 7:
+      - psc/u7intro.md
+      - psc/u7ws.md
+      - psc/u7lab.md
+      - psc/u7b.md
+    - Unit 8:
+      - psc/u8intro.md
+      - psc/u8ws.md
+      - psc/u8lab.md
+      - psc/u8b.md
+    - Unit 9:
+      - psc/u9intro.md
+      - psc/u9ws.md
+      - psc/u9lab.md
+    - Unit 10:
+      - psc/u10intro.md
+      - psc/u10ws.md
+      - psc/u10lab.md
+      - psc/u10b.md
+
+  - Linux Automation Course:
+    - pcae/syllabus.md
+    - Unit 1:
+      - pcae/u1intro.md
+      - pcae/u1ws.md
+      - pcae/u1lab.md
+    - Unit 2:
+      - pcae/u2intro.md
+      - pcae/u2ws.md
+      - pcae/u2lab.md
+    - Unit 3:
+      - pcae/u3intro.md
+      - pcae/u3ws.md
+      - pcae/u3lab.md
+      - pcae/u3b.md
+    - Unit 4:
+      - pcae/u4intro.md
+      - pcae/u4ws.md
+      - pcae/u4lab.md
+    - Unit 5:
+      - pcae/u5intro.md
+      - pcae/u5ws.md
+      - pcae/u5lab.md
+    - Unit 6:
+      - pcae/u6intro.md
+      - pcae/u6ws.md
+      - pcae/u6lab.md
+    - Unit 7:
+      - pcae/u7intro.md
+      - pcae/u7ws.md
+      - pcae/u7lab.md
+      - pcae/u7b.md
+    - Unit 8:
+      - pcae/u8intro.md
+      - pcae/u8ws.md
+      - pcae/u8lab.md
+      - pcae/u8b.md
+    - Unit 9:
+      - pcae/u9intro.md
+      - pcae/u9ws.md
+      - pcae/u9lab.md
+    - Unit 10:
+      - pcae/u10intro.md
+      - pcae/u10ws.md
+      - pcae/u10lab.md
+      - pcae/u10b.md
 
 
 extra:
