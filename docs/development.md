@@ -1,9 +1,4 @@
-<div class="flex-container">
-        <img src="https://github.com/ProfessionalLinuxUsersGroup/img/blob/main/Assets/Logos/ProLUG_Round_Transparent_LOGO.png?raw=true" width="64" height="64"></img>
-    <p>
-        <h1>Contributing and Local Development</h1>
-    </p>
-</div>
+# Contributing and Local Development
 
 It is strongly encouraged that contributors test their changes before making
 commits. To help facilitate this process a set of instructions and guidelines

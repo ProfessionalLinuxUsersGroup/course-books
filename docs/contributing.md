@@ -1,9 +1,4 @@
-<div class="flex-container">
-        <img src="https://github.com/ProfessionalLinuxUsersGroup/img/blob/main/Assets/Logos/ProLUG_Round_Transparent_LOGO.png?raw=true" width="64" height="64"></img>
-    <p>
-        <h1>Contributing to the ProLUG Linux Sysadmin Course Book</h1>
-    </p>
-</div>
+# Contributing to the ProLUG Linux Sysadmin Course Book
 
 The Professional Linux Users Group (ProLUG) provides a set of requirements
 and guidelines to contribute to this project. Below are steps to ensure

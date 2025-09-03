@@ -1,8 +1,3 @@
-# The Professional Linux Users Group (ProLUG)
-
-<div class="grid cards" markdown>
-
--   :material-account-group:{ .lg .middle } __ProLUG__
 
     ---
 

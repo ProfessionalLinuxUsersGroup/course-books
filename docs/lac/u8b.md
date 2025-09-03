@@ -1,9 +1,4 @@
-<div class="flex-container">
-        <img src="https://github.com/ProfessionalLinuxUsersGroup/img/blob/main/Assets/Logos/ProLUG_Round_Transparent_LOGO.png?raw=true" width="64" height="64">
-    <p>
-        <h1>Unit 8 Bonus - Scripting  </h1>
-    </p>
-</div>
+# Unit 8 Bonus - Scripting  
 
 > **NOTE:** This is an **optional** bonus section. You **do not** need to read it, but if you're interested in digging deeper, this is for you.
 
