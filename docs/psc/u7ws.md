@@ -1,7 +1,4 @@
-<div class="flex-container">
-        <h1>Unit 7 Worksheet - Monitoring and Alerting</h1>
-    </p>
-</div>
+# Unit 7 Worksheet - Monitoring and Alerting
 
 ## Instructions
 

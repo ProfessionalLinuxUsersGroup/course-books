@@ -1,7 +1,4 @@
-<div class="flex-container">
-        <h1>Unit 8 Worksheet - Configuration Drift and Remediation</h1>
-    </p>
-</div>
+# Unit 8 Worksheet - Configuration Drift and Remediation
 
 ## Instructions
 

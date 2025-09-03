@@ -1,7 +1,4 @@
-<div class="flex-container">
-        <h1>ProLUG Security Engineering - Final Project</h1>
-    </p>
-</div>
+# ProLUG Security Engineering - Final Project
 
 Students wishing to complete the Security Engineering course are expected to devise 
 and complete a capstone project, to be turned in at the end of the course.
