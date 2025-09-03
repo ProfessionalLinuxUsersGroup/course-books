@@ -1,4 +1,4 @@
-        <h1>Unit 2 - Essential Tools</h1>
+# Unit 2 - Essential Tools
 
 ## Overview
 

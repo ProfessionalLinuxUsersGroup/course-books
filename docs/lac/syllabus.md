@@ -1,4 +1,4 @@
-        <h1>ProLUG Systems Administration for the Enterprise</h1>
+# ProLUG Systems Administration for the Enterprise
 
 Welcome to the ProLUG Enterprise Linux Systems Administration Course Book.
 
