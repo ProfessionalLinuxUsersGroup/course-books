@@ -1,9 +1,4 @@
-<div class="flex-container" style="justify-content:center;">
-        <img src="https://github.com/ProfessionalLinuxUsersGroup/img/blob/main/Assets/Logos/ProLUG_Round_Transparent_LOGO.png?raw=true" width="64" height="64"></img>
-    <p>
-        <h1>Table of Contents</h1>
-    </p>
-</div>
+# Table of Contents
 
 | Unit |                                                 Topic                                                 |
 | :--: | :---------------------------------------------------------------------------------------------------: |
