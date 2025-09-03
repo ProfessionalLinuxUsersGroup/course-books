@@ -83,7 +83,7 @@ The discussion posts are done in Discord threads. Click the 'Threads' icon on th
 
 - [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1098309490681598072)
 
-### Start thinking about your project ideas (more to come in future weeks):
+### Start thinking about your project ideas (more to come in future weeks)
 
 Topics:
 

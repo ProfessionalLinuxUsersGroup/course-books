@@ -1,30 +1,9 @@
-<div class="flex-container">
-        <img src="https://github.com/ProfessionalLinuxUsersGroup/img/blob/main/Assets/Logos/ProLUG_Round_Transparent_LOGO.png?raw=true" width="64" height="64"></img>
-    <p>
-        <h1>Contributing to the ProLUG Linux Sysadmin Course Book</h1>
-    </p>
-</div>
+# Contributing to the ProLUG Linux Sysadmin Course Book
 
 The Professional Linux Users Group (ProLUG) provides a set of requirements
 and guidelines to contribute to this project. Below are steps to ensure
 contributors are adhering to those guidelines and fostering a productive
 version control environment.
-
-## Table of Contents
-
-- [How to be a Successful Contributor](#how-to-be-a-successful-contributor)
-- [Signing your Git Commits with SSH](#signing-your-git-commits-with-ssh)
-- [Syncing your Fork with the Upstream ProLUG Repo](#syncing-your-fork-with-the-upstream-prolug-repo)
-- [Basic Contribution Workflow](#basic-contribution-workflow)
-  - [Comment First](#comment-first)
-  - [Create a Fork](#create-a-fork)
-  - [Clone the Fork to your Local Machine](#clone-the-fork-to-your-local-machine)
-  - [Create a New Branch](#create-a-new-branch)
-  - [Understand a few Best Practices](#understand-a-few-best-practices)
-  - [Commit and Push your Changes](#commit-and-push-your-changes)
-  - [Comment your Changes](#comment-your-changes)
-  - [Create a Pull Request](#create-a-pull-request)
-- [Supporting Material](#supporting-material)
 
 ## How to be a Successful Contributor
 
@@ -48,9 +27,9 @@ Git documentation:
 
 Git and GitHub video tutorials:
 
-- [ByteByteGo's Git Explained in 4 Minutes (4m)](https://www.youtube.com/watch?v=e9lnsKot_SQ)
-- [Fireship's How to use Git and Github (12m)](https://youtu.be/HkdAHXoRtos)
-- [freeCodeCamp's Git and GitHub Crash Course (1hr)](https://youtu.be/RGOj5yH7evk)
+- [ByteByteGo's Git Explained in 4 Minutes (4m)](https://www.youtube.com/watch?v=e9lnsKot_SQ) :fontawesome-brands-youtube:{ .youtube }
+- [Fireship's How to use Git and Github (12m)](https://youtu.be/HkdAHXoRtos) :fontawesome-brands-youtube:{ .youtube }
+- [freeCodeCamp's Git and GitHub Crash Course (1hr)](https://youtu.be/RGOj5yH7evk) :fontawesome-brands-youtube:{ .youtube }
 
 ## Signing your Git Commits with SSH
 
@@ -82,7 +61,7 @@ ssh-keygen -t ed25519
 ```
 
 Add SSH public key ('.pub' suffix) to GitHub as "Signing Key".
-<img src="./assets/images/addkey.png"></img>
+![addkey](assets/images/addkey.png)
 
 \* GitHub.com -> Profile -> Settings -> GPG and SSH Keys -> Add SSH Key -> Drop down -> Signing Key
 
@@ -107,7 +86,7 @@ git log --show-signature -1
 Make a commit after running those commands and then use `git log --show-signature -1`.
 You should see something like `Good "git" signature for <yourname> with ED25519 key SHA256:abcdef...` if it worked.
 
-<img src="./assets/images/verified.png"></img>
+![verified](assets/images/verified.png)
 
 Your commits should now be verified from your account. This helps us ensure that valid users are
 contributing to this project. Unverified commits will be scrutinized and likely discarded.
@@ -116,7 +95,7 @@ contributing to this project. Unverified commits will be scrutinized and likely 
 
 ---
 
-<img src="./assets/images/syncfork.png"></img>
+![syncfork](assets/images/syncfork.png)
 
 In an effort to minimize merge conflicts we strongly suggest forks remain up to date with
 the original repository before committing changes. This will help us reduce pull request management overhead.
@@ -236,7 +215,7 @@ pull requests.
 Below is an example of 4 local commits squashed into a single commit that was pushed
 remotely:
 
-<img src="./assets/images/squashing.png"></img>
+![squashing](assets/images/squashing.png)
 
 Squashing commits can improve readability, but its primary utility,
 especially for larger projects, may be in addressing an event where

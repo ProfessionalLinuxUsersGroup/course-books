@@ -1,11 +1,4 @@
-<div class="flex-container">
-        <img src="https://github.com/ProfessionalLinuxUsersGroup/img/blob/main/Assets/Logos/ProLUG_Round_Transparent_LOGO.png?raw=true" width="64" height="64"></img>
-    <p>
-        <h1>Qualifying for the Certification</h1>
-    </p>
-</div>
-
----
+# Qualifying for the Certification
 
 Each course run through the Professional Linux Users Group (ProLUG) allows you to earn
 a certification upon completion.

@@ -1,0 +1,7 @@
+#!/bin/bash
+dnf install -y httpd git python3 hostname httpd
+git clone https://github.com/ProfessionalLinuxUsersGroup/course-books && cd course-books
+python3 -m venv . && source "$PWD"/bin/activate
+pip install -U pip && pip install -U mkdocs mkdocs-material mkdocs-glightbox
+# use mkdocs serve -a "$(hostname -I | awk '{print $1}'):8000" for live reloading
+mkdocs build -d /var/www/html/ && systemctl enable --now httpd
