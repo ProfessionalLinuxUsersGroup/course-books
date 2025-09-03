@@ -1,9 +1,4 @@
-<div class="flex-container">
-        <img src="https://github.com/ProfessionalLinuxUsersGroup/img/blob/main/Assets/Logos/ProLUG_Round_Transparent_LOGO.png?raw=true" width="64" height="64"></img>
-    <p>
-        <h1>ProLUG Systems Administration for the Enterprise</h1>
-    </p>
-</div>
+# ProLUG Systems Administration for the Enterprise
 
 Welcome to the ProLUG Enterprise Linux Systems Administration Course Book.
 
@@ -104,8 +99,6 @@ This class will effectively engage 40-60 learners.
 
 Class will meet over weekend (Brown bag) sessions. 1 time per week, for 16 weeks. There will be a total of 16 sessions.
 
-<div class="center-table" markdown>
-
 | Session |                                 Topic                                 |
 | :-----: | :-------------------------------------------------------------------: |
 |    1    |        Get Linux Lab Access - CLI Primer - vi/vim/nano basics         |
@@ -124,8 +117,6 @@ Class will meet over weekend (Brown bag) sessions. 1 time per week, for 16 weeks
 |   14    |                          Ansible Automation                           |
 |   15    |                      Engineering Troubleshooting                      |
 |   16    | Incident Response - Actual incident callout and information gathering |
-
-</div>
 
 #### Suggested Learning Approach
 

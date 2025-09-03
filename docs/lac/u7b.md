@@ -1,9 +1,4 @@
-<div class="flex-container">
-        <img src="https://github.com/ProfessionalLinuxUsersGroup/img/blob/main/Assets/Logos/ProLUG_Round_Transparent_LOGO.png?raw=true" width="64" height="64"></img>
-    <p>
-        <h1>Unit 7 Bonus - Package Management & Patching</h1>
-    </p>
-</div>
+# Unit 7 Bonus - Package Management & Patching
 
 > **NOTE:** This is an **optional** bonus section. You **do not** need to read it, but if you're interested in digging deeper, this is for you.
 

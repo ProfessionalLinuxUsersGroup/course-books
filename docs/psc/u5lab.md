@@ -1,9 +1,4 @@
-<div class="flex-container">
-        <img src="https://github.com/ProfessionalLinuxUsersGroup/img/blob/main/Assets/Logos/ProLUG_Round_Transparent_LOGO.png?raw=true" width="64" height="64"></img>
-    <p>
-        <h1>Unit 5 Lab - Repos and Patching</h1>
-    </p>
-</div>
+# Unit 5 Lab - Repos and Patching
 
 > If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot`
 > the machine from the command line so that other students will have the intended environment.

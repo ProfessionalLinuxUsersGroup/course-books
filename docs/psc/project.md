@@ -1,12 +1,4 @@
-<head>
-    <style> .flex-container { display: flex; align-items: center; gap: 20px; } </style>
-</head>
-<div class="flex-container">
-        <img src="https://github.com/ProfessionalLinuxUsersGroup/img/blob/main/Assets/Logos/ProLUG_Round_Transparent_LOGO.png?raw=true" width="64" height="64">
-    <p>
-        <h1>ProLUG Security Engineering - Final Project</h1>
-    </p>
-</div>
+# ProLUG Security Engineering - Final Project
 
 Students wishing to complete the Security Engineering course are expected to devise 
 and complete a capstone project, to be turned in at the end of the course.
