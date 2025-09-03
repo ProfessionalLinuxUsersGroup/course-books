@@ -12,20 +12,15 @@ technologies as containers, bash scripts, and more.
 
 ---
 
-The ProLUG Linux Administration Course (LAC) utilizes [mdBook](https://github.com/rust-lang/mdBook)
-(markdown Book), a friendly and popular markdown utility that quickly exports static web files for
-documentation or general website use cases.
+The ProLUG course books utilize [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/), a friendly
+and popular markdown utility that quickly exports static web files for documentation or general website use cases.
 
-Utilizing mdBook this course then deploys the exported web structure to a
-[Git Pages workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) and runner that then produces an easily navigable website.
+Utilizing Material for MkDocs this course then deploys the exported web structure to a Git Pages workflow and runner
+that then produces an easily navigable website.
 
 Below is the current workflow that deploys the Git Page for the course:
 
-<div style="text-align: center;">
-
-<img src="./assets/images/workflow.png" style="border-radius:2%"></img>
-
-</div>
+![workflow](assets/images/workflow.png)
 
 To achieve this deployment locally the following environment and dependencies are
 required:
@@ -119,4 +114,4 @@ scp src/development.md 172.16.15.8:/root/lac/src/
 ssh 172.16.15.8 "cd /root/lac && /root/lac/mdbook build -d /var/www/html && systemctl restart httpd"
 ```
 
-<img src="./assets/images/flow.png"></img>
+![flow](assets/images/flow.png)

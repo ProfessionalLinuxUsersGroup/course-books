@@ -1,0 +1,54 @@
+ProLUG 101
+Unit 10 Worksheet
+
+Instructions
+Fill out this sheet as you progress through the lab and discussions. Hold onto all of your work to send to me at the end of the course.
+
+Discussion Questions:
+Unit 10 Discussion Post 1: Read this document: https://kubernetes.io/docs/concepts/overview/
+
+1.What are the two most compelling reasons you see to implement Kubernetes in your organization?
+2.When the article says Kubernetes is not a PaaS? What do they mean by that? What is a PaaS in comparison?
+
+Unit 10 Discussion Post 2: You get a ticket about your new test cluster. The team is unable to deploy some of their applications. They suspect there is a problem and send you over this output:
+
+[root@Test_Cluster1 ~]# kubectl version
+Client Version: v1.31.6+k3s3
+Kustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3
+Server Version: v1.30.6+k3s1
+[root@rocky15 ~]# kubectl get nodes
+NAME STATUS ROLES AGE VERSION
+Test_Cluster1 Ready control-plane,master 17h v1.30.6+k3s1
+Test_Cluster2 NotReady worker 33m v1.29.6+k3s1
+Test_Cluster3 Ready worker 17h v1.28.6+k3s1
+
+1.What are you checking on the cluster to validate you see their error?
+2.What do you think the problem could be?
+3.Do you think someone else has tried anything to fix this problem before you? Why or why not?
+
+Unit 10 Discussion Post 3: You are the network operations center (NOC) lead. Your team has recently started supporting the dev, test, and QA environments for your company’s K8s cluster. Write up a basic checkout procedure for your new NOC personnel to verify operation of the cluster before escalating on critical alerts.
+
+1.What information online helped you figure this out? What blogs or tools did you use?
+2.What did you learn in this process of writing this up?
+
+Definitions/Terminology
+
+Kubernetes/K8s
+K3s
+Controller Manager
+ETCD
+Kubelet
+Kube-proxy
+Controlplane
+Node
+Static Pod
+Scheduler
+API Server
+
+Notes During Lecture/Class:
+
+Links:
+
+Terms:
+
+Useful tools:
