@@ -83,7 +83,7 @@ ProLUG Lab access to Rocky 9.4+ instance.
   - 3 x 3GB hard drives (for raid and disk labs)
   - Network Interface (IP already setup)
 
-<img src="./assets/images/syllabus-lab.png" style="border-radius:2%"></img>
+<img src="../../assets/lac/images/syllabus-lab.png" style="border-radius:2%"></img>
 
 ### Course Plan
 

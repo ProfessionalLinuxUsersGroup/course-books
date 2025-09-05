@@ -18,8 +18,8 @@
 
 The lab has been provided for convenience below:
 
-- <a href="./assets/downloads/u3/u3_lab.pdf" target="_blank" download>📥 u3_lab(`.pdf`)</a>
-- <a href="./assets/downloads/u3/u3_lab.docx" target="_blank" download>📥 u3_lab(`.docx`)</a>
+- <a href="../../assets/lac/downloads/u3/u3_lab.pdf" target="_blank" download>📥 u3_lab(`.pdf`)</a>
+- <a href="../../assets/lac/downloads/u3/u3_lab.docx" target="_blank" download>📥 u3_lab(`.docx`)</a>
 
 ## Pre-Lab Warm-Up
 

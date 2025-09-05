@@ -19,8 +19,8 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="./assets/downloads/u11/u11_worksheet.txt" target="_blank" download>📥 u11_worksheet(`.txt`)</a>
-- <a href="./assets/downloads/u11/u11_worksheet.docx" target="_blank" download>📥 u11_worksheet(`.docx`)</a>
+- <a href="../../assets/lac/downloads/u11/u11_worksheet.txt" target="_blank" download>📥 u11_worksheet(`.txt`)</a>
+- <a href="../../assets/lac/downloads/u11/u11_worksheet.docx" target="_blank" download>📥 u11_worksheet(`.docx`)</a>
 
 ### Unit 11 Recording
 

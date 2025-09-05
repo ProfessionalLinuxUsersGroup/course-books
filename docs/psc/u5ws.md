@@ -23,12 +23,12 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="./assets/downloads/u5/u5_worksheet.pdf" target="_blank" download>📥 u5_worksheet(`.pdf`)</a>
-- <a href="./assets/downloads/u5/u5_worksheet.txt" target="_blank" download>📥 u5_worksheet(`.txt`)</a>
+- <a href="../../assets/psc/downloads/u5/u5_worksheet.pdf" target="_blank" download>📥 u5_worksheet(`.pdf`)</a>
+- <a href="../../assets/psc/downloads/u5/u5_worksheet.txt" target="_blank" download>📥 u5_worksheet(`.txt`)</a>
 
 ### Unit 5 Recording
 
-<!-- <img src="./assets/images/under-construction.jpg" style="border-radius:2%"></img> -->
+<!-- <img src="../../assets/psc/images/under-construction.jpg" style="border-radius:2%"></img> -->
 
 <iframe
     style="width: 100%; height: 100%; border: none;

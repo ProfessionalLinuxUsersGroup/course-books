@@ -20,8 +20,8 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="./assets/downloads/u6/u6_worksheet.txt" target="_blank" download>📥 u6_worksheet(`.txt`)</a>
-- <a href="./assets/downloads/u6/u6_worksheet.docx" target="_blank" download>📥 u6_worksheet(`.docx`)</a>
+- <a href="../../assets/lac/downloads/u6/u6_worksheet.txt" target="_blank" download>📥 u6_worksheet(`.txt`)</a>
+- <a href="../../assets/lac/downloads/u6/u6_worksheet.docx" target="_blank" download>📥 u6_worksheet(`.docx`)</a>
 
 ### Unit 6 Recording
 

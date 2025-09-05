@@ -20,8 +20,8 @@
 
 The lab has been provided for convenience below:
 
-- <a href="./assets/downloads/u5/u5_lab.pdf" target="_blank" download>📥 u5_lab(`.pdf`)</a>
-- <a href="./assets/downloads/u5/u5_lab.docx" target="_blank" download>📥 u5_lab(`.docx`)</a>
+- <a href="../../assets/lac/downloads/u5/u5_lab.pdf" target="_blank" download>📥 u5_lab(`.pdf`)</a>
+- <a href="../../assets/lac/downloads/u5/u5_lab.docx" target="_blank" download>📥 u5_lab(`.docx`)</a>
 
 ## Pre-Lab Warm-Up
 
@@ -359,7 +359,7 @@ The primary permissions commands we're going to use are going to be `chmod` (acc
 
 A quick rundown of how permissions break out:
 
-<img src='./assets/images/permissions.png'></img>
+<img src='../../assets/lac/images/permissions.png'></img>
 
 Let's examine some permissions and see if we can't figure out what permissions are allowed:
 

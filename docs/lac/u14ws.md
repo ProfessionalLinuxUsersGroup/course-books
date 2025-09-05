@@ -19,8 +19,8 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="./assets/downloads/u14/u14_worksheet.txt" target="_blank" download>📥 u14_worksheet(`.txt`)</a>
-- <a href="./assets/downloads/u14/u14_worksheet.docx" target="_blank" download>📥 u14_worksheet(`.docx`)</a>
+- <a href="../../assets/lac/downloads/u14/u14_worksheet.txt" target="_blank" download>📥 u14_worksheet(`.txt`)</a>
+- <a href="../../assets/lac/downloads/u14/u14_worksheet.docx" target="_blank" download>📥 u14_worksheet(`.docx`)</a>
 
 ### Unit 14 Recording
 
@@ -46,7 +46,7 @@ online documentation: <https://docs.ansible.com/ansible/latest/inventory_guide/i
 
 </blockquote>
 
-<img src="./assets/images/u14/u14-dp1-prolug-lab.png"></img>
+<img src="../../assets/lac/images/u14/u14-dp1-prolug-lab.png"></img>
 
 1. Make an inventory of the servers, grouped any way you like.
 2. What format did you choose to use for your inventory?

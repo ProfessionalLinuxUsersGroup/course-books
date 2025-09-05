@@ -17,8 +17,8 @@ The lab has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="./assets/downloads/u1/u1_lab.txt" target="_blank" download>📥 u1_lab(`.txt`)</a>
-- <a href="./assets/downloads/u1/u1_lab.docx" target="_blank" download>📥 u1_lab(`.docx`)</a>
+- <a href="../../assets/psc/downloads/u1/u1_lab.txt" target="_blank" download>📥 u1_lab(`.txt`)</a>
+- <a href="../../assets/psc/downloads/u1/u1_lab.docx" target="_blank" download>📥 u1_lab(`.docx`)</a>
 
 ## Module 1: Exploring System Information
 
@@ -59,10 +59,10 @@ lsmod | grep -i tables
 ## Module 2: PreLAB
 
 1. Download the STIG Viewer 2.18 from - <https://public.cyber.mil/stigs/downloads/>
-   ![img](./assets/images/u1/mod2_prelab1.png)
+   ![img](../../assets/psc/images/u1/mod2_prelab1.png)
 
 2. Download the STIG for Mariadb and the import it into your STIG viewer.
-   ![img](./assets/images/u1/mod2_prelab2.png)
+   ![img](../../assets/psc/images/u1/mod2_prelab2.png)
 
 ## Module 3: Lab
 

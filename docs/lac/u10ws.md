@@ -21,8 +21,8 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="./assets/downloads/u10/u10_worksheet.txt" target="_blank" download>📥 u10_worksheet(`.txt`)</a>
-- <a href="./assets/downloads/u10/u10_worksheet.docx" target="_blank" download>📥 u10_worksheet(`.docx`)</a>
+- <a href="../../assets/lac/downloads/u10/u10_worksheet.txt" target="_blank" download>📥 u10_worksheet(`.txt`)</a>
+- <a href="../../assets/lac/downloads/u10/u10_worksheet.docx" target="_blank" download>📥 u10_worksheet(`.docx`)</a>
 
 ### Unit 10 Recording
 

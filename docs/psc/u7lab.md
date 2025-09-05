@@ -17,8 +17,8 @@ The lab has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="./assets/downloads/u7/u7_lab.txt" target="_blank" download>📥 u7_lab(`.txt`)</a>
-- <a href="./assets/downloads/u7/u7_lab.pdf" target="_blank" download>📥 u7_lab(`.pdf`)</a>
+- <a href="../../assets/psc/downloads/u7/u7_lab.txt" target="_blank" download>📥 u7_lab(`.txt`)</a>
+- <a href="../../assets/psc/downloads/u7/u7_lab.pdf" target="_blank" download>📥 u7_lab(`.pdf`)</a>
 
 ## Lab 🧪
 
@@ -26,7 +26,7 @@ These labs focus on pulling metric information and then visualizing that data qu
 
 ### Monitoring Jails with Fail2ban logs
 
-<img src='./assets/images/u7/image1.png'></img>
+<img src='../../assets/psc/images/u7/image1.png'></img>
 
 1. Complete the lab: <https://killercoda.com/het-tanis/course/Linux-Labs/109-fail2ban-with-log-monitoring>
 
@@ -39,7 +39,7 @@ These labs focus on pulling metric information and then visualizing that data qu
 
 ### Monitoring Jails with Fail2ban and telemetry data
 
-<img src='./assets/images/u7/image2.png'></img>
+<img src='../../assets/psc/images/u7/image2.png'></img>
 
 1. Complete the lab here: <https://killercoda.com/het-tanis/course/Linux-Labs/110-fail2ban-with-metric-alerting>
 

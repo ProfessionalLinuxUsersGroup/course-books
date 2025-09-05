@@ -19,8 +19,8 @@
 
 The lab has been provided for convenience below:
 
-- <a href="./assets/downloads/u2/u2_lab.pdf" target="_blank" download>📥 u2_lab(`.pdf`)</a>
-- <a href="./assets/downloads/u2/u2_lab.docx" target="_blank" download>📥 u2_lab(`.docx`)</a>
+- <a href="../../assets/lac/downloads/u2/u2_lab.pdf" target="_blank" download>📥 u2_lab(`.pdf`)</a>
+- <a href="../../assets/lac/downloads/u2/u2_lab.docx" target="_blank" download>📥 u2_lab(`.docx`)</a>
 
 ## Pre-Lab Warm-Up
 
