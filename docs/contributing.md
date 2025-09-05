@@ -322,13 +322,18 @@ Admin Course, so we'd add it to `docs/lac/u6intro.md`.
 This can be done with a raw HTML `<img>` element:
 
 ```html
-<img src="/course-books/assets/lac/images/u6/firewall_connection_diagram.png"></img>
+<img src="../../assets/lac/images/u6/firewall_connection_diagram.png"></img>
 ```
 
-- This is an **absolute path** to the image, starting from the `/course-books` root.
+This is a **relative path** to the image.
 
-- The `docs/` directory is **not** included in the path. This directory **does
-  not exist** when MkDocs is done building. Use `course-books/` instead of `docs/`.
+- When determining either the relative or absolute path of the image, use
+  `mkdocs build` and examine where the asset file is and where the target page is.  
+
+  - For example, `docs/lac/u6intro.md` will end up in `/site/lac/u6intro/index.html`
+
+  - So the relative path from here would be
+    `../../assets/lac/image/u6/firewall_connection_diagram.png`
 
 > **Note**: The markdown syntax `![alt text](/path/to/image)` also works. However, to
 > maintain consistency, we ask that you use the HTML version.
