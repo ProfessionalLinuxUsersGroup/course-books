@@ -107,7 +107,7 @@ Pull requests with substantial merge conflicts may be rejected.
 You can do this from the GitHub web UI easily with the `Sync Fork` button. If you want to do this from the terminal, you can add a new `git remote` called `upstream`.
 
 ```bash
-git remote add upstream https://github.com/ProfessionalLinuxUsersGroup/lac.git
+git remote add upstream https://github.com/ProfessionalLinuxUsersGroup/course-books.git
 ```
 
 Then, to sync your local fork with the original repo, do a `git pull` from the `upstream` remote.
@@ -136,14 +136,14 @@ visibility and collaboration before merging changes.
 
 ### Create a Fork
 
-Go to the [original repository link](https://github.com/ProfessionalLinuxUsersGroup/lac).
+Go to the [original repository link](https://github.com/ProfessionalLinuxUsersGroup/course-books).
 Click on "Fork" on the top right.
 Now you'll have your own version of the repository that you can clone.
 
 ```bash
-git clone git@github.com:YOUR_USERNAME/lac.git
+git clone git@github.com:YOUR_USERNAME/course-books.git
 # Or, with https:
-git clone https://github.com/YOUR_USERNAME/lac.git
+git clone https://github.com/YOUR_USERNAME/course-books.git
 ```
 
 ### Clone the Fork to your Local Machine
@@ -151,7 +151,7 @@ git clone https://github.com/YOUR_USERNAME/lac.git
 Then you'll need to clone your fork down to your local machine in order to work on it.
 
 ```bash
-git clone git@github.com:yourname/lac.git
+git clone git@github.com:yourname/course-books.git
 ```
 
 ### Create a New Branch
@@ -268,7 +268,7 @@ for free, so there is only one person who is able to merge pull requests at the 
 
 ### Create a Pull Request
 
-Now you'll be able to go to the [original repository link](https://github.com/ProfessionalLinuxUsersGroup/lac) and go to the "Pull Requests" tab and create a new pull request.
+Now you'll be able to go to the [original repository link](https://github.com/ProfessionalLinuxUsersGroup/course-books) and go to the "Pull Requests" tab and create a new pull request.
 Select your branch `unit1-worksheet`, and create a description and mention an issue by number (e.g., `#5`).
 
 ## Adding Assets
@@ -349,11 +349,11 @@ before opening a pull request.
 
 Below are links to the necessary materials to build out the course templates:
 
-- Look over the [template pages wiki](https://github.com/ProfessionalLinuxUsersGroup/lac/wiki), or directly here:
-  - Pages: [intro](https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/ref/intro.md),
-    [bonus](https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/ref/ub.md),
-    [lab](https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/ref/ulab.md),
-    [worksheet](https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/ref/uws.md)
+- Look over the [template pages wiki](https://github.com/ProfessionalLinuxUsersGroup/course-books/wiki), or directly here:
+  - Pages: [intro](https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/ref/intro.md),
+    [bonus](https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/ref/ub.md),
+    [lab](https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/ref/ulab.md),
+    [worksheet](https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/ref/uws.md)
 
 Ancillary unit videos provided by Scott:
 
