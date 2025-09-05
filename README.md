@@ -47,7 +47,7 @@ Outlined below are a set of objectives this repository attempts to provide.
 ## To Begin Contributing
 
 ProLUG asks all contributors to understand and adhere to the principles and guidelines detailed
-in the [contributing.md](https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/src/contributing.md) markdown file.
+in the [contributing.md](https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/src/contributing.md) markdown file.
 Contributors found significantly deviating from these policies will have their work discarded appropriately.
 
 Contributors will be provided with supplementary material to begin building out unit worksheet labs
@@ -56,12 +56,12 @@ and templates within the project managed issues board.
 To start contributing:
 
 - Understand the repository objectives
-- Read the [contributing.md](https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/src/contributing.md) markdown
-- Look over the [template pages wiki](https://github.com/ProfessionalLinuxUsersGroup/lac/wiki), or directly here:
-  - Pages: [intro](https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/ref/intro.md),
-    [bonus](https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/ref/ub.md),
-    [lab](https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/ref/ulab.md),
-    [worksheet](https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/ref/uws.md)
-- Request to be assigned a task within the repo [Issues](https://github.com/ProfessionalLinuxUsersGroup/lac/issues) tab
+- Read the [contributing.md](https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/src/contributing.md) markdown
+- Look over the [template pages wiki](https://github.com/ProfessionalLinuxUsersGroup/course-books/wiki), or directly here:
+  - Pages: [intro](https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/ref/intro.md),
+    [bonus](https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/ref/ub.md),
+    [lab](https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/ref/ulab.md),
+    [worksheet](https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/ref/uws.md)
+- Request to be assigned a task within the repo [Issues](https://github.com/ProfessionalLinuxUsersGroup/course-books/issues) tab
 - Fork this repository and create a development branch for eventual pull requests
 - Strictly adhere to contemporary GitHub contribution decorum to facilitate the version control process

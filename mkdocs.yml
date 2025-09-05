@@ -243,11 +243,11 @@ extra:
 
     - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/@het_tanis8213
-      name: Het_Tanis Youtube
+      name: \@Het_Tanis Youtube
 
     - icon: material/web
-      link: https://www.prolug.org/
-      name: ProLUG.org
+      link: https://prolug.org/
+      name: https://ProLUG.org/
 
 copyright: Copyright &copy; 2025 Professional Linux Users Group
 
