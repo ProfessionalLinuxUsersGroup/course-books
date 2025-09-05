@@ -168,8 +168,12 @@ to some as incredibly useful when engaging in version control with Git.
 
 A notably useful workflow provided by Git is the `git worktree`. This allows the instantion of multiple
 working directories within a repository that point to a particular branch for any number of reasons without
-needing to clone the base respository separately. Suppose one worktree is created to work on feature "x" on
-branch feat, and a separate worktree is implemented for bug "y" on branch 'bug', all localized in the same repository.
+needing to clone the base respository separately.
+
+Suppose one worktree is created to work on feature "x" on branch feat, and a separate worktree is implemented
+for bug "y" on branch 'bug', all localized in the same repository. A git worktree could even be utilized to quickly
+checkout a pull request in its own separate directory within the repository facilitating downstream commands like
+pushing over changed files to a host for testing.
 
 Git worktree [documentation](https://git-scm.com/docs/git-worktree).
 

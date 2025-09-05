@@ -12,8 +12,8 @@ We decided to consolidate these repositories into a monorepo for simplicity and 
 
 ## Goals
 
-The overarching goal of this project is to provide a free, open source Systems Administration course
-predicated on the work produced by Scott Champine, an experienced and skilled Senior Systems Engineer.
+The overarching goal of this project is to provide free and open source educational course material predicated on the
+work produced by Scott Champine, an experienced and skilled Senior Systems Engineer.
 
 Scott has over 20+ years administering and engineering Linux systems across a broad variety of
 fields and teams. He has built and maintains systems like High Performance Compute (HPC) clusters
@@ -35,14 +35,14 @@ Outlined below are a set of objectives this repository attempts to provide.
     - Basic command line skills, ie. scripting, tools, syntax
     - Networking
     - Security practices
-  - Basic Systems engineering
+  - Systems engineering
     - Server build processes
     - System hardening
     - Construction of build testing, ie. conditional testing, system tasks
     - Introductions to technologies like:
       - Podman, Kubernetes, Ansible
-    - Automation and implementation
     - Troubleshooting and system benchmarking
+- Systems Automation and implementation
 
 ## To Begin Contributing
 
