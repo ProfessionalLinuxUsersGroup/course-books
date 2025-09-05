@@ -107,7 +107,7 @@ Pull requests with substantial merge conflicts may be rejected.
 You can do this from the GitHub web UI easily with the `Sync Fork` button. If you want to do this from the terminal, you can add a new `git remote` called `upstream`.
 
 ```bash
-git remote add upstream https://github.com/ProfessionalLinuxUsersGroup/lac.git
+git remote add upstream https://github.com/ProfessionalLinuxUsersGroup/course-books.git
 ```
 
 Then, to sync your local fork with the original repo, do a `git pull` from the `upstream` remote.
@@ -136,14 +136,14 @@ visibility and collaboration before merging changes.
 
 ### Create a Fork
 
-Go to the [original repository link](https://github.com/ProfessionalLinuxUsersGroup/lac).
+Go to the [original repository link](https://github.com/ProfessionalLinuxUsersGroup/course-books).
 Click on "Fork" on the top right.
 Now you'll have your own version of the repository that you can clone.
 
 ```bash
-git clone git@github.com:YOUR_USERNAME/lac.git
+git clone git@github.com:YOUR_USERNAME/course-books.git
 # Or, with https:
-git clone https://github.com/YOUR_USERNAME/lac.git
+git clone https://github.com/YOUR_USERNAME/course-books.git
 ```
 
 ### Clone the Fork to your Local Machine
@@ -151,7 +151,7 @@ git clone https://github.com/YOUR_USERNAME/lac.git
 Then you'll need to clone your fork down to your local machine in order to work on it.
 
 ```bash
-git clone git@github.com:yourname/lac.git
+git clone git@github.com:yourname/course-books.git
 ```
 
 ### Create a New Branch
@@ -268,8 +268,80 @@ for free, so there is only one person who is able to merge pull requests at the 
 
 ### Create a Pull Request
 
-Now you'll be able to go to the [original repository link](https://github.com/ProfessionalLinuxUsersGroup/lac) and go to the "Pull Requests" tab and create a new pull request.
+Now you'll be able to go to the [original repository link](https://github.com/ProfessionalLinuxUsersGroup/course-books) and go to the "Pull Requests" tab and create a new pull request.
 Select your branch `unit1-worksheet`, and create a description and mention an issue by number (e.g., `#5`).
+
+## Adding Assets
+
+If you'd like to add an image to one of the pages, you will need to save that
+image into the `docs/assets/` directory.
+
+Each book has its own subdirectory in `assets/`:
+
+```text
+assets/
+├── deploy
+├── downloads
+├── images
+├── lac
+├── pcae
+└── psc
+```
+
+- Notice the `lac`, `psc`, and `pcae` directories. These are where course-specific
+  assets belong.
+
+If you're attempting to add an image to a page in the Linux Admin Course book,
+you'd move that image to the `docs/assets/lac/images/` directory.
+
+It's preferable that each unit of each course also has its own directory.
+
+For example, if you're adding a diagram to the intro page in unit 6 of the
+Linux Admin Course book, this would go in `/docs/asset/lac/images/u6/`. Giving
+the image file a descriptive name also helps (e.g., `firewall-connection-diagram.png`).
+
+This convention helps us keep track of assets and where they belong.
+
+Continuing with that example, this is the path that the image should go in:
+
+```text
+docs/
+└── assets/
+    └── lac/
+       └── images/
+           └── u6/
+               └── firewall-connection-diagram.png
+```
+
+---
+
+Once you've added the asset to the appropriate directory, you need to reference
+it in the page itself. We're adding a diagram to the Unit 6 Intro of the Linux 
+Admin Course, so we'd add it to `docs/lac/u6intro.md`.  
+
+This can be done with a raw HTML `<img>` element:
+
+```html
+<img src="../../assets/lac/images/u6/firewall_connection_diagram.png"></img>
+```
+
+This is a **relative path** to the image.
+
+- When determining either the relative or absolute path of the image, use
+  `mkdocs build` and examine where the asset file is and where the target page is.  
+
+  - For example, `docs/lac/u6intro.md` will end up in `/site/lac/u6intro/index.html`
+
+  - So the relative path from here would be
+    `../../assets/lac/image/u6/firewall_connection_diagram.png`
+
+> **Note**: The markdown syntax `![alt text](/path/to/image)` also works. However, to
+> maintain consistency, we ask that you use the HTML version.
+
+After adding that, your new asset should be ready to go!
+
+To minimize the strain on maintainers, we ask that you test your change locally
+before opening a pull request.
 
 ## Supporting Material
 
@@ -277,11 +349,11 @@ Select your branch `unit1-worksheet`, and create a description and mention an is
 
 Below are links to the necessary materials to build out the course templates:
 
-- Look over the [template pages wiki](https://github.com/ProfessionalLinuxUsersGroup/lac/wiki), or directly here:
-  - Pages: [intro](https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/ref/intro.md),
-    [bonus](https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/ref/ub.md),
-    [lab](https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/ref/ulab.md),
-    [worksheet](https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/ref/uws.md)
+- Look over the [template pages wiki](https://github.com/ProfessionalLinuxUsersGroup/course-books/wiki), or directly here:
+  - Pages: [intro](https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/ref/intro.md),
+    [bonus](https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/ref/ub.md),
+    [lab](https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/ref/ulab.md),
+    [worksheet](https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/ref/uws.md)
 
 Ancillary unit videos provided by Scott:
 
