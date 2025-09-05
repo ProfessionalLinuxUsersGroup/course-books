@@ -271,6 +271,51 @@ for free, so there is only one person who is able to merge pull requests at the 
 Now you'll be able to go to the [original repository link](https://github.com/ProfessionalLinuxUsersGroup/lac) and go to the "Pull Requests" tab and create a new pull request.
 Select your branch `unit1-worksheet`, and create a description and mention an issue by number (e.g., `#5`).
 
+## Adding Assets
+
+If you'd like to add an image to one of the pages, you will need to save that
+image into the `docs/assets/` directory.
+
+Each book has its own subdirectory in assets:
+
+```text
+assets/
+├── deploy
+├── downloads
+├── images
+├── lac
+├── pcae
+└── psc
+```
+
+Notice the `lac`, `psc`, and `pcae` directories. These are where course-specific
+assets belong.
+
+If you're attempting to add an image to a page in the Linux Admin Course book,
+you'd move that image to the `docs/assets/lac/images/` directory.
+
+It's preferable that each unit has its own assets directory. For example, if you're
+adding a diagram to a page in unit 6 of the Linux Admin Course book, this would
+go in `/docs/asset/lac/images/u6/`. Giving the image file a descriptive name
+also helps. This convention helps us keep track of assets and where they
+belong.
+
+---
+
+Once you've added an asset to the appropriate directory, you now need to
+reference it in the page itself.
+
+This can be done with a raw HTML `<img>` element.
+
+```html
+<img src="assets/lac/images/u6/firewall_connection_diagram.png"></img>
+```
+
+After adding that, your new asset should be ready to go!
+
+To minimize the strain on maintainers, we ask that you test your change locally
+before opening a pull request.
+
 ## Supporting Material
 
 ---
