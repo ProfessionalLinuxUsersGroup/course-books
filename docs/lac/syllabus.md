@@ -8,13 +8,13 @@ Contains all materials pertaining to the course including links to external reso
 It has been put together with care by a number of ProLUG group members referencing original
 instructional materials produce by Scott Champine (het_tanis).
 
-The content is version controlled with Git and stored here: <https://github.com/ProfessionalLinuxUsersGroup/lac/>
+The content is version controlled with Git and stored here: <https://github.com/ProfessionalLinuxUsersGroup/course-books>
 
 Furthermore, the book has been built with mdbook for ease of navigation. Be sure to try the search functionality.
 
 **Course Description:**
 
-This course addresses how the Linux systems work for administration level tasks inside a
+This course addresses how Linux systems work for administration level tasks inside a
 corporate environment. This course will explore everything from the administration of a
 Linux server and fundamental command line tasks to advanced topics such as patching and
 web administration.
@@ -27,7 +27,7 @@ Prerequisites: None
 
 **Contact hours: 120 (50 Theory Hours, 70 Lab Hours)**
 
-### Course Summary
+## Course Summary
 
 #### Major Instructional Areas
 
@@ -54,7 +54,7 @@ Prerequisites: None
 8. Describe and troubleshoot network services.
 9. Write and perform Ansible tasks to automate deployments to servers.
 
-### Learning Materials and References
+## Learning Materials and References
 
 #### Required Resources
 
@@ -83,9 +83,9 @@ ProLUG Lab access to Rocky 9.4+ instance.
   - 3 x 3GB hard drives (for raid and disk labs)
   - Network Interface (IP already setup)
 
-<img src="./assets/images/syllabus-lab.png" style="border-radius:2%"></img>
+<img src="../../assets/images/proluglab.png"></img>
 
-### Course Plan
+## Course Plan
 
 #### Instructional Methods
 

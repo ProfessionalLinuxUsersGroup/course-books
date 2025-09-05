@@ -30,6 +30,7 @@ theme:
     - content.tabs.link
     - content.action.edit
     - content.action.view
+    - content.code.annotate
     - content.code.copy
     - content.code.select
 
@@ -254,6 +255,8 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.blocks.caption
