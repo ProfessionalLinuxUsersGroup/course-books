@@ -27,7 +27,7 @@
     The ProLUG Linux Administration course, designed to build foundational
     knowledge in Linux Systems Administration
 
-    [:octicons-arrow-right-24: Admin Course](https://cmckee786.github.io/prolug-mkdocs/lac/syllabus/)
+    [:octicons-arrow-right-24: Admin Course](./lac/syllabus)
 
 -   :material-server-security:{ .lg .middle } __Security Course__
 
@@ -36,7 +36,7 @@
     The ProLUG Linux Security course, an advanced course that focuses on
     systems security
 
-    [:octicons-arrow-right-24: Security Course](https://cmckee786.github.io/prolug-mkdocs/psc/syllabus/)
+    [:octicons-arrow-right-24: Security Course](./psc/syllabus)
 
 </div>
 
