@@ -17,8 +17,8 @@ The lab has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="./assets/downloads/u6/u6_lab.txt" target="_blank" download>📥 u6_lab(`.txt`)</a>
-- <a href="./assets/downloads/u6/u6_lab.pdf" target="_blank" download>📥 u6_lab(`.pdf`)</a>
+- <a href="../../assets/psc/downloads/u6/u6_lab.txt" target="_blank" download>📥 u6_lab(`.txt`)</a>
+- <a href="../../assets/psc/downloads/u6/u6_lab.pdf" target="_blank" download>📥 u6_lab(`.pdf`)</a>
 
 ## Lab 🧪
 
@@ -37,7 +37,7 @@ or another of these tools may be the right choice in their organization or not.
 1. Consider this architecture, where all modern Linux systems have built in rsyslog capabilities. One of them can
    be set to "catch" or aggregate all logs and then any number of servers can send over to them.
 
-<img src='./assets/images/u6/image1.jpg'></img>
+<img src='../../assets/psc/images/u6/image1.jpg'></img>
 
 2. Complete the lab: <https://killercoda.com/het-tanis/course/Linux-Labs/206-setting-up-rsyslog>
 
@@ -69,7 +69,7 @@ or another of these tools may be the right choice in their organization or not.
 
      - Can you see it in your Grafana?
 
-   <img src='./assets/images/u6/image2.jpg'></img>
+   <img src='../../assets/psc/images/u6/image2.jpg'></img>
 
    - Can you modify the file loki-write.py to say something related to your name?
 
@@ -94,7 +94,7 @@ or another of these tools may be the right choice in their organization or not.
 2. Review our diagram here. Maybe we're testing kafka and want to integrate it to the existing infrastructure.
    Maybe we have a remote location that we need to reliably catch logs in real time and then move them remote. There are many reasons to use this.
 
-<img src='./assets/images/u6/image3.jpg'></img>
+<img src='../../assets/psc/images/u6/image3.jpg'></img>
 
 3. Complete the killercoda lab found here: <https://killercoda.com/het-tanis/course/Linux-Labs/108-kafka-to-loki-logging>
 

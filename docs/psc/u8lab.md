@@ -17,8 +17,8 @@ The lab has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="./assets/downloads/u8/u8_lab.txt" target="_blank" download>📥 u8_lab(`.txt`)</a>
-- <a href="./assets/downloads/u8/u8_lab.pdf" target="_blank" download>📥 u8_lab(`.pdf`)</a>
+- <a href="../../assets/psc/downloads/u8/u8_lab.txt" target="_blank" download>📥 u8_lab(`.txt`)</a>
+- <a href="../../assets/psc/downloads/u8/u8_lab.pdf" target="_blank" download>📥 u8_lab(`.pdf`)</a>
 
 ## Lab 🧪
 
@@ -26,7 +26,7 @@ These labs focus on configuration drift tracking and remediation.
 
 ### Operational Activities
 
-![Image 1](./assets/images/u8/image1.jpeg)
+![Image 1](../../assets/psc/images/u8/image1.jpeg)
 
 1. Check your stig viewer and go to RHEL 9 stigs.
 
@@ -82,7 +82,7 @@ These labs focus on configuration drift tracking and remediation.
      - What do you notice about the output?
        1. What do you need to go read about?
 
-![Image 2](./assets/images/u8/image2.jpeg)
+![Image 2](../../assets/psc/images/u8/image2.jpeg)
 
 (Mine took 5 minutes 8 seconds to run on the lab system)
 
@@ -105,7 +105,7 @@ These labs focus on configuration drift tracking and remediation.
    - How long did this take to run?
      1. What type of usage do you see against user/system space?
 
-![Image 3](./assets/images/u8/image3.png)
+![Image 3](../../assets/psc/images/u8/image3.png)
 
 ### Using Ansible to fix drift
 
@@ -127,7 +127,7 @@ These labs focus on configuration drift tracking and remediation.
    ansible-playbook -i /root/hosts /root/web_environment.yaml
    ```
 
-![Image 4](./assets/images/u8/image4.png)
+![Image 4](../../assets/psc/images/u8/image4.png)
 
 - Did this force the system back into a working configuration?
   - If it worked, would it always work, or would they (the systems) need to be

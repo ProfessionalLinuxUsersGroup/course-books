@@ -19,8 +19,8 @@
 
 The lab has been provided for convenience below:
 
-- <a href="./assets/downloads/u13/u13_lab.pdf" target="_blank" download>📥 u13_lab(`.pdf`)</a>
-- <a href="./assets/downloads/u13/u13_lab.docx" target="_blank" download>📥 u13_lab(`.docx`)</a>
+- <a href="../../assets/lac/downloads/u13/u13_lab.pdf" target="_blank" download>📥 u13_lab(`.pdf`)</a>
+- <a href="../../assets/lac/downloads/u13/u13_lab.docx" target="_blank" download>📥 u13_lab(`.docx`)</a>
 
 ## Pre-Lab Warm-Up
 
@@ -89,7 +89,7 @@ Look in the results to see output.
 
 1. Harden sshd
 
-   <img src="./assets/downloads/u13/image2.jpeg"></img>
+   <img src="../../assets/lac/downloads/u13/image2.jpeg"></img>
 
    - Is your system hardened in this capacity?
    - How did you check?
@@ -101,7 +101,7 @@ Look in the results to see output.
    - Read about cowsay – `man cowsay`
    - Remove cowsay – `dnf remove cowsay`
 
-<img src="./assets/downloads/u13/image3.png"></img>
+<img src="../../assets/lac/downloads/u13/image3.png"></img>
 
 #### Rescan to validate change
 

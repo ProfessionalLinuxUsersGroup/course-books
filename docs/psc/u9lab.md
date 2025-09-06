@@ -10,8 +10,8 @@ The lab has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="./assets/downloads/u9/u9_lab.txt" target="_blank" download>📥 u9_lab(`.txt`)</a>
-- <a href="./assets/downloads/u9/u9_lab.pdf" target="_blank" download>📥 u9_lab(`.pdf`)</a>
+- <a href="../../assets/psc/downloads/u9/u9_lab.txt" target="_blank" download>📥 u9_lab(`.txt`)</a>
+- <a href="../../assets/psc/downloads/u9/u9_lab.pdf" target="_blank" download>📥 u9_lab(`.pdf`)</a>
 
 ### Setting up Rsyslog with TLS
 

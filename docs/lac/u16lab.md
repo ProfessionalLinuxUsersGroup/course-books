@@ -16,9 +16,9 @@ on systems in the ProLUG lab environment.
 
 The lab has been provided for convenience below:
 
-- <a href="./assets/downloads/u16/u16_lab.pdf" target="_blank" download>📥 u16_lab(`.pdf`)</a>
-- <a href="./assets/downloads/u16/u16_lab.txt" target="_blank" download>📥 u16_lab(`.txt`)</a>
-- <a href="./assets/downloads/u16/u16_lab.docx" target="_blank" download>📥 u16_lab(`.docx`)</a>
+- <a href="../../assets/lac/downloads/u16/u16_lab.pdf" target="_blank" download>📥 u16_lab(`.pdf`)</a>
+- <a href="../../assets/lac/downloads/u16/u16_lab.txt" target="_blank" download>📥 u16_lab(`.txt`)</a>
+- <a href="../../assets/lac/downloads/u16/u16_lab.docx" target="_blank" download>📥 u16_lab(`.docx`)</a>
 
 ## LAB
 

@@ -15,8 +15,8 @@ The lab has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.docx`
 could be transposed to a `.md` file.
 
-- <a href="./assets/downloads/u2/u2_lab.txt" target="_blank" download>📥 u2_lab(`.txt`)</a>
-- <a href="./assets/downloads/u2/u2_lab.docx" target="_blank" download>📥 u2_lab(`.docx`)</a>
+- <a href="../../assets/psc/downloads/u2/u2_lab.txt" target="_blank" download>📥 u2_lab(`.txt`)</a>
+- <a href="../../assets/psc/downloads/u2/u2_lab.docx" target="_blank" download>📥 u2_lab(`.docx`)</a>
 
 ## Pre-Lab Warm-Up
 
@@ -49,15 +49,15 @@ Can you verify FIPS status?
 
 Download the STIG Viewer 2.18 from - <https://public.cyber.mil/stigs/downloads/>
 
-<img src="./assets/images/u2/image2.png"></img>
+<img src="../../assets/psc/images/u2/image2.png"></img>
 
 Download the STIG for RHEL 9 and the import it into your STIG viewer
 
-<img src="./assets/images/u2/image3.png"></img>
+<img src="../../assets/psc/images/u2/image3.png"></img>
 
 Create a checklist from the opened STIG for RHEL 9
 
-<img src="./assets/images/u2/image4.png"></img>
+<img src="../../assets/psc/images/u2/image4.png"></img>
 
 ## Lab 🧪
 
@@ -70,7 +70,7 @@ This lab is designed to have the engineer practice securing a Linux server or se
 Connect to a hammer server  
 Filter by ipv4 and see how many STIGs you have.
 
-<img src="./assets/images/u2/image5.jpeg"></img>
+<img src="../../assets/psc/images/u2/image5.jpeg"></img>
 
 #### Examine STIG V-257957
 
@@ -83,7 +83,7 @@ Is it set properly on your system?
 sysctl -a | grep -i ipv4 | grep -i syncookies
 ```
 
-<img src="./assets/images/u2/image6.png"></img>
+<img src="../../assets/psc/images/u2/image6.png"></img>
 
 Can you remediate this finding?  
 In this case it's already correctly set.  
@@ -97,7 +97,7 @@ What is the fix?
 What type of control is being implemented?  
 Is it set properly on your system?
 
-<img src="./assets/images/u2/image7.png"></img>
+<img src="../../assets/psc/images/u2/image7.png"></img>
 
 How would you go about remediating this on your system?
 
@@ -112,7 +112,7 @@ Is it set properly on your system?
 
 How many STIGS do you see?
 
-<img src="./assets/images/u2/image8.jpeg"></img>
+<img src="../../assets/psc/images/u2/image8.jpeg"></img>
 
 What do these STIGS appear to be trying to do? What types of controls are they?
 

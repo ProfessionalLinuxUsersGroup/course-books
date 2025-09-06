@@ -17,28 +17,28 @@ The lab has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="./assets/downloads/u5/u5_lab.txt" target="_blank" download>📥 u5_lab(`.txt`)</a>
-- <a href="./assets/downloads/u5/u5_lab.pdf" target="_blank" download>📥 u5_lab(`.pdf`)</a>
-<!-- - <a href="./assets/downloads/u5/u5_lab.docx" target="_blank" download>📥 u5_lab(`.docx`)</a> -->
+- <a href="../../assets/psc/downloads/u5/u5_lab.txt" target="_blank" download>📥 u5_lab(`.txt`)</a>
+- <a href="../../assets/psc/downloads/u5/u5_lab.pdf" target="_blank" download>📥 u5_lab(`.pdf`)</a>
+<!-- - <a href="../../assets/psc/downloads/u5/u5_lab.docx" target="_blank" download>📥 u5_lab(`.docx`)</a> -->
 
 ## PreLAB
 
 Download the STIG Viewer 2.18 from - <https://public.cyber.mil/stigs/downloads/>
 
-<img src="./assets/images/download_stig_viewer.png" />
+<img src="../../assets/psc/images/download_stig_viewer.png" />
 
 Download the STIG for Apache 2.4 and the import it into your STIG viewer
 
-<img src="./assets/images/download_apache2_stig.png" />
+<img src="../../assets/psc/images/download_apache2_stig.png" />
 
 Create a checklist from the opened STIG for Apache 2.4
 
-<img src="./assets/images/create_apache2_stig_checklist.png" />
+<img src="../../assets/psc/images/create_apache2_stig_checklist.png" />
 
 Review the software download process for Mellanox drivers:  
 [Linux InfiniBand Drivers](https://network.nvidia.com/products/infiniband-drivers/linux/mlnx_ofed/)
 
-<img src="./assets/images/u5/linux_infiniband_drivers_mlnx_u5lab.png" />
+<img src="../../assets/psc/images/u5/linux_infiniband_drivers_mlnx_u5lab.png" />
 
 Look through the available downloads and see if you can find the currently available
 LTS for Rocky 9.5 x86_64.  

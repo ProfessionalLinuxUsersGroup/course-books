@@ -18,8 +18,8 @@ The lab has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.docx`
 could be transposed to a `.md` file.
 
-- <a href="./assets/downloads/u3/u3_lab.pdf" target="_blank" download>📥 u3_lab(`.pdf`)</a>
-- <a href="./assets/downloads/u3/u3_lab.docx" target="_blank" download>📥 u3_lab(`.docx`)</a>
+- <a href="../../assets/psc/downloads/u3/u3_lab.pdf" target="_blank" download>📥 u3_lab(`.pdf`)</a>
+- <a href="../../assets/psc/downloads/u3/u3_lab.docx" target="_blank" download>📥 u3_lab(`.docx`)</a>
 
 **EXERCISES** (Warmup to quickly run through your system and familiarize yourself)
 
@@ -39,15 +39,15 @@ cat /etc/pam.d/sshd
 
 Download the STIG Viewer 2.18 from - https://public.cyber.mil/stigs/downloads/
 
-<img src="./assets/images/u3/image6.png"></img>
+<img src="../../assets/psc/images/u3/image6.png"></img>
 
 Download the STIG for RHEL 9 and the import it into your STIG viewer
 
-<img src="./assets/images/u3/image1.png"></img>
+<img src="../../assets/psc/images/u3/image1.png"></img>
 
 Create a checklist from the opened STIG for RHEL 9
 
-<img src="./assets/images/u3/image2.png"></img>
+<img src="../../assets/psc/images/u3/image2.png"></img>
 
 ## Lab 🧪
 
@@ -60,7 +60,7 @@ This lab is designed to have the engineer practice securing a Linux server or se
 Connect to a hammer server  
 Filter by pam and see how many STIGS you have. (Why is it really only 16?)
 
-<img src="./assets/images/u3/image4.jpg"></img>
+<img src="../../assets/psc/images/u3/image4.jpg"></img>
 
 #### Examine STIG V-257986
 
@@ -73,7 +73,7 @@ Is it set properly on your system?
 grep -i pam /etc/ssh/sshd_config
 ```
 
-<img src="./assets/images/u3/image7.png"></img>
+<img src="../../assets/psc/images/u3/image7.png"></img>
 
 Can you remediate this finding?
 
@@ -95,7 +95,7 @@ Is it set properly on your system?
 
 #### Filter by "password complexity"
 
-<img src="./assets/images/u3/image3.jpg"></img>
+<img src="../../assets/psc/images/u3/image3.jpg"></img>
 
 How many are there?  
 What are the password complexity rules?  

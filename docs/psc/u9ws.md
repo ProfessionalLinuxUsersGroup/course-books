@@ -23,8 +23,8 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="./assets/downloads/u9/u9_worksheet.txt" target="_blank" download>📥 u9_worksheet(`.txt`)</a>
-- <a href="./assets/downloads/u9/u9_worksheet.pdf" target="_blank" download>📥 u9_worksheet(`.pdf`)</a>
+- <a href="../../assets/psc/downloads/u9/u9_worksheet.txt" target="_blank" download>📥 u9_worksheet(`.txt`)</a>
+- <a href="../../assets/psc/downloads/u9/u9_worksheet.pdf" target="_blank" download>📥 u9_worksheet(`.pdf`)</a>
 
 ### Unit 9 Recording
 

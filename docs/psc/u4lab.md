@@ -17,15 +17,15 @@ The lab has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-<!-- - <a href="./assets/downloads/u4/u4_lab.txt" target="_blank" download>📥 u4_lab(`.txt`)</a> -->
-- <a href="./assets/downloads/u4/u4_lab.pdf" target="_blank" download>📥 u4_lab(`.pdf`)</a>
+<!-- - <a href="../../assets/psc/downloads/u4/u4_lab.txt" target="_blank" download>📥 u4_lab(`.txt`)</a> -->
+- <a href="../../assets/psc/downloads/u4/u4_lab.pdf" target="_blank" download>📥 u4_lab(`.pdf`)</a>
 
 
 ## PreLAB
 
 Review lab diagram for the Bastion design.
 
-<img src="./assets/images/u4/u4_lab_bastion_diagram.png" />
+<img src="../../assets/psc/images/u4/u4_lab_bastion_diagram.png" />
 
 ## LAB
 
