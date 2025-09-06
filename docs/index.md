@@ -20,12 +20,12 @@
 
     [:octicons-arrow-right-24: Killer Coda](https://killercoda.com/)
 
--   :material-keyboard-close-outline:{ .lg .middle } __Linux Course__
+-   :material-keyboard-close-outline:{ .lg .middle } __Admin Course__
 
     ---
 
     The ProLUG Linux Administration course, designed to build foundational
-    knowledge in Linux
+    knowledge in Linux Systems Administration
 
     [:octicons-arrow-right-24: Admin Course](https://cmckee786.github.io/prolug-mkdocs/lac/syllabus/)
 

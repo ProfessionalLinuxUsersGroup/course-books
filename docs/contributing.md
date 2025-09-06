@@ -1,4 +1,4 @@
-# Contributing to the ProLUG Linux Sysadmin Course Book
+# Contributing to the ProLUG Linux Course Books
 
 The Professional Linux Users Group (ProLUG) provides a set of requirements
 and guidelines to contribute to this project. Below are steps to ensure
@@ -7,12 +7,10 @@ version control environment.
 
 ## How to be a Successful Contributor
 
----
-
-To be an effective contributor understanding [Git](https://git-scm.com/), whether
-through the command line or an external tool, will be an important part of contributing.
-To this effect it is important that any individual who contributes to this project have
-a working understanding of committing, merging, and other fundamental Git workflows.
+To be an effective contributor understanding Git, whether through the command line or an
+external tool, will be an important part of contributing. To this effect it is important
+that any individual who contributes to this project have a working understanding of committing,
+merging, and other fundamental Git workflows.
 
 For clarity this project utilizes GitHub for remote repositories and CI/CD testing
 pipeline workflows. Git and GitHub are two separate entities where GitHub provides
@@ -21,19 +19,13 @@ the hosting services and Git provides the version control.
 Prospective contributors are directed to several resources should they feel their
 competency with Git or GitHub falls short:
 
-Git documentation:
-
-- <https://git-scm.com/doc>
-
-Git and GitHub video tutorials:
+Git [documentation](https://git-scm.com/doc) and GitHub video tutorials:
 
 - [ByteByteGo's Git Explained in 4 Minutes (4m)](https://www.youtube.com/watch?v=e9lnsKot_SQ) :fontawesome-brands-youtube:{ .youtube }
 - [Fireship's How to use Git and Github (12m)](https://youtu.be/HkdAHXoRtos) :fontawesome-brands-youtube:{ .youtube }
 - [freeCodeCamp's Git and GitHub Crash Course (1hr)](https://youtu.be/RGOj5yH7evk) :fontawesome-brands-youtube:{ .youtube }
 
 ## Signing your Git Commits with SSH
-
----
 
 Contributors who elect to contribute through the command line will need
 to verify their identities before their commits can be accepted. **This step
@@ -56,7 +48,7 @@ To Sign your Git Commits with SSH:
 
 Generate an SSH key pair if you don't have one:
 
-```bash
+```bash linenums="1"
 ssh-keygen -t ed25519
 ```
 
@@ -68,7 +60,7 @@ Add SSH public key ('.pub' suffix) to GitHub as "Signing Key".
 Below is a bash script that will attempt to configure signing
 Git commits on a localhost:
 
-```bash
+```bash title="commit-sign.bash" linenums="1"
 #!/bin/bash
 GH_USERNAME="YourUsername"
 git config --global gpg.format ssh
@@ -93,16 +85,14 @@ contributing to this project. Unverified commits will be scrutinized and likely 
 
 ## Syncing your Fork with the Upstream ProLUG Repo
 
----
-
 ![syncfork](assets/images/syncfork.png)
 
 In an effort to minimize merge conflicts we strongly suggest forks remain up to date with
 the original repository before committing changes. This will help us reduce pull request management overhead.
 
-<div class = warning>
-Pull requests with substantial merge conflicts may be rejected.
-</div>
+!!! warning
+
+    Pull requests with substantial merge conflicts may be rejected or marked for change requests.
 
 You can do this from the GitHub web UI easily with the `Sync Fork` button. If you want to do this from the terminal, you can add a new `git remote` called `upstream`.
 
@@ -119,8 +109,6 @@ git pull upstream main
 This fork should now be up to date with the original upstream repository.
 
 ## Basic Contribution Workflow
-
----
 
 You'll create your own fork of the repository using the GitHub web UI, create a
 branch, make changes, push to your fork, then open a pull request.
@@ -172,45 +160,64 @@ Make changes to the `u1ws.md`.
 
 ## Consider a few Useful Practices
 
----
-
 The practices presented below are not required to contribute to the ProLUG
 course books but can streamline contributing to any project and are considered
-to some as best practice or incredibly useful when engaging in version control
-with Git.
+to some as incredibly useful when engaging in version control with Git.
+
+### Git Worktrees
+
+A notably useful workflow provided by Git is the `git worktree`. This allows the instantion of multiple
+working directories within a repository that point to a particular branch for any number of reasons without
+needing to clone the base respository separately.
+
+Suppose one worktree is created to work on feature "x" on branch feat, and a separate worktree is implemented
+for bug "y" on branch 'bug', all localized in the same repository. A git worktree could even be utilized to quickly
+checkout a pull request in its own separate directory within the repository facilitating downstream commands like
+pushing over changed files to a host for testing.
+
+Git worktree [documentation](https://git-scm.com/docs/git-worktree).
 
 ### Git Rebasing
 
-<div class="warning">
-  <strong>FIRST AND FOREMOST, ONLY REBASE IN LOCAL REPOSITORIES. NEVER REBASE
-  A PUBLIC BRANCH OR REPOSITORY UNLESS YOU FULLY UNDERSTAND THE CONSEQUENCES.
-  YOU HAVE BEEN WARNED.</strong>
-</div>
+???+ warning
 
-Proper implementation of rebasing can leave a clean, and easily readable
-commit history for all concerned parties. Rebasing can also facilitate the
-management of branches and working directories in a notably active project.
+    Do not rebase commits that exist outside your repository and that people may
+    have based work on. Rebase only within your own branches and forks, never onto
+    public branches or repos.
 
-The Git documentation provides a succinct explanation of its utility but
-also how it **could potentially ruin a project** and erase the work of other
-contributors.
+In sum, rebasing can be utilized to replay commits onto a currently checked-out branch if
+such branch is behind in commits from its upstream branch. This allows circumvention of potentially
+hard to read merge commits in a busy repository. As such, proper implementation of rebasing can
+leave a clean, and easily readable commit history for all concerned parties. Rebasing can also
+facilitate the management of branches and working directories in a notably active project in a myriad
+of other ways. Contributors are encouraged to explore the possibilties of rebasing.
+
+```bash title="git-rebase.bash" linenums="1"
+git checkout experiment
+git rebase master
+First, rewinding head to replay your work on top of it...
+Applying: added staged command
+
+# Or even a simple pull
+git pull --rebase # (1)
+```
+
+1.  :pencil: The default `git pull` behavior can be changed to rebase
+    instead of merging which won't require a `--rebase` flag; `git config --global pull.rebase true`.
+    Find out more here: <https://git-scm.com/docs/git-config#Documentation/git-config.txt-pullrebase>
 
 Rebasing also plays a role in facilitating any commit reverts that may need
 to be made in the future. More on that will follow.
 
-<div class="warning">
-  <strong>USE REBASING WISELY</strong>
-</div>
-
-Git Rebasing documentation: <https://git-scm.com/book/en/v2/Git-Branching-Rebasing>
+Git Rebasing [documentation](https://git-scm.com/book/en/v2/Git-Branching-Rebasing).
 
 ### Commit Early, Often, and Squashing Commits
 
 It is great practice to commit early, and often. This however can produce hard
 to read commits for repo maintainers and contributors. Squashing commits, which is
 a type of rebasing, can be utilized to compress a large number of commits made in
-a local repository before being pushed into a remote repository and eventual
-pull requests.
+a local repository before being pushed upstream to a remote repository and eventual
+pull request.
 
 Below is an example of 4 local commits squashed into a single commit that was pushed
 remotely:
@@ -227,10 +234,6 @@ When done appropriately this can greatly facilitate the development process.
 Contributors are strongly encouraged to begin exploring these types of workflows
 if they never have.
 
-<div class="warning">
-<strong>AGAIN, USE REBASING AND SQUASHING WISELY</strong>
-</div>
-
 ### Git Stashing
 
 Another useful practice is to employ "stashing" uncommitted files in
@@ -244,16 +247,13 @@ or merge before committing changes upstream for instance.
 
 More on this here:
 
-<https://www.atlassian.com/git/tutorials/saving-changes/git-stash>
-
-<https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning>
+- <https://www.atlassian.com/git/tutorials/saving-changes/git-stash>
+- <https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning>
 
 ## Commit and Push your Changes
 
----
-
-First make sure your forked repo is [up-to-date with the original](#syncing-your-fork-with-the-upstream-prolug-repo).
-Create your commit (make sure it's [signed](#signing-your-git-commits-with-ssh)!), then push changes to **your own fork** on the new branch.
+First make sure your forked repo is [up-to-date with the original](#create-a-fork).
+Create your commit (make sure it's [signed](#signing-your-git-commits-with-ssh)), then push changes to **your own fork** on the new branch.
 
 ```bash
 git commit -m "descriptive commit message"
@@ -316,8 +316,8 @@ docs/
 ---
 
 Once you've added the asset to the appropriate directory, you need to reference
-it in the page itself. We're adding a diagram to the Unit 6 Intro of the Linux 
-Admin Course, so we'd add it to `docs/lac/u6intro.md`.  
+it in the page itself. We're adding a diagram to the Unit 6 Intro of the Linux
+Admin Course, so we'd add it to `docs/lac/u6intro.md`.
 
 This can be done with a raw HTML `<img>` element:
 
@@ -328,15 +328,16 @@ This can be done with a raw HTML `<img>` element:
 This is a **relative path** to the image.
 
 - When determining either the relative or absolute path of the image, use
-  `mkdocs build` and examine where the asset file is and where the target page is.  
-
+  `mkdocs build` and examine where the asset file is and where the target page is.
   - For example, `docs/lac/u6intro.md` will end up in `/site/lac/u6intro/index.html`
 
   - So the relative path from here would be
     `../../assets/lac/image/u6/firewall_connection_diagram.png`
 
-> **Note**: The markdown syntax `![alt text](/path/to/image)` also works. However, to
-> maintain consistency, we ask that you use the HTML version.
+???+ note
+
+    The markdown syntax `![alt text](/path/to/image)` also works. However, to
+    maintain consistency, we ask that you use the HTML version.
 
 After adding that, your new asset should be ready to go!
 
@@ -344,8 +345,6 @@ To minimize the strain on maintainers, we ask that you test your change locally
 before opening a pull request.
 
 ## Supporting Material
-
----
 
 Below are links to the necessary materials to build out the course templates:
 
@@ -355,10 +354,18 @@ Below are links to the necessary materials to build out the course templates:
     [lab](https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/ref/ulab.md),
     [worksheet](https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/ref/uws.md)
 
-Ancillary unit videos provided by Scott:
+<!-- TODO: Implement wiki for ref material -->
 
-- <https://www.youtube.com/watch?v=eHB8WKWz2eQ&list=PLyuZ_vuAWmprPIqsG11yoUG49Z5dE5TDu>
-
-PDF and docs directly related to each Unit of the course:
-
-- <https://discord.com/channels/611027490848374811/1098309490681598072>
+<!-- - Look over the [template pages wiki](https://github.com/ProfessionalLinuxUsersGroup/lac/wiki), or directly here: -->
+<!--   - Pages: [intro](https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/ref/intro.md), -->
+<!--     [bonus](https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/ref/ub.md), -->
+<!--     [lab](https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/ref/ulab.md), -->
+<!--     [worksheet](https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/ref/uws.md) -->
+<!---->
+<!-- Ancillary unit videos provided by Scott: -->
+<!---->
+<!-- - <https://www.youtube.com/watch?v=eHB8WKWz2eQ&list=PLyuZ_vuAWmprPIqsG11yoUG49Z5dE5TDu> -->
+<!---->
+<!-- PDF and docs directly related to each Unit of the course: -->
+<!---->
+<!-- - <https://discord.com/channels/611027490848374811/1098309490681598072> -->
