@@ -111,7 +111,9 @@ Minimal resources can accomplish our tasks
 - 4 GB RAM
 - Network Interface (IP already setup)
 
-<img src="./assets/images/syllabus-lab.png" style="border-radius:2%"></img>
+<figure markdown="span">
+    <img src="../../assets/images/proluglab.png"></img>
+</figure>
 
 ### Course Plan
 
