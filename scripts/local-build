@@ -75,7 +75,7 @@ if [[ ! -d ./docs && ! -f ./mkdocs.yml ]]; then
     exit 1
 fi
 
-while [[ -n $1 && $1 =~ ^- ]]; do
+while [[ -n $1 && $1 =~ ^- && ! $1 == '--' ]]; do
     case $1 in
         -rm|--remove-venv)
             printf "[INFO]: Virtual environment will be removed on exit.\n"
