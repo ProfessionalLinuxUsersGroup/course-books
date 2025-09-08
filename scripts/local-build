@@ -23,7 +23,6 @@
 #
 #===============================================================================
 
-
 printf "Setting up a local build for ProLUG MkDocs course books...\n"
 
 declare -i REMOVE_VENV=0
@@ -38,8 +37,38 @@ cleanup() {
         rm -rf ./venv &&
         printf "[INFO]: Removed virtual environment.\n"
 }
-
 trap 'printf "Cleaning up...\n"; cleanup; exit 0;' EXIT SIGINT SIGHUP
+
+usage() {
+    cat <<- EOF
+Usage: ./scripts/local-build [OPTIONS] [--]
+
+       To be run from the root directory of the project.
+
+Set up a Python virtual environment and serve the ProLUG MkDocs course books
+locally for development. Automatically installs required dependencies and launches 
+a hot-reloading MkDocs server bound to the host IP.
+
+OPTIONS:
+  -rm, --remove-venv       Remove the virtual environment on exit.
+                           Useful for one-off testing.
+
+  -h,  --help              Display this help message and exit.
+
+NOTES:
+  - Must be run from the root of the course-books project directory.
+  - Requires bash >= 4.4, python3 >= 3.10 with the 'venv' module.
+  - Dependencies installed into the venv: mkdocs, mkdocs-material,
+    mkdocs-glightbox.
+  - The server binds to "\$(hostname -I | cut -d' ' -f1):8000" by default.
+
+EXAMPLES:
+  ./scripts/local-build             # set up venv if needed, then serve
+  ./scripts/local-build -rm         # remove venv after exit
+  ./scripts/local-build --help      # show this help message and exit
+
+EOF
+}
 
 if [[ ! -d ./docs && ! -f ./mkdocs.yml ]]; then
     printf >&2 "[ERROR]: You must invoke this script from the root of the project:\n\n\t./scripts/local-build\n\n"
@@ -52,6 +81,10 @@ while [[ -n $1 && $1 =~ ^- ]]; do
             printf "[INFO]: Removing virtual environment on exit.\n"
             REMOVE_VENV=1
             shift;
+            ;;
+        -h|--help)
+            usage
+            exit 0
             ;;
         *)
             printf >&2 "[ERROR]: Unknown option argument: %s\n" "$1"
@@ -71,7 +104,6 @@ setup-venv(){
         }
     else
         printf "[INFO]: Virtual environment found. Activating...\n"
-
     fi
 
     \. ./venv/bin/activate || {
