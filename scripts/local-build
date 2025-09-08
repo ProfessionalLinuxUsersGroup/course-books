@@ -78,7 +78,7 @@ fi
 while [[ -n $1 && $1 =~ ^- ]]; do
     case $1 in
         -rm|--remove-venv)
-            printf "[INFO]: Removing virtual environment on exit.\n"
+            printf "[INFO]: Virtual environment will be removed on exit.\n"
             REMOVE_VENV=1
             shift;
             ;;
