@@ -13,7 +13,7 @@
 #                 MkDocs server with hot-reloading enabled.
 #
 #       OPTIONS:  -rm, --remove-venv   Remove virtual environment on exit
-#                 -h,  --help          Show this help message and exit
+#                 -h,  --help          Show a help message and exit
 #
 #  REQUIREMENTS:  bash >= 4.4,
 #                 python3 >= 3.10 with 'venv' and 'pip' modules,
