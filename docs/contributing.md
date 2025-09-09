@@ -115,7 +115,7 @@ branch, make changes, push to your fork, then open a pull request.
 
 The basic steps to contribute are outlined below.
 
-### Comment First
+### 1. Comment First
 
 If you'd like to work on a specific worksheet or lab, please let us know first by
 commenting on the issue so you can be assigned to it.
@@ -124,7 +124,7 @@ This way, other contributors can see that someone is already working on it.
 This helps the repository maintainers and contributors attain a high degree of
 visibility and collaboration before merging changes.
 
-### Create a Fork
+### 2. Create a Fork
 
 Go to the [original repository link](https://github.com/ProfessionalLinuxUsersGroup/course-books).
 Click on "Fork" on the top right.
@@ -137,7 +137,7 @@ Then click "Create Fork" on the next page.
 
 Now you'll have your own version of the repository tied to your GitHub account.
 
-### Clone the Fork to your Local Machine
+### 3. Clone the Fork to your Local Machine
 
 After creating your fork, you'll need to clone it down to your local machine in
 order to work on it.
@@ -148,7 +148,7 @@ git clone git@github.com:YOUR_USERNAME/course-books.git
 git clone https://github.com/YOUR_USERNAME/course-books.git
 ```
 
-### Create a New Branch
+### 4. Create a New Branch
 
 Whenever making changes contributors are highly encouraged to create a branch with an
 appropriate name. Switch to that branch, then make changes there.
@@ -172,7 +172,7 @@ git switch lac-unit1-add-worksheet
 git switch -c lac-unit1-add-worksheet
 ```
 
-### Make Changes and Commit
+### 5. Make Changes and Commit
 
 Once you're on your new branch, make changes to the `u1ws.md` using the editor
 of your choice.
@@ -195,7 +195,7 @@ git commit -m "feat: Add lac unit 1 worksheet"
     Your commit message should be structured following the conventions laid
     out here: <https://www.conventionalcommits.org/en/v1.0.0/#summary>
 
-### Push the Changes
+### 6. Push the Changes
 
 After making your commit, you can now push the changes to **your fork** on the
 **new branch** you created earlier.
@@ -207,7 +207,7 @@ git push origin lac-unit1-add-worksheet
 This will update your forked repository on GitHub to contain the new branch
 with the new changes.
 
-### Create a Pull Request
+### 7. Create a Pull Request
 
 ???+ note "Local Testing"
 
