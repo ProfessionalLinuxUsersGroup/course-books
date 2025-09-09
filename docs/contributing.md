@@ -113,6 +113,8 @@ This fork should now be up to date with the original upstream repository.
 You'll create your own fork of the repository using the GitHub web UI, create a
 branch, make changes, push to your fork, then open a pull request.
 
+The basic steps to contribute are outlined below.
+
 ### Comment First
 
 If you'd like to work on a specific worksheet or lab, please let us know first by
@@ -126,20 +128,24 @@ visibility and collaboration before merging changes.
 
 Go to the [original repository link](https://github.com/ProfessionalLinuxUsersGroup/course-books).
 Click on "Fork" on the top right.
-Now you'll have your own version of the repository that you can clone.
+
+<img src="../assets/images/fork_repo1.png"></img>
+
+Then click "Create Fork" on the next page.
+
+<img src="../assets/images/fork_repo2.png"></img>
+
+Now you'll have your own version of the repository tied to your GitHub account.
+
+### Clone the Fork to your Local Machine
+
+After creating your fork, you'll need to clone it down to your local machine in
+order to work on it.
 
 ```bash
 git clone git@github.com:YOUR_USERNAME/course-books.git
 # Or, with https:
 git clone https://github.com/YOUR_USERNAME/course-books.git
-```
-
-### Clone the Fork to your Local Machine
-
-Then you'll need to clone your fork down to your local machine in order to work on it.
-
-```bash
-git clone git@github.com:yourname/course-books.git
 ```
 
 ### Create a New Branch
@@ -153,7 +159,7 @@ appropriate name. Switch to that branch, then make changes there.
     ```plaintext
     <book>-<unit>-<action>
     ```
-    If you are making a change to something that affects the entire project rather 
+    If you are making a change to something that affects the entire project rather
     than just a specific book, give it a descriptive name.
 
 For example, if you're working on adding the Unit 1 Worksheet for the Linux
@@ -206,7 +212,7 @@ with the new changes.
 ???+ note "Local Testing"
 
     We ask that you test your changes locally before opening a pull request.
-    Our [devlopment page](./development.md) outlines how to test locally.
+    Our [development page](./development.md) outlines how to test locally.
 
 Now you'll be able to open a pull request.
 
