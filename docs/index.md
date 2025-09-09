@@ -11,6 +11,15 @@
 
     [:octicons-arrow-right-24: ProLUG.org](https://prolug.org/)
 
+-   :material-star-circle:{ .lg .middle } __Beginners__
+
+    ---
+
+    If you are new and just want to get oriented.
+
+
+    [:octicons-arrow-right-24: Start Here](./beginners/bsh.md)
+
 -   :fontawesome-solid-flask-vial:{ .lg .middle } __Killer Coda Labs__
 
     ---
