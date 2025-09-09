@@ -147,16 +147,76 @@ git clone git@github.com:yourname/course-books.git
 Whenever making changes contributors are highly encouraged to create a branch with an
 appropriate name. Switch to that branch, then make changes there.
 
-For example, if you're working on the Unit 1 Worksheet:
+!!! note "Branch Naming Convention"
+
+    Our branch naming convention is as follows:
+    ```plaintext
+    <book>-<unit>-<action>
+    ```
+    If you are making a change to something that affects the entire project rather 
+    than just a specific book, give it a descriptive name.
+
+For example, if you're working on adding the Unit 1 Worksheet for the Linux
+Admin Course book:
 
 ```bash
-git branch unit1-worksheet
-git switch unit1-worksheet
+git branch lac-unit1-add-worksheet
+git switch lac-unit1-add-worksheet
 # Or, simply:
-git switch -c unit1-worksheet
+git switch -c lac-unit1-add-worksheet
 ```
 
-Make changes to the `u1ws.md`.
+### Make Changes and Commit
+
+Once you're on your new branch, make changes to the `u1ws.md` using the editor
+of your choice.
+
+```bash
+vi u1ws.md
+# Make changes
+:wq
+```
+
+Once the changes are made, commit them.
+
+```bash
+git add u1ws.md
+git commit -m "feat: Add lac unit 1 worksheet"
+```
+
+!!! note "Commit Message Convention"
+
+    Your commit message should be structured following the conventions laid
+    out here: <https://www.conventionalcommits.org/en/v1.0.0/#summary>
+
+### Push the Changes
+
+After making your commit, you can now push the changes to **your fork** on the
+**new branch** you created earlier.
+
+```bash
+git push origin lac-unit1-add-worksheet
+```
+
+This will update your forked repository on GitHub to contain the new branch
+with the new changes.
+
+### Create a Pull Request
+
+???+ note "Local Testing"
+
+    We ask that you test your changes locally before opening a pull request.
+    Our [devlopment page](./development.md) outlines how to test locally.
+
+Now you'll be able to open a pull request.
+
+GitHub should be smart about detecting new changes and prompt you to open
+a pull request upon visiting the original repository or your own fork.
+
+You can also go to the [original repository link](https://github.com/ProfessionalLinuxUsersGroup/course-books), go to the "Pull Requests" tab, and create a new pull request.
+
+After starting your pull request, select your branch `lac-unit1-add-worksheet`,
+create a description, and mention an issue by number, prefixed with `#` (e.g., `#5`).
 
 ## Consider a few Useful Practices
 
@@ -250,27 +310,6 @@ More on this here:
 - <https://www.atlassian.com/git/tutorials/saving-changes/git-stash>
 - <https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning>
 
-## Commit and Push your Changes
-
-First make sure your forked repo is [up-to-date with the original](#create-a-fork).
-Create your commit (make sure it's [signed](#signing-your-git-commits-with-ssh)), then push changes to **your own fork** on the new branch.
-
-```bash
-git commit -m "descriptive commit message"
-git push origin unit1-worksheet
-```
-
-### Comment your Changes
-
-Before creating a pull request, make a comment on the issue containing your changes.
-We're doing this since the GitHub organization feature is paid and we are doing this
-for free, so there is only one person who is able to merge pull requests at the moment.
-
-### Create a Pull Request
-
-Now you'll be able to go to the [original repository link](https://github.com/ProfessionalLinuxUsersGroup/course-books) and go to the "Pull Requests" tab and create a new pull request.
-Select your branch `unit1-worksheet`, and create a description and mention an issue by number (e.g., `#5`).
-
 ## Adding Assets
 
 If you'd like to add an image to one of the pages, you will need to save that
@@ -329,6 +368,7 @@ This is a **relative path** to the image.
 
 - When determining either the relative or absolute path of the image, use
   `mkdocs build` and examine where the asset file is and where the target page is.
+
   - For example, `docs/lac/u6intro.md` will end up in `/site/lac/u6intro/index.html`
 
   - So the relative path from here would be
