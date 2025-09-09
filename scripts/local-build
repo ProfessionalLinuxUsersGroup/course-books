@@ -118,7 +118,7 @@ setup-venv(){
     printf "[INFO]: Python virtual environment successfully activated.\n"
 
     printf "[INFO]: Installing dependencies...\n"
-    pip install -U mkdocs mkdocs-material mkdocs-glightbox > /dev/null || {
+    pip install -U "${PIP_DEPS[@]}" > /dev/null || {
         printf >&2 "[ERROR]: Failed to install dependencies!\n"
         return 1
     }
