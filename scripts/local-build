@@ -33,11 +33,14 @@ declare -a PIP_DEPS=(
 )
 
 cleanup() {
-    [[ $REMOVE_VENV -eq 1 && -d ./venv ]] && 
+    [[ $REMOVE_VENV -gt 0 && -d ./venv ]] && 
         rm -rf ./venv &&
         printf "[INFO]: Removed virtual environment.\n"
 }
-trap 'printf "Cleaning up...\n"; cleanup; exit 0;' EXIT SIGINT SIGHUP
+trap 'printf "Cleaning up...\n"; cleanup; exit 0;' EXIT
+trap 'exit 130' SIGINT
+trap 'exit 129' SIGHUP
+trap 'exit 143' SIGTERM
 
 usage() {
     cat <<- EOF
@@ -88,6 +91,7 @@ while [[ -n $1 && $1 =~ ^- && ! $1 == '--' ]]; do
             ;;
         *)
             printf >&2 "[ERROR]: Unknown option argument: %s\n" "$1"
+            usage
             exit 1
             ;;
     esac
@@ -112,18 +116,13 @@ setup-venv(){
     }
 
     printf "[INFO]: Python virtual environment successfully activated.\n"
-    printf "[INFO]: Checking dependencies...\n"
 
-    if python3 -m pip show "${PIP_DEPS[@]}" | grep -qi 'not found' > /dev/null 2>&1; then
-        printf "[INFO]: Attempting to install dependencies...\n"
-        pip install -U mkdocs mkdocs-material mkdocs-glightbox || {
-            printf >&2 "[ERROR]: Failed to install dependencies!\n"
-            return 1
-        }
-        printf "[INFO]: Dependencies successfully installed.\n"
-    else
-        printf "[INFO]: Dependencies already installed.\n"
-    fi
+    printf "[INFO]: Installing dependencies...\n"
+    pip install -U mkdocs mkdocs-material mkdocs-glightbox > /dev/null || {
+        printf >&2 "[ERROR]: Failed to install dependencies!\n"
+        return 1
+    }
+    printf "[INFO]: Dependencies successfully installed.\n"
     printf "[INFO]: Virtual environment setup complete.\n"
     return 0
 }
