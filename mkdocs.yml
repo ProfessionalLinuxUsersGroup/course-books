@@ -37,6 +37,7 @@ theme:
 nav:
   - Home:
     - index.md
+    - beginners/bsh.md
     -  certify.md
     - Contributing to ProLUG MkDocs:
       - contributing.md

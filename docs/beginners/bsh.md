@@ -1,8 +1,8 @@
-# Hello
+# Getting Started
 
 Welcome to the Professional Linux User Group! You’re likely here because you want to take a structured approach to learning Linux. Our community is passionate about sharing knowledge—we come together voluntarily to create these web-books as companion materials for our interactive courses.
 
-We call them interactive because participation with your peers during the course timeframe is required to earn a certificate. That said, you are also free to follow along with the materials at your own pace. Inside each book, you’ll find everything you need: labs, worksheets, and recorded lecture videos.
+We call them interactive because participation with your peers during the course time frame is required to earn a certificate. That said, you are also free to follow along with the materials at your own pace. Inside each book, you’ll find everything you need: labs, worksheets, and recorded lecture videos.
 
 ### A Bit About Linux
 
@@ -18,7 +18,7 @@ These distributions vary in design and purpose—some focus on ease of use, othe
 
 ## 1. Learning Basic Linux Skills
 
-the best way to understand Linux is through hands-on practice. This is sometimes called Time on Tools (TOT)—the time you spend directly working with the commands, files, and systems yourself. Reading guides and watching tutorials are helpful, but it’s the act of typing commands, troubleshooting mistakes, and seeing the results that makes the knowledge stick.
+The best way to understand Linux is through hands-on practice. This is sometimes called Time on Tools (TOT)—the time you spend directly working with the commands, files, and systems yourself. Reading guides and watching tutorials are helpful, but it’s the act of typing commands, troubleshooting mistakes, and seeing the results that makes the knowledge stick.
 
 ### Killercoda
 
@@ -54,7 +54,7 @@ Take some time to research which option best fits your needs, budget, and comfor
 ## 3. Participation in a Course
 the ProLUG Certified Enterprise Linux Administration Course is meant to teach you the fundamentals. It is a long and involved course at 16 weeks with 
 
-[:octicons-arrow-right-24: Linux Admin Coure Book](/course-books/lac/syllabus/)
+[:octicons-arrow-right-24: Linux Admin Course Book](/course-books/lac/syllabus/)
 
 
 

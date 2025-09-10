@@ -18,3 +18,7 @@ img {
 .md-typeset table:not([class]) {
     display: table;
 }
+
+.youtube {
+  color: #EE0F0F;
+}

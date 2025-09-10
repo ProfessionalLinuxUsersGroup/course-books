@@ -11,41 +11,38 @@
 
     [:octicons-arrow-right-24: ProLUG.org](https://prolug.org/)
 
+-   :fontawesome-solid-flask-vial:{ .lg .middle } __ProLUG Big Book of Labs__
+
+    ---
+
+    Labs from [@Het_Tanis](https://www.youtube.com/@het_tanis8213) :fontawesome-brands-youtube:{ .youtube } himself
+
+    [:octicons-arrow-right-24: Het's Big Book of Labs](https://leanpub.com/theprolugbigbookoflabs)
+
+-   :fontawesome-brands-discord:{ .lg .middle } __Join The ProLUG Discord__
+
+    ---
+
+    Come join a group of dedicated Systems enthusiasts on Discord!
+
+    [Join us on Discord! :fontawesome-solid-paper-plane:](https://discord.com/invite/m6VPPD9usw){ .md-button }
+
 -   :material-star-circle:{ .lg .middle } __Beginners__
 
     ---
 
-    If you are new and just want to get oriented.
+    If you are new and just want to get oriented
 
 
     [:octicons-arrow-right-24: Start Here](./beginners/bsh.md)
 
--   :fontawesome-solid-flask-vial:{ .lg .middle } __Killer Coda Labs__
+-   :fontawesome-solid-book:{ .lg .middle } __Course Books__
 
     ---
 
-    Many of the labs in the course material leverage Killer Coda
+    ProLUG welcomes all prospective contributors, if you'd like to help out check in at the repo!
 
-
-    [:octicons-arrow-right-24: Killer Coda](https://killercoda.com/)
-
--   :material-keyboard-close-outline:{ .lg .middle } __Admin Course__
-
-    ---
-
-    The ProLUG Linux Administration course, designed to build foundational
-    knowledge in Linux Systems Administration
-
-    [:octicons-arrow-right-24: Admin Course](./lac/syllabus)
-
--   :material-server-security:{ .lg .middle } __Security Course__
-
-    ---
-
-    The ProLUG Linux Security course, an advanced course that focuses on
-    systems security
-
-    [:octicons-arrow-right-24: Security Course](./psc/syllabus)
+    [:octicons-arrow-right-24: Course Books Repo](https://github.com/ProfessionalLinuxUsersGroup/course-books)
 
 </div>
 
