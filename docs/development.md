@@ -1,19 +1,68 @@
-# Contributing and Local Development
+# Local Development and Testing
 
-It is strongly encouraged that contributors test their changes before making commits. To help
-facilitate this process a set of instructions and guidelines are provided below. These guidelines
-are by no means a requirement or the only set of procedures to locally develop on this project.
+It is strongly encouraged that contributors test their changes before making commits.
+
+To help facilitate this process, we have provided a local build script that can
+be used to test changes locally.
+
+If the contributor prefers to configure their environment on their own, a set
+of instructions and guidelines are provided below. These guidelines are by no
+means a requirement or the only set of procedures to locally develop on this
+project.
 
 The examples, code, and commands provided below were developed using such technologies as containers,
 bash scripts, and more.
 
-## Build Dependencies
+## Using the Provided Build Script
+
+If you are on a Linux machine or another machine that has access to Bash and
+Python, you may use the script provided in the `scripts/` directory.
+
+This script should be run from the root directory of the project:
+
+```bash
+git clone https://github.com/ProfessionalLinuxUsersGroup/course-books.git
+cd course-books
+./scripts/local-build
+```
+
+Use the `--help` option to see usage instructions:
+
+```bash
+./scripts/local-build --help
+```
+
+This is a Bash script that requires Bash version 4.4+, Python 3.10+, as well as the
+`venv` and `pip` Python modules.
+
+This script will create a Python virtual environment for the project, install
+the necessary dependencies, and serve the site locally via HTTP. A link will be
+output to the terminal that you can use to see the local version of the website.
+
+Any changes made while this script is running will reload the website in
+real-time.
+
+When you are done testing, use `Ctrl-C` (`SIGINT`) to stop the script.
+
+!!! note "Reporting an Issue"
+
+    Any issues or errors encountered with this script can be reported by [opening an
+    issue](https://github.com/ProfessionalLinuxUsersGroup/course-books/issues/new)
+    in the project's repository.
+
+## Building Manually
+
+If you prefer to build out your own test environment, you can do so by
+following the instructions below.
+
+### Build Dependencies
 
 The ProLUG course books utilize [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/), a friendly
 and popular markdown utility that quickly exports static web files for documentation or general website use cases.
 
-Utilizing Material for MkDocs this course then deploys the exported web structure to a Git Pages workflow and runner
-that then produces an easily navigable website.
+Utilizing Material for MkDocs, this course then deploys the exported web
+structure to a GitHub Pages workflow and runner that then produces an easily
+navigable website.
 
 Below is the current workflow that deploys the Git Page for the courses:
 
@@ -28,23 +77,22 @@ can utilize a virtual python environment with the required dependencies.
 
 !!! info inline end "Local Dependencies"
 
-    - httpd or apache2
-    - git
-    - python3>=.8
-    - python virtual environment with mkdoc-material required pip packages
+    - `httpd` or `apache2`
+    - `git`
+    - Python 3.8+
+    - Python virtual environment with `mkdoc-material` required pip packages
     - a clone of the [ProLUG course-books repository](https://github.com/ProfessionalLinuxUsersGroup/course-books)
 
 To achieve this deployment locally without deploying the suggested Materials for MkDocs Docker image the following
 environment and dependencies are required: A localhost, this could be a container, virtual machine, or local machine,
 and the following packages installed on such machine. :material-arrow-right-box:
 
-
 More information to get started is provided by Material for MkDocs here: <https://squidfunk.github.io/mkdocs-material/getting-started/>
 
-## Building, Deploying, and Developing Locally
+### Building, Deploying, and Developing Locally
 
 Below is a set of scripts that can quickly achieve this environment in an automated fashion if contributors
-choose to forgo utilizing the provided Docker image.
+choose to forgo utilizing the provided build script.
 
 These commands assume a `root` user. These scripts will update host package repositories to
 their latest offerings and download missing dependencies, insantiate the python virtual environment
@@ -58,7 +106,7 @@ on the container or machine.
 
     ```bash
     #!/bin/bash
-    apt-get update && apt-get -y install git python3 hostname apache2
+    apt-get update && apt-get -y install git python3-full hostname apache2
     git clone https://github.com/ProfessionalLinuxUsersGroup/course-books && cd course-books
     python3 -m venv . && source "$PWD"/bin/activate
     pip install -U pip && pip install -U mkdocs mkdocs-material mkdocs-glightbox
