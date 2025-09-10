@@ -11,32 +11,29 @@
 
     [:octicons-arrow-right-24: ProLUG.org](https://prolug.org/)
 
--   :fontawesome-solid-flask-vial:{ .lg .middle } __Killer Coda Labs__
+-   :fontawesome-solid-flask-vial:{ .lg .middle } __ProLUG Big Book of Labs__
 
     ---
 
-    Many of the labs in the course material leverage Killer Coda
+    Labs from [@Het_Tanis](https://www.youtube.com/@het_tanis8213) :fontawesome-brands-youtube:{ .youtube } himself
 
+    [:octicons-arrow-right-24: Het's Big Book of Labs](https://leanpub.com/theprolugbigbookoflabs)
 
-    [:octicons-arrow-right-24: Killer Coda](https://killercoda.com/)
-
--   :material-keyboard-close-outline:{ .lg .middle } __Linux Course__
-
-    ---
-
-    The ProLUG Linux Administration course, designed to build foundational
-    knowledge in Linux
-
-    [:octicons-arrow-right-24: Admin Course](https://cmckee786.github.io/prolug-mkdocs/lac/syllabus/)
-
--   :material-server-security:{ .lg .middle } __Security Course__
+-   :fontawesome-brands-discord:{ .lg .middle } __Join The ProLUG Discord__
 
     ---
 
-    The ProLUG Linux Security course, an advanced course that focuses on
-    systems security
+    Come join a group of dedicated Systems enthusiasts on Discord!
 
-    [:octicons-arrow-right-24: Security Course](https://cmckee786.github.io/prolug-mkdocs/psc/syllabus/)
+    [Join us on Discord! :fontawesome-solid-paper-plane:](https://discord.com/invite/m6VPPD9usw){ .md-button }
+
+-   :fontawesome-solid-book:{ .lg .middle } __Course Books__
+
+    ---
+
+    ProLUG welcomes all prospective contributors, if you'd like to help out check in at the repo!
+
+    [:octicons-arrow-right-24: Course Books Repo](https://github.com/ProfessionalLinuxUsersGroup/course-books)
 
 </div>
 
