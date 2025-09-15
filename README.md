@@ -2,6 +2,8 @@
 
 This is a collection of all course books produced by the Professional Linux Users Group (ProLUG).
 
+- [Prolug Course Books](https://professionallinuxusersgroup.github.io/course-books/)
+
 Previously these were in separate repositories:
 
 - [Linux Administration Course](https://github.com/ProfessionalLinuxUsersGroup/lac)
