@@ -22,3 +22,13 @@ img {
 .youtube {
   color: #EE0F0F;
 }
+
+/* Primary color scheme palettes (e.g., header).
+ * Default, Light mode, and Dark mode. */
+
+/* :root  > * { */
+/*   --md-primary-fg-color:        #29241e; */
+/*   --md-primary-fg-color--light: #29241e; */
+/*   --md-primary-fg-color--dark:  #29241e; */
+/* } */
+
