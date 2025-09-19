@@ -37,7 +37,10 @@ get-files(){
     local -r file_pattern="*.md"
 
     IFS=$'\n' read -r -d '' -a FILES < <(
-        find "$search_dir" -maxdepth 1 -mindepth 1 -name "$file_pattern"
+        find "$search_dir" -maxdepth 1 -mindepth 1 -name "$file_pattern" \
+            \! -name 'unitindex.md' \
+            \! -name 'resources.md' \
+            \! -name 'downloads.md'
     )
     return 0
 }
@@ -46,7 +49,6 @@ pull-links() {
     local -i count_md_links=0
     local -i count_reg_links=0
     local -i count_uf_links=0
-    local -i total_link_count=0
     local -i duplicates=0
 
     for file in "${FILES[@]}"; do
@@ -102,21 +104,20 @@ pull-links() {
                 [[ -z $UNIT ]] && sed -i "/^## Misc$/a- $markdown_link" "$RESOURCES_FILE"
                 ADDED_LINKS["$link_hash"]=1
             else
-                (( DUPLICATES++ ))
+                (( duplicates++ ))
             fi
 
         done
 
     done
 
-    total_link_count=$(( count_md_links + count_uf_links + count_reg_links ))
     cat <<- EOF
 
 	REPORT:
 	- Markdown Links        $count_md_links
 	- Regular Links         $count_reg_links
 	- Unformatted Links     $count_uf_links
-	Total Links: $total_link_count
+	Total Links: $(( count_md_links + count_uf_links + count_reg_links )) 
 	Total links added: ${#ADDED_LINKS[@]}
 	
 	Duplicates: $duplicates
