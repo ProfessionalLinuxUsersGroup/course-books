@@ -9,11 +9,11 @@
 #
 #   DESCRIPTION:  This script generates a list of all external resources used in a
 #                 ProLUG course book.
-#                 It parses all markdown files in the /src directory and extracts
-#                 any links to external resources. It then formats those resources
-#                 into $RESOURCES_FILE (/src/resources.md by default) under their
+#                 It parses all markdown files in the /docs directory/subdirectories 
+#                 and extracts any links to external resources. It then formats those 
+#                 resources into $RESOURCES_FILE (/docs/BOOK/resources.md) under their
 #                 respective unit headers, determined by the name of the file they
-#                 came from.
+#                 came from or the unitindex.md file (if present).
 #
 #       OPTIONS:  There are currently no options for this script.
 #  REQUIREMENTS:  bash >= 4.0, GNU coreutils (md5sum, cut) GNU grep, GNU sed,
@@ -23,29 +23,24 @@
 #
 #===============================================================================
 
-# TODO(fix): Handle instances of closing parens inside links (e.g., wikipedia)
-
 declare -A ADDED_LINKS
 declare -a FILES
 declare RESOURCES_FILE
 declare -a BOOK_DIRS
 
 get-files(){
-    local search_dir
-    local -r file_pattern="*.md"
     [[ -n $1 && -d $1 ]] || {
         printf >&2 "[ERROR]: Called 'get-links' with missing or bad arguments!\n"
         return 1
     }
-    search_dir=$1
+    local search_dir="$1"
+    local -r file_pattern="*.md"
 
     IFS=$'\n' read -r -d '' -a FILES < <(
         find "$search_dir" -maxdepth 1 -mindepth 1 -name "$file_pattern"
     )
     return 0
 }
-
-
 
 pull-links() {
     local -i count_md_links=0
