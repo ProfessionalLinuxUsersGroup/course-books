@@ -63,7 +63,7 @@ pull-links() {
 
         IFS=$'\n' read -r -d '' -a RESOURCES < <(
             grep -iP '\bhttps?://' "$file" |
-                grep -vP '(img)? ?src=|discord\.(gg|com)|user-attachments|(\./assets)'
+                grep -vP '(img)? ?src=|discord\.(gg|com)|github\.com/user-attachments|(\./assets)'
         )
 
         [[ -n "${RESOURCES[*]}" ]] || continue
@@ -71,22 +71,22 @@ pull-links() {
         for resource in "${RESOURCES[@]}"; do
             local markdown_link=
             local link_hash=
+            [[ -z $resource ]] && continue
             [[ $file =~ .*u([0-9]+).*\.md ]] && UNIT="${BASH_REMATCH[1]}"
-            [[ -n $resource ]] || printf "resource empty: %s\n" "$resource"
 
             # extract markdown link from the line
             markdown_link="$(perl -ne 'print $1 if m/(\[.*?\]\([^\s]+)/' <<< "$resource")" 
 
-            if  [[ -z $markdown_link ]]; then
+            if [[ -z $markdown_link ]]; then
                 markdown_link="$(perl -ne 'print $1 if m,([^<(]http[s]?://[^\s]+),' <<< "$resource")"
                 if [[ -n $markdown_link ]]; then
                     # Link is unformatted: http://example.com
                     (( count_uf_links++ )) && continue
                 fi
 
-                markdown_link="$(perl -ne 'print $1 if m,([<]http[s]?://[^\s]+),' <<< "$resource")"
+                markdown_link="$(perl -ne 'print $1 if m,([<]http[s]?://[^\s]+>),' <<< "$resource")"
                 if [[ -n $markdown_link ]]; then
-                    # Link is formatted as: <http://example.com>
+                    # Link is bracketed: <http://example.com>
                     (( count_reg_links++ ))
                 fi
             else
