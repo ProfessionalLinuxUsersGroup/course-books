@@ -132,12 +132,8 @@ format-resources() {
         { printf >&2 "No argument passed to 'format-resources()'.\n"; return 1; }
     : > "$RESOURCES_FILE"
     cat <<- EOF >> "$RESOURCES_FILE"
-	<div class="flex-container">
-	        <img src="https://github.com/ProfessionalLinuxUsersGroup/img/blob/main/Assets/Logos/ProLUG_Round_Transparent_LOGO.png?raw=true" width="64" height="64"></img>
-	    <p>
-	        <h1>Course Resources</h1>
-	    </p>
-	</div>
+	# Course Resources
+
 	This is a comprehensive list of all external resources used in this course.
 
 	EOF
