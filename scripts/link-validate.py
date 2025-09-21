@@ -1,8 +1,8 @@
-# v 1.0
+# v 1.0.1
 # Authored by Christian McKee - cmckee786@github.com
 # Attempts to validate links within ProLUG Course-Books repo
 # Must be called from root of github repo directory
-# DO NOT use in runner builds for the time being
+# Not intended for use in runner builds for the time being
 
 import re
 from datetime import datetime
@@ -17,6 +17,8 @@ BLUE = "\033[34m"
 ORANGE = "\033[33m"
 RESET = "\033[0m"
 
+# Worker count dependent on host limitations
+WORKER_COUNT = 20
 failed_links = []
 
 def link_validation(unique_link):
@@ -37,7 +39,7 @@ def link_validation(unique_link):
     req = urllib.request.Request(unique_link, headers=headers)
 
     try:
-        with urllib.request.urlopen(req, timeout = 30) as response:
+        with urllib.request.urlopen(req, timeout = 15) as response:
             if response.code >= 200 or response.code <=399:
                 print(
                     f'{unique_link}\n'
@@ -48,6 +50,7 @@ def link_validation(unique_link):
                     f'{unique_link}\n'
                     f'\t- Unknown error {RED}[FAILED]{RESET}'
                 )
+                failed_links.append(unique_link)
     except urllib.error.HTTPError as e:
         print(
             f'{unique_link}\n'
@@ -96,7 +99,7 @@ def main():
     print(f'Total links found: {ORANGE}{total_links}{RESET}')
     print(f'Unique links: {GREEN}{len(uniq_total)}{RESET}\n{"-"*50}')
 
-    with ThreadPoolExecutor(max_workers=20) as executor:
+    with ThreadPoolExecutor(max_workers=WORKER_COUNT) as executor:
         futures = {executor.submit(link_validation, url): url for url in uniq_total}
         for future in as_completed(futures):
             try:
@@ -104,13 +107,13 @@ def main():
             except Exception as e:
                 print(f'{futures[future]} -> Unexpected error: {e}')
 
-    report = f"'./failed_links.report.{datetime.now().strftime('%Y-%m-%d')}'"
+    report = f"failed_links.{datetime.now().strftime('%Y-%m-%d')}"
     with open(
         report,
-        'w',
+        'a',
         encoding='utf-8') as f:
 
-        print('Writing report to file...')
+        print(f'Writing report to {Path.cwd()}/{report}...')
         f.write(f'Report ran on: {datetime.now().strftime("%Y-%m-%d %H:%M")}\n{"-"*50}\n')
         [f.writelines(f'{link}\n') for link in failed_links]
 
