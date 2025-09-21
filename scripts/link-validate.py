@@ -56,19 +56,19 @@ def link_validation(unique_link):
             f'{unique_link}\n'
             f'\t- Responded HTTP Error: {RED}{e.code} {e.reason}{RESET}'
         )
-        failed_links.append(unique_link)
+        failed_links.append(f'{unique_link} - {e.code} {e.reason}')
     except urllib.error.URLError as e:
         print(
             f'{unique_link}\n'
             f'\t- Responded URL Error: {RED}{e.reason}{RESET}'
         )
-        failed_links.append(unique_link)
+        failed_links.append(f'{unique_link} - {e.reason}')
     except TimeoutError as e:
         print(
             f'{unique_link}\n'
             f'\t- Responded {RED}Timeout Error{RESET}'
         )
-        failed_links.append(unique_link)
+        failed_links.append(f'{unique_link} - Timeout Error')
 
 def main():
     """Validates links found in ProLUG Course-Books repo
