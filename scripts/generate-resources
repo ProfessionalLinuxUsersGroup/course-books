@@ -9,11 +9,11 @@
 #
 #   DESCRIPTION:  This script generates a list of all external resources used in a
 #                 ProLUG course book.
-#                 It parses all markdown files in the /src directory and extracts
-#                 any links to external resources. It then formats those resources
-#                 into $RESOURCES_FILE (/src/resources.md by default) under their
+#                 It parses all markdown files in the /docs directory/subdirectories 
+#                 and extracts any links to external resources. It then formats those 
+#                 resources into $RESOURCES_FILE (/docs/BOOK/resources.md) under their
 #                 respective unit headers, determined by the name of the file they
-#                 came from.
+#                 came from or the unitindex.md file (if present).
 #
 #       OPTIONS:  There are currently no options for this script.
 #  REQUIREMENTS:  bash >= 4.0, GNU coreutils (md5sum, cut) GNU grep, GNU sed,
@@ -23,44 +23,32 @@
 #
 #===============================================================================
 
-# TODO(fix): Handle instances of closing parens inside links (e.g., wikipedia)
-
 declare -A ADDED_LINKS
 declare -a FILES
 declare RESOURCES_FILE
 declare -a BOOK_DIRS
 
-get-book-dirs() {
-    # ignore the ./docs/deploy directory
-    IFS=$'\n' read -r -d '' -a BOOK_DIRS < <(
-        find 'docs/' -maxdepth 1 -mindepth 1 -type d  \! -name 'deploy'
-    ) || {
-        printf >&2 "[ERROR]: Failed to get book directories!\n"
-    }
-}
-
 get-files(){
-    local search_dir
-    local -r file_pattern="*.md"
-    [[ -n $1 ]] || {
-        printf >&2 "[ERROR]: Called 'get-links' with no arguments!\n"
+    [[ -n $1 && -d $1 ]] || {
+        printf >&2 "[ERROR]: Called 'get-links' with missing or bad arguments!\n"
         return 1
     }
-    search_dir=$1
+    local search_dir="$1"
+    local -r file_pattern="*.md"
 
     IFS=$'\n' read -r -d '' -a FILES < <(
-        find "$search_dir" -maxdepth 1 -mindepth 1 -name "$file_pattern"
+        find "$search_dir" -maxdepth 1 -mindepth 1 -name "$file_pattern" \
+            \! -name 'unitindex.md' \
+            \! -name 'resources.md' \
+            \! -name 'downloads.md'
     )
     return 0
 }
-
-
 
 pull-links() {
     local -i count_md_links=0
     local -i count_reg_links=0
     local -i count_uf_links=0
-    local -i total_link_count=0
     local -i duplicates=0
 
     for file in "${FILES[@]}"; do
@@ -71,8 +59,8 @@ pull-links() {
         local link_hash=
 
         IFS=$'\n' read -r -d '' -a RESOURCES < <(
-            grep -i -E '\<https://' "$file" |
-                grep -v -E '(img)? ?src=|discord\.(gg|com)|user-attachments'
+            grep -iP '\bhttps?://' "$file" |
+                grep -vP '(img)? ?src=|discord\.(gg|com)|github\.com/user-attachments|(\./assets)'
         )
 
         [[ -n "${RESOURCES[*]}" ]] || continue
@@ -80,31 +68,31 @@ pull-links() {
         for resource in "${RESOURCES[@]}"; do
             local markdown_link=
             local link_hash=
+            [[ -z $resource ]] && continue
             [[ $file =~ .*u([0-9]+).*\.md ]] && UNIT="${BASH_REMATCH[1]}"
 
             # extract markdown link from the line
-            markdown_link="$(perl -pe 's/.*(\[.*?\]\(.*?\)).*/\1/' <<< "$resource")" 
+            markdown_link="$(perl -ne 'print $1 if m/(\[.*?\]\([^\s]+)/' <<< "$resource")" 
 
-            if [[ $markdown_link =~ .*(<.*>).* ]]; then
-                # Link is formatted as: <http://example.com>
-                markdown_link="${BASH_REMATCH[1]}"
-                (( count_reg_links++ ))
-            elif [[ $markdown_link =~ .*[^[\<\(](https://[^ \)]+).* ]]; then
-                # Link is unformatted: http://example.com
-                markdown_link="${BASH_REMATCH[1]}"
-                (( count_uf_links++ ))
-                continue
+            if [[ -z $markdown_link ]]; then
+                markdown_link="$(perl -ne 'print $1 if m,([^<(]http[s]?://[^\s]+),' <<< "$resource")"
+                if [[ -n $markdown_link ]]; then
+                    # Link is unformatted: http://example.com
+                    (( count_uf_links++ )) && continue
+                fi
+
+                markdown_link="$(perl -ne 'print $1 if m,([<]http[s]?://[^\s]+>),' <<< "$resource")"
+                if [[ -n $markdown_link ]]; then
+                    # Link is bracketed: <http://example.com>
+                    (( count_reg_links++ ))
+                fi
             else
-                # Link is formatted as: [Link](http://example.com)
+                # Link is formatted as: [Link Text](http://example.com)
                 (( count_md_links++ ))
             fi
             [[ -z $markdown_link ]] && continue
 
             # Fix duplicate problem
-            # Using grep to check for duplicates created a race condition
-            # - Add associative array containing links already added
-            #   - Bash can't parse markdown links as associative array keys
-            #   - use md5sum hashes
             link_hash=$(
                 sed -E 's/\/([>\)])?$/\1/' <<< "${markdown_link,,}" |
                     md5sum |
@@ -116,21 +104,20 @@ pull-links() {
                 [[ -z $UNIT ]] && sed -i "/^## Misc$/a- $markdown_link" "$RESOURCES_FILE"
                 ADDED_LINKS["$link_hash"]=1
             else
-                (( DUPLICATES++ ))
+                (( duplicates++ ))
             fi
 
         done
 
     done
 
-    total_link_count=$(( count_md_links + count_uf_links + count_reg_links ))
     cat <<- EOF
 
 	REPORT:
 	- Markdown Links        $count_md_links
 	- Regular Links         $count_reg_links
 	- Unformatted Links     $count_uf_links
-	Total Links: $total_link_count
+	Total Links: $(( count_md_links + count_uf_links + count_reg_links )) 
 	Total links added: ${#ADDED_LINKS[@]}
 	
 	Duplicates: $duplicates
@@ -145,12 +132,8 @@ format-resources() {
         { printf >&2 "No argument passed to 'format-resources()'.\n"; return 1; }
     : > "$RESOURCES_FILE"
     cat <<- EOF >> "$RESOURCES_FILE"
-	<div class="flex-container">
-	        <img src="https://github.com/ProfessionalLinuxUsersGroup/img/blob/main/Assets/Logos/ProLUG_Round_Transparent_LOGO.png?raw=true" width="64" height="64"></img>
-	    <p>
-	        <h1>Course Resources</h1>
-	    </p>
-	</div>
+	# Course Resources
+
 	This is a comprehensive list of all external resources used in this course.
 
 	EOF
@@ -161,7 +144,7 @@ format-resources() {
     else
         printf >&2 "[ERROR]: No unitindex.md file in: %s\n" "$unitindex_file"
         local unit_count=
-        # Gather number of units from filenames if repo is not in 'case'
+        # Gather number of units from filenames if no unitindex file is present
         if [[ -z $unit_count && -d ${unitindex_file%/*} ]]; then 
             unit_count="$(grep -oP '(\d+)' \
                 <(find "${unitindex_file%/*}" -maxdepth 1 -mindepth 1 -type f -name '*.md') |
@@ -184,10 +167,13 @@ format-resources() {
     fi
 }
 
-get-book-dirs || {
-    printf >&2 "[ERROR]: Failed to fetch book directories!\n"
-    exit 1
-}
+IFS=$'\n' read -r -d '' -a BOOK_DIRS < <(
+    find 'docs/' -maxdepth 1 -mindepth 1 -type d  \
+        \! -name 'deploy' \
+        \! -name 'assets' \
+        \! -name 'stylesheets' \
+        \! -name 'beginners'
+)
 
 for dir in "${BOOK_DIRS[@]}"; do
     printf -- "#----------------- Files for dir: %s -----------------#\n" "$dir"
@@ -196,6 +182,7 @@ for dir in "${BOOK_DIRS[@]}"; do
         exit 1
     }
     RESOURCES_FILE="${dir}/resources.md"
+    ADDED_LINKS=()
     format-resources "$dir/unitindex.md"
     pull-links
 done
