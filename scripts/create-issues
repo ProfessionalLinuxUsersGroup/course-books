@@ -2,12 +2,10 @@
 # Make sure you're authenticated via 'gh auth login', with a PAT with correct access.  
 # Run from inside the `scripts` directory.
 
-declare UNIT
+declare -i UNIT
 declare TYPE
 declare FILE
 declare EMOJI
-declare PROJECT
-declare TEMPL_PATH
 declare BOOK
 
 declare -a ALL_TYPES=('intro' 'worksheet' 'lab' 'bonus')
@@ -87,43 +85,33 @@ done
 
 [[ -z $UNIT ]] && read -r -p "Enter unit number: " UNIT;  
 [[ -z $TYPE ]] && read -r -p "Enter type (ws/lab/intro/bonus/all): " TYPE;  
-[[ -z $TYPE || -z $UNIT ]] && printf "Missing Type or Unit!\n" && exit 1
-[[ "${PWD##*/}" == scripts ]] &&
-    TEMPL_PATH="../.github/ISSUE_TEMPLATE" ||
-    TEMPL_PATH=".github/ISSUE_TEMPLATE"
-
+[[ -z $TYPE || -z $UNIT ]] && printf >&2 "[ERROR]: Missing Type or Unit!\n" && exit 1
 
 if [[ "${TYPE,,}" == "all" ]]; then
     for t in "${ALL_TYPES[@]}"; do
         _set_type_vars "$t"
         gh issue create \
-            --title "[$BOOK] Unit ${UNIT} ${t^} ${EMOJI} (${FILE})" \
+            --title "[${BOOK^^}] Unit ${UNIT} ${t^} ${EMOJI} (${FILE})" \
             --label "${LABEL}" \
             --label "Unit #${UNIT}" \
             --label "help wanted" \
             --label "enhancement" \
             --body "See the reference page for this type of file at https://github.com/ProfessionalLinuxUsersGroup/course-books/tree/main/ref" 
-            # --body-file "$TEMPL_PATH/unit-${t,,}-body.md" || {
-            # printf >&2 "Failed to create the issue!\n" && exit 1
-        # }
     done
     printf "Successfully created all issues for unit %s.\n" "$UNIT"
     exit 0
 else
     _set_type_vars "$TYPE"
     gh issue create \
-        --title "[$BOOK] Unit ${UNIT} ${TYPE^} ${EMOJI} (${FILE})" \
+        --title "[${BOOK^^}] Unit ${UNIT} ${TYPE^} ${EMOJI} (${BOOK}/${FILE})" \
         --label "${LABEL}" \
         --label "Unit #${UNIT}" \
         --label "help wanted" \
         --label "enhancement" \
         --body "See the reference page for this type of file at https://github.com/ProfessionalLinuxUsersGroup/course-books/tree/main/ref" 
-        # --body-file "$TEMPL_PATH/unit-${TYPE,,}-body.md" || {
-        # printf >&2 "Failed to create the issue!\n" && exit 1
-    # }
     printf "Successfully created %s issue for unit %s.\n" "$TYPE" "$UNIT"
     exit 0
 fi
 
-# --project "$PROJECT" \ # doesn't work
+# --project "$PROJECT" 
 
