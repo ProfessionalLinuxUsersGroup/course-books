@@ -115,6 +115,7 @@ nav:
       - Intro: lac/u16intro.md
       - Worksheet: lac/u16ws.md
       - Lab: lac/u16lab.md
+    - Course Resources: lac/resources.md
 
   - Linux Security Course:
     - Syllabus: psc/syllabus.md
@@ -163,6 +164,7 @@ nav:
       - Worksheet: psc/u10ws.md
       - Lab: psc/u10lab.md
       - Bonus: psc/u10b.md
+    - Course Resources: psc/resources.md
 
   - Linux Automation Course:
     # - Syllabus: pcae/syllabus.md
