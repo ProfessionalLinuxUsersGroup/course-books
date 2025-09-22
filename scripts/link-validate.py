@@ -19,6 +19,9 @@ RESET = "\033[0m"
 
 # Worker count dependent on host limitations
 WORKER_COUNT = 20
+# Regex intended to match http(s) links unique to this project (very greedy)
+REGEX = r"(?<!\[)https?:\/\/(?:\S+\.)[^\s\)\]\}\<\>\"\,]+"
+
 failed_links = []
 
 def link_validation(unique_link):
@@ -28,8 +31,6 @@ def link_validation(unique_link):
     headers = {
         "User-Agent": (
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-            "AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/140.0.0.0 Safari/537.36 Edg/134.0.0.0"
         ),
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
         "Accept-Language": "en-US,en;q=0.5",
@@ -85,7 +86,7 @@ def main():
     for path in file_paths:
         with open(path, 'r', encoding='utf-8') as f:
             contents = f.read()
-            link_search = re.findall(r"(?<!\[)https?:\/\/(?:\S+\.)[^\s\)\]\}\<\>\"\,]+", contents)
+            link_search = re.findall(REGEX, contents)
             list_sum = len(link_search)
             print(f'{ORANGE}File{RESET}: {path}\n{"-"*50}')
             if list_sum > 0:
