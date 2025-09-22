@@ -97,7 +97,7 @@ if [[ "${TYPE,,}" == "all" ]]; then
     for t in "${ALL_TYPES[@]}"; do
         _set_type_vars "$t"
         gh issue create \
-            --title "Unit ${UNIT} ${t^} ${EMOJI} (${FILE})" \
+            --title "[$BOOK] Unit ${UNIT} ${t^} ${EMOJI} (${FILE})" \
             --label "${LABEL}" \
             --label "Unit #${UNIT}" \
             --label "help wanted" \
