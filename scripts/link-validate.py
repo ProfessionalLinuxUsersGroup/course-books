@@ -1,13 +1,13 @@
-# v 1.1.87
+# v 1.1.103
 # Authored by Christian McKee - cmckee786@github.com
 # Attempts to validate links within ProLUG Course-Books repo
 # Must be called from root of github repo directory
 # Not intended for use in runner builds for the time being
 
 import re
-from datetime import datetime
 import urllib.request
 import urllib.error
+from datetime import datetime
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -89,12 +89,12 @@ def link_processing():
         Must be run from root of git repo directory
     """
 
-    matched_links = []
-    unique_links = []
-    file_matches = int(0)
-    total_links = int(0)
+    matched_links: list = []
+    unique_links: list = []
+    file_matches: int = 0
+    total_links: int = 0
     file_paths = Path('docs/').glob('**/*.md')
-    link_item = {
+    link_item: dict = {
         "link": "",
         "file": "",
         "line": ""
@@ -103,7 +103,7 @@ def link_processing():
     for path in file_paths:
         with open(path, 'r', encoding='utf-8') as f:
             print(f'{ORANGE}File{RESET}: {path}\n{"-"*50}')
-            contents = f.read().splitlines()
+            contents: list = f.read().splitlines()
             for i, line in enumerate(contents, 1):
                 str_match = re.search(REGEX, line)
                 if str_match:
