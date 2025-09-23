@@ -1,0 +1,117 @@
+#!/bin/bash
+# Make sure you're authenticated via 'gh auth login', with a PAT with correct access.  
+# Run from inside the `scripts` directory.
+
+declare -i UNIT
+declare TYPE
+declare FILE
+declare EMOJI
+declare BOOK
+
+declare -a ALL_TYPES=('intro' 'worksheet' 'lab' 'bonus')
+
+_set_type_vars() {
+    # Pass in $TYPE
+    case $1 in
+        ws|worksheet)
+            TYPE='worksheet'
+            FILE="u${UNIT}ws.md"
+            EMOJI="📄"
+            LABEL="Worksheet ${EMOJI}"
+            ;;
+        l|lab)
+            TYPE='lab'
+            FILE="u${UNIT}lab.md"
+            EMOJI="🧪"
+            LABEL="Lab ${EMOJI}"
+            ;;
+        i|intro)
+            TYPE='intro'
+            FILE="u${UNIT}intro.md"
+            EMOJI="👋"
+            LABEL="Intro"
+            ;;
+        b|bonus)
+            TYPE='bonus'
+            FILE="u${UNIT}b.md"
+            EMOJI="🍒"
+            LABEL="Bonus ${EMOJI}"
+            ;;
+    esac
+}
+
+while [[ -n $1 ]]; do
+    case $1 in
+        -u|--unit)
+            [[ -n $2 && ! $2 =~ ^- ]] && UNIT=$2 && shift || printf "Bad argument to -u/--unit.\n"
+            shift;
+            ;;
+        -t|--type)
+            [[ -n $2 && ! $2 =~ ^- ]] && TYPE=$2 && shift || printf "No argument to -t/--type.\n"
+            shift; 
+            ;;
+        -a|--all)
+            TYPE="all"
+            shift;
+            ;;
+        -b|--book)
+            [[ -n $2 && ! $2 =~ ^- ]] && BOOK=$2 && shift || printf "No argument to -b/--book.\n"
+            if ! [[ "$BOOK" =~ (lac|psc|pcae) ]]; then
+                printf >&2 "[ERROR]: Bad argument to -b/--book!\n"
+                exit 1
+            fi
+            shift;
+            ;;
+        -h|--help)
+            cat <<- EOF
+            NAME: create-issues
+            USAGE:
+              create-issues [-t|--type TYPE] [-u|--unit UNIT_NUMBER] [-a|--all]
+
+            OPTIONS:
+                -u | --unit UNIT_NUMBER     Specify the unit number for the issue 
+                -t | --type TYPE            Specify the type of document for the issue 
+                                            This can be one of 'worksheet', 'lab', 'intro', 'bonus'. Set to 'all' to create an issue of each type.
+                -a | --all                  Shorthand for '--type all'
+
+            SYNOPSIS:
+            Creates an issue for the upstream repo. The 'gh' tool must be configured beforehand.
+			EOF
+            shift;
+            exit 0
+            ;;
+    esac
+done
+
+[[ -z $UNIT ]] && read -r -p "Enter unit number: " UNIT;  
+[[ -z $TYPE ]] && read -r -p "Enter type (ws/lab/intro/bonus/all): " TYPE;  
+[[ -z $TYPE || -z $UNIT ]] && printf >&2 "[ERROR]: Missing Type or Unit!\n" && exit 1
+
+if [[ "${TYPE,,}" == "all" ]]; then
+    for t in "${ALL_TYPES[@]}"; do
+        _set_type_vars "$t"
+        gh issue create \
+            --title "[${BOOK^^}] Unit ${UNIT} ${t^} ${EMOJI} (${FILE})" \
+            --label "${LABEL}" \
+            --label "Unit #${UNIT}" \
+            --label "help wanted" \
+            --label "enhancement" \
+            --body "See the reference page for this type of file at https://github.com/ProfessionalLinuxUsersGroup/course-books/tree/main/ref" 
+    done
+    printf "Successfully created all issues for unit %s.\n" "$UNIT"
+    exit 0
+else
+    _set_type_vars "$TYPE"
+    gh issue create \
+        --title "[${BOOK^^}] Unit ${UNIT} ${TYPE^} ${EMOJI} (${BOOK}/${FILE})" \
+        --label "${LABEL}" \
+        --label "Unit #${UNIT}" \
+        --label "help wanted" \
+        --label "enhancement" \
+        --body "See the reference page for this type of file at https://github.com/ProfessionalLinuxUsersGroup/course-books/tree/main/ref" 
+    printf "Successfully created %s issue for unit %s.\n" "$TYPE" "$UNIT"
+    exit 0
+fi
+
+# --project "$PROJECT" 
+
