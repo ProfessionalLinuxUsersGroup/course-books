@@ -1,10 +1,3 @@
-<div class="flex-container">
-        <img src="https://github.com/ProfessionalLinuxUsersGroup/img/blob/main/Assets/Logos/ProLUG_Round_Transparent_LOGO.png?raw=true" width="64" height="64"></img>
-    <p>
-        <h1>Unit Bonus Template</h1>
-    </p>
-</div>
-
 # THIS IS A TEMPLATE DOCUMENT
 
 (However, these are not hard fast templates, as long as the style is maintained

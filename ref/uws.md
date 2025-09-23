@@ -1,25 +1,13 @@
-<div class="flex-container">
-        <img src="https://github.com/ProfessionalLinuxUsersGroup/img/blob/main/Assets/Logos/ProLUG_Round_Transparent_LOGO.png?raw=true" width="64" height="64"></img>
-    <p>
-        <h1>PLACEHOLDER: Unit N - Unit Title</h1>
-    </p>
-</div>
-
-(However, these are not hard fast templates, as long as the style is maintained
-there is a degree of freedom. We are using `prettier` for formatting.)
-
 ## Instructions
-
----
 
 Fill out the worksheet as you progress through the lab and discussions.
 Hold your worksheets until the end to turn them in as a final submission packet.
 
 ### Resources / Important Links
 
-- [PLACEHOLDER]()
-- [PLACEHOLDER]()
-- [PLACEHOLDER]()
+- [PLACEHOLDER](LINK_HERE)
+- [PLACEHOLDER](LINK_HERE)
+- [PLACEHOLDER](LINK_HERE)
 
 #### Downloads
 
@@ -51,28 +39,23 @@ could be transposed to a `.md` file.
 
 #### Discussion Post #2
 
-<blockquote>
+!!! abstract
 
-PLACEHOLDER - Scenarios go inside block quotes.
-
-</blockquote>
+    PLACEHOLDER - Scenarios go inside abstract [admonitions](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types).
 
 1. PLACEHOLDER - Questions will be in ordered lists.
 
 2. PLACEHOLDER - Questions will be in ordered lists.
 
-<div class="warning">
-Submit your input by following the link below:
+!!! notes
 
-The discussion posts are done in Discord threads. Click the 'Threads' icon on the top right and search for the discussion post.
+    Submit your input by following the link below:
 
-</div>
+    The discussion posts are done in Discord threads. Click the 'Threads' icon on the top right and search for the discussion post.
 
 - [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1098309490681598072)
 
 ## Definitions
-
----
 
 PLACEHOLDER: The terms will be left blank for the student to fill in.
 
@@ -86,14 +69,10 @@ PLACEHOLDER:
 
 ## Digging Deeper
 
----
-
 1. PLACEHOLDER - Questions will be in ordered lists.
    - Related sub-questions will be in nested unordered lists.
 
 ## Reflection Questions
-
----
 
 <!-- The first reflection question is always the same. -->
 
