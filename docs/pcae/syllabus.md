@@ -9,6 +9,7 @@ can occur and deployments as code are utilized. The learner will practice secure
 integrating, and monitoring Linux systems in an automated fashion.
 
 ## Prerequisite(s) and/or Corequisite(s):
+
 - Prerequisites: None
 - Credit hours: N/A
 - Contact hours: 160 (60 Theory Hours, 100 Lab Hours)
@@ -17,10 +18,10 @@ integrating, and monitoring Linux systems in an automated fashion.
 
 ### Major Instructional Areas
 
-1. Automation tools
-2. Automation mindset
+1. Automation Tools
+2. Automation Mindset
     1. Systems Engineering Focus
-    2. Continuous Integration/Continuous Deployment (CI/CD) Focus
+    2. Continuous Integration/Continuous Deployment (**CI/CD**) Focus
     3. Operations/Administration Focus
 3. System Building (Standardization)
     1. Prebaking
@@ -71,6 +72,7 @@ No matter which option is chosen, minimal resources can accomplish our tasks.
     - 8 GB RAM
     - Network Interface (IP already setup)
 
+ProLUG lab access will be granted upon request.
 
 ## Course Plan
 
@@ -91,27 +93,27 @@ This class will effectively engage 100-200 learners.
 
 ### Class Schedule
 
-Class will meet over weekend (Brown bag) sessions. One (1) time per week, for 16 weeks.  
+Class will meet over weekend (brown bag) sessions. One (1) time per week, for 16 weeks.  
 There will be a total of 16 sessions.
 
 ### Session Overview
 
-1. Unit 1 – Automation tools installation and execution
-2. Unit 2 – Interacting with the Operating system
-3. Unit 3 – Making and using inventories
-4. Unit 4 – Admin commands and one-offs.
-5. Unit 5 – Environment and Local Variables in systems
-6. Unit 6 – Automating Docker Builds
-7. Unit 7 – Automating Docker environments
-8. Unit 8 - Automating K8s environments
-9. Unit 9 – Build and Deploy Linux systems
-10. Unit 10 – Harden Linux systems
-11. Unit 11 – Update and patch systems
-12. Unit 12 – Configure Network Devices
-13. Unit 13 - Remediating and Reporting on Drift
-14. Unit 14 – CI/CD Pipelines and Make v. Buy v. Adopt Decisions.
-15. Unit 15 – Troubleshooting/Testing 1
-16. Unit 16 - Troubleshooting/Testing 2
+1. **Unit 1** – Automation Tools (Installation and Execution)
+2. **Unit 2** – Interacting with the Operating System
+3. **Unit 3** – Making and Using Inventories
+4. **Unit 4** – Admin Commands and One-Offs
+5. **Unit 5** – Environment and Local Variables in Systems
+6. **Unit 6** – Automating Docker Builds
+7. **Unit 7** – Automating Docker Environments
+8. **Unit 8** – Automating K8s Environments
+9. **Unit 9** – Build and Deploy Linux Systems
+10. **Unit 10** – Harden Linux Systems
+11. **Unit 11** – Update and Patch Systems
+12. **Unit 12** – Configure Network Devices
+13. **Unit 13** – Remediating and Reporting on Drift
+14. **Unit 14** – CI/CD Pipelines and Make v. Buy v. Adopt Decisions.
+15. **Unit 15** – Troubleshooting/Testing 1
+16. **Unit 16** – Troubleshooting/Testing 2
 
 ## Suggested Learning Approach
 
