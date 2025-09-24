@@ -167,7 +167,7 @@ nav:
     - Course Resources: psc/resources.md
 
   - Linux Automation Course:
-    # - Syllabus: pcae/syllabus.md
+    - Syllabus: pcae/syllabus.md
     - Table of Contents: pcae/unitindex.md
     # - Unit 1 - Automation Tools:
     #   - Intro: pcae/u1intro.md
