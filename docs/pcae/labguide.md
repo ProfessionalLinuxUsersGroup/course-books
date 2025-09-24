@@ -13,7 +13,7 @@
 
 The acceptable use policy is presented during login through the Bastion node:  
 
-> “You are entering the ProLUG lab environment. All activities may be monitored. By entering you agree to use the lab for the stated purpose of learning Linux.”
+!!! “You are entering the ProLUG lab environment. All activities may be monitored. By entering you agree to use the lab for the stated purpose of learning Linux.”
 
 Violations of this Acceptable Use Policy (AUP) or deliberate misuse of lab resources will result in immediate termination of access privileges and removal from ProLUG.
 
