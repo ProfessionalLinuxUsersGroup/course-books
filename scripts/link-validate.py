@@ -1,8 +1,14 @@
-# v 1.2.158
+# v 1.3.78
 # Authored by Christian McKee - cmckee786@github.com
 # Attempts to validate links within ProLUG Course-Books repo
+
+# Likely will not match 100% of links, edge cases will need to
+# be added to ignoredlinks.txt. Additionally attempts to store
+# validated links in flat file to reduce subsequent runtimes
+
 # Must be called from root of github repo directory
 # Not intended for use in runner builds for the time being
+# Delete successfullinks.txt for now to retest all links
 
 import re
 import urllib.request
@@ -32,22 +38,22 @@ failed_links: list = []
 
 
 if Path(STORAGE).exists():
-    with open(STORAGE, 'r', encoding='utf-8') as f_cur:
-        stored_links = [line.strip() for line in f_cur]
+    with open(STORAGE, 'r', encoding='utf-8') as f_stored:
+        stored_links = [line.strip() for line in f_stored]
 else:
     with open(STORAGE, 'w', encoding = 'utf-8'):
         pass
 
 if Path(IGNORED).exists():
-    with open(IGNORED, 'r', encoding='utf-8') as f_cur:
-        ignored_links = [line.strip() for line in f_cur]
+    with open(IGNORED, 'r', encoding='utf-8') as f_ignored:
+        ignored_links = [line.strip() for line in f_ignored]
 else:
     with open(IGNORED, 'w', encoding = 'utf-8'):
         pass
 
 
 def link_validation(matched_item: dict):
-    """Utilizes user-agent headers lest webservers return false negative
+    """Utilizes user-agent headers lest webservers return false negatives
        Odds are some requests may be blocked by rate limiters like Cloudflare
     """
     headers = {
@@ -106,10 +112,8 @@ def link_validation(matched_item: dict):
         )
 
 def link_processing():
-    """Validates links found in ProLUG Course-Books repo
+    """Attemptes to validate links found in ProLUG Course-Books repo
         Returns per file total and total unique links found
-        Then reports invalidated links to file
-
         Must be run from root of git repo directory
     """
 
@@ -141,10 +145,9 @@ def link_processing():
                     file_matches += 1
             if file_matches == 0:
                 print('No links found...\n')
-            else:
-                print(f'\nLinks found: {BLUE}{file_matches}{RESET}\n')
             total_links += file_matches
             file_matches = 0
+
     unique_links = list({i['link']:i for i in reversed(matched_links)}.values())
 
     print('Filtering stored and ignored links...\n')
@@ -155,33 +158,39 @@ def link_processing():
     print(f'Total links found: {ORANGE}{total_links}{RESET}')
     print(f'Links to Test: {GREEN}{len(unique_links)}{RESET}\n{"-"*50}')
 
-    with ThreadPoolExecutor(max_workers=WORKER_COUNT) as executor:
-        futures = {
-            executor.submit(link_validation, dict_item):
-            dict_item for dict_item in unique_links
-        }
-        for future in as_completed(futures):
-            try:
-                future.result()
-            except Exception as e:
-                print(f'{futures[future]} -> Unexpected error: {e}')
+    return unique_links
 
 def main():
     """The place we call home"""
-    link_processing()
+    test_links = link_processing()
 
-    report = f"failed_links.{datetime.now().strftime('%Y-%m-%d')}"
-    with open(report, 'w', encoding='utf-8') as f_report, \
-         open(STORAGE, 'a', encoding='utf-8') as f_updated:
-        print(
-            f'Failed Links: {RED}{len(failed_links)}{RESET}\n'
-            f'Writing report to {Path.cwd()}/{report}...'
-        )
-        f_report.write(f'Report ran on: {datetime.now().strftime("%Y-%m-%d %H:%M")}\n{"-"*50}\n')
-        if failed_links:
-            [f_report.writelines(f'{link}\n') for link in failed_links]
-        if successful_links:
-            [f_updated.writelines(f'{link}\n') for link in successful_links]
+    if test_links:
+        with ThreadPoolExecutor(max_workers=WORKER_COUNT) as executor:
+            futures = {
+                executor.submit(link_validation, dict_item):
+                dict_item for dict_item in test_links
+            }
+            for future in as_completed(futures):
+                try:
+                    future.result()
+                except Exception as e:
+                    print(f'{futures[future]} -> Unexpected error: {e}')
+
+        report = f"failed_links.{datetime.now().strftime('%Y-%m-%d')}"
+        with open(report, 'w', encoding='utf-8') as f_report, \
+             open(STORAGE, 'a', encoding='utf-8') as f_updated:
+            print(
+                f'Failed Links: {RED}{len(failed_links)}{RESET}\n'
+                f'Writing report to {Path.cwd()}/{report}...'
+            )
+            f_report.write(f'Report ran on: {datetime.now().strftime("%Y-%m-%d %H:%M")}\n{"-"*50}\n')
+            if failed_links:
+                [f_report.writelines(f'{link}\n') for link in failed_links]
+            if successful_links:
+                [f_updated.writelines(f'{link}\n') for link in successful_links]
+
+    else:
+        print('Test link list is empty!\nExiting...')
 
 if __name__ == '__main__':
     main()

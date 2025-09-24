@@ -279,3 +279,4 @@ https://youtu.be/HkdAHXoRtos
 https://youtu.be/RGOj5yH7evk
 https://killercoda.com/het-tanis/course/Ansible-Labs/16-Ansible-Web-Server-Env-Deploy
 https://landscape.cncf.io/guide#observability-and-analysis--observability
+https://help.ubuntu.com/community/UFW
