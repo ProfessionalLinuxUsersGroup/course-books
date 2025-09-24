@@ -7,7 +7,7 @@
 
 - [Killercoda Labs](https://killercoda.com/learn)
 - [Wikipedia Page for Compilers](https://en.wikipedia.org/wiki/Compiler)
-- [Wikipedia Page for the C Programming Lang](<https://en.wikipedia.org/wiki/C_(programming_language)>)
+- [Wikipedia Page for the C Programming Lang](https://en.wikipedia.org/wiki/C_(programming_language))
 - [Wikipedia Page for Truth Table](https://en.wikipedia.org/wiki/Truth_table)
 - [CProgramming.com Introductory](http://www.cprogramming.com/tutorial/c-tutorial.html)
 - [Unit #1 Bonus (VIM) Page](https://professionallinuxusersgroup.github.io/lac/u1b.html)

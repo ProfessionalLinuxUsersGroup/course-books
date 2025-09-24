@@ -1,4 +1,4 @@
-# v 1.1.103
+# v 1.2.158
 # Authored by Christian McKee - cmckee786@github.com
 # Attempts to validate links within ProLUG Course-Books repo
 # Must be called from root of github repo directory
@@ -22,7 +22,29 @@ WORKER_COUNT = 20
 # Regex intended to match http(s) links unique to this project (very greedy)
 REGEX = r"(?<!\[)https?:\/\/(?:\S+\.)[^\s\)\]\}\<\>\"\,]+"
 
-failed_links = []
+STORAGE = 'scripts/link-storage/successfullinks.txt'
+IGNORED = 'scripts/link-storage/ignoredlinks.txt'
+
+stored_links: list = []
+ignored_links: list = []
+successful_links: list = []
+failed_links: list = []
+
+
+if Path(STORAGE).exists():
+    with open(STORAGE, 'r', encoding='utf-8') as f_cur:
+        stored_links = [line.strip() for line in f_cur]
+else:
+    with open(STORAGE, 'w', encoding = 'utf-8'):
+        pass
+
+if Path(IGNORED).exists():
+    with open(IGNORED, 'r', encoding='utf-8') as f_cur:
+        ignored_links = [line.strip() for line in f_cur]
+else:
+    with open(IGNORED, 'w', encoding = 'utf-8'):
+        pass
+
 
 def link_validation(matched_item: dict):
     """Utilizes user-agent headers lest webservers return false negative
@@ -41,6 +63,7 @@ def link_validation(matched_item: dict):
     troubleshoot_output = f' {ORANGE}File:{RESET}{matched_item["file"]}'\
                           f' {BLUE}L:{matched_item["line"]} {RESET}'
 
+
     try:
         with urllib.request.urlopen(req, timeout = 7) as response:
             if response.code >= 200 or response.code <=399:
@@ -48,6 +71,7 @@ def link_validation(matched_item: dict):
                     f'{matched_item['link']}\n'
                     f'\t- Responded {GREEN}{response.status} {response.reason}{RESET}'
                 )
+                successful_links.append(matched_item['link'])
             else:
                 print(
                     f'{matched_item['link']}\n'
@@ -110,7 +134,7 @@ def link_processing():
                     print(f'{GREEN}L:{i}{RESET} | {str_match.group(0)}')
                     link_item = {
                         "link": str_match.group(0),
-                        "file": f"{path.parent}/{path.name}",
+                        "file": f"{path}",
                         "line": i
                     }
                     matched_links.append(link_item)
@@ -123,8 +147,13 @@ def link_processing():
             file_matches = 0
     unique_links = list({i['link']:i for i in reversed(matched_links)}.values())
 
+    print('Filtering stored and ignored links...\n')
+    if stored_links:
+        unique_links[:] = [d for d in unique_links if d['link'] not in stored_links]
+        unique_links[:] = [d for d in unique_links if d['link'] not in ignored_links]
+
     print(f'Total links found: {ORANGE}{total_links}{RESET}')
-    print(f'Unique links: {GREEN}{len(unique_links)}{RESET}\n{"-"*50}')
+    print(f'Links to Test: {GREEN}{len(unique_links)}{RESET}\n{"-"*50}')
 
     with ThreadPoolExecutor(max_workers=WORKER_COUNT) as executor:
         futures = {
@@ -142,14 +171,17 @@ def main():
     link_processing()
 
     report = f"failed_links.{datetime.now().strftime('%Y-%m-%d')}"
-    with open(
-        report,
-        'a',
-        encoding='utf-8') as f:
-
-        print(f'Writing report to {Path.cwd()}/{report}...')
-        f.write(f'Report ran on: {datetime.now().strftime("%Y-%m-%d %H:%M")}\n{"-"*50}\n')
-        [f.writelines(f'{link}\n') for link in failed_links]
+    with open(report, 'w', encoding='utf-8') as f_report, \
+         open(STORAGE, 'a', encoding='utf-8') as f_updated:
+        print(
+            f'Failed Links: {RED}{len(failed_links)}{RESET}\n'
+            f'Writing report to {Path.cwd()}/{report}...'
+        )
+        f_report.write(f'Report ran on: {datetime.now().strftime("%Y-%m-%d %H:%M")}\n{"-"*50}\n')
+        if failed_links:
+            [f_report.writelines(f'{link}\n') for link in failed_links]
+        if successful_links:
+            [f_updated.writelines(f'{link}\n') for link in successful_links]
 
 if __name__ == '__main__':
     main()
