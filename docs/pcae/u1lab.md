@@ -2,13 +2,6 @@
 # ProLUG Linux Automation
 # Lab Guide  
 
-| Section |                                                 Contents
-| :--: | :---------------------------------------------------------------------------------------------------: |
-|  X   | [Acceptable Use Policy]()    |
-|  X   | [Access to Lab]()   |
-|  X   | [Public Keys]()  |
-|  X   | [Lab Best Practices]()      |
-
 ## Acceptable Use Policy
 
 The acceptable use policy is presented during login through the Bastion node:  
