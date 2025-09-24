@@ -1,0 +1,3 @@
+https://github.com/YOUR_USERNAME/course-books.git
+https://discord.com/api/webhooks/your_webhook_url
+https://en.wikipedia.org/wiki/C_(programming_language
