@@ -191,7 +191,6 @@ This is foundational to change management, compliance, and intrusion detection.
 
 - [RPM Man Page](https://man7.org/linux/man-pages/man8/rpm.8.html)
 - [AIDE Documentation](https://aide.github.io/)
-- [Verifying RPM Packages](https://access.redhat.com/solutions/14303)
 - [Using sha256sum](https://man7.org/linux/man-pages/man1/sha256sum.1.html)
  
 ## Downloads

@@ -108,10 +108,10 @@ ss -ntulp | grep 3306
   SELECT user, max_user_connections FROM mysql.user;
   ```
 
-  ![image](https://github.com/user-attachments/assets/53984015-72ca-42c1-baa2-28e9a9470e3c)
+  ![image](../../assets/psc/images/u1/sql1.png)
 
   Can you remediate this finding?
-  ![image](https://github.com/user-attachments/assets/a9410577-7250-421c-acdf-00cc7f54a3f0)
+  ![image](../../assets/psc/images/u1/sql2.png)
 
 - Check and remediate `v-253677 STIG`
   - What is the problem?
