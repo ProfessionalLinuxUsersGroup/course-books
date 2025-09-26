@@ -1,8 +1,47 @@
 #!/bin/bash
-# Helper script to create issues for unit intros, worksheets, labs, and bonuses
-# for the ProLUG course-books repo.
-# Must be authenticated via 'gh auth login', with a PAT with correct access.  
-# Run from inside the `scripts` directory.
+#===============================================================================
+#
+#          FILE:  create-issues
+#       VERSION:  1.0.0
+#
+#         USAGE:  ./create-issues OPTIONS
+#
+#   DESCRIPTION:  Helper script to create issues for unit intros, worksheets, 
+#                 labs, and bonuses. Generates issue(s) of a given type(s) for
+#                 the ProLUG course-books repository.
+#                 Must be authenticated via 'gh auth login', with a PAT with 
+#                 correct access.  
+#
+#       OPTIONS:
+#           -u | --unit UNIT_NUMBER     Specify the unit number for the issue.
+#                                       Required unless provided interactively.
+#
+#           -t | --type TYPE            Specify the type of document for the issue. 
+#                                       One of:
+#                                         - intro     (👋  file: u<UNIT>intro.md)
+#                                         - worksheet (📄  file: u<UNIT>ws.md)
+#                                         - lab       (🧪  file: u<UNIT>lab.md)
+#                                         - bonus     (🍒  file: u<UNIT>b.md)
+#                                         - all       (create one issue per type)
+#                                       Set to 'all' to create an issue of each type.
+#                                       Required unless provided interactively.
+#
+#           -b | --book BOOK            Specify the book the issue is targeting.
+#                                       Valid options:
+#                                         - lac | admin       (labels: [LAC],   "admin")
+#                                         - psc | security    (labels: [PSC],   "security")
+#                                         - pcae | automation (labels: [PCAE],  "automation")
+#
+#           -a | --all                  Alias for '--type all'.
+#
+#           -h, --help                  Show usage and exit.
+#
+#  REQUIREMENTS:  bash >= 4.0, GNU coreutils (md5sum, cut) GNU grep, GNU sed,
+#                 GNU findutils (find), perl >= 5.10, gh >= 2.4.0
+#        AUTHOR:  Connor W. (https://github.com/kolkhis)
+#       CREATED:  2025-04-23
+#
+#===============================================================================
 
 declare -i UNIT
 declare TYPE
@@ -83,10 +122,14 @@ USAGE:
 
 OPTIONS:
     -u | --unit UNIT_NUMBER     Specify the unit number for the issue 
+
     -t | --type TYPE            Specify the type of document for the issue 
-                                This can be one of 'worksheet', 'lab', 'intro', 'bonus'. Set to 'all' to create an issue of each type.
+                                This can be one of 'worksheet', 'lab', 'intro', 'bonus'.
+                                Set to 'all' to create an issue of each type.
+
     -b | --book BOOK            Specify the book the issue is for
                                 Valid options: lac|admin, psc|security, pcae|automation, 
+
     -a | --all                  Shorthand for '--type all'
 
 SYNOPSIS:
@@ -102,6 +145,7 @@ done
 [[ -z $TYPE ]] && read -r -p "Enter type (ws/lab/intro/bonus/all): " TYPE;  
 [[ -z $BOOK ]] && read -r -p "Enter book (lac/psc/pcae): " BOOK;  
 [[ -z $TYPE || -z $UNIT ]] && printf >&2 "[ERROR]: Missing Type or Unit!\n" && exit 1
+
 case $BOOK in
     lac|admin)
         BOOK='[LAC] '
