@@ -24,18 +24,16 @@ could be transposed to a `.md` file.
 
 ### Unit 1 Recording
 
-Coming soon.
-
-<!-- <iframe -->
-<!--     style="width: 100%; height: 100%; border: none; -->
-<!--     aspect-ratio: 16/9; border-radius: 1rem; background:black" -->
-<!--     src="PLACEHOLDER: Unit Embed Link" -->
-<!--     title="Automation Unit 1: Automation Tools - Lecure Recording" -->
-<!--     frameborder="0" -->
-<!--     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" -->
-<!--     referrerpolicy="strict-origin-when-cross-origin" -->
-<!--     allowfullscreen> -->
-<!-- </iframe> -->
+<iframe
+    style="width: 100%; height: 100%; border: none;
+    aspect-ratio: 16/9; border-radius: 1rem; background:black"
+    src="https://www.youtube.com/embed/wyVhGtFFYIQ?si=6-SPB7mVJL4LcIMV"
+    title="Automation Unit 1: Automation Tools - Lecure Recording"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+</iframe>
 
 #### Discussion Post #1
 
