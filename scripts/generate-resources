@@ -4,7 +4,7 @@
 #          FILE:  generate-resources
 #
 #         USAGE:  ./generate-resources
-#                 To be run from the root directory of the ProLUG course mdBook
+#                 To be run from the root directory of the ProLUG course MkDocs
 #                 project.  
 #
 #   DESCRIPTION:  This script generates a list of all external resources used in a

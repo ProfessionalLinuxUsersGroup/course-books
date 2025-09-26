@@ -10,7 +10,7 @@ instructional materials produce by Scott Champine (het_tanis).
 
 The content is version controlled with Git and stored here: <https://github.com/ProfessionalLinuxUsersGroup/course-books>
 
-Furthermore, the book has been built with mdbook for ease of navigation. Be sure to try the search functionality.
+Furthermore, the book has been built with MkDocs for ease of navigation. Be sure to try the search functionality.
 
 **Course Description:**
 
