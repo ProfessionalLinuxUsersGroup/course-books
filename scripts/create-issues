@@ -1,12 +1,16 @@
 #!/bin/bash
-# Make sure you're authenticated via 'gh auth login', with a PAT with correct access.  
+# Helper script to create issues for unit intros, worksheets, labs, and bonuses
+# for the ProLUG course-books repo.
+# Must be authenticated via 'gh auth login', with a PAT with correct access.  
 # Run from inside the `scripts` directory.
 
 declare -i UNIT
 declare TYPE
+declare TYPE_LABEL
+declare BOOK
+declare BOOK_LABEL
 declare FILE
 declare EMOJI
-declare BOOK
 
 declare -a ALL_TYPES=('intro' 'worksheet' 'lab' 'bonus')
 
@@ -17,25 +21,25 @@ _set_type_vars() {
             TYPE='worksheet'
             FILE="u${UNIT}ws.md"
             EMOJI="📄"
-            LABEL="Worksheet ${EMOJI}"
+            TYPE_LABEL="Worksheet ${EMOJI}"
             ;;
         l|lab)
             TYPE='lab'
             FILE="u${UNIT}lab.md"
             EMOJI="🧪"
-            LABEL="Lab ${EMOJI}"
+            TYPE_LABEL="Lab ${EMOJI}"
             ;;
         i|intro)
             TYPE='intro'
             FILE="u${UNIT}intro.md"
             EMOJI="👋"
-            LABEL="Intro"
+            TYPE_LABEL="Intro"
             ;;
         b|bonus)
             TYPE='bonus'
             FILE="u${UNIT}b.md"
             EMOJI="🍒"
-            LABEL="Bonus ${EMOJI}"
+            TYPE_LABEL="Bonus ${EMOJI}"
             ;;
     esac
 }
@@ -43,11 +47,17 @@ _set_type_vars() {
 while [[ -n $1 ]]; do
     case $1 in
         -u|--unit)
-            [[ -n $2 && ! $2 =~ ^- ]] && UNIT=$2 && shift || printf "Bad argument to -u/--unit.\n"
+            { [[ -n $2 && ! $2 =~ ^- ]] && UNIT=$2 && shift; } || {
+                printf >&2 "[ERROR]: Missing or bad argument to -u/--unit.\n"
+                exit 1
+            }
             shift;
             ;;
         -t|--type)
-            [[ -n $2 && ! $2 =~ ^- ]] && TYPE=$2 && shift || printf "No argument to -t/--type.\n"
+            { [[ -n $2 && ! $2 =~ ^- ]] && TYPE=$2 && shift; } || {
+                printf >&2 "[ERROR]: Missing or bad argument to -t/--type.\n"
+                exit 1
+            } 
             shift; 
             ;;
         -a|--all)
@@ -55,8 +65,11 @@ while [[ -n $1 ]]; do
             shift;
             ;;
         -b|--book)
-            [[ -n $2 && ! $2 =~ ^- ]] && BOOK=$2 && shift || printf "No argument to -b/--book.\n"
-            if ! [[ "$BOOK" =~ (lac|psc|pcae) ]]; then
+            { [[ -n $2 && ! $2 =~ ^- ]] && BOOK=$2 && shift; } || {
+                printf >&2 "[ERROR]: Missing or bad argument to -b/--book.\n"
+                exit 1
+            }
+            if ! [[ "$BOOK" =~ ((lac|admin)|(psc|security)|(pcae|automation)) ]]; then
                 printf >&2 "[ERROR]: Bad argument to -b/--book!\n"
                 exit 1
             fi
@@ -64,18 +77,20 @@ while [[ -n $1 ]]; do
             ;;
         -h|--help)
             cat <<- EOF
-            NAME: create-issues
-            USAGE:
-              create-issues [-t|--type TYPE] [-u|--unit UNIT_NUMBER] [-a|--all]
+NAME: create-issues
+USAGE:
+  ./scripts/create-issues [-b|--book BOOK] [-t|--type TYPE] [-u|--unit UNIT] [-a|--all]
 
-            OPTIONS:
-                -u | --unit UNIT_NUMBER     Specify the unit number for the issue 
-                -t | --type TYPE            Specify the type of document for the issue 
-                                            This can be one of 'worksheet', 'lab', 'intro', 'bonus'. Set to 'all' to create an issue of each type.
-                -a | --all                  Shorthand for '--type all'
+OPTIONS:
+    -u | --unit UNIT_NUMBER     Specify the unit number for the issue 
+    -t | --type TYPE            Specify the type of document for the issue 
+                                This can be one of 'worksheet', 'lab', 'intro', 'bonus'. Set to 'all' to create an issue of each type.
+    -b | --book BOOK            Specify the book the issue is for
+                                Valid options: lac|admin, psc|security, pcae|automation, 
+    -a | --all                  Shorthand for '--type all'
 
-            SYNOPSIS:
-            Creates an issue for the upstream repo. The 'gh' tool must be configured beforehand.
+SYNOPSIS:
+Creates an issue for the upstream repo. The 'gh' tool must be configured beforehand.
 			EOF
             shift;
             exit 0
@@ -85,30 +100,48 @@ done
 
 [[ -z $UNIT ]] && read -r -p "Enter unit number: " UNIT;  
 [[ -z $TYPE ]] && read -r -p "Enter type (ws/lab/intro/bonus/all): " TYPE;  
+[[ -z $BOOK ]] && read -r -p "Enter book (lac/psc/pcae): " BOOK;  
 [[ -z $TYPE || -z $UNIT ]] && printf >&2 "[ERROR]: Missing Type or Unit!\n" && exit 1
+case $BOOK in
+    lac|admin)
+        BOOK='[LAC] '
+        BOOK_LABEL='admin'
+        ;;
+    psc|security)
+        BOOK='[PSC] ' 
+        BOOK_LABEL='security'
+        ;;
+    pcae|automation)
+        BOOK='[PCAE] '
+        BOOK_LABEL='automation'
+        ;;
+    *)
+        ;;
+esac
+
+create() {
+    local issue_body
+    issue_body="See the reference page for this type of file at: https://github.com/ProfessionalLinuxUsersGroup/course-books/tree/main/ref/$(perl -pe 's/\d+//g' <<< "$FILE")" 
+    gh issue create \
+        --title "${BOOK^^} Unit ${UNIT} ${t^} ${EMOJI} (${FILE})" \
+        --label "${TYPE_LABEL}" \
+        --label "${BOOK_LABEL}" \
+        --label "Unit #${UNIT}" \
+        --label "help wanted" \
+        --label "enhancement" \
+        --body "$issue_body"
+}
 
 if [[ "${TYPE,,}" == "all" ]]; then
     for t in "${ALL_TYPES[@]}"; do
         _set_type_vars "$t"
-        gh issue create \
-            --title "[${BOOK^^}] Unit ${UNIT} ${t^} ${EMOJI} (${FILE})" \
-            --label "${LABEL}" \
-            --label "Unit #${UNIT}" \
-            --label "help wanted" \
-            --label "enhancement" \
-            --body "See the reference page for this type of file at https://github.com/ProfessionalLinuxUsersGroup/course-books/tree/main/ref" 
+        create
     done
     printf "Successfully created all issues for unit %s.\n" "$UNIT"
     exit 0
 else
     _set_type_vars "$TYPE"
-    gh issue create \
-        --title "[${BOOK^^}] Unit ${UNIT} ${TYPE^} ${EMOJI} (${BOOK}/${FILE})" \
-        --label "${LABEL}" \
-        --label "Unit #${UNIT}" \
-        --label "help wanted" \
-        --label "enhancement" \
-        --body "See the reference page for this type of file at https://github.com/ProfessionalLinuxUsersGroup/course-books/tree/main/ref" 
+    create
     printf "Successfully created %s issue for unit %s.\n" "$TYPE" "$UNIT"
     exit 0
 fi
