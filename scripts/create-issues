@@ -119,30 +119,29 @@ case $BOOK in
         ;;
 esac
 
-if [[ "${TYPE,,}" == "all" ]]; then
-    for t in "${ALL_TYPES[@]}"; do
-        _set_type_vars "$t"
-        gh issue create \
-            --title "${BOOK^^} Unit ${UNIT} ${t^} ${EMOJI} (${FILE})" \
-            --label "${TYPE_LABEL}" \
-            --label "${BOOK_LABEL}" \
-            --label "Unit #${UNIT}" \
-            --label "help wanted" \
-            --label "enhancement" \
-            --body "See the reference page for this type of file at https://github.com/ProfessionalLinuxUsersGroup/course-books/tree/main/ref/$(perl -pe 's/\d+//g' <<< "$FILE")" 
-    done
-    printf "Successfully created all issues for unit %s.\n" "$UNIT"
-    exit 0
-else
-    _set_type_vars "$TYPE"
+create() {
+    local issue_body
+    issue_body="See the reference page for this type of file at: https://github.com/ProfessionalLinuxUsersGroup/course-books/tree/main/ref/$(perl -pe 's/\d+//g' <<< "$FILE")" 
     gh issue create \
-        --title "${BOOK^^} Unit ${UNIT} ${TYPE^} ${EMOJI} (${BOOK}/${FILE})" \
+        --title "${BOOK^^} Unit ${UNIT} ${t^} ${EMOJI} (${FILE})" \
         --label "${TYPE_LABEL}" \
         --label "${BOOK_LABEL}" \
         --label "Unit #${UNIT}" \
         --label "help wanted" \
         --label "enhancement" \
-        --body "See the reference page for this type of file at https://github.com/ProfessionalLinuxUsersGroup/course-books/tree/main/ref/$(perl -pe 's/\d+//g' <<< "$FILE")" 
+        --body "$issue_body"
+}
+
+if [[ "${TYPE,,}" == "all" ]]; then
+    for t in "${ALL_TYPES[@]}"; do
+        _set_type_vars "$t"
+        create
+    done
+    printf "Successfully created all issues for unit %s.\n" "$UNIT"
+    exit 0
+else
+    _set_type_vars "$TYPE"
+    create
     printf "Successfully created %s issue for unit %s.\n" "$TYPE" "$UNIT"
     exit 0
 fi
