@@ -66,6 +66,22 @@ If any reviewer believes that the contribution may have been AI-generated, they
 may post a change request with a comment stating that they believe it came from AI.  
 If the reviewer is also a maintainer, they may reject the pull request.
 
+## Learning Markdown
+
+This project uses Markdown, which is a markup language used to create formatted
+text using a plaintext editor. Many developers and engineers have switched to 
+using Markdown to write technical documentation.  
+
+It's easy to learn, and any prospective contributor will be expected to 
+understand basic markdown syntax.  
+
+Below are some resources to get you started with Markdown:
+
+- [MkDocs Markdown Overview](https://www.mkdocs.org/user-guide/writing-your-docs/#writing-with-markdown)
+- [Commonmark Markdown Cheatsheet](https://commonmark.org/help/)
+- [Dillinger, a Web-based Markdown Editor and Previewer](https://dillinger.io/)
+- [HowToGeek: Brief Overview of Markdown](https://www.howtogeek.com/448323/what-is-markdown-and-how-do-you-use-it/)
+
 ## Signing your Git Commits with SSH
 
 Contributors who elect to contribute through the command line will need
