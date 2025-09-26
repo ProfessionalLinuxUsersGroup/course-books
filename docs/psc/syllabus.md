@@ -8,9 +8,9 @@ Contains all materials pertaining to the course including links to external reso
 It has been put together with care by a number of ProLUG group members referencing original
 instructional materials produced by Scott Champine (Het Tanis).
 
-The content is version controlled with Git and stored here: <https://github.com/ProfessionalLinuxUsersGroup/psc/>
+The content is version controlled with Git and stored here: <https://github.com/ProfessionalLinuxUsersGroup/course-books/>
 
-Furthermore, the book has been built with mdbook for ease of navigation. Be sure to try the search functionality.
+Furthermore, the book has been built with MkDocs for ease of navigation. Be sure to try the search functionality.
 
 ### Course Description
 
