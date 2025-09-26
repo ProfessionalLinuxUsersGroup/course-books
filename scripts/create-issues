@@ -36,8 +36,9 @@
 #
 #           -h, --help                  Show usage and exit.
 #
-#  REQUIREMENTS:  bash >= 4.0, GNU coreutils (md5sum, cut) GNU grep, GNU sed,
-#                 GNU findutils (find), perl >= 5.10, gh >= 2.4.0
+#  REQUIREMENTS:  bash >= 4.0, GNU coreutils, perl >= 5.x (tested with >=5.10),
+#                 gh >= 2.4.0, authenticated via `gh auth login` with a PAT
+#                 with "repo" scope.
 #        AUTHOR:  Connor W. (https://github.com/kolkhis)
 #       CREATED:  2025-04-23
 #
