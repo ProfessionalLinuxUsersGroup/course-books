@@ -436,23 +436,7 @@ before opening a pull request.
 Below are links to the necessary materials to build out the course templates:
 
 - Look over the [template pages wiki](https://github.com/ProfessionalLinuxUsersGroup/course-books/wiki), or directly here:
-  - Pages: [intro](https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/ref/intro.md),
+  - Reference Pages: [intro](https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/ref/intro.md),
     [bonus](https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/ref/ub.md),
     [lab](https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/ref/ulab.md),
     [worksheet](https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/ref/uws.md)
-
-<!-- TODO: Implement wiki for ref material -->
-
-<!-- - Look over the [template pages wiki](https://github.com/ProfessionalLinuxUsersGroup/lac/wiki), or directly here: -->
-<!--   - Pages: [intro](https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/ref/intro.md), -->
-<!--     [bonus](https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/ref/ub.md), -->
-<!--     [lab](https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/ref/ulab.md), -->
-<!--     [worksheet](https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/ref/uws.md) -->
-<!---->
-<!-- Ancillary unit videos provided by Scott: -->
-<!---->
-<!-- - <https://www.youtube.com/watch?v=eHB8WKWz2eQ&list=PLyuZ_vuAWmprPIqsG11yoUG49Z5dE5TDu> -->
-<!---->
-<!-- PDF and docs directly related to each Unit of the course: -->
-<!---->
-<!-- - <https://discord.com/channels/611027490848374811/1098309490681598072> -->
