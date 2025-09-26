@@ -169,9 +169,9 @@ nav:
   - Linux Automation Course:
     - Syllabus: pcae/syllabus.md
     - Table of Contents: pcae/unitindex.md
-    # - Unit 1 - Automation Tools:
+    - Unit 1 - Automation Tools:
     #   - Intro: pcae/u1intro.md
-    #   - Worksheet: pcae/u1ws.md
+      - Worksheet: pcae/u1ws.md
     #   - Lab: pcae/u1lab.md
     # - Unit 2 - Interacting with the OS:
     #   - Intro: pcae/u2intro.md
@@ -235,6 +235,7 @@ nav:
     #   - Intro: pcae/u16intro.md
     #   - Worksheet: pcae/u16ws.md
     #   - Lab: pcae/u16lab.md
+    - Downloads: pcae/downloads.md
 
 
 extra:
@@ -279,6 +280,7 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.keys
 
 plugins:
   - glightbox
