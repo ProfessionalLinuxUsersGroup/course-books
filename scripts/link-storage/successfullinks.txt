@@ -280,3 +280,17 @@ https://youtu.be/RGOj5yH7evk
 https://killercoda.com/het-tanis/course/Ansible-Labs/16-Ansible-Web-Server-Env-Deploy
 https://landscape.cncf.io/guide#observability-and-analysis--observability
 https://help.ubuntu.com/community/UFW
+https://www.youtube.com/embed/wyVhGtFFYIQ?si=6-SPB7mVJL4LcIMV
+https://killercoda.com
+https://en.wikipedia.org/wiki/C_(programming_language)
+https://aws.amazon.com/blogs/big-data/tag/amazon-msk/
+https://www.mkdocs.org/user-guide/writing-your-docs/#writing-with-markdown
+https://www.howtogeek.com/448323/what-is-markdown-and-how-do-you-use-it/
+https://dillinger.io/
+https://krython.com/post/installing-rocky-linux-9-complete-installation-guide
+https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview
+https://ubuntu.com/tutorials/install-ubuntu-server#1-overview
+https://serverlessland.com/patterns
+https://serverlessland.com/
+https://commonmark.org/help/
+https://github.com/ProfessionalLinuxUsersGroup/course-books/

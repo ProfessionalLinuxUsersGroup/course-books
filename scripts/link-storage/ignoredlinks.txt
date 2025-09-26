@@ -1,3 +1,14 @@
 https://github.com/YOUR_USERNAME/course-books.git
 https://discord.com/api/webhooks/your_webhook_url
-https://en.wikipedia.org/wiki/C_(programming_language
+https://public.cyber.mil/stigs/srg-stig-tools/
+http://dl.rockylinux.org/$contentdir/$releasever/BaseOS/$basearch/os/
+https://mirrors.rockylinux.org/mirrorlist?arch=$basearch&repo=BaseOS-$releasever$rltype
+https://www.cisa.gov/kubernetes-hardening-guide
+https://www.linux.org/pages/download/
+https://www.cyberciti.biz/tips/top-linux-monitoring-tools.html
+https://public.cyber.mil/stigs/downloads/
+https://www.gnu.org/software/bash/manual/bash.html
+https://www.gnu.org/software/screen/manual/screen.html
+https://www.gnu.org/software/screen/
+http://hammer25/repo/AppStream/
+http://hammer25/repo/BaseOS/
