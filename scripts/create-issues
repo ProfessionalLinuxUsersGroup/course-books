@@ -168,7 +168,7 @@ create() {
     local issue_body
     issue_body="See the reference page for this type of file at: https://github.com/ProfessionalLinuxUsersGroup/course-books/tree/main/ref/$(perl -pe 's/\d+//g' <<< "$FILE")" 
     gh issue create \
-        --title "${BOOK^^} Unit ${UNIT} ${t^} ${EMOJI} (${FILE})" \
+        --title "${BOOK^^} Unit ${UNIT} ${TYPE^} ${EMOJI} (${FILE})" \
         --label "${TYPE_LABEL}" \
         --label "${BOOK_LABEL}" \
         --label "Unit #${UNIT}" \
