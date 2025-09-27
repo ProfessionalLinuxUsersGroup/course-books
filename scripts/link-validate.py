@@ -1,4 +1,4 @@
-# v 1.3.78
+# v 1.3.145
 # Authored by Christian McKee - cmckee786@github.com
 # Attempts to validate links within ProLUG Course-Books repo
 
@@ -25,8 +25,9 @@ RESET = "\033[0m"
 
 # Worker count dependent on host limitations
 WORKER_COUNT = 20
-# Regex intended to match http(s) links unique to this project (very greedy)
-REGEX = r"(?<!\[)https?:\/\/(?:\S+\.)[^\s\)\]\}\<\>\"\,]+"
+# Regex intended to match http(s) links unique to this project
+REGEX = r"(?<!\[)https?://\S+[^\s\.\"\'\,\>\)\{\}]"
+pattern = re.compile(REGEX)
 
 STORAGE = 'scripts/link-storage/successfullinks.txt'
 IGNORED = 'scripts/link-storage/ignoredlinks.txt'
@@ -51,14 +52,13 @@ else:
     with open(IGNORED, 'w', encoding = 'utf-8'):
         pass
 
-
 def link_validation(matched_item: dict):
     """Utilizes user-agent headers lest webservers return false negatives
        Odds are some requests may be blocked by rate limiters like Cloudflare
     """
     headers = {
         "User-Agent": (
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Gecko/20100101 Firefox/143.0"
         ),
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
         "Accept-Language": "en-US,en;q=0.5",
@@ -68,7 +68,6 @@ def link_validation(matched_item: dict):
     req = urllib.request.Request(matched_item["link"], headers=headers)
     troubleshoot_output = f' {ORANGE}File:{RESET}{matched_item["file"]}'\
                           f' {BLUE}L:{matched_item["line"]} {RESET}'
-
 
     try:
         with urllib.request.urlopen(req, timeout = 7) as response:
@@ -130,33 +129,45 @@ def link_processing():
 
     for path in file_paths:
         with open(path, 'r', encoding='utf-8') as f:
-            print(f'{ORANGE}File{RESET}: {path}\n{"-"*50}')
+            print(f'{ORANGE}File{RESET}:{path}\n{"-"*50}')
             contents: list = f.read().splitlines()
             for i, line in enumerate(contents, 1):
-                str_match = re.search(REGEX, line)
+                str_match = pattern.search(line)
                 if str_match:
-                    print(f'{GREEN}L:{i}{RESET} | {str_match.group(0)}')
+                    match = str_match.group(0)
+                    if '(' in match and 'localhost' not in match:
+                        match = match + ')'
+                    elif 'localhost' in match :
+                        match = None
+                else:
+                    match = None
+                if match:
+                    print(f'{GREEN}L:{i}{RESET} | {match}')
                     link_item = {
-                        "link": str_match.group(0),
+                        "link": match,
                         "file": f"{path}",
                         "line": i
                     }
                     matched_links.append(link_item)
                     file_matches += 1
             if file_matches == 0:
-                print('No links found...\n')
+                print('No links found...')
+            print()
             total_links += file_matches
             file_matches = 0
 
     unique_links = list({i['link']:i for i in reversed(matched_links)}.values())
 
+    print(f'Total links found: {ORANGE}{total_links}{RESET}\n')
     print('Filtering stored and ignored links...\n')
+
     if stored_links:
         unique_links[:] = [d for d in unique_links if d['link'] not in stored_links]
         unique_links[:] = [d for d in unique_links if d['link'] not in ignored_links]
 
-    print(f'Total links found: {ORANGE}{total_links}{RESET}')
-    print(f'Links to Test: {GREEN}{len(unique_links)}{RESET}\n{"-"*50}')
+    print(f'\nLinks to Test: {GREEN}{len(unique_links)}{RESET}\n{"-"*50}')
+    for _ in unique_links:
+        print(f"{_['link']} {ORANGE}File:{RESET} {_['file']} {BLUE}L:{_['line']}{RESET}")
 
     return unique_links
 
@@ -165,6 +176,7 @@ def main():
     test_links = link_processing()
 
     if test_links:
+        print(f'\nFetching links\n{"-"*50}')
         with ThreadPoolExecutor(max_workers=WORKER_COUNT) as executor:
             futures = {
                 executor.submit(link_validation, dict_item):
@@ -180,7 +192,7 @@ def main():
         with open(report, 'w', encoding='utf-8') as f_report, \
              open(STORAGE, 'a', encoding='utf-8') as f_updated:
             print(
-                f'Failed Links: {RED}{len(failed_links)}{RESET}\n'
+                f'\nFailed Links: {RED}{len(failed_links)}{RESET}\n'
                 f'Writing report to {Path.cwd()}/{report}...'
             )
             f_report.write(f'Report ran on: {datetime.now().strftime("%Y-%m-%d %H:%M")}\n{"-"*50}\n')
