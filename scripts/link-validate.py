@@ -1,4 +1,4 @@
-# v 1.3.145
+# v 1.5.103
 # Authored by Christian McKee - cmckee786@github.com
 # Attempts to validate links within ProLUG Course-Books repo
 
@@ -32,25 +32,29 @@ pattern = re.compile(REGEX)
 STORAGE = 'scripts/link-storage/successfullinks.txt'
 IGNORED = 'scripts/link-storage/ignoredlinks.txt'
 
-stored_links: list = []
-ignored_links: list = []
 successful_links: list = []
 failed_links: list = []
 
+def file_setup(path: str):
+    """Instantiate files if missing, and populate stored/ignored links"""
+    if Path(path).exists():
+        with open(path, 'r', encoding='utf-8') as f_stored:
+            stored_links: list = [line.strip() for line in f_stored]
+    else:
+        with open(path, 'w', encoding = 'utf-8'):
+            stored_links = []
 
-if Path(STORAGE).exists():
-    with open(STORAGE, 'r', encoding='utf-8') as f_stored:
-        stored_links = [line.strip() for line in f_stored]
-else:
-    with open(STORAGE, 'w', encoding = 'utf-8'):
-        pass
+    return stored_links
 
-if Path(IGNORED).exists():
-    with open(IGNORED, 'r', encoding='utf-8') as f_ignored:
-        ignored_links = [line.strip() for line in f_ignored]
-else:
-    with open(IGNORED, 'w', encoding = 'utf-8'):
-        pass
+def file_processing(path: str):
+    """Sort files for stored and ignored links to reduce diffs"""
+    with open(path, 'r', encoding='utf-8') as f_pre:
+        links: list = [line.strip() for line in f_pre]
+        links.sort()
+        if links:
+            with open(path, 'w', encoding='utf-8') as f_post:
+                for line in links:
+                    f_post.writelines(f'{line}\n')
 
 def link_validation(matched_item: dict):
     """Utilizes user-agent headers lest webservers return false negatives
@@ -110,12 +114,14 @@ def link_validation(matched_item: dict):
             f'{matched_item['link']} - {RED}Timeout Error{RESET}{troubleshoot_output}'
         )
 
-def link_processing():
+def link_processing(stored: list, ignored: list):
     """Attemptes to validate links found in ProLUG Course-Books repo
         Returns per file total and total unique links found
         Must be run from root of git repo directory
     """
 
+    stored_links: list = stored
+    ignored_links: list = ignored
     matched_links: list = []
     unique_links: list = []
     file_matches: int = 0
@@ -134,13 +140,13 @@ def link_processing():
             for i, line in enumerate(contents, 1):
                 str_match = pattern.search(line)
                 if str_match:
-                    match = str_match.group(0)
+                    match: str = str_match.group(0)
                     if '(' in match and 'localhost' not in match:
                         match = match + ')'
                     elif 'localhost' in match :
-                        match = None
+                        match = ''
                 else:
-                    match = None
+                    match = ''
                 if match:
                     print(f'{GREEN}L:{i}{RESET} | {match}')
                     link_item = {
@@ -173,36 +179,46 @@ def link_processing():
 
 def main():
     """The place we call home"""
-    test_links = link_processing()
 
-    if test_links:
-        print(f'\nFetching links\n{"-"*50}')
-        with ThreadPoolExecutor(max_workers=WORKER_COUNT) as executor:
-            futures = {
-                executor.submit(link_validation, dict_item):
-                dict_item for dict_item in test_links
-            }
-            for future in as_completed(futures):
-                try:
-                    future.result()
-                except Exception as e:
-                    print(f'{futures[future]} -> Unexpected error: {e}')
+    try:
+        storage_links = file_setup(STORAGE)
+        ignored_storage_links = file_setup(IGNORED)
+        test_links = link_processing(storage_links, ignored_storage_links)
 
-        report = f"failed_links.{datetime.now().strftime('%Y-%m-%d')}"
-        with open(report, 'w', encoding='utf-8') as f_report, \
-             open(STORAGE, 'a', encoding='utf-8') as f_updated:
-            print(
-                f'\nFailed Links: {RED}{len(failed_links)}{RESET}\n'
-                f'Writing report to {Path.cwd()}/{report}...'
-            )
-            f_report.write(f'Report ran on: {datetime.now().strftime("%Y-%m-%d %H:%M")}\n{"-"*50}\n')
-            if failed_links:
-                [f_report.writelines(f'{link}\n') for link in failed_links]
-            if successful_links:
-                [f_updated.writelines(f'{link}\n') for link in successful_links]
+        if test_links:
+            print(f'\nFetching links\n{"-"*50}')
+            with ThreadPoolExecutor(max_workers=WORKER_COUNT) as executor:
+                futures = {
+                    executor.submit(link_validation, dict_item):
+                    dict_item for dict_item in test_links
+                }
+                for future in as_completed(futures):
+                    try:
+                        future.result()
+                    except Exception as e:
+                        print(f'{futures[future]} -> Unexpected error: {e}')
 
-    else:
-        print('Test link list is empty!\nExiting...')
+            report = f"failed_links.{datetime.now().strftime('%Y-%m-%d')}"
+            with open(report, 'w', encoding='utf-8') as f_report, \
+                 open(STORAGE, 'a', encoding='utf-8') as f_updated:
+                print(
+                    f'\nFailed Links: {RED}{len(failed_links)}{RESET}\n'
+                    f'Writing report to {Path.cwd()}/{report}...'
+                )
+                f_report.write(f'Report ran on: {datetime.now().strftime("%Y-%m-%d %H:%M")}\n{"-"*50}\n')
+                if failed_links:
+                    [f_report.writelines(f'{link}\n') for link in failed_links]
+
+                if successful_links:
+                    [f_updated.writelines(f'{link}\n') for link in successful_links]
+
+    except Exception as e:
+        print(e)
+    finally:
+        if Path(STORAGE).exists():
+            file_processing(STORAGE)
+        if Path(IGNORED).exists():
+            file_processing(IGNORED)
 
 if __name__ == '__main__':
     main()
