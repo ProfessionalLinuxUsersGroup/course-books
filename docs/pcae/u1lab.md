@@ -18,7 +18,7 @@
 The lab has been provided for convenience below:
 
 - <a href="../../assets/pcae/downloads/u1/u1_lab.txt" target="_blank" download>:material-download: u1_lab(`.txt`)</a>
-- <a href="../../assets/pcae/downloads/u1/u1_lab.md" target="_blank" download>:material-download: u1_lab(`.md`)</a>
+- <a href="../../assets/pcae/downloads/u1/u1_lab.md.txt" target="_blank" download="u1_lab.md">:material-download: u1_lab(`.md`)</a>
 
 
 ## Lab
