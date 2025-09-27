@@ -1,0 +1,58 @@
+Unit 1 Lab – Automation tools installation and execution
+
+Required Materials
+
+Putty or other connection tool
+Lab Server
+Root or sudo command access
+
+
+LAB
+
+This lab is designed to have the engineer verify and execute their automation tools in a controlled
+environment.
+
+
+Bash execution:
+
+1. Execute some simple commands within your bash shell
+    a. Verify your location and version of bash
+        i. which bash
+        ii. /usr/bin/bash --version
+
+    b. Verify your shell PID
+        i. echo $$
+
+    c. Verify your shell variable
+        i. echo $SHELL
+
+    d. Loop over your target servers #Use your target servers
+        i. for server in target1-1 target1-2; do timeout 10 ssh svc_ansible@$server 'uptime'; done
+           Enter your password for svc_ansible from lab guide
+
+Python execution:
+
+1. Test and execute Python
+
+    a. Verify your version of Python
+        i. python3 --version
+    b. Test that you can import modules
+        i. python3 #Will drop you into interactive shell
+        ii. import os #Should work with no output
+        iii. import numpy #Should not work as you don’t have numpy on the system
+        iv. exit() #Will exit the interactive python3 environment.
+
+Ansible execution:
+
+2. Test and execute Ansible
+
+    a. Verify your version of Ansible
+        i. ansible –version
+
+    b. Check other ansible tools
+        i. ansible- <tab><tab>
+
+    c. Check modules
+        i. ansible-doc -l
+        ii. ansible-doc -l | wc -l
+        iii. ansible-doc -l | grep -i copy
