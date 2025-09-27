@@ -31,20 +31,17 @@ tools in a controlled environment.
 Execute some simple commands within your bash shell.
 
 1. Verify your location and version of bash
-
    ```bash linenums="1"
    which bash
    /usr/bin/bash --version
    ```
 
 2. Verify your shell PID
-
    ```bash linenums="1"
    echo $$
    ```
 
 3. Verify your shell variable
-
    ```bash linenums="1"
    echo $SHELL
    ```
@@ -53,14 +50,13 @@ Execute some simple commands within your bash shell.
    ```bash linenums="1"
    for server in target1-1 target1-2; do timeout 10 ssh svc_ansible@$server 'uptime'; done
    ```
-   Enter your password for svc_ansible from lab guide.
+   Enter your password for the `svc_ansible` user from the lab guide.
 
 ### Python Execution
 
 Test and execute Python.
 
 1. Verify your version of Python
-
    ```bash linenums="1"
    python3 --version
    ```
@@ -78,16 +74,15 @@ Test and execute Python.
 Test and execute Ansible.
 
 1. Verify your version of Ansible
-
    ```bash linenums="1"
    ansible –version
    ```
 
 2. Check other ansible tools
-
    ```bash linenums="1"
    ansible- <tab><tab>
    ```
+
    The ++tab+tab++ will trigger autocompletion, showing what commands are
    available that start with `ansible-`.  
 
