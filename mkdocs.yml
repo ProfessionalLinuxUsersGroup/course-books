@@ -172,7 +172,7 @@ nav:
     - Unit 1 - Automation Tools:
     #   - Intro: pcae/u1intro.md
       - Worksheet: pcae/u1ws.md
-    #   - Lab: pcae/u1lab.md
+      - Lab: pcae/u1lab.md
     # - Unit 2 - Interacting with the OS:
     #   - Intro: pcae/u2intro.md
     #   - Worksheet: pcae/u2ws.md
