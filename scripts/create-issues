@@ -164,7 +164,7 @@ esac
 
 create() {
     local labels="$BOOK_LABEL,$TYPE_LABEL,Unit $UNIT,help wanted,enhancement"
-    local title="[${BOOK^^}] Unit ${UNIT} ${TYPE^} ${EMOJI} (${FILE})"
+    local title="${BOOK^^} Unit ${UNIT} ${TYPE^} ${EMOJI} (${FILE})"
     local issue_body
     issue_body="See the reference page for this type of file at: https://github.com/ProfessionalLinuxUsersGroup/course-books/tree/main/ref/$(tr -d '[:digit:]' <<< "$FILE")" 
 
