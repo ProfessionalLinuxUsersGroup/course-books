@@ -2,7 +2,7 @@
 #===============================================================================
 #
 #          FILE:  create-issues
-#       VERSION:  1.1.0
+#       VERSION:  1.1.1
 #
 #         USAGE:  ./create-issues OPTIONS
 #
@@ -166,7 +166,7 @@ esac
 
 create() {
     local issue_body
-    issue_body="See the reference page for this type of file at: https://github.com/ProfessionalLinuxUsersGroup/course-books/tree/main/ref/$(perl -pe 's/\d+//g' <<< "$FILE")" 
+    issue_body="See the reference page for this type of file at: https://github.com/ProfessionalLinuxUsersGroup/course-books/tree/main/ref/$(tr -d '[:digit:]' <<< "$FILE")" 
     gh issue create \
         --title "${BOOK^^} Unit ${UNIT} ${TYPE^} ${EMOJI} (${FILE})" \
         --label "${TYPE_LABEL}" \
