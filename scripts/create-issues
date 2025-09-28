@@ -2,7 +2,7 @@
 #===============================================================================
 #
 #          FILE:  create-issues
-#       VERSION:  1.1.1
+#       VERSION:  1.2.1
 #
 #         USAGE:  ./create-issues OPTIONS
 #
@@ -61,13 +61,13 @@ _set_type_vars() {
             TYPE='worksheet'
             FILE="u${UNIT}ws.md"
             EMOJI="📄"
-            TYPE_LABEL="Worksheet ${EMOJI}"
+            TYPE_LABEL="Worksheet"
             ;;
         l|lab)
             TYPE='lab'
             FILE="u${UNIT}lab.md"
             EMOJI="🧪"
-            TYPE_LABEL="Lab ${EMOJI}"
+            TYPE_LABEL="Lab"
             ;;
         i|intro)
             TYPE='intro'
@@ -79,7 +79,7 @@ _set_type_vars() {
             TYPE='bonus'
             FILE="u${UNIT}b.md"
             EMOJI="🍒"
-            TYPE_LABEL="Bonus ${EMOJI}"
+            TYPE_LABEL="Bonus"
             ;;
     esac
 }
@@ -147,34 +147,35 @@ done
 [[ -z $BOOK ]] && read -r -p "Enter book (lac/psc/pcae): " BOOK;  
 [[ -z $TYPE || -z $UNIT ]] && printf >&2 "[ERROR]: Missing Type or Unit!\n" && exit 1
 
-case $BOOK in
+case "${BOOK,,}" in
     lac|admin)
-        BOOK='[LAC] '
+        BOOK='[LAC]'
         BOOK_LABEL='admin'
         ;;
     psc|security)
-        BOOK='[PSC] ' 
+        BOOK='[PSC]' 
         BOOK_LABEL='security'
         ;;
     pcae|automation)
-        BOOK='[PCAE] '
+        BOOK='[PCAE]'
         BOOK_LABEL='automation'
-        ;;
-    *)
         ;;
 esac
 
 create() {
+    local labels="$BOOK_LABEL,$TYPE_LABEL,Unit $UNIT,help wanted,enhancement"
+    local title="[${BOOK^^}] Unit ${UNIT} ${TYPE^} ${EMOJI} (${FILE})"
     local issue_body
     issue_body="See the reference page for this type of file at: https://github.com/ProfessionalLinuxUsersGroup/course-books/tree/main/ref/$(tr -d '[:digit:]' <<< "$FILE")" 
+
     gh issue create \
-        --title "${BOOK^^} Unit ${UNIT} ${TYPE^} ${EMOJI} (${FILE})" \
-        --label "${TYPE_LABEL}" \
-        --label "${BOOK_LABEL}" \
-        --label "Unit ${UNIT}" \
-        --label "help wanted" \
-        --label "enhancement" \
-        --body "$issue_body"
+        --title "${title}" \
+        --label "${labels}" \
+        --body "$issue_body" || {
+        printf >&2 "[ERROR]: Failed to create issue!\n"
+        return 1
+    }
+
 }
 
 if [[ "${TYPE,,}" == "all" ]]; then
@@ -190,6 +191,4 @@ else
     printf "Successfully created %s issue for unit %s.\n" "$TYPE" "$UNIT"
     exit 0
 fi
-
-# --project "$PROJECT" 
 
