@@ -89,44 +89,47 @@ ss -ntulp | grep 3306
 ```
 
 - Check and remediate v-253666 STIG.
-  ![image](https://github.com/user-attachments/assets/e882e555-773f-43c2-b6df-a12fe34e64eb)
+  ![STIG 253666 image](../../assets/psc/images/u1/psc-lab1-mariadb-stig253666.png)
+  ![STIG 253666 continued image](../../assets/psc/images/u1/psc-lab1-mariadb-stig253666-continued.png)
+    - What is the problem?
+    - What is the fix?
+    - What type of control is being implemented?
+    - Is it set properly on your system?
 
-  - What is the problem?
-  - What is the fix?
-  - What type of control is being implemented?
-  - Is it set properly on your system?
+    Connect to MariaDB locally.
 
-  Connect to MariaDB locally.
+    ```bash
+    mysql
+    ```
 
-  ```bash
-  mysql
-  ```
+    Run the SQL command in the STIG's Fix Text section:
 
-  Run the SQL command in the STIG's Fix Text section:
+    ```sql
+    SELECT user, max_user_connections FROM mysql.user;
+    ```
 
-  ```sql
-  SELECT user, max_user_connections FROM mysql.user;
-  ```
+    ![SQL Image 1](../../assets/psc/images/u1/psc-u1lab-sql1.png)
 
-  ![image](../../assets/psc/images/u1/sql1.png)
+    Can you remediate this finding?
 
-  Can you remediate this finding?
-  ![image](../../assets/psc/images/u1/sql2.png)
+    ![SQL Image 2](../../assets/psc/images/u1/psc-u1lab-sql2.png)
 
 - Check and remediate `v-253677 STIG`
-  - What is the problem?
-  - What is the fix?
-  - What type of control is being implemented?
-  - Is it set properly on your system?
+    - What is the problem?
+    - What is the fix?
+    - What type of control is being implemented?
+    - Is it set properly on your system?
+
 - Check and remediate `v-253678 STIG`
-  - What is the problem?
-  - What is the fix?
-  - What type of control is being implemented?
-  - Is it set properly on your system?
+    - What is the problem?
+    - What is the fix?
+    - What type of control is being implemented?
+    - Is it set properly on your system?
+
 - Check and remediate `v-253734 STIG`
-  - What is the problem?
-  - What is the fix?
-  - What type of control is being implemented?
-  - Is it set properly on your system?
+    - What is the problem?
+    - What is the fix?
+    - What type of control is being implemented?
+    - Is it set properly on your system?
 
 > Be sure to `reboot` the lab machine from the command line when you are done.
