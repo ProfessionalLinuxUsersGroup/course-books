@@ -169,6 +169,7 @@ nav:
   - Linux Automation Course:
     - Syllabus: pcae/syllabus.md
     - Table of Contents: pcae/unitindex.md
+    - Lab Guide: pcae/lab-guide.md
     - Unit 1 - Automation Tools:
     #   - Intro: pcae/u1intro.md
       - Worksheet: pcae/u1ws.md
