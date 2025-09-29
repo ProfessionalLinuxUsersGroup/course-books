@@ -22,7 +22,9 @@ By entering you agree to use the lab for the stated purpose of learning Linux."
 
 ## Access to Lab
 
-Auto server mapping to target nodes.
+<img src="../../assets/pcae/images/lab-guide-bastion-process.png" />
+
+Auto server mapping to target nodes is as follows.
 ```plaintext
 Auto1 -> user: svc_ansible, password: ansible1234 -> target nodes: target1-1, target1-2
 Auto2 -> user: svc_ansible, password: ansible1234 -> target nodes: target2-1, target2-2
