@@ -1,4 +1,4 @@
-# v 1.5.110
+# v 1.5.209
 # Authored by Christian McKee - cmckee786@github.com
 # Attempts to validate links within ProLUG Course-Books repo
 
@@ -8,7 +8,7 @@
 
 # Must be called from root of github repo directory
 # Not intended for use in runner builds for the time being
-# Delete successfullinks.txt for now to retest all links
+# Delete or empty successfullinks.txt for now to retest all links
 
 import re
 import urllib.request
@@ -27,16 +27,14 @@ RESET = "\033[0m"
 WORKER_COUNT = 20
 # Regex intended to match http(s) links unique to this project
 REGEX = r"(?<!\[)https?://\S+[^\s\.\"\'\,\>\)\{\}]"
-pattern = re.compile(REGEX)
+PATTERN = re.compile(REGEX)
 
 STORAGE = 'scripts/link-storage/successfullinks.txt'
 IGNORED = 'scripts/link-storage/ignoredlinks.txt'
 
-successful_links: list = []
-failed_links: list = []
 
-def file_setup(path: str):
-    """Instantiate files if missing, and populate stored/ignored links"""
+def get_file_links(path: str):
+    """Populate stored/ignored links from files or instantiate files if missing"""
     if Path(path).exists():
         with open(path, 'r', encoding='utf-8') as f_stored:
             stored_links: list = [line.strip() for line in f_stored]
@@ -46,7 +44,7 @@ def file_setup(path: str):
 
     return stored_links
 
-def file_processing(path: str):
+def sort_file(path: str):
     """Sort files for stored and ignored links to reduce diffs"""
     with open(path, 'r', encoding='utf-8') as f_pre:
         links: list = [line.strip() for line in f_pre]
@@ -56,7 +54,7 @@ def file_processing(path: str):
                 for line in links:
                     f_post.writelines(f'{line}\n')
 
-def link_validation(matched_item: dict):
+def validate_link(matched_item: dict):
     """Utilizes user-agent headers lest webservers return false negatives
        Odds are some requests may be blocked by rate limiters like Cloudflare
     """
@@ -69,9 +67,9 @@ def link_validation(matched_item: dict):
         "Connection": "keep-alive",
     }
 
+    link_status: int = 0
     req = urllib.request.Request(matched_item["link"], headers=headers)
-    troubleshoot_output = f' {ORANGE}File:{RESET}{matched_item["file"]}'\
-                          f' {BLUE}L:{matched_item["line"]} {RESET}'
+    
 
     try:
         with urllib.request.urlopen(req, timeout = 7) as response:
@@ -80,41 +78,35 @@ def link_validation(matched_item: dict):
                     f'{matched_item['link']}\n'
                     f'\t- Responded {GREEN}{response.status} {response.reason}{RESET}'
                 )
-                successful_links.append(matched_item['link'])
+                link_status = 0
             else:
                 print(
                     f'{matched_item['link']}\n'
                     f'\t- Unknown error {RED}[FAILED]{RESET}'
                 )
-                failed_links.append(
-                    f'{matched_item["link"]}{troubleshoot_output}'
-                )
+                link_status = 1
     except urllib.error.HTTPError as e:
         print(
             f'{matched_item["link"]}\n'
             f'\t- Responded HTTP Error: {RED}{e.code} {e.reason}{RESET}'
         )
-        failed_links.append(
-            f'{matched_item['link']} - {RED}{e.code} {e.reason}{RESET}{troubleshoot_output}'
-        )
+        link_status = 1
     except urllib.error.URLError as e:
         print(
             f'{matched_item['link']}\n'
             f'\t- Responded URL Error: {RED}{e.reason}{RESET}'
         )
-        failed_links.append(
-            f'{matched_item['link']} - {RED}{e.reason}{RESET}{troubleshoot_output}'
-        )
+        link_status = 1
     except TimeoutError as e:
         print(
             f'{matched_item['link']}\n'
             f'\t- Responded {RED}Timeout Error{RESET}'
         )
-        failed_links.append(
-            f'{matched_item['link']} - {RED}Timeout Error{RESET}{troubleshoot_output}'
-        )
+        link_status = 1
 
-def link_processing(stored: list, ignored: list):
+    return link_status, matched_item
+
+def get_unique_links(stored: list, ignored: list):
     """Attemptes to validate links found in ProLUG Course-Books repo
         Returns per file total and total unique links found
         Must be run from root of git repo directory
@@ -138,7 +130,7 @@ def link_processing(stored: list, ignored: list):
             print(f'{ORANGE}File{RESET}:{path}\n{"-"*50}')
             contents: list = f.read().splitlines()
             for i, line in enumerate(contents, 1):
-                str_match = pattern.search(line)
+                str_match = PATTERN.search(line)
                 if str_match:
                     match: str = str_match.group(0)
                     if '(' in match and 'localhost' not in match:
@@ -151,7 +143,6 @@ def link_processing(stored: list, ignored: list):
                 else:
                     match = ''
                 if match:
-                    print(f'{GREEN}L:{i}{RESET} | {match}')
                     link_item = {
                         "link": match,
                         "file": path,
@@ -159,46 +150,60 @@ def link_processing(stored: list, ignored: list):
                     }
                     matched_links.append(link_item)
                     file_matches += 1
+                    print(f'{BLUE}{file_matches}{RESET} | {GREEN}L:{i}{RESET} | {match}')
             if file_matches == 0:
-                print('No links found...')
-            print()
+                print('No links found...\n')
+            else:
+                print()
             total_links += file_matches
             file_matches = 0
 
     unique_links = list({i['link']:i for i in reversed(matched_links)}.values())
 
-    print(f'Total links found: {ORANGE}{total_links}{RESET}\n')
-    print('Filtering stored and ignored links...\n')
+    print(
+        f'Total links found: {ORANGE}{total_links}{RESET}\n'
+        f'Unique links: {GREEN}{len(unique_links)}{RESET}\n'
+        f'Filtering stored and ignored links...\n'
+    )
 
     if stored_links:
         unique_links[:] = [d for d in unique_links if d['link'] not in stored_links]
         unique_links[:] = [d for d in unique_links if d['link'] not in ignored_links]
 
-    print(f'\nLinks to Test: {GREEN}{len(unique_links)}{RESET}\n{"-"*50}')
-    for _ in unique_links:
-        print(f"{_['link']} {ORANGE}File:{RESET} {_['file']} {BLUE}L:{_['line']}{RESET}")
 
     return unique_links
 
 def main():
     """The place we call home"""
     try:
-        storage_links = file_setup(STORAGE)
-        ignored_storage_links = file_setup(IGNORED)
-        test_links = link_processing(storage_links, ignored_storage_links)
+        successful_links: list = []
+        failed_links: list = []
+
+        storage_links = get_file_links(STORAGE)
+        ignored_storage_links = get_file_links(IGNORED)
+        test_links = get_unique_links(storage_links, ignored_storage_links)
 
         if test_links:
-            print(f'\nFetching links\n{"-"*50}')
+            print(f'Attempting to resolve links for testing...\n{"-"*50}')
             with ThreadPoolExecutor(max_workers=WORKER_COUNT) as executor:
                 futures = {
-                    executor.submit(link_validation, dict_item):
+                    executor.submit(validate_link, dict_item):
                     dict_item for dict_item in test_links
                 }
                 for future in as_completed(futures):
                     try:
-                        future.result()
+                        link_status, link = future.result()
+                        troubleshoot_output: str = \
+                                f'{link['link']}'\
+                                f' {ORANGE}File:{RESET}{link["file"]}'\
+                                f' {BLUE}L:{link["line"]} {RESET}'
+
+                        if link_status == 1:
+                            failed_links.append(troubleshoot_output)
+                        else:
+                            successful_links.append(link['link'])
                     except Exception as e:
-                        print(f'{futures[future]} -> Unexpected error: {e}')
+                        print(f'{futures[future]} - Unexpected error: {e}')
 
             report = f"failed_links.{datetime.now().strftime('%Y-%m-%d')}"
             with open(report, 'w', encoding='utf-8') as f_report, \
@@ -207,7 +212,9 @@ def main():
                     f'\nFailed Links: {RED}{len(failed_links)}{RESET}\n'
                     f'Writing report to {Path.cwd()}/{report}...'
                 )
-                f_report.write(f'Report ran on: {datetime.now().strftime("%Y-%m-%d %H:%M")}\n{"-"*50}\n')
+                f_report.write(
+                    f'Report ran on: {datetime.now().strftime("%Y-%m-%d %H:%M")}\n{"-"*50}\n'
+                )
                 if failed_links:
                     [f_report.writelines(f'{link}\n') for link in failed_links]
 
@@ -218,9 +225,9 @@ def main():
         print(e)
     finally:
         if Path(STORAGE).exists():
-            file_processing(STORAGE)
+            sort_file(STORAGE)
         if Path(IGNORED).exists():
-            file_processing(IGNORED)
+            sort_file(IGNORED)
 
 if __name__ == '__main__':
     main()
