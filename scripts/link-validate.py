@@ -10,6 +10,8 @@
 # Not intended for use in runner builds for the time being
 # Delete or empty successfullinks.txt for now to retest all links
 
+# USE RESPONSIBLY
+
 import re
 import urllib.request
 import urllib.error
@@ -55,8 +57,8 @@ def sort_file(path: str):
                     f_post.writelines(f'{line}\n')
 
 def validate_link(matched_item: dict):
-    """Utilizes user-agent headers lest webservers return false negatives
-       Odds are some requests may be blocked by rate limiters like Cloudflare
+    """ Attempt to resolve link and return error or status code for processing
+        Utilizes user-agent headers lest webservers return false negatives
     """
     headers = {
         "User-Agent": (
@@ -69,7 +71,6 @@ def validate_link(matched_item: dict):
 
     link_status: int = 0
     req = urllib.request.Request(matched_item["link"], headers=headers)
-    
 
     try:
         with urllib.request.urlopen(req, timeout = 7) as response:
@@ -107,7 +108,7 @@ def validate_link(matched_item: dict):
     return link_status, matched_item
 
 def get_unique_links(stored: list, ignored: list):
-    """Attemptes to validate links found in ProLUG Course-Books repo
+    """ Aggregate files and URLs for link validation
         Returns per file total and total unique links found
         Must be run from root of git repo directory
     """
