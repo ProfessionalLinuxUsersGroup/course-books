@@ -1,4 +1,4 @@
-# v 1.5.103
+# v 1.5.110
 # Authored by Christian McKee - cmckee786@github.com
 # Attempts to validate links within ProLUG Course-Books repo
 
@@ -142,7 +142,10 @@ def link_processing(stored: list, ignored: list):
                 if str_match:
                     match: str = str_match.group(0)
                     if '(' in match and 'localhost' not in match:
-                        match = match + ')'
+                        split_match = match.split('/')
+                        if '(' in split_match[-1] and ')' not in split_match[-1]:
+                            split_match[-1] = split_match[-1] + ')'
+                            match = '/'.join(split_match)
                     elif 'localhost' in match :
                         match = ''
                 else:
@@ -151,7 +154,7 @@ def link_processing(stored: list, ignored: list):
                     print(f'{GREEN}L:{i}{RESET} | {match}')
                     link_item = {
                         "link": match,
-                        "file": f"{path}",
+                        "file": path,
                         "line": i
                     }
                     matched_links.append(link_item)
@@ -179,7 +182,6 @@ def link_processing(stored: list, ignored: list):
 
 def main():
     """The place we call home"""
-
     try:
         storage_links = file_setup(STORAGE)
         ignored_storage_links = file_setup(IGNORED)
