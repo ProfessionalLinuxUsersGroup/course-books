@@ -1,4 +1,4 @@
-# v 1.5.209
+# v 1.5.210
 # Authored by Christian McKee - cmckee786@github.com
 # Attempts to validate links within ProLUG Course-Books repo
 
@@ -197,7 +197,7 @@ def main():
                         troubleshoot_output: str = \
                                 f'{link['link']}'\
                                 f' {ORANGE}File:{RESET}{link["file"]}'\
-                                f' {BLUE}L:{link["line"]} {RESET}'
+                                f' {BLUE}L:{link["line"]}{RESET}'
 
                         if link_status == 1:
                             failed_links.append(troubleshoot_output)
