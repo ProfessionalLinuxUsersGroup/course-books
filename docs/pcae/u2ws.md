@@ -7,9 +7,7 @@ Hold your worksheets until the end to turn them in as a final submission packet.
 
 ### Resources / Important Links
 
-- [PLACEHOLDER](LINK_HERE)
-- [PLACEHOLDER](LINK_HERE)
-- [PLACEHOLDER](LINK_HERE)
+- [Lab: Interacting with the OS](https://killercoda.com/het-tanis/course/Automation-Labs/Unit2_Interacting_with_OS)
 
 #### Downloads
 
