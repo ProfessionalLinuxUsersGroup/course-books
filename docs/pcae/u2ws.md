@@ -62,11 +62,9 @@ Read about the **Pareto Rule** or the **Rule of 80/20**.
 
 !!! notes
 
-    Submit your input by following the link below:
+    Submit your input by following the link below. The discussion posts are done in Discord Forums.
 
-    The discussion posts are done in Discord threads. Click the 'Threads' icon on the top right and search for the discussion post.
-
-- [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1098309490681598072)
+    - [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 ## Definitions
 
