@@ -174,9 +174,9 @@ nav:
     #   - Intro: pcae/u1intro.md
       - Worksheet: pcae/u1ws.md
       - Lab: pcae/u1lab.md
-    # - Unit 2 - Interacting with the OS:
+    - Unit 2 - Interacting with the OS:
     #   - Intro: pcae/u2intro.md
-    #   - Worksheet: pcae/u2ws.md
+      - Worksheet: pcae/u2ws.md
     #   - Lab: pcae/u2lab.md
     # - Unit 3 - Creating && Using Inventories:
     #   - Intro: pcae/u3intro.md
