@@ -1,0 +1,67 @@
+ProLUG Automation
+
+Unit 2 Worksheet
+
+Instructions
+
+Fill out this sheet as you progress through the lab and discussions.
+Hold your worksheets until the end to turn them in as a final submission packet.
+
+
+Discussion Questions:
+
+Unit 2 Discussion Post 1: Review the automation cycle presented in Unit 2 and
+answer the following questions.
+
+1. What would you add or take away from this drawing?
+
+2. When might you want something to fail during an automation?
+
+3. When might you not want an automation to fail?
+
+
+Unit 2 Discussion Post 2: Read about the pareto rule or the rule of 80/20.
+
+1. What is the general stated rule, as you understand it?
+
+2. Do you agree with the rule? Has this been your experience?
+
+    1. What examples can you find where this has proven true?
+
+    2. What examples can you find where this has not proven true?
+
+
+
+Definitions/Terminology
+
+- Pareto’s rule or principle
+
+- 80/20 Rule
+
+- Input validation
+
+- System Checking
+
+- System Validation
+
+- Reporting
+
+
+Notes During Lecture/Class:
+
+Links:
+
+Terms:
+
+Useful tools:
+
+
+Lab and Assignment
+Unit2 Lab from Lab book
+https://killercoda.com/het-tanis/course/Automation-Labs/Unit2_Interacting_with_OS
+
+Digging Deeper
+
+Reflection Questions
+1. What questions do you still have about this week?
+2. How are you going to use what you’ve learned in your current role?
