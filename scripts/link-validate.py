@@ -1,4 +1,4 @@
-# v 1.5.210
+# v 1.5.211
 # Authored by Christian McKee - cmckee786@github.com
 # Attempts to validate links within ProLUG Course-Books repo
 
@@ -169,6 +169,7 @@ def get_unique_links(stored: list, ignored: list):
 
     if stored_links:
         unique_links[:] = [d for d in unique_links if d['link'] not in stored_links]
+    if ignored_links:
         unique_links[:] = [d for d in unique_links if d['link'] not in ignored_links]
 
 
