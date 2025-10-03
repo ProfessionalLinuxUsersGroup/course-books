@@ -41,14 +41,14 @@ Capture all the terms and concepts that we talk about in this week’s recording
 #### Discussion Post #2
 
 1. Think about how the course objectives apply to the things you’ve worked on.
-   - How would you answer if I asked you for a quick rundown of how you would
-     secure a Linux system?
-   - How would you answer if I asked you why you are a good fit as a security
-     engineer in my company?
-   - Think about what security concepts you think bear the most weight as you
-     put these course objectives onto your resume.
-     1. Which would you include?
-     2. Which don’t you feel comfortable including?
+    - How would you answer if I asked you for a quick rundown of how you would
+      secure a Linux system?
+    - How would you answer if I asked you why you are a good fit as a security
+      engineer in my company?
+    - Think about what security concepts you think bear the most weight as you
+      put these course objectives onto your resume.
+        1. Which would you include?
+        2. Which don’t you feel comfortable including?
 
 ---
 

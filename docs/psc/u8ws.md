@@ -45,7 +45,7 @@ Read about configuration management here:
 - What are some of the standards and guidelines organizations involved with
   configuration management?
 
-  - Do you recognize them from other IT activities?
+    - Do you recognize them from other IT activities?
 
 #### Discussion Post #2
 

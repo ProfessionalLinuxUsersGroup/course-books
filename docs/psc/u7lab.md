@@ -30,12 +30,12 @@ These labs focus on pulling metric information and then visualizing that data qu
 
 1. Complete the lab: <https://killercoda.com/het-tanis/course/Linux-Labs/109-fail2ban-with-log-monitoring>
 
-   - Were you able to see the IP address that was banned and unban it?
+    - Were you able to see the IP address that was banned and unban it?
 
-   - Were you able to see all the NOTICE events in Grafana?
+    - Were you able to see all the NOTICE events in Grafana?
 
-   - What other questions do you have about this lab, and how might you go figure them
-     out?
+    - What other questions do you have about this lab, and how might you go figure them
+      out?
 
 ### Monitoring Jails with Fail2ban and telemetry data
 
@@ -43,28 +43,28 @@ These labs focus on pulling metric information and then visualizing that data qu
 
 1. Complete the lab here: <https://killercoda.com/het-tanis/course/Linux-Labs/110-fail2ban-with-metric-alerting>
 
-   - Do you see `fail2ban` in the Grafana Dashboard? If not, how are you going to
-     troubleshoot it?
+    - Do you see `fail2ban` in the Grafana Dashboard? If not, how are you going to
+      troubleshoot it?
 
-   - Did you get your test alert and then real alert to trigger into the Discord channel?
+    - Did you get your test alert and then real alert to trigger into the Discord channel?
 
-   - What other applications or uses for this could you think of? Do you have other
-     places you could send alerts that would help you professionally?
+    - What other applications or uses for this could you think of? Do you have other
+      places you could send alerts that would help you professionally?
 
 ## Digging Deeper challenge (not required for finishing lab)
 
 1. Review the alert manager documentation:
    <https://prometheus.io/docs/alerting/latest/configuration/>
 
-   - What are all the types of receivers you see?
+    - What are all the types of receivers you see?
 
-   - Which of the receivers do you have experience with?
+    - Which of the receivers do you have experience with?
 
 2. Review the Grafana alert thresholds:
    <https://grafana.com/docs/grafana/latest/panels-visualizations/configure-thresholds/>
 
-   - Can you modify one of the thresholds from the lab to trigger into the discord?
+    - Can you modify one of the thresholds from the lab to trigger into the discord?
 
-   - What is the relationship between critical and warning by default?
+    - What is the relationship between critical and warning by default?
 
 > Be sure to `reboot` the lab machine from the command line when you are done.

@@ -46,11 +46,11 @@ There are 16 Stigs that involve PAM for RHEL 9.
 Read the guide from Rocky Linux here: <https://docs.rockylinux.org/guides/security/pam/>
 
 1. What are the mechanisms and how do they affect PAM functionality?
-   - Review `/etc/pam.d/sshd` on a Linux system.  
-     What is happening in that file relative to these functionalities?
+    - Review `/etc/pam.d/sshd` on a Linux system.  
+      What is happening in that file relative to these functionalities?
 2. What are the common PAM modules?
-   - Review `/etc/pam.d/sshd` on a Linux system.  
-     What is happening in that file relative to these functionalities?
+    - Review `/etc/pam.d/sshd` on a Linux system.  
+      What is happening in that file relative to these functionalities?
 3. Look for a blog post or article about PAM that discusses real world application.  
    Post it here and give us a quick synopsis. (Bonus arbitrary points if you find one of our ProLUG members blogs on the subject.)
 
@@ -61,8 +61,8 @@ Read about active directory (or LDAP) configurations of Linux via `sssd` here:
 
 1. Why do we not want to just use local authentication in Linux? Or really any system?
 2. There are 4 SSSD STIGS.
-   - What are they?
-   - What do they seek to do with the system?
+    - What are they?
+    - What do they seek to do with the system?
 
 <div class="warning">
 Submit your input by following the link below.
@@ -99,11 +99,11 @@ wheel (system group in RHEL):
 
 1. How does `/etc/security/access.conf` come into play with pam_access?
    Read up on it here: <https://man7.org/linux/man-pages/man8/pam_access.8.html>
-   - Can you find any other good resources?
-   - What is the structure of the access.conf file directives?
+    - Can you find any other good resources?
+    - What is the structure of the access.conf file directives?
 2. What other important user access or user management information do you learn by
    reading this? <https://docs.rockylinux.org/books/admin_guide/06-users/>
-   - What is the contents of the `/etc/login.defs` file? Why do you care?
+    - What is the contents of the `/etc/login.defs` file? Why do you care?
 
 ## Reflection Questions
 

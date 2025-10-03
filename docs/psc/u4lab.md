@@ -40,11 +40,11 @@ hosts and jailing users as they enter an air-gapped environment.
 2. If you were to write out the high level steps of building a chroot jail, what would they be?
 
 3. Think about what you did in the lab and what extra (or less) you might give a user/process.
-   - What directories are needed?
-   - What executables might you give the jailed user/process?
-   - If you give an executable, why is it important to give the link libraries that it uses?
-   - What are the special files that you made with mknod and why must they be there?
-     (try removing them or redoing the lab without them. How does it break?)
+    - What directories are needed?
+    - What executables might you give the jailed user/process?
+    - If you give an executable, why is it important to give the link libraries that it uses?
+    - What are the special files that you made with mknod and why must they be there?
+      (try removing them or redoing the lab without them. How does it break?)
 
 ### Building a Bastion
 
@@ -55,8 +55,8 @@ hosts and jailing users as they enter an air-gapped environment.
 3. When you jump into the bastion host, do you have any options other than the one you have given yourself?
 
 4. How did you test that you couldn't leave the jailed environment?
-   - How effective do you think this is as a technical preventative control against user
-     breakout in the jail, having a 20 second timeout?
+    - How effective do you think this is as a technical preventative control against user
+      breakout in the jail, having a 20 second timeout?
 
 ## Digging Deeper challenge (not required for finishing lab)
 

@@ -49,8 +49,8 @@ some overlaps between those, but review them and answer these questions
    server builds?
 2. Why is it important to understand all the possible ingress points to our servers that
    exist?
-   - Why is it so important to understand the behaviors of processes that are
-     connecting on those ingress points?
+    - Why is it so important to understand the behaviors of processes that are
+      connecting on those ingress points?
 
 #### Discussion Post #2
 
