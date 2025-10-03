@@ -9,7 +9,7 @@
     Welcome to The Professional Linux Users Group, hopefully this
     stuff is useful to ya
 
-    [:octicons-arrow-right-24: ProLUG.org](https://prolug.org/)
+    [ProLUG.org<sup>:octicons-link-external-16:</sup>](https://prolug.org/)
 
 -   :fontawesome-solid-flask-vial:{ .lg .middle } __ProLUG Big Book of Labs__
 
@@ -17,7 +17,7 @@
 
     Labs from [@Het_Tanis](https://www.youtube.com/@het_tanis8213) :fontawesome-brands-youtube:{ .youtube } himself
 
-    [:octicons-arrow-right-24: Het's Big Book of Labs](https://leanpub.com/theprolugbigbookoflabs)
+    [Het's Big Book of Labs<sup>:octicons-link-external-16:</sup>](https://leanpub.com/theprolugbigbookoflabs)
 
 -   :fontawesome-brands-discord:{ .lg .middle } __Join The ProLUG Discord__
 
@@ -42,7 +42,7 @@
 
     ProLUG welcomes all prospective contributors, if you'd like to help out check in at the repo!
 
-    [:octicons-arrow-right-24: Course Books Repo](https://github.com/ProfessionalLinuxUsersGroup/course-books)
+    [Course Books Repo<sup>:octicons-link-external-16:</sup>](https://github.com/ProfessionalLinuxUsersGroup/course-books)
 
 </div>
 
