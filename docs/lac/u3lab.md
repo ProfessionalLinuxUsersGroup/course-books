@@ -1,7 +1,8 @@
 # Unit 3 Lab - LVM and Raid
 
-> If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot`
-> the machine from the command line so that other students will have the intended environment.
+!!! info
+
+    If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot` the machine from the command line so that other students will have the intended environment.
 
 ### Resources / Important Links
 
@@ -86,7 +87,7 @@ into or out of your filesystems as you create them. Different types of raid and
 different disk setups will give different speed of read and write. This is a simple
 way to test them. Use these throughout the lab in each mount for fun and understanding.
 
-#### Write tests (saving off write data - rename /tmp/file each time):
+#### Write tests (saving off write data - rename /tmp/file each time)
 
 ```bash
 # Check /dev/xvda for a filesystem
@@ -99,19 +100,19 @@ mkdir /space # (If you don’t have it. Lab will tell you to later as well)
 mount /dev/xvda /space
 ```
 
-#### Write Test:
+#### Write Test
 
 ```bash
 for i in `seq 1 10`; do time dd if=/dev/zero of=/space/testfile$i bs=1024k count=1000 | tee -a /tmp/speedtest1.basiclvm; done
 ```
 
-#### Read tests:
+#### Read tests
 
 ```bash
 for i in `seq 1 10`; do time dd if=/space/testfile$i of=/dev/null; done
 ```
 
-#### Cleanup:
+#### Cleanup
 
 ```bash
 for i in `seq 1 10`; do rm -rf /space/testfile$i; done
@@ -128,7 +129,7 @@ is especially true in SAN write tests.
 
 start in root (#); cd /root
 
-#### LVM explanation and use within the system:
+#### LVM explanation and use within the system
 
 ```bash
 # Check physical volumes on your server (my output may vary)
@@ -140,7 +141,7 @@ fdisk -l | grep -i xvd
 # Disk /dev/xvde: 3 GiB, 3221225472 bytes, 6291456 sectors
 ```
 
-#### Looking at Logical Volume Management:
+#### Looking at Logical Volume Management
 
 Logical Volume Management is an abstraction layer that looks a lot like how
 we carve up SAN disks for storage management. We have Physical Volumes that
@@ -173,7 +174,7 @@ If there is still no output, it’s because this system is not configured for LV
 You will notice that none of the disk you verified are attached are allocated to
 LVM yet. We’ll do that next.
 
-#### Creating and Carving up your LVM resources:
+#### Creating and Carving up your LVM resources
 
 Disks for this lab are /dev/xvdb, /dev/xvdc, and /dev/xvdd.
 (but verify before continuing and adjust accordingly.)
@@ -275,7 +276,7 @@ df -h
 
 Good place to speed test and save off your data.
 
-#### Removing and breaking down the LVM to raw disks:
+#### Removing and breaking down the LVM to raw disks
 
 The following command is one way to comment out the line in /etc/fstab. If you had
 to do this across multiple servers this could be useful. (Or you can just use vi for simplicity).
@@ -327,7 +328,7 @@ pvs;vgs;lvs
 # lv_app VolGroup01 -wi-ao---- 19.90g
 ```
 
-#### More complex types of LVM:
+#### More complex types of LVM
 
 LVM can also be used to raid disks
 
@@ -384,7 +385,7 @@ To run RAID 5 3 disks are needed. To run RAID 6 at least 4 disks are needed.
 
 Good place to speed test and save off your data
 
-#### Set the system back to raw disks:
+#### Set the system back to raw disks
 
 Unmount /space and remove entry from /etc/fstab
 
@@ -402,7 +403,7 @@ for disk in c e f; do pvremove /dev/sd$disk; done
 # Labels on physical volume "/dev/sdf" successfully wiped.
 ```
 
-#### Working with MDADM as another RAID option:
+#### Working with MDADM as another RAID option
 
 There could be a reason to use MDADM on the system. For example you want raid handled
 outside of your LVM so that you can bring in sets of new disks already raided and treat
@@ -412,7 +413,7 @@ useful to understand.
 
 May have to install mdadm yum: yum install mdadm
 
-#### Create a raid5 with MDADM:
+#### Create a raid5 with MDADM
 
 ```bash
 mdadm --create -l raid5 /dev/md0 -n 3 /dev/sdc /dev/sde /dev/sdf
@@ -421,7 +422,7 @@ mdadm --create -l raid5 /dev/md0 -n 3 /dev/sdc /dev/sde /dev/sdf
 # mdadm: array /dev/md0 started.
 ```
 
-#### Add newly created /dev/md0 raid to LVM:
+#### Add newly created /dev/md0 raid to LVM
 
 This is same as any other add. The only difference here is that LVM is unaware
 of the lower level RAID that is happening.
@@ -495,4 +496,6 @@ Can you use the internet/man pages/or other documentation to take this raid down
 
 Can you document your steps so that you or others could come back and do this process again?
 
-> Be sure to `reboot` the lab machine from the command line when you are done.
+!!! info
+
+    Be sure to `reboot` the lab machine from the command line when you are done.

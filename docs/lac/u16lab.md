@@ -1,10 +1,12 @@
 # Unit 16 Lab - Incident Response
 
+!!! info
+
+    If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot` the machine from the command line so that other students will have the intended environment.
+
 The unit 16 lab will be done during the lecture. Students will troubleshoot problems
 on systems in the ProLUG lab environment.
 
-> If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot`
-> the machine from the command line so that other students will have the intended environment.
 
 ### Required Materials
 
@@ -27,7 +29,7 @@ The lab has been provided for convenience below:
 You have the answers here, if they ask, you may give them hints. Otherwise, you can help them find the
 right solution any way you want to.
 
-### Scenario 1:
+### Scenario 1
 
 - Connect to `tshoot1@prolug.asuscomm.com`
 - Password:
@@ -76,7 +78,7 @@ To complete this event the following three must be correct.
 <b>Reboot the lab machine when finished.</b>
 </div>
 
-### Scenario 2:
+### Scenario 2
 
 - Connect to `tshoot2@prolug.asuscomm.com`
 - Password:
@@ -132,7 +134,7 @@ Same way as above.
 <b>Reboot the lab machine when finished.</b>
 </div>
 
-### Scenario 3:
+### Scenario 3
 
 - Connect to `tshoot3@prolug.asuscomm.com`
 - Password:
@@ -161,4 +163,6 @@ To complete this event the following two must be correct.
 <!-- - Answer: You need to comment out the line in `/etc/yum.conf` about `"exclude=kernel*"` because -->
 <!--   this is stopping any kernel updates from happening. -->
 
-> Be sure to `reboot` the lab machine from the command line when you are done.
+!!! info
+
+    Be sure to `reboot` the lab machine from the command line when you are done.

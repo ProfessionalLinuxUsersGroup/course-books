@@ -1,7 +1,8 @@
 # Unit 12 Lab - Baselines & Benchmarks
 
-> If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot`
-> the machine from the command line so that other students will have the intended environment.
+!!! info
+
+    If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot` the machine from the command line so that other students will have the intended environment.
 
 ### Resources / Important Links
 
@@ -203,7 +204,7 @@ no regard for what it may do to the system. You want to validate if there are an
 problems and be able to express your concerns as an engineer, if there are actual
 issues. No one cares what you think, they care what you can show, or prove.
 
-#### Determine the right question to ask:
+#### Determine the right question to ask
 
 - Do we have a system baseline to compare against?
 
@@ -339,4 +340,6 @@ Put command you're using for load here:
 - What would you report to your management team regarding the new agent’s impact?
 - How would you adjust your test plan to capture additional performance metrics?
 
-> Be sure to `reboot` the lab machine from the command line when you are done.
+!!! info
+
+    Be sure to `reboot` the lab machine from the command line when you are done.

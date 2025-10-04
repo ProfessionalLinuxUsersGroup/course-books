@@ -1,7 +1,8 @@
 # Unit 6 Lab - Firewalls
 
-> If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot`
-> the machine from the command line so that other students will have the intended environment.
+!!! info
+
+    If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot` the machine from the command line so that other students will have the intended environment.
 
 ### Resources / Important Links
 
@@ -65,7 +66,7 @@ you to put it together in a more complex fashion.
 It is recommended that you type these commands and do not copy and paste them.
 Browsers sometimes like to format characters in a way that doesn't always play nice with Linux.
 
-#### Check Firewall Status and settings:
+#### Check Firewall Status and settings
 
 A very important thing to note before starting this lab. You’re connected into that server on ssh via port 22. If you do anything to lockout **port 22** in this lab, you will be blocked from that connection and we’ll have to reset it.
 
@@ -97,13 +98,13 @@ A very important thing to note before starting this lab. You’re connected into
 
    **Hint:** Some lines were ellipsized, use -l to show in full.
 
-#### If necessary start the firewalld daemon:
+#### If necessary start the firewalld daemon
 
 ```bash
 systemctl start firewalld
 ```
 
-#### Set the firewalld daemon to be persistent through reboots:
+#### Set the firewalld daemon to be persistent through reboots
 
 ```bash
 systemctl enable firewalld
@@ -111,13 +112,13 @@ systemctl enable firewalld
 
 Verify with systemctl status firewalld again from **step 1**
 
-#### Check which zones exist:
+#### Check which zones exist
 
 ```bash
 firewall-cmd --get-zones
 ```
 
-#### Checking the values within each zone:
+#### Checking the values within each zone
 
 ```bash
 firewall-cmd --list-all --zone=public
@@ -137,7 +138,7 @@ icmp-blocks:
 rich rules:
 ```
 
-#### Checking the active and default zones:
+#### Checking the active and default zones
 
 ```bash
 firewall-cmd --get-default
@@ -166,7 +167,7 @@ interfaces: wlp4s0
 
 So now you know how to see the values in your firewall. Use steps 4 and 5 to check all the values of the different zones to see how they differ.
 
-#### Set the firewall active and default zones:
+#### Set the firewall active and default zones
 
 We know the zones from above, set your firewall to the different active or default zones. Default zones are the ones that will come up when the firewall is restarted.
 
@@ -254,7 +255,7 @@ public
    sources: 192.168.200.0/24
 ```
 
-#### Working with ports and services:
+#### Working with ports and services
 
 We can be even more granular with our ports and services. We can block or allow services by port number, or we can assign port numbers to a service name and then block or allow those service names.
 
@@ -498,4 +499,6 @@ So now take this and set up some firewalls on the interfaces of your system.
 Change the default ports and services assigned to your different zones (at least 3 zones)
 Read the `man firewall-cmd` command or `firewall-cmd -help` to see if there are any other userful things you should know.
 
-> Be sure to `reboot` the lab machine from the command line when you are done.
+!!! info
+
+    Be sure to `reboot` the lab machine from the command line when you are done.

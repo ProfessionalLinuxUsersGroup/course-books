@@ -1,7 +1,8 @@
 # Unit 10 Lab - Kubernetes
 
-> If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot`
-> the machine from the command line so that other students will have the intended environment.
+!!! info
+
+    If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot` the machine from the command line so that other students will have the intended environment.
 
 ### Resources / Important Links
 
@@ -37,7 +38,7 @@ curl -sfL https://get.k3s.io > /tmp/k3_installer.sh
 more /tmp/k3_installer.sh
 ```
 
-#### Questions:
+#### Questions
 
 - What system checks does the installer perform?
 - What environment variables does it check?
@@ -49,7 +50,7 @@ uname -m
 grep -i arch /tmp/k3_installer.sh
 ```
 
-#### Questions:
+#### Questions
 
 - What is the variable holding the system architecture?
 - How does K3s determine system compatibility?
@@ -106,7 +107,7 @@ kubectl get configmaps -A
 kubectl get secrets -A
 ```
 
-#### Questions:
+#### Questions
 
 - What namespaces exist by default?
 - What secrets are stored in the cluster?
@@ -215,4 +216,6 @@ At the end of this lab, you should:
 
 📌 Next Steps: Continue testing deployments, set up monitoring tools like Prometheus or Grafana, and explore Ingress Controllers to manage external access.
 
-> Be sure to `reboot` the lab machine from the command line when you are done.
+!!! info
+
+    Be sure to `reboot` the lab machine from the command line when you are done.

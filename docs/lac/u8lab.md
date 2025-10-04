@@ -1,7 +1,7 @@
 # Unit 8 Lab - Scripting
+!!! info
 
-> If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot`
-> the machine from the command line so that other students will have the intended environment.
+    If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot` the machine from the command line so that other students will have the intended environment.
 
 ### Resources / Important Links
 
@@ -472,3 +472,7 @@ strace -c ./scriptfile.sh
 ```
 
 There are a lot of ways to use these tools. There are a lot of things you can do and include with scripts. This is just meant to teach you the basics and give you some confidence that you can go out there and figure out the rest. You can develop things that solve your own problems or automate your own tasks.
+
+!!! info
+
+    Be sure to `reboot` the lab machine from the command line when you are done.

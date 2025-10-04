@@ -1,7 +1,8 @@
 # Unit 13 Lab - System Hardening
 
-> If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot`
-> the machine from the command line so that other students will have the intended environment.
+!!! info
+
+    If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot` the machine from the command line so that other students will have the intended environment.
 
 ### Resources / Important Links
 
@@ -64,7 +65,7 @@ There will be three basic tasks for today’s labs:
 2.  You will remediate some of the items from the scan
 3.  You will rescan and verify a better score.
 
-### SCC Report:
+### SCC Report
 
 This lab portion can be done in the ProLUG Rocky servers, or in killercoda at this location:
 <https://killercoda.com/het-tanis/course/Linux-Labs/207-OS_STIG_Scan_with_SCC_Tool>
@@ -118,4 +119,6 @@ cd /root/SCC/sessions #find the most recent run
 
 Look in the results to see output.
 
-> Be sure to `reboot` the lab machine from the command line when you are done.
+!!! info
+
+    Be sure to `reboot` the lab machine from the command line when you are done.
