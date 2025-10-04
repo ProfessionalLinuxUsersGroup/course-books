@@ -103,7 +103,7 @@ This class will effectively engage 100-200 learners.
 
 ### Class Schedule
 
-Class will meet over weekend (brown bag) sessions. One (1) time per week, for 16 weeks.\
+Class will meet over weekend (brown bag) sessions. One (1) time per week, for 16 weeks.
 There will be a total of 16 sessions.
 
 ### Session Overview
