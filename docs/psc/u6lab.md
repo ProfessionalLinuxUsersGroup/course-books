@@ -57,19 +57,14 @@ or another of these tools may be the right choice in their organization or not.
     - Does the lab work correctly, and do you understand the data flow?
 
     - While still in the lab
-
-        - `cd /answers`
-
-        - `python3 loki-write.py #Do this a few times`
-
+      ```bash
+      cd /answers
+      python3 loki-write.py  # Do this a few times
+      ```
         - Refresh your Grafana and change the app to lab_logging
-
         - Can you see it in your Grafana?
-
-   <img src='../../assets/psc/images/u6/image2.jpg'></img>
-
-    - Can you modify the file loki-write.py to say something related to your name?
-
+          <img src='../../assets/psc/images/u6/image2.jpg'></img>
+    - Can you modify the file `loki-write.py` to say something related to your name?
     - Run this bash snippet and see if you can see your loki-writes
       ```bash
       curl -G -s "http://localhost:3100/loki/api/v1/query_range" \
@@ -88,8 +83,7 @@ or another of these tools may be the right choice in their organization or not.
 
 2. Review our diagram here. Maybe we're testing kafka and want to integrate it to the existing infrastructure.
    Maybe we have a remote location that we need to reliably catch logs in real time and then move them remote. There are many reasons to use this.
-
-<img src='../../assets/psc/images/u6/image3.jpg'></img>
+   <img src='../../assets/psc/images/u6/image3.jpg'></img>
 
 3. Complete the killercoda lab found here: <https://killercoda.com/het-tanis/course/Linux-Labs/108-kafka-to-loki-logging>
 
