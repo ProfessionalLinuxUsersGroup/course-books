@@ -9,7 +9,8 @@ page.
 ## Instructions
 
 1. We have picked up a new client. They are requesting we help them adhere to the HIPAA
-   compliance standard. Review an explanation of the standard here:  
+   compliance standard. 
+    - Review an explanation of the standard here:  
    <https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html>
     - If you are in the EU and want to substitute GDPR, you may do so.  
       <https://gdpr.eu/what-is-gdpr/>
