@@ -293,10 +293,47 @@ A notably useful workflow provided by Git is the `git worktree`. This allows the
 working directories within a repository that point to a particular branch for any number of reasons without
 needing to clone the base respository separately.
 
-Suppose one worktree is created to work on feature "x" on branch feat, and a separate worktree is implemented
+Suppose one worktree is created to work on feature "x" on branch 'feat', and a separate worktree is implemented
 for bug "y" on branch 'bug', all localized in the same repository. A git worktree could even be utilized to quickly
 checkout a pull request in its own separate directory within the repository facilitating downstream commands like
 pushing over changed files to a host for testing.
+
+If the branch does not already exist this command will make a local branch and directory within the main repo.
+Otherwise you can quickly checkout a remote branch and create a directory within the main repo.
+```bash
+git worktree add -b {remote branch to create} {directory to be created}
+```
+
+Here we can see multiple copies of the primary repo but checked out under different branches in
+different directories. The utility in this is that we can work on multiple branches without disturbing 
+the primary while maintaining a source of truth, all contained within one directory on the host. This facilitates
+things like easily rebasing a separate branch cleanly from the main branch, testing file changes, repo asset
+package changes, and more.
+
+```bash title="git-worktree.bash" linenums="1"
+git worktree add test-branch test-branch
+# Or create a branch if it doesn't exist
+git worktree add -b test-branch ../test-branch-dir
+
+├── dev-cleanup # Separate branch
+│   ├── docs
+│   ├── ref
+│   └── scripts
+├── docs        # Primary repo branch
+│   ├── assets
+│   ├── beginners
+│   ├── lac
+│   ├── pcae
+│   ├── psc
+│   └── stylesheets
+├── fixups      # Separate branch
+│   ├── docs
+│   ├── ref
+│   └── scripts
+├── ref
+├── scripts
+│   └── link-storage
+```
 
 Git worktree [documentation](https://git-scm.com/docs/git-worktree).
 
