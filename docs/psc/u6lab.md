@@ -36,8 +36,7 @@ or another of these tools may be the right choice in their organization or not.
 
 1. Consider this architecture, where all modern Linux systems have built in rsyslog capabilities. One of them can
    be set to "catch" or aggregate all logs and then any number of servers can send over to them.
-
-<img src='../../assets/psc/images/u6/image1.jpg'></img>
+   <img src='../../assets/psc/images/u6/image1.jpg'></img>
 
 2. Complete the lab: <https://killercoda.com/het-tanis/course/Linux-Labs/206-setting-up-rsyslog>
     - Why do we split out the logs in this lab? Why don't we just aggregated them to one place?
