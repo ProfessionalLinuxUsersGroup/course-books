@@ -301,7 +301,7 @@ pushing over changed files to a host for testing.
 If the branch does not already exist this command will make a local branch and directory within the main repo.
 Otherwise you can quickly checkout a remote branch and create a directory within the main repo.
 ```bash
-git worktree add -b {remote branch to create} {directory to be created}
+git worktree add -b {branch to create} {directory to be created}
 ```
 
 Here we can see multiple copies of the primary repo but checked out under different branches in
