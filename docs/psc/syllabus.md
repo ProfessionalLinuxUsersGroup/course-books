@@ -6,11 +6,9 @@ Welcome to the ProLUG Security Engineering Course Book.
 
 Contains all materials pertaining to the course including links to external resources.
 It has been put together with care by a number of ProLUG group members referencing original
-instructional materials produced by Scott Champine (Het Tanis).
+instructional materials produced by Scott Champine [@Het_Tanis](https://www.youtube.com/@het_tanis8213) :fontawesome-brands-youtube:{ .youtube }.
 
 The content is version controlled with Git and stored here: <https://github.com/ProfessionalLinuxUsersGroup/course-books/>
-
-Furthermore, the book has been built with MkDocs for ease of navigation. Be sure to try the search functionality.
 
 ### Course Description
 
@@ -22,11 +20,9 @@ reporting will be practiced throughout, to better prepare the learner for the in
 
 ### Prerequisite(s) and/or Corequisite(s):
 
-Prerequisites: None
-
-**Credit hours: N/A**
-
-**Contact hours: 100 (40 Theory Hours, 60 Lab Hours)**
+Prerequisites: None  
+Credit hours: N/A  
+Contact hours: 100 (40 Theory Hours, 60 Lab Hours)
 
 ## Course Summary
 
@@ -53,23 +49,19 @@ Prerequisites: None
 - Monitoring and alerting on events in Linux
 - Maintaining system configuration drift and remediation
 
-#### Written Discussions
+### Written Discussions
 
 Are assigned as 'Discussion Posts' within each unit. Discussions generally take place
 within the Discord Server under #prolug-projects. More specifically, each unit will
 contain links to particular discussion posts within #prolug-projects.
 
-#### Completing the Course
+### Completing the Course
 
 In order to complete this course students must participate in group discussions and
 complete provided labs. Additionally, students are to propose and complete a final
 project involving skills learned from the course.
 
-<!-- <div class="warning"> -->
-<!-- <strong>Note</strong>: If any lab download does not work, check the <code>/labs</code> folder on the server for a <code>[course]_[unit#].zip</code> file to complete the activities. -->
-<!-- </div> -->
-
-#### Recommended Tools, Resources, and Frameworks
+### Recommended Tools, Resources, and Frameworks
 
 - Killercoda: <https://killercoda.com/>
 - STIG Resources: <https://public.cyber.mil/stigs/srg-stig-tools/>
@@ -81,35 +73,26 @@ project involving skills learned from the course.
 ### Required Resources
 
 #### Option #1 (Killercoda Machine)
-
-Cloud Lab server running Ubuntu on Killercoda.
-
+1. Cloud Lab server running Ubuntu on Killercoda.
 Minimal resources can accomplish our tasks
-
-- 1 CPU
-- 2 GB Ram
-- 30 GB Hard Drive
-- Network Interface (IP already setup)
+    - 1 CPU
+    - 2 GB Ram
+    - 30 GB Hard Drive
+    - Network Interface (IP already setup)
 
 #### Option #2 (Home Lab)
-
-Local VM server running: RHEL, Fedora, Rocky
-
+2. Local VM server running: RHEL, Fedora, Rocky
 Minimal resources
-
-- 1 CPU
-- 2GB RAM
-- Network Interface (Bridged)
+    - 1 CPU
+    - 2GB RAM
+    - Network Interface (Bridged)
 
 #### Option #3 (ProLUG Remote Lab)
-
-ProLUG Lab access to Rocky 9.4+ instance.
-
+3. ProLUG Lab access to Rocky 9.4+ instance.
 Minimal resources can accomplish our tasks
-
-- 1 CPU
-- 4 GB RAM
-- Network Interface (IP already setup)
+    - 1 CPU
+    - 4 GB RAM
+    - Network Interface (IP already setup)
 
 <figure markdown="span">
     <img src="../../assets/images/proluglab.png"></img>
@@ -117,7 +100,7 @@ Minimal resources can accomplish our tasks
 
 ### Course Plan
 
-#### Instructional Methods
+### Instructional Methods
 
 This course is designed to promote learner-centered activities and support the development of Linux
 security skills. The course utilizes individual and group learning activities, performance-driven
@@ -125,11 +108,11 @@ assignments, problem-based cases, projects, and discussions. These methods focus
 engaging learning experiences conducive to development of critical knowledge and skills that can be
 effectively applied in professional contexts.
 
-#### Class Size
+### Class Size
 
 This class will effectively engage 40-60 learners.
 
-#### Class Schedule
+### Class Schedule
 
 <https://discord.com/events/611027490848374811/1353330418669326407>
 
