@@ -100,18 +100,18 @@ SIEM
 1. Find a cloud service and see what their logging best practices are for security
    incident response. Here is AWS: <https://aws.amazon.com/blogs/security/logging-strategies-for-security-incident-response/>
 
-   - What are the high level concepts mentioned?
-   - What are the tools available and what actions do they take?
-   - What are the manual and automated query capabilities provided, and how
-     they help you rapidly get to a correct assessment of the logged events?
+    - What are the high level concepts mentioned?
+    - What are the tools available and what actions do they take?
+    - What are the manual and automated query capabilities provided, and how
+      they help you rapidly get to a correct assessment of the logged events?
 
 2. Open up that STIG Viewer and filter by "logging" for any of the previous STIGs we've
    worked on. (Mariadb has some really good ones.)
 
-   - What seems to be a common theme?
-   - What types of activities MUST be logged in various applications and operating systems?
-     - Does it make sense why all logins are tracked?
-     - Does it make sense why all admin actions, even just attempted admin actions, are logged?
+    - What seems to be a common theme?
+    - What types of activities MUST be logged in various applications and operating systems?
+        - Does it make sense why all logins are tracked?
+        - Does it make sense why all admin actions, even just attempted admin actions, are logged?
 
 ## Reflection Questions
 
@@ -119,9 +119,9 @@ SIEM
 
 1. What architectures have you used in your career?
 
-   - If you haven't yet worked with any of these, what do you think you would
-     architect in the ProLUG lab (~60 virtual machines, 4 physical machines, 1
-     NFS share, and 2 Windows laptops?)
+    - If you haven't yet worked with any of these, what do you think you would
+      architect in the ProLUG lab (~60 virtual machines, 4 physical machines, 1
+      NFS share, and 2 Windows laptops?)
 
 2. What questions do you still have about this week?
 

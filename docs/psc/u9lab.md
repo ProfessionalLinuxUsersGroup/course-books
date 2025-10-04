@@ -20,21 +20,21 @@ could be transposed to a `.md` file.
 ### Review Solving the Bottom Turtle
 
 1. Review pages 41-48 of <https://spiffe.io/pdf/Solving-the-bottom-turtle-SPIFFE-SPIRE-Book.pdf>
-   - Does the diagram on page 44 make sense to you for what you did with a certificate authority in this lab?
+    - Does the diagram on page 44 make sense to you for what you did with a certificate authority in this lab?
 
 ### SSH – Public and Private key pairs
 
 1. Complete the lab: <https://killercoda.com/het-tanis/course/Linux-Labs/212-public-private-keys-with-ssh>
-   - What is the significance of the permission settings that you saw on the generated
-     public and private key pairs?
+    - What is the significance of the permission settings that you saw on the generated
+      public and private key pairs?
 
 ## Digging Deeper challenge (not required for finishing lab)
 
 1. Complete the following labs and see if they reinforce any of your understanding of certificates with
    the use of Kubernetes.
 
-    - <https://killercoda.com/killer-shell-cks/scenario/certificate-signing-requests-sign-manually>
-    - <https://killercoda.com/killer-shell-cks/scenario/certificate-signing-requests-sign-k8s>
+     - <https://killercoda.com/killer-shell-cks/scenario/certificate-signing-requests-sign-manually>
+     - <https://killercoda.com/killer-shell-cks/scenario/certificate-signing-requests-sign-k8s>
 
 2. Read the rest of <https://spiffe.io/pdf/Solving-the-bottom-turtle-SPIFFE-SPIRE-Book.pdf>
 

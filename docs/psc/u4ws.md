@@ -104,9 +104,8 @@ Namespaces
 1. While this isn't, strictly speaking, an automation course there is some value in
    looking at automation of the bastion deployments. Check out this ansible code:  
    <https://github.com/het-tanis/stream_setup/blob/master/roles/bastion_deploy/tasks/main.yml>
-
-   - Does the setup make sense to you with our deployment?
-   - What can improve and make this better?
+    - Does the setup make sense to you with our deployment?
+    - What can improve and make this better?
 
 2. Find a blog or github where someone else deploys a bastion. Compare it to our
    process.
@@ -115,9 +114,9 @@ Namespaces
    on the first 3 weeks, all the STIGs you've reviewed and touched. Do any of them
    seem moot, or less necessary if applied in an air-gapped environment?
 
-   - Does your answer change if you read about Zero Trust and know how much of a hot
-     topic that is in the security world now?
-     1. Why or why not?
+    - Does your answer change if you read about Zero Trust and know how much of a hot
+      topic that is in the security world now?
+        1. Why or why not?
 
 4. Think of a Linux system where you would like to deploy a bastion (If you cannot think
    of one, use ProLUG Lab). Draw out how you think the system works in
