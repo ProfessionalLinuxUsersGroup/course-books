@@ -53,6 +53,7 @@ Before beginning Unit 6, students should:
 ## Key terms and Definitions
 
 Types of Logs
+
 - Application Logs  
 - Host Logs  
 - Network Logs  

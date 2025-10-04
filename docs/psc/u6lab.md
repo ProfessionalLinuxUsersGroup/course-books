@@ -36,17 +36,13 @@ or another of these tools may be the right choice in their organization or not.
 
 1. Consider this architecture, where all modern Linux systems have built in rsyslog capabilities. One of them can
    be set to "catch" or aggregate all logs and then any number of servers can send over to them.
-
-<img src='../../assets/psc/images/u6/image1.jpg'></img>
+   <img src='../../assets/psc/images/u6/image1.jpg'></img>
 
 2. Complete the lab: <https://killercoda.com/het-tanis/course/Linux-Labs/206-setting-up-rsyslog>
-
-   - Why do we split out the logs in this lab? Why don't we just aggregated them to one place?
-
-     - What do we split them out by?
-     - How does that template configuration work?
-
-   - Are we securing this communication in any way, or do we still need to configure that?
+    - Why do we split out the logs in this lab? Why don't we just aggregated them to one place?
+        - What do we split them out by?
+        - How does that template configuration work?
+    - Are we securing this communication in any way, or do we still need to configure that?
 
 3. We will revisit this lab in Unit 10, with security involved via certificates, so make sure you are comfortable
    with the base components you are configuring.
@@ -57,31 +53,24 @@ or another of these tools may be the right choice in their organization or not.
 
 2. Complete the lab here: <https://killercoda.com/het-tanis/course/Linux-Labs/102-monitoring-linux-logs>
 
-   - Does the lab work correctly, and do you understand the data flow?
+    - Does the lab work correctly, and do you understand the data flow?
 
-   - While still in the lab
-
-     - `cd /answers`
-
-     - `python3 loki-write.py #Do this a few times`
-
-     - Refresh your Grafana and change the app to lab_logging
-
-     - Can you see it in your Grafana?
-
-   <img src='../../assets/psc/images/u6/image2.jpg'></img>
-
-   - Can you modify the file loki-write.py to say something related to your name?
-
-   - Run this bash snippet and see if you can see your loki-writes
-
-   ```bash
-   curl -G -s "http://localhost:3100/loki/api/v1/query_range" \
-   --data-urlencode 'query=sum(rate({job="lab_logging"}[10m])) by (level)' \
-   --data-urlencode 'step=300' | jq
-   ```
-
-   - Can you modify that to see the actual entires? <https://grafana.com/docs/loki/latest/reference/loki-http-api/#query-logs-within-a-range-of-time>
+    - While still in the lab
+      ```bash
+      cd /answers
+      python3 loki-write.py  # Do this a few times
+      ```
+        - Refresh your Grafana and change the app to lab_logging
+        - Can you see it in your Grafana?
+          <img src='../../assets/psc/images/u6/image2.jpg'></img>
+    - Can you modify the file `loki-write.py` to say something related to your name?
+    - Run this bash snippet and see if you can see your loki-writes
+      ```bash
+      curl -G -s "http://localhost:3100/loki/api/v1/query_range" \
+      --data-urlencode 'query=sum(rate({job="lab_logging"}[10m])) by (level)' \
+      --data-urlencode 'step=300' | jq
+      ```
+    - Can you modify that to see the actual entires? <https://grafana.com/docs/loki/latest/reference/loki-http-api/#query-logs-within-a-range-of-time>
 
 3. We will revisit this lab in Unit 10, with security involved via certificates, so make sure you are
    comfortable with the base components you are configuring.
@@ -93,17 +82,16 @@ or another of these tools may be the right choice in their organization or not.
 
 2. Review our diagram here. Maybe we're testing kafka and want to integrate it to the existing infrastructure.
    Maybe we have a remote location that we need to reliably catch logs in real time and then move them remote. There are many reasons to use this.
-
-<img src='../../assets/psc/images/u6/image3.jpg'></img>
+   <img src='../../assets/psc/images/u6/image3.jpg'></img>
 
 3. Complete the killercoda lab found here: <https://killercoda.com/het-tanis/course/Linux-Labs/108-kafka-to-loki-logging>
 
-   - Did you get it all to work?
+    - Did you get it all to work?
 
-     - Does the flow make sense in the context of this diagram?
+        - Does the flow make sense in the context of this diagram?
 
-   - Can you find any configurations or blogs that describe why you might want to use this architecture or
-     how it has been used in the industry?
+    - Can you find any configurations or blogs that describe why you might want to use this architecture or
+      how it has been used in the industry?
 
 ### (OPTIONAL) Cloud-Native Logging services
 
@@ -115,21 +103,21 @@ or another of these tools may be the right choice in their organization or not.
 
 1. For Architecture 3, using message queues. This is an excellent write-up of how disparate systems can be connected with a message queues or event bus to enhance metrics pipelining. <https://get.influxdata.com/rs/972-GDU-533/images/Customer%20Case%20Study_%20Wayfair.pdf>
 
-   - They're not necessarily doing logs, but rather metric data, but can you see how they solved their latency
-     and connectivity problems on page 14 and 15?
+    - They're not necessarily doing logs, but rather metric data, but can you see how they solved their latency
+      and connectivity problems on page 14 and 15?
 
 2. Review some of the anti-patterns for cloud, but really any logging patterns. <https://docs.aws.amazon.com/wellarchitected/latest/framework/sec_detect_investigate_events_app_service_logging.html>
 
-   - How do these relate to your current understanding of logging?
+    - How do these relate to your current understanding of logging?
 
-   - Do they show anything that you need to think about in the future of how you look at enterprise logging?
+    - Do they show anything that you need to think about in the future of how you look at enterprise logging?
 
 3. Go to <https://landscape.cncf.io/guide#observability-and-analysis--observability>
 
-   - Which of these have you used and which have you not used?
+    - Which of these have you used and which have you not used?
 
-   - How do many of these plug into existing observability patterns (logging)?
+    - How do many of these plug into existing observability patterns (logging)?
 
-   - What is Fluentd trying to solve? How does it work? <https://www.fluentd.org/architecture>
+    - What is Fluentd trying to solve? How does it work? <https://www.fluentd.org/architecture>
 
 > Be sure to `reboot` the lab machine from the command line when you are done.

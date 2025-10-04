@@ -89,15 +89,15 @@ STIG:
 
 1. Research a risk management framework. <https://csrc.nist.gov/projects/risk-management/about-rmf>
 
-   - What are the areas of concern for risk management?
+    - What are the areas of concern for risk management?
 
 2. Research the difference between quantitative and qualitative risks.
 
-   - Why might you use one or the other?
+    - Why might you use one or the other?
 
 3. Research ALE, SLE, and ARO.
-   - What are these terms in relation to?
-   - How do these help in the risk discussion?
+    - What are these terms in relation to?
+    - How do these help in the risk discussion?
 
 ## Reflection Questions
 

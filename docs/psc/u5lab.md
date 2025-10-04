@@ -61,7 +61,7 @@ run their own repo on their network.
 
 1. Look at the 4 STIGs for "tls"
 
-   - What file is fixed for all of them to be remediated?
+    - What file is fixed for all of them to be remediated?
 
 2. Install httpd on your Hammer server
 
@@ -73,31 +73,30 @@ run their own repo on their network.
 
 3. Check STIG V-214234
 
-   - What is the problem?
+    - What is the problem?
 
-   - What is the fix?
+    - What is the fix?
 
-   - What type of control is being implemented?
+    - What type of control is being implemented?
 
-   - Is it set properly on your system?
+    - Is it set properly on your system?
 
 4. Check STIG V-214248
 
-   - What is the problem?
+    - What is the problem?
 
-   - What is the fix?
+    - What is the fix?
 
-   - What type of control is being implemented?
+    - What type of control is being implemented?
 
-   - Is it set properly on your system?
+    - Is it set properly on your system?
 
-   - How do you think SELINUX will help implement this control in an enforcing state? Or
+    - How do you think SELINUX will help implement this control in an enforcing state? Or
      will it not affect it?
 
 ### Building repos
 
 1. Start out by removing all your active repos
-
    ```bash
    cd /etc/yum.repos.d
    mkdir old_archive
@@ -106,7 +105,6 @@ run their own repo on their network.
    ```
 
 2. Mount the local repository and make a local repo
-
    ```bash
    mount -o loop /lab_work/repos_and_patching/Rocky-9.5-x86_64-dvd.iso /mnt
    df -h  # Should see the mount point
@@ -114,9 +112,7 @@ run their own repo on their network.
    touch /etc/yum.repos.d/rocky9.repo
    vi /etc/yum.repos.d/rocky9.repo
    ```
-
    Add the repo configuration:
-
    ```ini
    [BaseOS]
    name=BaseOS Packages Rocky Linux 9
@@ -134,57 +130,42 @@ run their own repo on their network.
    baseurl=file:///mnt/AppStream/
    gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
    ```
-
    Save with `esc :wq` or "shift + ZZ"
-
-   - Do the paths you're using here make sense to you based off what you saw
-     when using the `ls -l`? Why or why not?
-
+    - Do the paths you're using here make sense to you based off what you saw
+      when using the `ls -l`? Why or why not?
    ```bash
    chmod 644 /etc/yum.repos.d/rocky9.repo
    dnf clean all
    ```
 
 3. Test the local repository.
-
    ```bash
    dnf repolist
    dnf --disablerepo="*" --enablerepo="AppStream" list available
    ```
-
-   - Approximately how many are available?
-
+    - Approximately how many are available?
    ```bash
    dnf --disablerepo="*" --enablerepo="AppStream" list available | nl
    dnf --disablerepo="*" --enablerepo="AppStream" list available | nl | head
    ```
-
    Now use BaseOS.
-
    ```bash
    dnf --disablerepo="*" --enablerepo="BaseOS" list available
    ```
-
-   - Approximately how many are available?
-
-   ```bash
-   dnf --disablerepo="*" --enablerepo="BaseOS" list available | nl
-   dnf --disablerepo="*" --enablerepo="BaseOS" list available | nl | head
-   ```
-
-   - Try to install something
-
-     ```bash
-     dnf --disablerepo="*" --enablerepo="BaseOS AppStream" install gimp
-     # hit "n"
-     ```
-
+    - Approximately how many are available?
+      ```bash
+      dnf --disablerepo="*" --enablerepo="BaseOS" list available | nl
+      dnf --disablerepo="*" --enablerepo="BaseOS" list available | nl | head
+      ```
+    - Try to install something
+      ```bash
+      dnf --disablerepo="*" --enablerepo="BaseOS AppStream" install gimp
+      # hit "n"
+      ```
      1. How many packages does it want to install?
-
      2. How can you tell they're from different repos?
 
 4. Share out the local repository for your internal systems (tested on just this one system)
-
    ```bash
    rpm -qa | grep -i httpd
    systemctl status httpd
@@ -193,9 +174,7 @@ run their own repo on their network.
    cd /etc/httpd/conf.d
    vi repos.conf
    ```
-
    Edit the file:
-
    ```xml
    <Directory "/mnt">
        Options Indexes FollowSymLinks
@@ -209,16 +188,12 @@ run their own repo on their network.
        Require all granted
    </Location>
    ```
-
    Restart the service.
-
    ```bash
    systemctl restart httpd
    vi /etc/yum.repos.d/rocky9.repo
    ```
-
    Edit the file with your lab's name in the `baseurl`:
-
    ```ini
    ###USE YOUR HAMMER MACHINE IN BASEURL###
    [BaseOS]
@@ -239,9 +214,7 @@ run their own repo on their network.
    baseurl=http://hammer25/repo/AppStream/
    gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
    ```
-
-   - Do the paths you've modified at `baseurl` make sense to you? If not, what do you need to better understand?
-
+    - Do the paths you've modified at `baseurl` make sense to you? If not, what do you need to better understand?
    ```bash
    dnf clean all
    dnf repolist
@@ -255,11 +228,11 @@ run their own repo on their network.
 
 1. Complete the killercoda lab found here: <https://killercoda.com/het-tanis/course/Ansible-Labs/102-Enterprise-Ansible-Patching>
 
-   - Look at the roles, in the order the are run in the playbook.
-     - Does it make sense how the custom facts are used? What other custom
-       facts might you use?
-     1. What are the prechecks doing? What other ones might you add?
-     2. What does the reboot task do, and how does it check for reboot to be needed?
+    - Look at the roles, in the order the are run in the playbook.
+        - Does it make sense how the custom facts are used? What other custom
+          facts might you use?
+        1. What are the prechecks doing? What other ones might you add?
+        2. What does the reboot task do, and how does it check for reboot to be needed?
 
 ## Digging Deeper challenge (not required for finishing lab)
 

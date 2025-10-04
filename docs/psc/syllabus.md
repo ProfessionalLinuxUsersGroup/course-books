@@ -73,7 +73,7 @@ project involving skills learned from the course.
 
 - Killercoda: <https://killercoda.com/>
 - STIG Resources: <https://public.cyber.mil/stigs/srg-stig-tools/>
-  - Recommended (but not required) STIG Viewer: v2.18
+    - Recommended (but not required) STIG Viewer: v2.18
 - NIST: <https://www.nist.gov/>
 - Open Worldwide Application Security Project Top 10: <https://owasp.org/www-project-top-ten/>
 - CIS Controls and Benchmarks: <https://www.cisecurity.org/cis-benchmarks>
