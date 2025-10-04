@@ -11,11 +11,11 @@ page.
 1. Select a topic to research about a project that you are going to build.  
 Topics:  
     - System Stability
-        - System Performance
-        - System Security
-        - System monitoring
-        - Kubernetes
-        - Programming/Automation
+    - System Performance
+    - System Security
+    - System monitoring
+    - Kubernetes
+    - Programming/Automation
 2. Plan the project
     - Find documentation or similar projects and build off of what was done there.
 3. Document
