@@ -1,7 +1,8 @@
 # Unit 14 Lab - Ansible Automation
 
-> If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot`
-> the machine from the command line so that other students will have the intended environment.
+!!! info
+
+    If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot` the machine from the command line so that other students will have the intended environment.
 
 ### Resources / Important Links
 
@@ -57,7 +58,7 @@ Add the following contents:
 
 ### Run Ad Hoc Commands
 
-#### Test connectivity into the servers:
+#### Test connectivity into the servers
 
 ```bash
 ansible servers -i hosts -u inmate -k -m shell -a uptime
@@ -120,4 +121,6 @@ Then reflect:
 - What do you need to learn more about to deploy some of these tools?
 - Can you execute some of these? Why or why not?
 
-> Be sure to `reboot` the lab machine from the command line when you are done.
+!!! info
+
+    Be sure to `reboot` the lab machine from the command line when you are done.

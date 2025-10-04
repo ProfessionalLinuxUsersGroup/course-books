@@ -1,7 +1,8 @@
 # Unit 7 Lab - Package Management & Patching
 
-> If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot`
-> the machine from the command line so that other students will have the intended environment.
+!!! info
+
+    If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot` the machine from the command line so that other students will have the intended environment.
 
 ### Resources / Important Links
 
@@ -64,7 +65,7 @@ rpm -qa | grep -i imagemagick
 # Why did this work when the other one didn’t with dnf?
 ```
 
-#### Math Practice:
+#### Math Practice
 
 Some fun with the command line and basic scripting tools. I want you
 to see some of the capabilities that are available to you. Your system
@@ -103,7 +104,7 @@ you to examine them. <http://tldp.org/LDP/abs/html/arithexp.html>
 
 Log into your Rocky server and become root.
 
-#### RPM:
+#### RPM
 
 RPM is the Redhat package manager. It is a powerful tool to see what is installed
 on your system and to see what dependencies exist with different software packages.
@@ -157,7 +158,7 @@ dnf update systemd
 Use `rpm -qa | more` to find 3 other interesting packages and perform
 `rpm -qi <package>` on them to see information about them.
 
-#### DNF:
+#### DNF
 
 DNF is the front end package manager implemented into Rocky and derives its
 roots from Yum, a long decrepit version of Linux called Yellow dog. It is originally the
@@ -251,7 +252,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Rocky-9
 # Output truncated for brevity’s sake….
 ```
 
-#### Installing software you were asked by an application team:
+#### Installing software you were asked by an application team
 
 So someone has asked for some software and assured you it’s been tested in
 similar environments, so you go to install it on their system for them.
@@ -343,7 +344,7 @@ You can update your system if you like. You’d have to reboot for your
 system to take the new kernel. If you do that you can then redo the grubby
 portion and the ls /boot/ will show the new installed kernel, unless you excluded it.
 
-#### Using dnf to install group packages:
+#### Using dnf to install group packages
 
 Maybe we don’t even know what we need to get a project going. We know that
 we need to have a web server running but we don’t have an expert around to
@@ -367,4 +368,6 @@ but they won’t be configured. How would you figure out what tools and versions
 just installed? How might you report this for your own documentation and to a
 security team that keeps your security baselines?
 
-> Be sure to `reboot` the lab machine from the command line when you are done.
+!!! info
+
+    Be sure to `reboot` the lab machine from the command line when you are done.

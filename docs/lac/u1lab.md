@@ -1,7 +1,8 @@
 # Unit 1 Lab - Linux File Operations
 
-> If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot`
-> the machine from the command line so that other students will have the intended environment.
+!!! info
+
+    If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot` the machine from the command line so that other students will have the intended environment.
 
 ### Resources / Important Links
 
@@ -65,7 +66,7 @@ This lab is designed to help you get familiar with the basics of the systems you
 
 It is recommended that you type these commands and do not copy and paste them. Word sometimes likes to format characters and they don’t always play nice with Linux.
 
-#### Working with files:
+#### Working with files
 
 ```bash
 # Creating empty files with touch
@@ -86,7 +87,7 @@ ls -l fruits.txt
 # You will see that fruits.txt is gone.
 ```
 
-#### Creating files just by stuffing data in them:
+#### Creating files just by stuffing data in them
 
 ```bash
 echo “grapes 5” > fruits.txt
@@ -106,7 +107,7 @@ What is the difference between these two? Appending a file >> adds to the file
 whereas > just overwrites the file each write. Log files almost always are written
 with >>, we never > over those types of files.
 
-#### Creating file with vi or vim:
+#### Creating file with vi or vim
 
 ```bash
 # It is highly recommended the user read vimtutor. To get vimtutor follow
@@ -136,7 +137,7 @@ pineapples 9
 cat somefile.txt
 ```
 
-#### Copying and moving files:
+#### Copying and moving files
 
 ```bash
 cp somefile.txt backupfile.txt
@@ -152,7 +153,7 @@ difference between cp and mv? Read the manuals for cp and mv to see if
 there’s anything that may be useful to you. For most of us -r is tremendously
 useful option for moving directories.
 
-#### Searching/filtering through files:
+#### Searching/filtering through files
 
 ```bash
 # So maybe we only want to see certain values from a file, we can filter
@@ -175,7 +176,7 @@ Can you figure out why that worked? What do you think the ^ does?
 Anchoring is a common term for this. See if you can find what anchors
 to the end of a string.
 
-#### Sorting files with sort:
+#### Sorting files with sort
 
 ```bash
 # Let’s sort our file fruits.txt and look at what happens to the output
@@ -203,7 +204,7 @@ sort -k 2 fruits.txt > sort_by_price.txt
 # Cat both of those files out and verify their output
 ```
 
-#### Advanced sort practice:
+#### Advanced sort practice
 
 ```bash
 # Consider the command
@@ -229,7 +230,7 @@ out, depending on your processes running.
 Read man ps to figure out what other things you can see or sort by from the ps command.
 We will examine that command in detail in another lab.
 
-#### Working with redirection:
+#### Working with redirection
 
 The good thing is that you’ve already been redirecting information into files. The > and >> are useful for moving data into files. We have other functionality within redirects that can prove useful for putting data where we want it, or even not seeing the data.
 
@@ -276,7 +277,7 @@ See if you can figure out what each of those commands do.
 Read the manual `man command` for any command you don’t recognize.
 Use something you learned to affect the output.
 
-#### Throwing the output into a file:
+#### Throwing the output into a file
 
 We’ve already used > and >> to throw data into a file but when we redirect like that we are catching it before it comes to the screen. There is another tool that is useful for catching data and also showing it to us, that is tee.
 
@@ -293,7 +294,7 @@ date | tee -a datefile
 
 Do a quick man on tee to see what the -a does. Try it without that value. Can you see any other useful options in there for tee?
 
-#### Ignoring pesky errors or tossing out unwanted output:
+#### Ignoring pesky errors or tossing out unwanted output
 
 Sometimes we don’t care when something errs out. We just want to see that it’s working or not. If you’re wanting to filter out errors (2) in the standarderr, you can do this
 
@@ -364,7 +365,7 @@ chmod 755 testscript.sh
 
 What happened here is that we read the input from command line and gave it, in order to the script to read and then output. This is something we do if we know an installer wants certain values throughout it, but we don’t want to sit there and type them in, or we’re doing it across 100 servers quickly, or all kinds of reasons. It’s just a quick and dirty input “hack” that counts as a redirect.
 
-#### Working with permissions:
+#### Working with permissions
 
 Permissions have to do with who can or cannot access (read), edit (write), or execute (xecute)files.
 
@@ -408,4 +409,6 @@ The first character lets you know if the file is a directory, file, or link. In 
 
 Go find some other interesting files or directories and see what you see there. Can you identify their characteristics and permissions?
 
-> Be sure to `reboot` the lab machine from the command line when you are done.
+!!! info
+
+    Be sure to `reboot` the lab machine from the command line when you are done.

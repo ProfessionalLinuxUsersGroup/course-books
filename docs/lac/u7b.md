@@ -1,6 +1,8 @@
 # Unit 7 Bonus - Package Management & Patching
 
-> **NOTE:** This is an **optional** bonus section. You **do not** need to read it, but if you're interested in digging deeper, this is for you.
+!!! note
+
+    This is an **optional** bonus section. You **do not** need to read it, but if you're interested in digging deeper, this is for you.
 
 This bonus explores how you can audit and verify software integrity on your system
 using package tools, hashes, and file validation -- going deeper into real-world

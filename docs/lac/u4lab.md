@@ -1,7 +1,8 @@
 # Unit 4 Lab - Operating Running Systems
 
-> If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot`
-> the machine from the command line so that other students will have the intended environment.
+!!! info
+
+    If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot` the machine from the command line so that other students will have the intended environment.
 
 ### Resources / Important Links
 
@@ -46,7 +47,7 @@ The lab has been provided for convenience below:
     - Use `q` to exit.
     - Inside top, use `h` to find commands you can use to toggle system info.
 
-#### Pre-Lab - Disk Speed tests:
+#### Pre-Lab - Disk Speed tests
 
 1. Real quick check for a package that is useful.
 
@@ -307,7 +308,7 @@ You could do something like this:
   more /tmp/<filename>
   ```
 
-#### Exploring Cron:
+#### Exploring Cron
 
 Your system is running the cron daemon. You can check with:
 
@@ -399,4 +400,6 @@ from knowing the tool exists and then being able to properly apply it to the pro
 
 I hope you enjoyed this lab.
 
-> Be sure to `reboot` the lab machine from the command line when you are done.
+!!! info
+
+    Be sure to `reboot` the lab machine from the command line when you are done.

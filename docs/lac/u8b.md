@@ -1,6 +1,8 @@
 # Unit 8 Bonus - Scripting  
 
-> **NOTE:** This is an **optional** bonus section. You **do not** need to read it, but if you're interested in digging deeper, this is for you.
+!!! note
+
+    This is an **optional** bonus section. You **do not** need to read it, but if you're interested in digging deeper, this is for you.
 
 ## Bash: The Essential Skill for Any Linux Administrator
 

@@ -1,7 +1,8 @@
 # Unit 5 Lab - Managing Users and Groups
 
-> If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot`
-> the machine from the command line so that other students will have the intended environment.
+!!! info
+
+    If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot` the machine from the command line so that other students will have the intended environment.
 
 ### Resources / Important Links
 
@@ -75,7 +76,7 @@ you to put it together in a more complex fashion.
 It is recommended that you type these commands and do not copy and paste them.
 Browsers sometimes like to format characters in a way that doesn't always play nice with Linux.
 
-#### The Shadow password suite:
+#### The Shadow password suite
 
 There are 4 files that comprise of the shadow password suite. We'll investigate them a bit and look at
 how they secure the system. The four files are `/etc/passwd`, `/etc/group`, `/etc/shadow`, and `/etc/gshadow`.
@@ -133,7 +134,7 @@ Are there always 7 fields?
    We cannot allow these to be read by just anyone because then they could brute force
    and try to figure out our passwords.
 
-#### Creating and modifying local users:
+#### Creating and modifying local users
 
 We should take a second to note that the systems you're using are tied into our active directory with
 Kerberos. You will not be seeing your account in `/etc/passwd`, as that authentication is occurring
@@ -342,7 +343,7 @@ work
    You can play with these permissions a bit, but there's a lot of information online to help you
    understand permissions better if you need more resources.
 
-#### Working with permissions:
+#### Working with permissions
 
 Permissions have to do with who can or cannot access (read), edit (write), or execute (xecute)files.
 Permissions look like this:
@@ -386,4 +387,6 @@ The first character lets you know if the file is a directory, file, or link. In 
 Go find some other interesting files or directories and see what you see there.  
 Can you identify their characteristics and permissions?
 
-> Be sure to `reboot` the lab machine from the command line when you are done.
+!!! info
+
+    Be sure to `reboot` the lab machine from the command line when you are done.

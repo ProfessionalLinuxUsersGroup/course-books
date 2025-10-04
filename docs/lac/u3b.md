@@ -1,6 +1,7 @@
 # Unit 3 Bonus - Storage
+!!! note
 
-> **NOTE:** This is an **optional** bonus section. You **do not** need to read it, but if you're interested in digging deeper, this is for you.
+    This is an **optional** bonus section. You **do not** need to read it, but if you're interested in digging deeper, this is for you.
 
 When storage issues arise, troubleshooting step by step ensures a quick resolution. This guide flows logically, covering the most common issues you might face, from slow performance to filesystem corruption.
 
@@ -10,7 +11,7 @@ When storage issues arise, troubleshooting step by step ensures a quick resoluti
 
 If everything feels sluggish, your disk might be the bottleneck.
 
-### Check:
+### Check
 
 ```bash
 # Monitor disk I/O, latency, and throughput
@@ -26,7 +27,7 @@ iostat -dx 1
 - If I/O wait is high, it means the CPU is waiting on slow disk operations.
 - If certain processes are consuming all disk bandwidth, they might be the cause.
 
-### Fix:
+### Fix
 
 1. Identify and stop unnecessary high I/O processes:
 
@@ -63,7 +64,7 @@ iostat -dx 1
 
 👉 Disk space exhaustion is one of the most common causes of storage failures.
 
-### Check:
+### Check
 
 ```bash
 # Show disk usage per filesystem
@@ -76,7 +77,7 @@ du -ahx / | sort -rh | head -20
 - If a filesystem is 100% full, it prevents writes and can cause application crashes.
 - If there's space but files still won't write, check Step 4 (Corrupted Filesystem).
 
-### Fix:
+### Fix
 
 1. Find and remove large unnecessary files:
 
@@ -112,7 +113,7 @@ du -ahx / | sort -rh | head -20
 
 If files suddenly disappear or applications complain about missing storage, a mount issue may be the cause.
 
-### Check:
+### Check
 
 ```bash
 # View current mounts
@@ -125,7 +126,7 @@ lsblk
 cat /etc/fstab
 ```
 
-### Fix:
+### Fix
 
 1. Manually remount the filesystem (if missing):
 
@@ -169,7 +170,7 @@ cat /etc/fstab
 
 👉 Power losses, unexpected shutdowns, and failing drives can cause corruption.
 
-### Check:
+### Check
 
 ```bash
 # Check kernel error messages
@@ -180,7 +181,7 @@ fsck.ext4 -n /dev/sdX  # for ext4
 xfs_repair -n /dev/sdX  # for XFS
 ```
 
-### Fix:
+### Fix
 
 1. Repair the filesystem (if unmounted):
 
@@ -205,7 +206,7 @@ xfs_repair -n /dev/sdX  # for XFS
 
 You might have disk space but still can't create files? Check your inodes!
 
-### Check:
+### Check
 
 ```bash
 # Check inode usage
@@ -218,7 +219,7 @@ find . -type f | wc -l
 - If inode usage shows 100%, you can't create new files even with free space.
 - This happens when you have too many small files.
 
-### Fix:
+### Fix
 
 1. Clean up temporary files:
 

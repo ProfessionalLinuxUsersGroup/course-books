@@ -1,7 +1,8 @@
 # Unit 2 Lab - Essential Tools
 
-> If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot`
-> the machine from the command line so that other students will have the intended environment.
+!!! info
+
+    If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot` the machine from the command line so that other students will have the intended environment.
 
 ### Resources / Important Links
 
@@ -68,7 +69,7 @@ This lab is designed to help you get familiar with the basics of the systems you
 
 It is recommended that you type these commands and do not copy and paste them. Word sometimes likes to format characters and they don’t always play nice with Linux.
 
-#### Gathering system information:
+#### Gathering system information
 
 ```bash
 hostname
@@ -82,7 +83,7 @@ uname -r
 # man uname to see what those options mean if you don’t recognize the values
 ```
 
-#### Check the amount of RAM:
+#### Check the amount of RAM
 
 ```bash
 cat /proc/meminfo
@@ -92,7 +93,7 @@ free -m
 # What do each of these commands show you? How are they useful?
 ```
 
-#### Check the number of processors and processor info:
+#### Check the number of processors and processor info
 
 ```bash
 cat /proc/cpuinfo
@@ -102,7 +103,7 @@ cat /proc/cpuinfo | grep proc | wc -l
 # Does this command accurately count the processors?
 ```
 
-#### Check Storage usage and mounted filesystems:
+#### Check Storage usage and mounted filesystems
 
 ```bash
 df
@@ -144,7 +145,7 @@ try `du -h .` as well to see how that ouput differs
 # read `man du` to learn more about your options.
 ```
 
-#### Check the system uptime:
+#### Check the system uptime
 
 ```bash
 uptime
@@ -154,7 +155,7 @@ man uptime
 # Referencing this server, do you think it is under high load? Why or why not?
 ```
 
-#### Check who has recently logged into the server and who is currently in:
+#### Check who has recently logged into the server and who is currently in
 
 ```bash
 last
@@ -170,7 +171,7 @@ whoami
 # how many other users are on this system? What does the pts/0 mean on google?
 ```
 
-#### Check who you are and what is going on in your environment:
+#### Check who you are and what is going on in your environment
 
 ```bash
 printenv
@@ -182,7 +183,7 @@ id
 echo $SHELL
 ```
 
-#### Check running processes and services:
+#### Check running processes and services
 
 ```bash
 ps -aux | more
@@ -190,7 +191,7 @@ ps -ef | more
 ps -ef | wc -l
 ```
 
-#### Check memory usage and what is using the memory:
+#### Check memory usage and what is using the memory
 
 ```bash
 # Run each of these individually for understanding before we look at part b.
@@ -232,4 +233,6 @@ for i in `seq 1 20`; do echo "I am counting i and am on $i times through the loo
 
 Can you tell me what is the difference or significance of the $ in the command above? What does that denote to the system?
 
-> Be sure to `reboot` the lab machine from the command line when you are done.
+!!! info
+
+    Be sure to `reboot` the lab machine from the command line when you are done.
