@@ -45,6 +45,7 @@ nav:
   - Linux Admin Course:
     - Syllabus: lac/syllabus.md
     - Course Project: lac/project.md
+    - Unit Index: lac/unitindex.md
     - Unit 1 - Linux File Operations:
       - Intro: lac/u1intro.md
       - Worksheet: lac/u1ws.md
@@ -120,6 +121,7 @@ nav:
   - Linux Security Course:
     - Syllabus: psc/syllabus.md
     - Course Project: psc/project.md
+    - Unit Index: psc/unitindex.md
     - Unit 1 - Build Standards and Compliance:
       - Intro: psc/u1intro.md
       - Worksheet: psc/u1ws.md
@@ -170,6 +172,7 @@ nav:
     - Syllabus: pcae/syllabus.md
     # - Course Project: pcae/project.md
     - Lab Guide: pcae/lab-guide.md
+    - Unit Index: pcae/unitindex.md
     - Unit 1 - Automation Tools:
     #   - Intro: pcae/u1intro.md
       - Worksheet: pcae/u1ws.md
