@@ -26,7 +26,7 @@ These labs focus on configuration drift tracking and remediation.
 
 ### Operational Activities
 
-![Image 1](../../assets/psc/images/u8/image1.jpeg)
+<img src="../../assets/psc/images/u8/image1.jpeg" alt="Image 1" />
 
 1. Check your stig viewer and go to RHEL 9 stigs.
 
@@ -70,14 +70,12 @@ These labs focus on configuration drift tracking and remediation.
    time aide -i -c /etc/aide/aide.conf
    ```
     - How long did that take?
+      <img src="../../assets/psc/images/u8/image2.jpeg" alt="Image 2" />
+      (Mine took 5 minutes 8 seconds to run on the lab system)
         - How much time was wall clock v. system/user time?
         - Why might you want to know this on your systems?
         - What do you notice about the output?
             1. What do you need to go read about?
-
-![Image 2](../../assets/psc/images/u8/image2.jpeg)
-
-(Mine took 5 minutes 8 seconds to run on the lab system)
 
 7. Set the database up properly
    ```bash
@@ -94,8 +92,7 @@ These labs focus on configuration drift tracking and remediation.
     - Did you see your new files created?
     - How long did this take to run?
         1. What type of usage do you see against user/system space?
-
-![Image 3](../../assets/psc/images/u8/image3.png)
+    <img src="../../assets/psc/images/u8/image3.png" alt="Image 3" />
 
 ### Using Ansible to fix drift
 
@@ -114,8 +111,7 @@ These labs focus on configuration drift tracking and remediation.
    ```bash
    ansible-playbook -i /root/hosts /root/web_environment.yaml
    ```
-
-![Image 4](../../assets/psc/images/u8/image4.png)
+   <img src="../../assets/psc/images/u8/image4.png" alt="Image 4" />
 
 - Did this force the system back into a working configuration?
     - If it worked, would it always work, or would they (the systems) need to be
