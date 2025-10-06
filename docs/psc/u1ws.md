@@ -9,7 +9,7 @@ the end to turn them in as a final submission packet.
 
 ### Resources / Important Links
 
-- <https://public.cyber.mil/stigs/downloads>
+- <https://public.cyber.mil/stigs/downloads/>
 - <https://excalidraw.com>
 - <https://www.open-scap.org>
 - <https://www.sans.org/information-security-policy>
