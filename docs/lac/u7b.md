@@ -32,13 +32,13 @@ Let's get into it.
 
 Start by finding a package you know is installed and used in your environment -- for example, `sshd`:
 
-```bash
+```bash linenums="1"
 rpm -qi openssh-server
 ```
 
 Now, check the integrity of the package's files:
 
-```bash
+```bash linenums="1"
 rpm -V openssh-server
 ```
 
@@ -71,19 +71,19 @@ Let's get all files from a package.
 
 - Run `rpm -ql` to list the files that were installed with a package:
 
-  ```bash
+  ```bash linenums="1"
   rpm -ql openssh-server
   ```
 
 - Now pick one file and manually generate its sha256 hash:
 
-  ```bash
+  ```bash linenums="1"
   sha256sum /usr/sbin/sshd
   ```
 
 - Download the original `.rpm` package to compare its hash.
 
-  ```bash
+  ```bash linenums="1"
   dnf download openssh-server
   ```
 
@@ -92,20 +92,20 @@ Let's get all files from a package.
 
 - You can inspect the file of your choice with `rpm -qp --dump`:
 
-  ```bash
+  ```bash linenums="1"
   rpm -qp --dump openssh-server*.rpm | grep ^/usr/sbin/sshd
   ```
 
   This will output a bunch of information about the file.  
   The `sha256` hash will be in the fourth column, so we can use `awk` to extract that:
 
-  ```bash
+  ```bash linenums="1"
   rpm -qp --dump openssh-server*.rpm | grep ^/usr/sbin/sshd | awk '{print $4}'
   ```
 
 - Compare your version's hash to the original RPM file's hash:
 
-  ```bash
+  ```bash linenums="1"
   sha256sum /usr/sbin/sshd
   ```
 
@@ -116,13 +116,13 @@ If the hashes are different, the file has been modified.
 ---
 
 1. Run this one-liner to verify all installed packages:
-   ```bash
+   ```bash linenums="1"
    rpm -Va
    ```
    - This will verify every file from every package and report anything suspicious.
 1. Narrow the scope. Only show actual modified files:
 
-   ```bash
+   ```bash linenums="1"
    rpm -Va | grep -v '^..5'
    ```
 
@@ -131,7 +131,7 @@ If the hashes are different, the file has been modified.
 
 1. Investigate a suspicious result. If you see something like:
 
-   ```bash
+   ```bash linenums="1"
    .M....... c /etc/ssh/sshd_config
    ```
 
@@ -142,12 +142,12 @@ If the hashes are different, the file has been modified.
 
 1. Check the file in question:
 
-   ```bash
+   ```bash linenums="1"
    ls -l /etc/ssh/sshd_config
    ```
 
 1. Compare that to what you expected:
-   ```bash
+   ```bash linenums="1"
    rpm -q --qf '%{NAME} %{VERSION}-%{RELEASE}\n' -f /etc/ssh/sshd_config
    ```
 
@@ -171,7 +171,7 @@ Large enterprises often use tools like AIDE (Advanced Intrusion Detection Enviro
 AIDE can be installed easily with `dnf`, so you can play around with it if you want.
 To set up AIDE on your system (as root):
 
-```bash
+```bash linenums="1"
 dnf install aide -y
 
 aide --init

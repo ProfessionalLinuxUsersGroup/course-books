@@ -20,7 +20,7 @@ Python, you may use the script provided in the `scripts/` directory.
 
 This script should be run from the root directory of the project:
 
-```bash
+```bash linenums="1"
 git clone https://github.com/ProfessionalLinuxUsersGroup/course-books.git
 cd course-books
 ./scripts/local-build
@@ -28,7 +28,7 @@ cd course-books
 
 Use the `--help` option to see usage instructions:
 
-```bash
+```bash linenums="1"
 ./scripts/local-build --help
 ```
 
@@ -104,7 +104,7 @@ on the container or machine.
 
 === "APT"
 
-    ```bash
+    ```bash linenums="1"
     #!/bin/bash
     apt-get update && apt-get -y install git python3-full hostname apache2
     git clone https://github.com/ProfessionalLinuxUsersGroup/course-books && cd course-books
@@ -116,7 +116,7 @@ on the container or machine.
 
 === "DNF"
 
-    ```bash
+    ```bash linenums="1"
     #!/bin/bash
     dnf install -y httpd git python3 hostname httpd
     git clone https://github.com/ProfessionalLinuxUsersGroup/course-books && cd course-books
@@ -131,7 +131,7 @@ The ProLUG Linux Course Books website should now be available from your web brow
 
 From here you can use such commands from your localhost to implement changes:
 
-```bash
+```bash linenums="1"
 cd "$HOME"/course-books && source bin/activate
 mkdocs build -d /var/www/html
 systemctl restart {httpd or apache}
@@ -150,7 +150,7 @@ Or send commands over to a networked container or machine:
     To minimize complexity and given the nature of commands over SSH,
     these commands will need to utilize absolute paths.
 
-```bash
+```bash linenums="1"
 scp {working directory}/{targeted document} {TARGET_IP}:/root/course-books/{targeted document}
 ssh {TARGET_IP} "cd /root/course-books && /root/course-books/bin/mkdocks build -d /var/www/html && systemctl restart httpd"
 ```

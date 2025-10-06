@@ -13,7 +13,7 @@ If everything feels sluggish, your disk might be the bottleneck.
 
 ### Check
 
-```bash
+```bash linenums="1"
 # Monitor disk I/O, latency, and throughput
 iostat -xz 1
 
@@ -31,27 +31,27 @@ iostat -dx 1
 
 1. Identify and stop unnecessary high I/O processes:
 
-   ```bash
+   ```bash linenums="1"
    # Forcefully terminate a process (use with caution)
    kill -9 <PID>
    ```
 
 2. Optimize filesystem writes (for ext4):
 
-   ```bash
+   ```bash linenums="1"
    # Enable writeback mode for better performance
    tune2fs -o journal_data_writeback /dev/sdX
    ```
 
 3. Reduce excessive metadata writes:
 
-   ```bash
+   ```bash linenums="1"
    # Disable access time updates and set commit interval
    mount -o noatime,commit=60 /mnt/data
    ```
 
 4. If using LVM, extend the volume to reduce fragmentation:
-   ```bash
+   ```bash linenums="1"
    # Add 5GB to volume
    lvextend -L +5G /dev/examplegroup/lv_data
    ```
@@ -66,7 +66,7 @@ iostat -dx 1
 
 ### Check
 
-```bash
+```bash linenums="1"
 # Show disk usage per filesystem
 df -hT
 
@@ -81,14 +81,14 @@ du -ahx / | sort -rh | head -20
 
 1. Find and remove large unnecessary files:
 
-   ```bash
+   ```bash linenums="1"
    # Remove specific log file
    rm -f /var/log/large_old_log.log
    ```
 
 2. Truncate logs safely without deleting them:
 
-   ```bash
+   ```bash linenums="1"
    # Clear log contents while preserving file
    truncate -s 0 /var/log/syslog
 
@@ -98,7 +98,7 @@ du -ahx / | sort -rh | head -20
 
 3. Expand disk space if using LVM:
 
-   ```bash
+   ```bash linenums="1"
    # Extend logical volume
    lvextend -L +10G /dev/examplegroup/lv_data
 
@@ -115,7 +115,7 @@ If files suddenly disappear or applications complain about missing storage, a mo
 
 ### Check
 
-```bash
+```bash linenums="1"
 # View current mounts
 mount | grep /mnt/data
 
@@ -130,7 +130,7 @@ cat /etc/fstab
 
 1. Manually remount the filesystem (if missing):
 
-   ```bash
+   ```bash linenums="1"
    # Remount all fstab entries
    mount -a
    ```
@@ -144,7 +144,7 @@ cat /etc/fstab
 
 3. If an LVM mount is missing after reboot, reactivate it:
 
-   ```bash
+   ```bash linenums="1"
    # Activate volume groups
    vgchange -ay
 
@@ -154,7 +154,7 @@ cat /etc/fstab
 
 4. For NFS issues, check connectivity and restart services:
 
-   ```bash
+   ```bash linenums="1"
    # Check NFS exports
    showmount -e <NFS_SERVER_IP>
 
@@ -172,7 +172,7 @@ cat /etc/fstab
 
 ### Check
 
-```bash
+```bash linenums="1"
 # Check kernel error messages
 dmesg | grep -i "error"
 
@@ -185,7 +185,7 @@ xfs_repair -n /dev/sdX  # for XFS
 
 1. Repair the filesystem (if unmounted):
 
-   ```bash
+   ```bash linenums="1"
    # Unmount first
    umount /dev/sdX
 
@@ -195,7 +195,7 @@ xfs_repair -n /dev/sdX  # for XFS
    ```
 
 2. If corruption is severe, restore from backup:
-   ```bash
+   ```bash linenums="1"
    # Restore using rsync
    rsync -av /backup/mnt_data /mnt/data/
    ```
@@ -208,7 +208,7 @@ You might have disk space but still can't create files? Check your inodes!
 
 ### Check
 
-```bash
+```bash linenums="1"
 # Check inode usage
 df -i
 
@@ -223,7 +223,7 @@ find . -type f | wc -l
 
 1. Clean up temporary files:
 
-   ```bash
+   ```bash linenums="1"
    # Remove old files in /tmp
    rm -rf /tmp/*
 
@@ -232,7 +232,7 @@ find . -type f | wc -l
    ```
 
 2. Find and remove unnecessary files:
-   ```bash
+   ```bash linenums="1"
    # List directories with most files
    du -a | sort -n -r | head -n 10
    ```

@@ -117,7 +117,7 @@ Add SSH public key ('.pub' suffix) to GitHub as "Signing Key".
 Below is a bash script that will attempt to configure signing
 Git commits on a localhost:
 
-```bash title="commit-sign.bash" linenums="1"
+```bash linenums="1" title="commit-sign.bash"
 #!/bin/bash
 GH_USERNAME="YourUsername"
 git config --global gpg.format ssh
@@ -153,13 +153,13 @@ the original repository before committing changes. This will help us reduce pull
 
 You can do this from the GitHub web UI easily with the `Sync Fork` button. If you want to do this from the terminal, you can add a new `git remote` called `upstream`.
 
-```bash
+```bash linenums="1"
 git remote add upstream https://github.com/ProfessionalLinuxUsersGroup/course-books.git
 ```
 
 Then, to sync your local fork with the original repo, do a `git pull` from the `upstream` remote.
 
-```bash
+```bash linenums="1"
 git pull upstream main
 ```
 
@@ -199,7 +199,7 @@ Now you'll have your own version of the repository tied to your GitHub account.
 After creating your fork, you'll need to clone it down to your local machine in
 order to work on it.
 
-```bash
+```bash linenums="1"
 git clone git@github.com:YOUR_USERNAME/course-books.git
 # Or, with https:
 git clone https://github.com/YOUR_USERNAME/course-books.git
@@ -222,7 +222,7 @@ appropriate name. Switch to that branch, then make changes there.
 For example, if you're working on adding the Unit 1 Worksheet for the Linux
 Admin Course book:
 
-```bash
+```bash linenums="1"
 git branch lac-unit1-add-worksheet
 git switch lac-unit1-add-worksheet
 # Or, simply:
@@ -234,7 +234,7 @@ git switch -c lac-unit1-add-worksheet
 Once you're on your new branch, make changes to the `u1ws.md` using the editor
 of your choice.
 
-```bash
+```bash linenums="1"
 vi u1ws.md
 # Make changes
 :wq
@@ -242,7 +242,7 @@ vi u1ws.md
 
 Once the changes are made, commit them.
 
-```bash
+```bash linenums="1"
 git add u1ws.md
 git commit -m "feat: Add lac unit 1 worksheet"
 ```
@@ -257,7 +257,7 @@ git commit -m "feat: Add lac unit 1 worksheet"
 After making your commit, you can now push the changes to **your fork** on the
 **new branch** you created earlier.
 
-```bash
+```bash linenums="1"
 git push origin lac-unit1-add-worksheet
 ```
 
@@ -300,7 +300,7 @@ pushing over changed files to a host for testing.
 
 If the branch does not already exist this command will make a local branch and directory within the main repo.
 Otherwise you can quickly checkout a remote branch and create a directory within the main repo.
-```bash
+```bash linenums="1"
 git worktree add -b {branch to create} {directory to be created}
 ```
 
@@ -310,7 +310,7 @@ the primary while maintaining a source of truth, all contained within one direct
 things like easily rebasing a separate branch cleanly from the main branch, testing file changes, repo asset
 package changes, and more.
 
-```bash title="git-worktree.bash" linenums="1"
+```bash linenums="1" title="git-worktree.bash"
 git worktree add test-branch test-branch
 # Or create a branch if it doesn't exist
 git worktree add -b test-branch ../test-branch-dir
@@ -352,7 +352,7 @@ leave a clean, and easily readable commit history for all concerned parties. Reb
 facilitate the management of branches and working directories in a notably active project in a myriad
 of other ways. Contributors are encouraged to explore the possibilties of rebasing.
 
-```bash title="git-rebase.bash" linenums="1"
+```bash linenums="1" title="git-rebase.bash"
 git checkout experiment
 git rebase master
 First, rewinding head to replay your work on top of it...
@@ -417,7 +417,7 @@ image into the `docs/assets/` directory.
 
 Each book has its own subdirectory in `assets/`:
 
-```text
+```text linenums="1"
 assets/
 ├── deploy
 ├── downloads
@@ -443,7 +443,7 @@ This convention helps us keep track of assets and where they belong.
 
 Continuing with that example, this is the path that the image should go in:
 
-```text
+```text linenums="1"
 docs/
 └── assets/
     └── lac/
