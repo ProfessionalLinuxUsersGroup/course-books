@@ -28,7 +28,7 @@ The lab has been provided for convenience below:
 
 EXERCISES (Warmup to quickly run through your system and familiarize yourself)
 
-```bash
+```bash linenums="1"
 mkdir lab_essentials
 cd lab_essentials
 ls
@@ -68,7 +68,7 @@ It is recommended that you type these commands and do not copy and paste them. W
 
 #### Working with files
 
-```bash
+```bash linenums="1"
 # Creating empty files with touch
 touch fruits.txt
 
@@ -89,7 +89,7 @@ ls -l fruits.txt
 
 #### Creating files just by stuffing data in them
 
-```bash
+```bash linenums="1"
 echo “grapes 5” > fruits.txt
 cat fruits.txt
 echo “apples 3” > fruits.txt
@@ -109,7 +109,7 @@ with >>, we never > over those types of files.
 
 #### Creating file with vi or vim
 
-```bash
+```bash linenums="1"
 # It is highly recommended the user read vimtutor. To get vimtutor follow
 # these steps:
 sudo -i
@@ -139,7 +139,7 @@ cat somefile.txt
 
 #### Copying and moving files
 
-```bash
+```bash linenums="1"
 cp somefile.txt backupfile.txt
 ls
 cat backupfile.txt
@@ -155,7 +155,7 @@ useful option for moving directories.
 
 #### Searching/filtering through files
 
-```bash
+```bash linenums="1"
 # So maybe we only want to see certain values from a file, we can filter
 # with a tool called grep
 
@@ -178,7 +178,7 @@ to the end of a string.
 
 #### Sorting files with sort
 
-```bash
+```bash linenums="1"
 # Let’s sort our file fruits.txt and look at what happens to the output
 # and the original file
 
@@ -206,7 +206,7 @@ sort -k 2 fruits.txt > sort_by_price.txt
 
 #### Advanced sort practice
 
-```bash
+```bash linenums="1"
 # Consider the command
 ps -aux
 
@@ -237,7 +237,7 @@ The good thing is that you’ve already been redirecting information into files.
 Catching the input of one command and feeding that into the input of another command
 We’ve actually been doing this the entire time. “|” is the pipe operator and causes the output of one command to become the input of the second command.
 
-```bash
+```bash linenums="1"
 cat fruits.txt | grep apple
 # This cats out the file, all of it, but then only shows the things that
 # pass through the filter of grep. We could continually add to these and make
@@ -281,7 +281,7 @@ Use something you learned to affect the output.
 
 We’ve already used > and >> to throw data into a file but when we redirect like that we are catching it before it comes to the screen. There is another tool that is useful for catching data and also showing it to us, that is tee.
 
-```bash
+```bash linenums="1"
 date
 # comes to the screen
 
@@ -298,7 +298,7 @@ Do a quick man on tee to see what the -a does. Try it without that value. Can yo
 
 Sometimes we don’t care when something errs out. We just want to see that it’s working or not. If you’re wanting to filter out errors (2) in the standarderr, you can do this
 
-```bash
+```bash linenums="1"
 ls fruits.txt
 # You should see normal output
 
@@ -320,7 +320,7 @@ In one of our later labs we’re going to look at stressing our systems out. For
 
 May have to yum -y install bzip2 for this next one to work.
 
-```bash
+```bash linenums="1"
 time dd if=/dev/urandom bs=1024k count=20 | bzip2 -9 >> /dev/null
 ```
 
@@ -328,7 +328,7 @@ Use “crtl + c” to break if you use that and it becomes too long or your syst
 
 This is the “poor man’s” answer file. Something we used to do when we needed to answer some values into a script or installer. This is still very accurate and still works, but might be a bit advanced with a lot of advanced topics in here. Try it if you’d like but don’t worry if you don’t get this on the first lab.
 
-```bash
+```bash linenums="1"
 vi testscript.sh
 hit “i” to enter insert mode
 add the following lines:
@@ -371,7 +371,7 @@ Permissions have to do with who can or cannot access (read), edit (write), or ex
 
 Permissions look like this.
 
-```bash
+```bash linenums="1"
 ls -l
 ```
 
@@ -387,7 +387,7 @@ A quick rundown of how permissions break out:
 
 Let’s examine some permissions and see if we can’t figure out what permissions are allowed.
 
-```bash
+```bash linenums="1"
 ls -ld /root/
 # drwx------. 5 root root 4096 Jun 22 09:11 /root/
 ```

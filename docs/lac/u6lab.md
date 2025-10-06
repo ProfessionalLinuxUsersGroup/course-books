@@ -72,13 +72,13 @@ A very important thing to note before starting this lab. You’re connected into
 
 1. Check firewall status
 
-   ```bash
+   ```bash linenums="1"
    systemctl status firewalld
    ```
 
    Example Output:
 
-   ```bash
+   ```bash linenums="1"
    firewalld.service - firewalld - dynamic firewall daemon
    Loaded: loaded (/usr/lib/systemd/system/firewalld.service; enabled; vendor preset: enabled)
    Active: inactive (dead) since Sat 2017-01-21 19:27:10 MST; 2 weeks 6 days ago
@@ -100,13 +100,13 @@ A very important thing to note before starting this lab. You’re connected into
 
 #### If necessary start the firewalld daemon
 
-```bash
+```bash linenums="1"
 systemctl start firewalld
 ```
 
 #### Set the firewalld daemon to be persistent through reboots
 
-```bash
+```bash linenums="1"
 systemctl enable firewalld
 ```
 
@@ -114,19 +114,19 @@ Verify with systemctl status firewalld again from **step 1**
 
 #### Check which zones exist
 
-```bash
+```bash linenums="1"
 firewall-cmd --get-zones
 ```
 
 #### Checking the values within each zone
 
-```bash
+```bash linenums="1"
 firewall-cmd --list-all --zone=public
 ```
 
 **General Output**
 
-```bash
+```bash linenums="1"
 public (default, active)
 interfaces: wlp4s0
 sources:
@@ -140,25 +140,25 @@ rich rules:
 
 #### Checking the active and default zones
 
-```bash
+```bash linenums="1"
 firewall-cmd --get-default
 ```
 
 Example Output:
 
-```bash
+```bash linenums="1"
 public
 ```
 
 Next Command
 
-```bash
+```bash linenums="1"
 firewall-cmd --get-active-zones
 ```
 
 Example Output:
 
-```bash
+```bash linenums="1"
 public
 interfaces: wlp4s0
 ```
@@ -173,13 +173,13 @@ We know the zones from above, set your firewall to the different active or defau
 
 **Note:** It may be useful to perform an `ifconfig -a` and note your interfaces for the next part
 
-```bash
+```bash linenums="1"
 ifconfig -a | grep -i flags
 ```
 
 Example Output:
 
-```bash
+```bash linenums="1"
 ifconfig -a | grep -i flags
 docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
 ens32: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
@@ -188,25 +188,25 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
 
 1.  Changing the default zones (This is permanent over a reboot, other commands require --permanent switch)
 
-```bash
+```bash linenums="1"
 firewall-cmd --set-default-zone=work
 ```
 
 Example Output:
 
-```bash
+```bash linenums="1"
 success
 ```
 
 Next Command:
 
-```bash
+```bash linenums="1"
 firewall-cmd --get-active-zones
 ```
 
 Example Output:
 
-```bash
+```bash linenums="1"
 work
     interfaces: wlp4s0
 ```
@@ -216,37 +216,37 @@ Set it to one other zone, verify, then set it back to public.
 
 Changing interfaces and assigning different zones (use another interface from your earlier `ifconfig -a`
 
-```bash
+```bash linenums="1"
 firewall-cmd --change-interface=virbr0 --zone dmz
 ```
 
 Example Output:
 
-```bash
+```bash linenums="1"
 success
 ```
 
 Next Command:
 
-```bash
+```bash linenums="1"
 firewall-cmd --add-source 192.168.11.0/24 --zone=public
 ```
 
 Example Output:
 
-```bash
+```bash linenums="1"
 success
 ```
 
 Next Command:
 
-```bash
+```bash linenums="1"
 firewall-cmd --get-active-zones
 ```
 
 Example Output:
 
-```bash
+```bash linenums="1"
 dmz
    interfaces: virbr0
 work
@@ -261,13 +261,13 @@ We can be even more granular with our ports and services. We can block or allow 
 
 1. List all services assigned in firewalld
 
-   ```bash
+   ```bash linenums="1"
    firewall-cmd --get-services
    ```
 
    Example Output:
 
-   ```bash
+   ```bash linenums="1"
    RH-Satellite-6 amanda-client bacula bacula-client dhcp dhcpv6 dhcpv6-client dns freeipa-ldap freeipa-ldaps freeipa-replication ftp high-availability http https imaps ipp ipp-client ipsec iscsi-target kerberos kpasswd ldap ldaps libvirt libvirt-tls mdns mountd ms-wbt mysql nfs ntp openvpn pmcd pmproxy pmwebapi pmwebapis pop3s postgresql proxy-dhcp radius rpc-bind rsyncd samba samba-client smtp ssh telnet tftp tftp-client transmission-client vdsm vnc-server wbem-https
    ```
 
@@ -275,13 +275,13 @@ We can be even more granular with our ports and services. We can block or allow 
 
    Next Command:
 
-   ```bash
+   ```bash linenums="1"
    ls /usr/lib/firewalld/services/
    ```
 
    Example Output:
 
-   ```bash
+   ```bash linenums="1"
    amanda-client.xml        iscsi-target.xml  pop3s.xml
    bacula-client.xml        kerberos.xml      postgresql.xml
    bacula.xml               kpasswd.xml       proxy-dhcp.xml
@@ -304,13 +304,13 @@ We can be even more granular with our ports and services. We can block or allow 
 
    Next Command:
 
-   ```bash
+   ```bash linenums="1"
    cat /usr/lib/firewalld/services/http.xml
    ```
 
    Example Output:
 
-   ```bash
+   ```bash linenums="1"
    <?xml version="1.0" encoding="utf-8"?>
    <service>
      <short>WWW (HTTP)</short>
@@ -323,25 +323,25 @@ We can be even more granular with our ports and services. We can block or allow 
 
    Ensuring we are working on a public zone
 
-   ```bash
+   ```bash linenums="1"
    firewall-cmd --set-default-zone=public
    ```
 
    Example Output:
 
-   ```bash
+   ```bash linenums="1"
    success
    ```
 
    Listing Services
 
-   ```bash
+   ```bash linenums="1"
    firewall-cmd --list-services
    ```
 
    Example Ouput:
 
-   ```bash
+   ```bash linenums="1"
    dhcpv6-client ssh
    ```
 
@@ -349,85 +349,85 @@ We can be even more granular with our ports and services. We can block or allow 
 
    Permanently adding a service with the `--permanent` switch
 
-   ```bash
+   ```bash linenums="1"
    firewall-cmd --permanent --add-service ftp
    ```
 
    Example Output:
 
-   ```bash
+   ```bash linenums="1"
    success
    ```
 
    Reloading
 
-   ```bash
+   ```bash linenums="1"
    firewall-cmd --reload
    ```
 
    Example Output:
 
-   ```bash
+   ```bash linenums="1"
    success
    ```
 
    Verifying we are in the correct **Zone**
 
-   ```bash
+   ```bash linenums="1"
    firewall-cmd --get-default-zone
    ```
 
    Example Output:
 
-   ```bash
+   ```bash linenums="1"
    public
    ```
 
    Verifying that we have successfully added the **FTP** service
 
-   ```bash
+   ```bash linenums="1"
    firewall-cmd --list-services
    ```
 
    Example Output:
 
-   ```bash
+   ```bash linenums="1"
    dhcpv6-client ftp ssh
    ```
 
    Alternatively, we can do almost the same thing but not use a defined service name. If I just want to allow port 1147 through for TCP traffic, it is very simple as well.
 
-   ```bash
+   ```bash linenums="1"
    firewall-cmd --permanent --add-port=1147/tcp
    ```
 
    Example Output:
 
-   ```bash
+   ```bash linenums="1"
    success
    ```
 
    Reloading once again
 
-   ```bash
+   ```bash linenums="1"
    firewall-cmd --reload
    ```
 
    Example Output:
 
-   ```bash
+   ```bash linenums="1"
    success
    ```
 
    Listing open ports now
 
-   ```bash
+   ```bash linenums="1"
    firewall-cmd --list-ports
    ```
 
    Example Output:
 
-   ```bash
+   ```bash linenums="1"
    1147/tcp
    ```
 
@@ -437,55 +437,55 @@ We can be even more granular with our ports and services. We can block or allow 
 
    Firstly, we will permanently remove ftp service
 
-   ```bash
+   ```bash linenums="1"
    firewall-cmd --permanent --remove-service=ftp
    ```
 
    Example Output:
 
-   ```bash
+   ```bash linenums="1"
    success
    ```
 
    Then we will permanently remove the ports
 
-   ```bash
+   ```bash linenums="1"
    firewall-cmd --permanent --remove-port=1147/tcp
    ```
 
    Example Output:
 
-   ```bash
+   ```bash linenums="1"
    success
    ```
 
    Now lets do a reload
 
-   ```bash
+   ```bash linenums="1"
    firewall-cmd --reload
    ```
 
    Example Output:
 
-   ```bash
+   ```bash linenums="1"
    success
    ```
 
    Now we can list services again to confirm our work
 
-   ```bash
+   ```bash linenums="1"
    firewall-cmd --list-services
    ```
 
    Example Output:
 
-   ```bash
+   ```bash linenums="1"
    dhcpv6-client ssh
    ```
 
    Now we can list ports
 
-   ```bash
+   ```bash linenums="1"
    firewall-cmd --list-ports
    ```
 

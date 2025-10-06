@@ -43,19 +43,19 @@ These labs focus on configuration drift tracking and remediation.
 1. Go into the sandbox lab: <https://killercoda.com/playgrounds/scenario/ubuntu>
 
 2. Install aide and watch the installation happen.
-   ```bash
+   ```bash linenums="1"
    apt -y install aide
    ```
     - What is being put in the path `/etc/aide/aide.conf.d/`?
         - How many files are in there?
 
 3. Check your version of aide
-   ```bash
+   ```bash linenums="1"
    aide -v
    ```
 
 4. Read the man page (first page).
-   ```bash
+   ```bash linenums="1"
    man aide
    ```
     - What does aide try to do, and how does it do it?
@@ -66,7 +66,7 @@ These labs focus on configuration drift tracking and remediation.
     - Read the man for `capsh`, what is it used for?
 
 6. Set up aide according to the default configuration
-   ```bash
+   ```bash linenums="1"
    time aide -i -c /etc/aide/aide.conf
    ```
     - How long did that take?
@@ -78,12 +78,12 @@ These labs focus on configuration drift tracking and remediation.
             1. What do you need to go read about?
 
 7. Set the database up properly
-   ```bash
+   ```bash linenums="1"
    cp /var/lib/aide/aide.db.new /var/lib/aide/aide.db
    ```
 
 8. Test aide by making files in a tracked directory
-   ```bash
+   ```bash linenums="1"
    mkdir /root/prolug
    touch /root/prolug/test1
    touch /root/prolug/test2
@@ -99,7 +99,7 @@ These labs focus on configuration drift tracking and remediation.
 1. Complete the lab here: <https://killercoda.com/het-tanis/course/Ansible-Labs/16-Ansible-Web-Server-Env-Deploy>
 
 2. When you finish ensure that you see broken output for 8081, as required.
-   ```bash
+   ```bash linenums="1"
    curl node01:8081
    ```
 
@@ -108,7 +108,7 @@ These labs focus on configuration drift tracking and remediation.
    address that separately with the security team, but for now you need to get those
    environments back to working. Run your original deployment command to see if it sets
    mhe environment back properly.
-   ```bash
+   ```bash linenums="1"
    ansible-playbook -i /root/hosts /root/web_environment.yaml
    ```
    <img src="../../assets/psc/images/u8/image4.png" alt="Image 4" />

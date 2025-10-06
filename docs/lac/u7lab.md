@@ -44,7 +44,7 @@ and [dpkg backend](https://www.debian.org/doc/manuals/debian-handbook/sect.manip
 
 Investigate the man pages for additional information.
 
-```bash
+```bash linenums="1"
 cd ~
 rpm -qa | more
 rpm -qa | wc -l
@@ -72,7 +72,7 @@ to see some of the capabilities that are available to you. Your system
 can do a lot of basic arithmetic for you and this is a very small set of
 examples.
 
-```bash
+```bash linenums="1"
 # Check to see if you have bc tool.
 rpm -q bc
 
@@ -114,7 +114,7 @@ RPM helps to de-conflict and save huge amounts of time and engineering headaches
 
 Run through these commands and read `man rpm` to see what they do.
 
-```bash
+```bash linenums="1"
 # Read about the capabilities of systemd
 rpm -qi systemd
 
@@ -173,7 +173,7 @@ we can also create our own from file systems or web pages. We’ll be mostly dea
 with the defaults and how to enable or disable them, but there are many configurations
 that can be made to customize software deployment.
 
-```bash
+```bash linenums="1"
 # Checking how dnf is configured and seeing it’s available repositories
 cat /etc/dnf/dnf.conf
 
@@ -198,7 +198,7 @@ manually picking other mirrors.
 If the mirrorlist does not work for you, you can try the commented out
 baseurl line instead.
 
-```bash
+```bash linenums="1"
 [baseos]
 name=Rocky Linux $releasever - BaseOS
 mirrorlist=https://mirrors.rockylinux.org/mirrorlist?arch=$basearch&repo=BaseOS-$releasever$rltype
@@ -215,7 +215,7 @@ Something you’ll find out in the next section looking at repos is that when th
 are properly defined they are enabled by default. enabled=1 is implied and doesn’t
 need to exist when you create a repo.
 
-```bash
+```bash linenums="1"
 # Let’s disable a repo and see if the output changes at all
 dnf config-manager --disable baseos
 
@@ -257,7 +257,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Rocky-9
 So someone has asked for some software and assured you it’s been tested in
 similar environments, so you go to install it on their system for them.
 
-```bash
+```bash linenums="1"
 # See if we already have a version.
 rpm -qa mariadb
 
@@ -289,7 +289,7 @@ dnf -y install mariadb
 Surprise, the user calls back because that install has made the system unstable.
 They are asking for you to remove it and make the system back to the recent version.
 
-```bash
+```bash linenums="1"
 dnf remove mariadb
 # hit “N”
 
@@ -352,7 +352,7 @@ tell us everything that may help to make that stable. We can scour the interwebs
 (our normal job) but we also have a tool that will give us the base install needed
 for RHEL or CentOS to run that server.
 
-```bash
+```bash linenums="1"
 dnf grouplist
 dnf group install development
 

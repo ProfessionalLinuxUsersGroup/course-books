@@ -41,12 +41,12 @@ To complete this event the following three must be correct.
 1. Web server must be running.
 
    - HINT:
-     ```bash
+     ```bash linenums="1"
      systemctl status httpd
      ```
 
 <!-- - Answer: -->
-<!--   ```bash -->
+<!--   ```bash linenums="1" -->
 <!--   systemctl enable --now httpd # or some variation of that must have been run -->
 <!--   ``` -->
 
@@ -55,7 +55,7 @@ To complete this event the following three must be correct.
    - HINT: Can you check the open ports?
 
 <!-- - Answer: -->
-<!--   ```bash -->
+<!--   ```bash linenums="1" -->
 <!--   ss -ntulp  # Will show port 80 -->
 <!--   ``` -->
 <!-- The server is currently set on `8087` and needs to be fixed in `/etc/httpd/conf/http.conf`. -->
@@ -64,12 +64,12 @@ To complete this event the following three must be correct.
 3. Ensure that the server can be reached by external connection attempts on port 80.
 
    - HINT: Is the firewall running?
-     ```bash
+     ```bash linenums="1"
      systemctl status firewalld
      ```
 
 <!-- - Answer: Easiest is to turn off the firewall. -->
-<!--   ```bash -->
+<!--   ```bash linenums="1" -->
 <!--   systemctl stop firewalld. -->
 <!--   ``` -->
 <!--   - If they want to open the port, they can do that too. -->
@@ -107,7 +107,7 @@ To complete this event the following four must be correct.
    - HINT: Use your `pvs`, `vgs`, `lvs` tools
 
 <!-- - Answer: -->
-<!--   ```bash -->
+<!--   ```bash linenums="1" -->
 <!--   mkfs.ext4 /dev/mapper/<name of logical volume> -->
 <!--   ``` -->
 
@@ -116,7 +116,7 @@ To complete this event the following four must be correct.
    - Hint: Make the directory
 
 <!-- - Answer: -->
-<!--   ```bash -->
+<!--   ```bash linenums="1" -->
 <!--   mkdir /space -->
 <!--   vi /etc/fstab -->
 <!--   ``` -->
@@ -149,7 +149,7 @@ To complete this event the following two must be correct.
    - HINT: DNF isn’t updating, so where are the repos that it looks for?
 
 <!-- - Answer: -->
-<!--   ```bash -->
+<!--   ```bash linenums="1" -->
 <!--   vi /etc/yum.repos.d/rocky.repo -->
 <!--   ``` -->
 <!--   Look for `enabled=0`. This needs to be changed back to `1`. -->

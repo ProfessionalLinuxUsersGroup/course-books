@@ -24,7 +24,7 @@ could be transposed to a `.md` file.
 
 **EXERCISES** (Warmup to quickly run through your system and familiarize yourself)
 
-```bash
+```bash linenums="1"
 sysctl -a | grep -i ipv4 | grep -i forward
 # Does this system appear to be set to forward? Why or why not?
 
@@ -79,7 +79,7 @@ What is the fix?
 What type of control is being implemented?  
 Is it set properly on your system?
 
-```bash
+```bash linenums="1"
 sysctl -a | grep -i ipv4 | grep -i syncookies
 ```
 
@@ -130,7 +130,7 @@ the port that node_exporter runs on to the network outside of your system.
 
 #### Expose a network port through your firewall
 
-```bash
+```bash linenums="1"
 # Verify that your firewall is running
 systemctl status firewalld
 
@@ -167,7 +167,7 @@ focused Linux engineer, the trade-off between security and productivity.
 <strong>Note</strong>: If any lab download does not work, check the <code>/labs</code> folder on the server for a <code>[course]_[unit#].zip</code> file to complete the activities.
 </div>
 
-```bash
+```bash linenums="1"
 cd /root
 mkdir stigs
 cd stigs
@@ -181,7 +181,7 @@ unzip rhel9STIG-ansible.zip
 
 #### Examine the default values for STIGS
 
-```bash
+```bash linenums="1"
 cd /root/stigs/ansible/roles/rhel9STIG/defaults/
 vim main.yml
 ```
@@ -192,7 +192,7 @@ Search for a few of the STIG numbers you used earlier and see their default valu
 
 #### Examine the playbook to see how those are applied in a running system.
 
-```bash
+```bash linenums="1"
 vim /root/stigs/ansible/roles/rhel9STIG/tasks/main.yml
 ```
 
@@ -200,7 +200,7 @@ vim /root/stigs/ansible/roles/rhel9STIG/tasks/main.yml
 
 #### Create an Ansible playbook from OpenSCAP
 
-```bash
+```bash linenums="1"
 dnf -y install openscap-scanner openscap-utils openscap-scanner scap-security-guide
 cd /root
 mkdir openscap

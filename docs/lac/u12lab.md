@@ -30,20 +30,20 @@ The lab has been provided for convenience below:
 
 1. Create a working directory
 
-   ```bash
+   ```bash linenums="1" linenums="1"
    mkdir lab_baseline
    cd lab_baseline
    ```
 
 2. Verify if `iostat` is available
 
-   ```bash
+   ```bash linenums="1" linenums="1"
    which iostat
    ```
 
    If it’s not there:
 
-   ```bash
+   ```bash linenums="1" linenums="1"
    # Find which package provides iostat
    dnf whatprovides iostat
 
@@ -59,13 +59,13 @@ The lab has been provided for convenience below:
 
 3. Verify if `stress` is available
 
-   ```bash
+   ```bash linenums="1" linenums="1"
    which stress
    ```
 
    If it’s not there:
 
-   ```bash
+   ```bash linenums="1" linenums="1"
    # Find which package provides stress
    dnf whatprovides stress
 
@@ -79,13 +79,13 @@ The lab has been provided for convenience below:
 
 4. Verify if `iperf3` is available
 
-   ```bash
+   ```bash linenums="1" linenums="1"
    which iperf3
    ```
 
    If it’s not there:
 
-   ```bash
+   ```bash linenums="1" linenums="1"
    # Find which package provides iperf3
    dnf whatprovides iperf
 
@@ -115,7 +115,7 @@ first line and understand your system's performance.
 
 Some useful sar tracking commands. 10 minute increments.
 
-```bash
+```bash linenums="1" linenums="1"
 # By itself, this gives the last day's processing numbers
 sar
 
@@ -135,7 +135,7 @@ sar -f /var/log/sa/sa28
 For your later labs, you need to collect `sar` data in real time to compare with the
 baseline data.
 
-```bash
+```bash linenums="1" linenums="1"
 # View how SAR collects data every 10 minutes
 systemctl cat sysstat-collect.timer
 
@@ -150,7 +150,7 @@ sar -r 2 10
 
 `iostat` will give you either processing or device statistics for your system.
 
-```bash
+```bash linenums="1" linenums="1"
 # Gives all information (CPU and device)
 iostat
 
@@ -171,7 +171,7 @@ iostat -c 1 5
 
 In the ProLUG lab, `red1` is the iperf3 server, so we can bounce connections off it (`192.168.200.101`).
 
-```bash
+```bash linenums="1" linenums="1"
 # TCP connection with 128 connections
 time iperf3 -c 192.168.200.101 -n 1G -P 128
 
@@ -183,7 +183,7 @@ time iperf3 -c 192.168.200.101 -u -n 1G -P 128
 
 `stress` will produce extra load on a system. It can run against proc, ram, and disk I/O.
 
-```bash
+```bash linenums="1" linenums="1"
 # View stress usage information
 stress
 
@@ -209,7 +209,7 @@ issues. No one cares what you think, they care what you can show, or prove.
 - Do we have a system baseline to compare against?
 
   - No? Make a baseline.
-    ```bash
+    ```bash linenums="1" linenums="1"
     iostat -xh 1 10
     ```
 
@@ -221,7 +221,7 @@ issues. No one cares what you think, they care what you can show, or prove.
 
     - Writing/deleting 3000 empty files #modify as needed for your system
 
-    ```bash
+    ```bash linenums="1" linenums="1"
     # Speed: ~10s
     time for i in `seq 1 3000`; do touch testfile$i; done
 
@@ -237,14 +237,14 @@ issues. No one cares what you think, they care what you can show, or prove.
 
     - Testing processor speed
 
-      ```bash
+      ```bash linenums="1" linenums="1"
       time $(i=0; while (( i < 999999 )); do (( i ++ )); done)
       # if this takes your system under 10 seconds, add a 9
       ```
 
     - Alternate processor speed test
 
-    ```bash
+    ```bash linenums="1" linenums="1"
     time dd if=/dev/urandom bs=1024k count=20 | bzip2 -9 >> /dev/null
     ```
 
@@ -282,18 +282,18 @@ stress commands around them (examples):
 
 1. I assume no load on hdd, light load on processors
 
-   ```bash
+   ```bash linenums="1" linenums="1"
    while true; do stress --cpu 2 --io 4 --vm 2 --vm-bytes 128M --timeout 30; done #
    ```
 
 2. I assume low load on hdd, light load on processors
 
-   ```bash
+   ```bash linenums="1" linenums="1"
    while true; do stress --cpu 2-io 4 --vm 2 --vm-bytes 128M -d 1 --timeout 30; done
    ```
 
 3. I just assume everything is high load and it's a mess
-   ```bash
+   ```bash linenums="1" linenums="1"
    while true; do stress --cpu 4 --io 4 --vm 2 --vm-bytes 256M -d 4 --timeout 30; done
    ```
 

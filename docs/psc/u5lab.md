@@ -65,7 +65,7 @@ run their own repo on their network.
 
 2. Install httpd on your Hammer server
 
-   ```bash
+   ```bash linenums="1"
    systemctl stop wwclient
    dnf install -y httpd
    systemctl start httpd
@@ -97,7 +97,7 @@ run their own repo on their network.
 ### Building repos
 
 1. Start out by removing all your active repos
-   ```bash
+   ```bash linenums="1"
    cd /etc/yum.repos.d
    mkdir old_archive
    mv *.repo old_archive
@@ -105,7 +105,7 @@ run their own repo on their network.
    ```
 
 2. Mount the local repository and make a local repo
-   ```bash
+   ```bash linenums="1"
    mount -o loop /lab_work/repos_and_patching/Rocky-9.5-x86_64-dvd.iso /mnt
    df -h  # Should see the mount point
    ls -l /mnt
@@ -133,32 +133,32 @@ run their own repo on their network.
    Save with `esc :wq` or "shift + ZZ"
     - Do the paths you're using here make sense to you based off what you saw
       when using the `ls -l`? Why or why not?
-   ```bash
+   ```bash linenums="1"
    chmod 644 /etc/yum.repos.d/rocky9.repo
    dnf clean all
    ```
 
 3. Test the local repository.
-   ```bash
+   ```bash linenums="1"
    dnf repolist
    dnf --disablerepo="*" --enablerepo="AppStream" list available
    ```
     - Approximately how many are available?
-   ```bash
+   ```bash linenums="1"
    dnf --disablerepo="*" --enablerepo="AppStream" list available | nl
    dnf --disablerepo="*" --enablerepo="AppStream" list available | nl | head
    ```
    Now use BaseOS.
-   ```bash
+   ```bash linenums="1"
    dnf --disablerepo="*" --enablerepo="BaseOS" list available
    ```
     - Approximately how many are available?
-      ```bash
+      ```bash linenums="1"
       dnf --disablerepo="*" --enablerepo="BaseOS" list available | nl
       dnf --disablerepo="*" --enablerepo="BaseOS" list available | nl | head
       ```
     - Try to install something
-      ```bash
+      ```bash linenums="1"
       dnf --disablerepo="*" --enablerepo="BaseOS AppStream" install gimp
       # hit "n"
       ```
@@ -166,7 +166,7 @@ run their own repo on their network.
      2. How can you tell they're from different repos?
 
 4. Share out the local repository for your internal systems (tested on just this one system)
-   ```bash
+   ```bash linenums="1"
    rpm -qa | grep -i httpd
    systemctl status httpd
    ss -ntulp | grep 80
@@ -189,7 +189,7 @@ run their own repo on their network.
    </Location>
    ```
    Restart the service.
-   ```bash
+   ```bash linenums="1"
    systemctl restart httpd
    vi /etc/yum.repos.d/rocky9.repo
    ```
@@ -215,7 +215,7 @@ run their own repo on their network.
    gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
    ```
     - Do the paths you've modified at `baseurl` make sense to you? If not, what do you need to better understand?
-   ```bash
+   ```bash linenums="1"
    dnf clean all
    dnf repolist
    Try to install something

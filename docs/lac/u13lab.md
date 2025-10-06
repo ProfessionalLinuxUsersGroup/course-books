@@ -75,7 +75,7 @@ test there, but make sure you have some time.
 
 `ssh` into a Rocky sever
 
-```bash
+```bash linenums="1" linenums="1"
 cd /opt/scc
 time ./cscc
 
@@ -108,7 +108,7 @@ Look in the results to see output.
 
 `ssh` into a Rocky sever
 
-```bash
+```bash linenums="1" linenums="1"
 cd /opt/scc
 time ./cscc
 

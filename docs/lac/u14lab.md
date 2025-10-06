@@ -27,7 +27,7 @@ The lab has been provided for convenience below:
 
 Quickly run through your system and familiarize yourself:
 
-```bash
+```bash linenums="1"
 mkdir /root/ansible_madness
 cd /root/ansible_madness
 dnf whatprovides ansible   # Where is Ansible installed from?
@@ -43,7 +43,7 @@ ansible -vvv localhost -m shell -a uptime  # What extra info does -vvv show?
 
 While in `/root/ansible_madness`, create a file called `hosts`:
 
-```bash
+```bash linenums="1"
 vi /root/ansible_madness/hosts
 ```
 
@@ -60,7 +60,7 @@ Add the following contents:
 
 #### Test connectivity into the servers
 
-```bash
+```bash linenums="1"
 ansible servers -i hosts -u inmate -k -m shell -a uptime
 ```
 
@@ -68,7 +68,7 @@ ansible servers -i hosts -u inmate -k -m shell -a uptime
 
 Verbose version:
 
-```bash
+```bash linenums="1"
 ansible -vvv servers -i hosts -u inmate -k -m shell -a uptime
 ```
 
@@ -76,7 +76,7 @@ ansible -vvv servers -i hosts -u inmate -k -m shell -a uptime
 
 1. Create a test file:
 
-```bash
+```bash linenums="1"
 echo "This is my file <yourname>" > somefile
 ```
 
@@ -98,19 +98,19 @@ echo "This is my file <yourname>" > somefile
 
 3. Run the playbook:
 
-```bash
+```bash linenums="1"
 ansible-playbook -i hosts -k deploy.yaml
 ```
 
 4. Verify the file was pushed everywhere:
 
-```bash
+```bash linenums="1"
 ansible servers -i hosts -u inmate -k -m shell -a "ls -l /tmp/somefile"
 ```
 
 #### Pull Down a GitHub Repo
 
-```bash
+```bash linenums="1"
 git clone https://github.com/het-tanis/HPC_Deploy.git
 cd HPC_Deploy
 ```

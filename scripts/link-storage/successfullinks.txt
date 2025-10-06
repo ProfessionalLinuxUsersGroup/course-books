@@ -125,6 +125,7 @@ https://killercoda.com/het-tanis/course/Ansible-Labs/102-Enterprise-Ansible-Patc
 https://killercoda.com/het-tanis/course/Ansible-Labs/12-Ansible-System-Facts-Grouping
 https://killercoda.com/het-tanis/course/Ansible-Labs/16-Ansible-Web-Server-Env-Deploy
 https://killercoda.com/het-tanis/course/Ansible-Labs/19-Ansible-csv-report
+https://killercoda.com/het-tanis/course/Automation-Labs/Unit2_Interacting_with_OS
 https://killercoda.com/het-tanis/course/Hashicorp-Labs/004-vault-read-secrets-ansible
 https://killercoda.com/het-tanis/course/Linux-Labs
 https://killercoda.com/het-tanis/course/Linux-Labs/102-monitoring-linux-logs
