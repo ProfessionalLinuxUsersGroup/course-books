@@ -43,9 +43,10 @@ nav:
       - contributing.md
       - development.md
   - Linux Admin Course:
-    - Syllabus: lac/syllabus.md
-    - Course Project: lac/project.md
-    - Table of Contents: lac/unitindex.md
+    - Course Overview:
+      - Syllabus: lac/syllabus.md
+      - Course Project: lac/project.md
+      - Table of Contents: lac/unitindex.md
     - Unit 1 - Linux File Operations:
       - Intro: lac/u1intro.md
       - Worksheet: lac/u1ws.md
@@ -116,12 +117,15 @@ nav:
       - Intro: lac/u16intro.md
       - Worksheet: lac/u16ws.md
       - Lab: lac/u16lab.md
-    - Course Resources: lac/resources.md
+    - Course Resources:
+      - External Resources: lac/resources.md
+      - Downloads: lac/downloads.md
 
   - Linux Security Course:
-    - Syllabus: psc/syllabus.md
-    - Course Project: psc/project.md
-    - Table of Contents: psc/unitindex.md
+    - Course Overview:
+      - Syllabus: psc/syllabus.md
+      - Course Project: psc/project.md
+      - Table of Contents: psc/unitindex.md
     - Unit 1 - Build Standards and Compliance:
       - Intro: psc/u1intro.md
       - Worksheet: psc/u1ws.md
@@ -166,13 +170,16 @@ nav:
       - Worksheet: psc/u10ws.md
       - Lab: psc/u10lab.md
       - Bonus: psc/u10b.md
-    - Course Resources: psc/resources.md
+    - Course Resources:
+      - External Resources: psc/resources.md
+      # - Downloads: psc/downloads.md
 
   - Linux Automation Course:
-    - Syllabus: pcae/syllabus.md
-    # - Course Project: pcae/project.md
-    - Lab Guide: pcae/lab-guide.md
-    - Table of Contents: pcae/unitindex.md
+    - Course Overview:
+      - Syllabus: pcae/syllabus.md
+      # - Course Project: pcae/project.md
+      - Lab Guide: pcae/lab-guide.md
+      - Table of Contents: pcae/unitindex.md
     - Unit 1 - Automation Tools:
     #   - Intro: pcae/u1intro.md
       - Worksheet: pcae/u1ws.md
@@ -239,7 +246,9 @@ nav:
     #   - Intro: pcae/u16intro.md
     #   - Worksheet: pcae/u16ws.md
     #   - Lab: pcae/u16lab.md
-    - Downloads: pcae/downloads.md
+    - Course Resources:
+      - External Resources: pcae/resources.md
+      - Downloads: pcae/downloads.md
 
 
 extra:
