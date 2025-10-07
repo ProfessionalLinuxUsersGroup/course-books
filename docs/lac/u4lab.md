@@ -50,13 +50,11 @@ The lab has been provided for convenience below:
 #### Pre-Lab - Disk Speed tests
 
 1. Real quick check for a package that is useful.
-
    ```bash linenums="1"
    rpm -qa | grep -i iostat #should find nothing
    ```
 
 2. Let's find what provides iostat by looking in the YUM (we'll explore more in later lab)
-
    ```bash linenums="1"
    dnf whatprovides iostat
    ```
@@ -64,13 +62,11 @@ The lab has been provided for convenience below:
    - This should tell you that `sysstat` provides `iostat`.
 
 3. Let's check to see if we have it
-
    ```bash linenums="1"
    rpm -qa | grep -i sysstat
    ```
 
 4. If you don't, lets install it
-
    ```bash linenums="1"
    dnf install sysstat
    ```
@@ -95,7 +91,6 @@ The lab has been provided for convenience below:
 ---
 
 1. Gathering system information release and kernel information
-
    ```bash linenums="1"
    cat /etc/*release
    uname
@@ -104,13 +99,11 @@ The lab has been provided for convenience below:
    ```
 
    Run `man uname` to see what those options mean if you don't recognize the values
-
    ```bash linenums="1"
    rpm -qa | grep -i kernel
    ```
 
    What is your kernel number? Highlight it (copy in putty)
-
    ```bash linenums="1"
    rpm -qi <kernel from earlier>
    ```
@@ -149,7 +142,6 @@ pvs # What system are we running if we have physical volumes?
   ```
 
 3. Check the amount of RAM
-
    ```bash linenums="1"
    cat /proc/meminfo
    free
@@ -180,7 +172,6 @@ iostat -c 2 5 # Don't break this, just wait. What did this do differently? Why m
 Does this look familiar to what we did earlier with `iostat`?
 
 5. Check the system uptime
-
    ```bash linenums="1"
    uptime
    man uptime
@@ -190,14 +181,12 @@ Does this look familiar to what we did earlier with `iostat`?
    Referencing this server, do you think it is under high load? Why or why not?
 
 6. Check who has recently logged into the server and who is currently in
-
    ```bash linenums="1"
    last
    ```
 
    Last is a command that outputs backwards. (Top is most recent).
    So it is less than useful without using the more command.
-
    ```bash linenums="1"
    last | more
    ```
@@ -211,7 +200,6 @@ Does this look familiar to what we did earlier with `iostat`?
      How many other users are on this system? What does the `pts/0` mean on Google?
 
 7. Check running processes and services
-
    ```bash linenums="1"
    ps -aux | more
    ps -ef | more
@@ -242,7 +230,6 @@ Sar can also be run interactively. Run the command `yum whatprovides sar` and yo
 `sysstat` package. You may have guessed that sar runs almost exactly like `iostat`.
 
 - Try the same commands from earlier, but with their interactive information:
-
   ```bash linenums="1"
   sar 2  # Ctrl+C to break
   sar 2 5
@@ -268,7 +255,6 @@ from a server, you'd have to output it to a file that is readable.
 You could do something like this:
 
 - Gather information and move to the right location
-
   ```bash linenums="1"
   cd /var/log/sa
   pwd
@@ -278,25 +264,21 @@ You could do something like this:
   We know the files we want are in this directory and all look like this `sa*`
 
 - Build a loop against that list of files
-
   ```bash linenums="1"
   for file in `ls /var/log/sa/sa??`; do echo "reading this file $file"; done
   ```
 
 - Execute that loop with the output command of sar instead of just saying the filename
-
   ```bash linenums="1"
   for file in `ls /var/log/sa/sa?? | sort -n`; do sar -f $file ; done
   ```
 
 - But that is too much scroll, so let's also send it to a file for later viewing
-
   ```bash linenums="1"
   for file in `ls /var/log/sa/sa?? | sort -n`; do sar -f $file | tee -a /tmp/sar_data_`hostname`; done
   ```
 
 - Let's verify that file is as long as we expect it to be:
-
   ```bash linenums="1"
   ls -l /tmp/sar_data*
   cat /tmp/sar_data_<yourhostname> | wc -l
@@ -369,19 +351,16 @@ minute through all hours, of every day, of every month.
 We could also have done some other things:
 
 - Every 2 minutes (divisible by any number you need):
-
   ```bash linenums="1"
   */2 * * * *
   ```
 
 - The first and 31st minute of each hour:
-
   ```bash linenums="1"
   1,31 * * * *
   ```
 
 - The first minute of every 4th hour:
-
   ```bash linenums="1"
   1 */4 * * *
   ```

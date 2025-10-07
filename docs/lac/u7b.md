@@ -70,19 +70,16 @@ Let's say you suspect something has been changed or tampered with.
 Let's get all files from a package.  
 
 - Run `rpm -ql` to list the files that were installed with a package:
-
   ```bash linenums="1"
   rpm -ql openssh-server
   ```
 
 - Now pick one file and manually generate its sha256 hash:
-
   ```bash linenums="1"
   sha256sum /usr/sbin/sshd
   ```
 
 - Download the original `.rpm` package to compare its hash.
-
   ```bash linenums="1"
   dnf download openssh-server
   ```
@@ -91,20 +88,17 @@ Let's get all files from a package.
   - These `.rpm` packages are not stored on the system by default.
 
 - You can inspect the file of your choice with `rpm -qp --dump`:
-
   ```bash linenums="1"
   rpm -qp --dump openssh-server*.rpm | grep ^/usr/sbin/sshd
   ```
 
   This will output a bunch of information about the file.  
   The `sha256` hash will be in the fourth column, so we can use `awk` to extract that:
-
   ```bash linenums="1"
   rpm -qp --dump openssh-server*.rpm | grep ^/usr/sbin/sshd | awk '{print $4}'
   ```
 
 - Compare your version's hash to the original RPM file's hash:
-
   ```bash linenums="1"
   sha256sum /usr/sbin/sshd
   ```
@@ -121,7 +115,6 @@ If the hashes are different, the file has been modified.
    ```
    - This will verify every file from every package and report anything suspicious.
 1. Narrow the scope. Only show actual modified files:
-
    ```bash linenums="1"
    rpm -Va | grep -v '^..5'
    ```
@@ -130,7 +123,6 @@ If the hashes are different, the file has been modified.
    - You’ll now see files where size, mode, owner, or timestamp changed — higher confidence indicators of real change.
 
 1. Investigate a suspicious result. If you see something like:
-
    ```bash linenums="1"
    .M....... c /etc/ssh/sshd_config
    ```
@@ -141,7 +133,6 @@ If the hashes are different, the file has been modified.
    - It's a config file (`c`).
 
 1. Check the file in question:
-
    ```bash linenums="1"
    ls -l /etc/ssh/sshd_config
    ```

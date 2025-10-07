@@ -29,20 +29,17 @@ The lab has been provided for convenience below:
 ---
 
 1. Create a working directory
-
    ```bash linenums="1"
    mkdir lab_baseline
    cd lab_baseline
    ```
 
 2. Verify if `iostat` is available
-
    ```bash linenums="1"
    which iostat
    ```
 
    If it’s not there:
-
    ```bash linenums="1"
    # Find which package provides iostat
    dnf whatprovides iostat
@@ -58,13 +55,11 @@ The lab has been provided for convenience below:
    ```
 
 3. Verify if `stress` is available
-
    ```bash linenums="1"
    which stress
    ```
 
    If it’s not there:
-
    ```bash linenums="1"
    # Find which package provides stress
    dnf whatprovides stress
@@ -78,13 +73,11 @@ The lab has been provided for convenience below:
    ```
 
 4. Verify if `iperf3` is available
-
    ```bash linenums="1"
    which iperf3
    ```
 
    If it’s not there:
-
    ```bash linenums="1"
    # Find which package provides iperf3
    dnf whatprovides iperf
@@ -220,7 +213,6 @@ issues. No one cares what you think, they care what you can show, or prove.
   - Perform some basic tasks and get their completion times.
 
     - Writing/deleting 3000 empty files #modify as needed for your system
-
     ```bash linenums="1"
     # Speed: ~10s
     time for i in `seq 1 3000`; do touch testfile$i; done
@@ -236,14 +228,12 @@ issues. No one cares what you think, they care what you can show, or prove.
     ```
 
     - Testing processor speed
-
       ```bash linenums="1"
       time $(i=0; while (( i < 999999 )); do (( i ++ )); done)
       # if this takes your system under 10 seconds, add a 9
       ```
 
     - Alternate processor speed test
-
     ```bash linenums="1"
     time dd if=/dev/urandom bs=1024k count=20 | bzip2 -9 >> /dev/null
     ```
@@ -281,13 +271,11 @@ Make 3 different assumptions for how load may look on your system with the agent
 stress commands around them (examples):
 
 1. I assume no load on hdd, light load on processors
-
    ```bash linenums="1"
    while true; do stress --cpu 2 --io 4 --vm 2 --vm-bytes 128M --timeout 30; done #
    ```
 
 2. I assume low load on hdd, light load on processors
-
    ```bash linenums="1"
    while true; do stress --cpu 2-io 4 --vm 2 --vm-bytes 128M -d 1 --timeout 30; done
    ```
