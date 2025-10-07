@@ -51,13 +51,13 @@ The lab has been provided for convenience below:
 
 1. Real quick check for a package that is useful.
 
-   ```bash
+   ```bash linenums="1"
    rpm -qa | grep -i iostat #should find nothing
    ```
 
 2. Let's find what provides iostat by looking in the YUM (we'll explore more in later lab)
 
-   ```bash
+   ```bash linenums="1"
    dnf whatprovides iostat
    ```
 
@@ -65,25 +65,25 @@ The lab has been provided for convenience below:
 
 3. Let's check to see if we have it
 
-   ```bash
+   ```bash linenums="1"
    rpm -qa | grep -i sysstat
    ```
 
 4. If you don't, lets install it
 
-   ```bash
+   ```bash linenums="1"
    dnf install sysstat
    ```
 
 5. Re-check to verify we have it now
-   ```bash
+   ```bash linenums="1"
    rpm -qa | grep -I sysstat
    rpm -qi sysstat<version>
    iostat # We'll look at this more in a bit
    ```
    While we're working with packages, make sure that Vim is on your system.  
    This is the same procedure as above.
-   ```bash
+   ```bash linenums="1"
    rpm -qa | grep -i vim  # Check if vim is installed
    # If it's there, good.
    dnf install vim
@@ -96,7 +96,7 @@ The lab has been provided for convenience below:
 
 1. Gathering system information release and kernel information
 
-   ```bash
+   ```bash linenums="1"
    cat /etc/*release
    uname
    uname -a
@@ -105,13 +105,13 @@ The lab has been provided for convenience below:
 
    Run `man uname` to see what those options mean if you don't recognize the values
 
-   ```bash
+   ```bash linenums="1"
    rpm -qa | grep -i kernel
    ```
 
    What is your kernel number? Highlight it (copy in putty)
 
-   ```bash
+   ```bash linenums="1"
    rpm -qi <kernel from earlier>
    ```
 
@@ -120,7 +120,7 @@ The lab has been provided for convenience below:
    What license is your kernel released under?
 
 2. Check the number of disks
-   ```bash
+   ```bash linenums="1"
    fdisk -l
    ls /dev/sd*
    ```
@@ -129,7 +129,7 @@ The lab has been provided for convenience below:
    - How many disks are there on this system?
    - How do you know if it's a partition or a disk?
 
-```bash
+```bash linenums="1"
 pvs # What system are we running if we have physical volumes?
     # What other things can we tell with vgs and lvs?
 ```
@@ -142,7 +142,7 @@ pvs # What system are we running if we have physical volumes?
   - Try to `egrep` on some other values. Separate with `|` between search items.
 
 - Check some quick disk statistics
-  ```bash
+  ```bash linenums="1"
   iostat -d
   iostat -d 2   # Wait for a while, then use crtl + c to break. What did this do? Try changing this to a different number.
   iostat -d 2 5 # Don't break this, just wait. What did this do differently? Why might this be useful?
@@ -150,7 +150,7 @@ pvs # What system are we running if we have physical volumes?
 
 3. Check the amount of RAM
 
-   ```bash
+   ```bash linenums="1"
    cat /proc/meminfo
    free
    free -m
@@ -159,19 +159,19 @@ pvs # What system are we running if we have physical volumes?
    - What do each of these commands show you? How are they useful?
 
 4. Check the number of processors and processor info
-   ```bash
+   ```bash linenums="1"
    cat /proc/cpuinfo
    ```
    What type of processors do you have? Google to try to see when they were released.
    Look at the flags. Sometimes when compiling these are important to know. This is how
    you check what execution flags your processor works with.
-   ```bash
+   ```bash linenums="1"
    cat /proc/cpuinfo | grep proc | wc -l
    ```
    - Does this command accurately count the processors?
    - Check some quick processor statistics
 
-```bash
+```bash linenums="1"
 iostat -c
 iostat -c 2 # Wait for a while, then use Ctrl+C to break. What did this do? Try changing this to a different number.
 iostat -c 2 5 # Don't break this, just wait. What did this do differently? Why might this be useful?
@@ -181,7 +181,7 @@ Does this look familiar to what we did earlier with `iostat`?
 
 5. Check the system uptime
 
-   ```bash
+   ```bash linenums="1"
    uptime
    man uptime
    ```
@@ -191,19 +191,19 @@ Does this look familiar to what we did earlier with `iostat`?
 
 6. Check who has recently logged into the server and who is currently in
 
-   ```bash
+   ```bash linenums="1"
    last
    ```
 
    Last is a command that outputs backwards. (Top is most recent).
    So it is less than useful without using the more command.
 
-   ```bash
+   ```bash linenums="1"
    last | more
    ```
 
    - Were you the last person to log in? Who else has logged in today?
-     ```bash
+     ```bash linenums="1"
      w
      who
      whoami
@@ -212,7 +212,7 @@ Does this look familiar to what we did earlier with `iostat`?
 
 7. Check running processes and services
 
-   ```bash
+   ```bash linenums="1"
    ps -aux | more
    ps -ef | more
    ps -ef | wc -l
@@ -223,11 +223,11 @@ Does this look familiar to what we did earlier with `iostat`?
 
 8. Looking at system usage (historical)
    - Check processing for last day
-     ```bash
+     ```bash linenums="1"
      sar | more
      ```
    - Check memory for the last day
-     ```bash
+     ```bash linenums="1"
      sar -r | more
      ```
 
@@ -243,7 +243,7 @@ Sar can also be run interactively. Run the command `yum whatprovides sar` and yo
 
 - Try the same commands from earlier, but with their interactive information:
 
-  ```bash
+  ```bash linenums="1"
   sar 2  # Ctrl+C to break
   sar 2 5
   # or
@@ -252,7 +252,7 @@ Sar can also be run interactively. Run the command `yum whatprovides sar` and yo
   ```
 
 - Check sar logs for previous daily usage
-  ```bash
+  ```bash linenums="1"
   cd /var/log/sa/
   ls
   # Sar logfiles will look like: sa01 sa02 sa03 sa04 sa05 sar01 sar02 sar03 sar04
@@ -269,7 +269,7 @@ You could do something like this:
 
 - Gather information and move to the right location
 
-  ```bash
+  ```bash linenums="1"
   cd /var/log/sa
   pwd
   ls
@@ -279,31 +279,31 @@ You could do something like this:
 
 - Build a loop against that list of files
 
-  ```bash
+  ```bash linenums="1"
   for file in `ls /var/log/sa/sa??`; do echo "reading this file $file"; done
   ```
 
 - Execute that loop with the output command of sar instead of just saying the filename
 
-  ```bash
+  ```bash linenums="1"
   for file in `ls /var/log/sa/sa?? | sort -n`; do sar -f $file ; done
   ```
 
 - But that is too much scroll, so let's also send it to a file for later viewing
 
-  ```bash
+  ```bash linenums="1"
   for file in `ls /var/log/sa/sa?? | sort -n`; do sar -f $file | tee -a /tmp/sar_data_`hostname`; done
   ```
 
 - Let's verify that file is as long as we expect it to be:
 
-  ```bash
+  ```bash linenums="1"
   ls -l /tmp/sar_data*
   cat /tmp/sar_data_<yourhostname> | wc -l
   ```
 
 - Is it what you expected? You can also visually check it a number of ways
-  ```bash
+  ```bash linenums="1"
   cat /tmp/<filename>
   more /tmp/<filename>
   ```
@@ -312,7 +312,7 @@ You could do something like this:
 
 Your system is running the cron daemon. You can check with:
 
-```bash
+```bash linenums="1"
 ps -ef | grep -i cron
 systemctl status crond
 ```
@@ -325,7 +325,7 @@ a crontab or it can execute tasks from files found in the following locations.
 
 The other locations are directories found under:
 
-```bash
+```bash linenums="1"
 ls -ld /etc/cron*
 ```
 
@@ -337,7 +337,7 @@ in learning more.
 
 Crontab format looks like this picture:
 
-```bash
+```bash linenums="1"
 # .------- Minute (0 - 59)
 # | .------- Hour (0 - 23)
 # | | .------- Day of month (1 - 31)
@@ -353,7 +353,7 @@ Let's do these steps.
 1. `crontab -e`
 2. Add this line (using vi commands - Revisit `vimtutor` if you need help with them)
 
-```bash
+```bash linenums="1"
 * * * * * echo 'this is my cronjob running at' `date` | wall
 ```
 
@@ -370,25 +370,25 @@ We could also have done some other things:
 
 - Every 2 minutes (divisible by any number you need):
 
-  ```bash
+  ```bash linenums="1"
   */2 * * * *
   ```
 
 - The first and 31st minute of each hour:
 
-  ```bash
+  ```bash linenums="1"
   1,31 * * * *
   ```
 
 - The first minute of every 4th hour:
 
-  ```bash
+  ```bash linenums="1"
   1 */4 * * *
   ```
 
 - NOTE: If you're adding system-wide cron jobs (`/etc/crontab`), you can also specify
   the user to run the command as.
-  ```bash
+  ```bash linenums="1"
   * * * * * <user> <command>
   ```
 

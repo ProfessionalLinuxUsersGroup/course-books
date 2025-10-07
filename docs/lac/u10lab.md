@@ -33,7 +33,7 @@ Before installing K3s, verify system compatibility and gather initial data.
 
 ### Step 1: Download and Inspect K3s Installer
 
-```sh
+```bash linenums="1"
 curl -sfL https://get.k3s.io > /tmp/k3_installer.sh
 more /tmp/k3_installer.sh
 ```
@@ -45,7 +45,7 @@ more /tmp/k3_installer.sh
 
 ### Step 2: System Architecture Check
 
-```sh
+```bash linenums="1"
 uname -m
 grep -i arch /tmp/k3_installer.sh
 ```
@@ -57,7 +57,7 @@ grep -i arch /tmp/k3_installer.sh
 
 ### Step 3: SELinux Status Check
 
-```sh
+```bash linenums="1"
 grep -iE "selinux|sestatus" /tmp/k3_installer.sh
 sestatus
 ```
@@ -71,13 +71,13 @@ sestatus
 
 ### Step 4: Install K3s
 
-```sh
+```bash linenums="1"
 curl -sfL https://get.k3s.io | sh -
 ```
 
 ### Step 5: Verify Installation
 
-```sh
+```bash linenums="1"
 systemctl status k3s
 systemctl is-enabled k3s
 ```
@@ -87,7 +87,7 @@ systemctl is-enabled k3s
 
 ### Step 6: Explore System Services
 
-```sh
+```bash linenums="1"
 systemctl cat k3s
 ```
 
@@ -98,7 +98,7 @@ systemctl cat k3s
 
 ### Step 7: Checking Kubernetes Components
 
-```sh
+```bash linenums="1"
 kubectl version
 kubectl get nodes
 kubectl get pods -A
@@ -116,58 +116,58 @@ kubectl get secrets -A
 
 ### Step 8: Create a Simple Web Server Pod
 
-```sh
+```bash linenums="1"
 kubectl run webpage --image=nginx
 ```
 
 - Verify pod creation:
-  ```sh
+  ```bash linenums="1"
   kubectl get pods
   kubectl describe pod webpage
   ```
 
 ### Step 9: Deploy a Redis Database with Labels
 
-```sh
+```bash linenums="1"
 kubectl run database --image=redis --labels=tier=database
 ```
 
 - Verify labels:
-  ```sh
+  ```bash linenums="1"
   kubectl get pods --show-labels
   ```
 
 ### Step 10: Expose the Redis Database
 
-```sh
+```bash linenums="1"
 kubectl expose pod database --port=6379 --name=redis-service --type=ClusterIP
 ```
 
 - Verify service:
-  ```sh
+  ```bash linenums="1"
   kubectl get services
   ```
 
 ### Step 11: Create a Web Deployment with Replicas
 
-```sh
+```bash linenums="1"
 kubectl create deployment web-deployment --image=nginx --replicas=3
 ```
 
 - Check status:
-  ```sh
+  ```bash linenums="1"
   kubectl get deployments
   ```
 
 ### Step 12: Create a New Namespace and Deploy an App
 
-```sh
+```bash linenums="1"
 kubectl create namespace my-test
 kubectl create deployment redis-deploy -n my-test --image=redis --replicas=2
 ```
 
 - Verify deployment:
-  ```sh
+  ```bash linenums="1"
   kubectl get pods -n my-test
   ```
 
@@ -175,7 +175,7 @@ kubectl create deployment redis-deploy -n my-test --image=redis --replicas=2
 
 Your team reports an issue with the cluster:
 
-```sh
+```bash linenums="1"
 [root@Test_Cluster1 ~]# kubectl get nodes
 NAME            STATUS      ROLES                AGE     VERSION
 Test_Cluster1   Ready       control-plane,master 17h     v1.30.6+k3s1
@@ -185,7 +185,7 @@ Test_Cluster3   Ready       worker               17h     v1.28.6+k3s1
 
 ### Step 13: Investigate Node Health
 
-```sh
+```bash linenums="1"
 kubectl describe node Test_Cluster2
 kubectl get pods -A
 ```
@@ -195,7 +195,7 @@ kubectl get pods -A
 
 ### Step 14: Restart K3s and Check Logs
 
-```sh
+```bash linenums="1"
 systemctl restart k3s
 journalctl -xeu k3s
 ```

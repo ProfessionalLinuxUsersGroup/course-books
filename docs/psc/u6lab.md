@@ -56,7 +56,7 @@ or another of these tools may be the right choice in their organization or not.
     - Does the lab work correctly, and do you understand the data flow?
 
     - While still in the lab
-      ```bash
+      ```bash linenums="1"
       cd /answers
       python3 loki-write.py  # Do this a few times
       ```
@@ -65,7 +65,7 @@ or another of these tools may be the right choice in their organization or not.
           <img src='../../assets/psc/images/u6/image2.jpg'></img>
     - Can you modify the file `loki-write.py` to say something related to your name?
     - Run this bash snippet and see if you can see your loki-writes
-      ```bash
+      ```bash linenums="1"
       curl -G -s "http://localhost:3100/loki/api/v1/query_range" \
       --data-urlencode 'query=sum(rate({job="lab_logging"}[10m])) by (level)' \
       --data-urlencode 'step=300' | jq

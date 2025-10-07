@@ -29,7 +29,7 @@ The lab has been provided for convenience below:
 
 EXERCISES (Warmup to quickly run through your system and familiarize yourself)
 
-```bash
+```bash linenums="1"
 cd ~
 ls
 mkdir evaluation
@@ -71,7 +71,7 @@ It is recommended that you type these commands and do not copy and paste them. W
 
 #### Gathering system information
 
-```bash
+```bash linenums="1"
 hostname
 cat /etc/*release
 # What do you recognize about this output? What version of RHEL (CENTOS) are we on?
@@ -85,7 +85,7 @@ uname -r
 
 #### Check the amount of RAM
 
-```bash
+```bash linenums="1"
 cat /proc/meminfo
 free
 free -m
@@ -95,7 +95,7 @@ free -m
 
 #### Check the number of processors and processor info
 
-```bash
+```bash linenums="1"
 cat /proc/cpuinfo
 # What type of processors do you have? How many are there? (counting starts at 0)
 
@@ -105,7 +105,7 @@ cat /proc/cpuinfo | grep proc | wc -l
 
 #### Check Storage usage and mounted filesystems
 
-```bash
+```bash linenums="1"
 df
 # But df is barely readable, so find the option that makes it more readable `man df`
 
@@ -147,7 +147,7 @@ try `du -h .` as well to see how that ouput differs
 
 #### Check the system uptime
 
-```bash
+```bash linenums="1"
 uptime
 
 man uptime
@@ -157,7 +157,7 @@ man uptime
 
 #### Check who has recently logged into the server and who is currently in
 
-```bash
+```bash linenums="1"
 last
 # Last is a command that outputs backwards. (Top of the output is most recent).
 # So it is less than useful without using the more command.
@@ -173,7 +173,7 @@ whoami
 
 #### Check who you are and what is going on in your environment
 
-```bash
+```bash linenums="1"
 printenv
 # This scrolls by way too fast, how would you search for your home?
 
@@ -185,7 +185,7 @@ echo $SHELL
 
 #### Check running processes and services
 
-```bash
+```bash linenums="1"
 ps -aux | more
 ps -ef | more
 ps -ef | wc -l
@@ -193,7 +193,7 @@ ps -ef | wc -l
 
 #### Check memory usage and what is using the memory
 
-```bash
+```bash linenums="1"
 # Run each of these individually for understanding before we look at part b.
 free -m
 free -m | egrep “Mem|Swap”
@@ -208,7 +208,7 @@ free -t | egrep "Mem|Swap" | awk '{print $1 " Used Space = " ($3 / $2) * 100"%"}
 
 Have you ever written a basic check script or touched on conditional statements or loops? (Use ctrl + c to break out of these):
 
-```bash
+```bash linenums="1"
 while true; do free -m; sleep 3; done
 
 # Watch this output for a few and then break with ctrl + c
@@ -222,7 +222,7 @@ while true; do date; uptime; free -m; echo “ “; sleep 10; done
 while true; do free -t | egrep "Mem|Swap" | awk '{print $1 " Used Space = " ($3 / $2) * 100"%"}'; sleep 3; done
 ```
 
-```bash
+```bash linenums="1"
 seq 1 10
 # What did this do?
 # Can you man seq to modify that to count from 2 to 20 by 2’s?

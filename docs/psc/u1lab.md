@@ -24,7 +24,7 @@ could be transposed to a `.md` file.
 
 ### Exercise 1.1: Familiarizing ourselves with the System
 
-```bash
+```bash linenums="1"
 mount | grep -i noexec
 
 mount | grep -i nodev
@@ -36,7 +36,7 @@ mount | grep -i nosuid
 
 ### Exercise 1.2: Checking Mounted Systems
 
-```bash
+```bash linenums="1"
 sysctl -a | grep -i ipv4
 
 sysctl -a | grep -i ipv6
@@ -44,13 +44,13 @@ sysctl -a | grep -i ipv6
 # How many of each are there?
 ```
 
-```bash
+```bash linenums="1"
 sysctl -a | grep -i ipv4 | grep -i forward
 
 # Does IPv4 forward on interfaces?
 ```
 
-```bash
+```bash linenums="1"
 lsmod | grep -i tables
 
 # What type of tables exist?
@@ -76,7 +76,7 @@ The engineer will be using STIG Viewer 2.18 to complete this lab.
 1. Connect to a hammer server.
 2. Install MariaDB.
 
-```bash
+```bash linenums="1"
 dnf install mariadb-server
 
 # Ensure that it is running
@@ -98,7 +98,7 @@ ss -ntulp | grep 3306
 
     Connect to MariaDB locally.
 
-    ```bash
+    ```bash linenums="1"
     mysql
     ```
 

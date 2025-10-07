@@ -28,7 +28,7 @@ The lab has been provided for convenience below:
 
 EXERCISES (Warmup to quickly run through your system and familiarize yourself)
 
-```bash
+```bash linenums="1"
 cd ~
 mkdir lvm_lab
 
@@ -73,7 +73,7 @@ are no other users on the system `w` or `who`.
 After this, you may want to check the current state of the disks, as they retain
 their information even after a reboot resets the rest of the machine. `lsblk /dev/xvda`.
 
-```bash
+```bash linenums="1"
 # If you need to wipe the disks, you should use fdisk or a similar partition utility.
 fdisk /dev/xvda
 
@@ -89,7 +89,7 @@ way to test them. Use these throughout the lab in each mount for fun and underst
 
 #### Write tests (saving off write data - rename /tmp/file each time)
 
-```bash
+```bash linenums="1"
 # Check /dev/xvda for a filesystem
 blkid /dev/xvda
 
@@ -102,19 +102,19 @@ mount /dev/xvda /space
 
 #### Write Test
 
-```bash
+```bash linenums="1"
 for i in `seq 1 10`; do time dd if=/dev/zero of=/space/testfile$i bs=1024k count=1000 | tee -a /tmp/speedtest1.basiclvm; done
 ```
 
 #### Read tests
 
-```bash
+```bash linenums="1"
 for i in `seq 1 10`; do time dd if=/space/testfile$i of=/dev/null; done
 ```
 
 #### Cleanup
 
-```bash
+```bash linenums="1"
 for i in `seq 1 10`; do rm -rf /space/testfile$i; done
 ```
 
@@ -131,7 +131,7 @@ start in root (#); cd /root
 
 #### LVM explanation and use within the system
 
-```bash
+```bash linenums="1"
 # Check physical volumes on your server (my output may vary)
 fdisk -l | grep -i xvd
 
@@ -158,7 +158,7 @@ groups, and logical volumes.
 
 The three simplest and easiest are:
 
-```bash
+```bash linenums="1"
 pvs
 vgs
 lvs
@@ -182,7 +182,7 @@ Disks for this lab are /dev/xvdb, /dev/xvdc, and /dev/xvdd.
 We can do individual pvcreates for each disk `pvcreate /dev/xvdb` but we can also
 loop over them with a simple loop as below. Use your drive letters.
 
-```bash
+```bash linenums="1"
 for disk in b c d; do pvcreate /dev/xvd$disk; done
 
 # Physical volume "/dev/xvdb" successfully created.
@@ -259,7 +259,7 @@ By setting our mount in /etc/fstab and then telling the system to mount everythi
 we verify that this will come back up properly during a reboot. We have mounted
 and verified we have a persistent mount in one step.
 
-```bash
+```bash linenums="1"
 df -h
 
 # Filesystem Size Used Avail Use% Mounted on
@@ -281,7 +281,7 @@ Good place to speed test and save off your data.
 The following command is one way to comment out the line in /etc/fstab. If you had
 to do this across multiple servers this could be useful. (Or you can just use vi for simplicity).
 
-```bash
+```bash linenums="1"
 grep lv_test /etc/fstab; perl -pi -e "s/\/dev\/mapper\/VolGroupTest/#removed \/dev\/mapper\/VolGroupTest/" /etc/fstab; grep removed /etc/fstab
 # /dev/mapper/VolGroupTest-lv_test /space ext4 defaults 0 0
 #removed dev/mapper/VolGroupTest-lv_test /space ext4 defaults 0 0
@@ -306,7 +306,7 @@ for disk in c e f; do pvremove /dev/sd$disk; done
 
 Use your `pvs;vgs;lvs` commands to verify those volumes no longer exist.
 
-```bash
+```bash linenums="1"
 pvs;vgs;lvs
 
 # PV VG Fmt Attr PSize PFree
@@ -336,7 +336,7 @@ Create a RAID 5 filesystem and mount it to the OS (For brevity’s sake we will
 be limiting show commands from here on out, please use pvs,vgs,lvs often for
 your own understanding)
 
-```bash
+```bash linenums="1"
 for disk in c e f; do pvcreate /dev/sd$disk; done
 
 # Physical volume "/dev/sdc" successfully created.
@@ -364,7 +364,7 @@ Since we’re now using RAID 5 we would expect to see the size no longer match t
 
 To verify our raid levels we use lvs
 
-```bash
+```bash linenums="1"
 lvs
 # LV VG Attr LSize Pool Origin Data% Meta% Move Log Cpy%Sync
 # LogVol00 VolGroup00 -wi-ao---- 2.50g
@@ -389,7 +389,7 @@ Good place to speed test and save off your data
 
 Unmount /space and remove entry from /etc/fstab
 
-```bash
+```bash linenums="1"
 lvremove /dev/mapper/VolGroupTest-lv_test
 # Do you really want to remove active logical volume VolGroupTest/lv_test? [y/n]: y
 # Logical volume "lv_test" successfully removed
@@ -415,7 +415,7 @@ May have to install mdadm yum: yum install mdadm
 
 #### Create a raid5 with MDADM
 
-```bash
+```bash linenums="1"
 mdadm --create -l raid5 /dev/md0 -n 3 /dev/sdc /dev/sde /dev/sdf
 
 # mdadm: Defaulting to version 1.2 metadata
@@ -427,7 +427,7 @@ mdadm --create -l raid5 /dev/md0 -n 3 /dev/sdc /dev/sde /dev/sdf
 This is same as any other add. The only difference here is that LVM is unaware
 of the lower level RAID that is happening.
 
-```bash
+```bash linenums="1"
 pvcreate /dev/md0
 # Physical volume "/dev/md0" successfully created.
 
@@ -459,7 +459,7 @@ Fix your /etc/fstab to read
 
 /dev/mapper/VolGroupTest-lv_test /space xfs defaults 0 0
 
-```bash
+```bash linenums="1"
 mkfs.xfs /dev/mapper/VolGroupTest-lv_test
 
 # meta-data=/dev/mapper/VolGroupTest-lv_test isize=512 agcount=16, agsize=163712 blks
@@ -481,7 +481,7 @@ Good place to speed test and save off your data
 
 (not in our lab environment though)
 
-```bash
+```bash linenums="1"
 mdadm --detail --scan >> /etc/mdadm.conf
 cat /etc/mdadm.conf
 # ARRAY /dev/md0 metadata=1.2 name=ROCKY1:0 UUID=03583924:533e5338:8d363715:09a8b834

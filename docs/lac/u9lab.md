@@ -54,7 +54,7 @@ deployments interact with our Linux systems that we support.
 
 1. Pull and run a container
 
-```bash
+```bash linenums="1"
 podman run -dt -p 8080:80/tcp docker.io/library/httpd
 ```
 
@@ -62,7 +62,7 @@ What do you see on your screen as this happens?
 
 2. Check your images again (from your earlier exercises)
 
-```bash
+```bash linenums="1"
 podman images
 ```
 
@@ -70,27 +70,27 @@ Is there a new image, and if so, what do you notice about it?
 
 3. Check your podman running containers
 
-```bash
+```bash linenums="1"
 podman ps
 ```
 
 What appears to be happening? Can you validate this with your Linux knowledge?
 
-```bash
+```bash linenums="1"
 ss -ntulp
 curl 127.0.0.1:8080
 ```
 
 4. Inspect the running pod
 
-```bash
+```bash linenums="1"
 podman inspect -l
 ```
 
 What format is the output in?  
 What important information might you want from this in the future?
 
-```bash
+```bash linenums="1"
 podman logs -l
 ```
 
@@ -98,7 +98,7 @@ What info do you see in the logs?
 Do you see your connection attempt from earlier? What is the return code and
 why is that important for troubleshooting?
 
-```bash
+```bash linenums="1"
 podman top -l
 ```
 
@@ -108,13 +108,13 @@ Why might it be good to know the user being run within the pod?
 
 5. Stop the pod by its name
 
-```bash
+```bash linenums="1"
 podman stop <podname>
 ```
 
 Can you verify it is stopped from your previous commands?
 
-```bash
+```bash linenums="1"
 podman ps
 ss -ntulp
 curl 127.0.0.1:8080
@@ -122,7 +122,7 @@ curl 127.0.0.1:8080
 
 Does the container still exist? Why might you want to know this?
 
-```bash
+```bash linenums="1"
 podman image
 ```
 
@@ -134,7 +134,7 @@ for the general same steps.
 
 1. Setup your lab environment
 
-```bash
+```bash linenums="1"
 [root@rocky11 stream]# cd /lab_work/
 [root@rocky11 lab_work]# ls
 [root@rocky11 lab_work]# mkdir scott_lab9
@@ -156,7 +156,7 @@ Dockerfile hello.py
 
 2. Create a docker image from the docker file:
 
-```bash
+```bash linenums="1"
 time podman build -t scott_hello .
 #Use your name
 ```
@@ -168,25 +168,25 @@ If this breaks in the lab, how might you fix it? What do you suspect?
 
 3. Verify that you have built the container
 
-```bash
+```bash linenums="1"
 podman images
 ```
 
 4. Run the container as a daemon
 
-```bash
+```bash linenums="1"
 podman run -dt localhost/scott_example
 ```
 
 5. Verify the name and that it is running
 
-```bash
+```bash linenums="1"
 podman ps
 ```
 
 6. Exec into the pod and see that you are on the Ubuntu container
 
-```bash
+```bash linenums="1"
 podman exec -it festive_pascal sh
 cat /etc/*release
 exit

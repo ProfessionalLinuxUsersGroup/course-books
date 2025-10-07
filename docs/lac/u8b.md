@@ -28,26 +28,26 @@ Bash scripting turns **manual commands into powerful, reusable automation**.
 Let's create a simple script that prints a message.
 
 - **Create a script file:**
-  ```bash
+  ```bash linenums="1"
   touch first-script.sh
   ```
 - **Make it executable:**
-  ```bash
+  ```bash linenums="1"
   chmod +x first-script.sh
   # Or, use octal
   chmod 755 first-script.sh
   ```
 - **Open it in a text editor (e.g., `vi`):**
-  ```bash
+  ```bash linenums="1"
   vi first-script.sh
   ```
 - **Add the following code:**
-  ```bash
+  ```bash linenums="1"
   #!/bin/bash
   echo "Hello, admin!"
   ```
 - **Run the script:**
-  ```bash
+  ```bash linenums="1"
   ./first-script.sh
   ```
 - **Expected output:**
@@ -159,7 +159,7 @@ troubleshooting.
 
 ### Example Debugging Script
 
-```bash
+```bash linenums="1"
 #!/bin/bash
 set -xe  # Enable debugging and exit on failure
 mkdir /tmp/mydir
