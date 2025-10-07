@@ -10,7 +10,8 @@
 ### Required Materials
 
 - Putty or other terminal/connection tool
-- Lab Server
+- Lab Server (Killercoda recommended)
+    - <https://killercoda.com/het-tanis/course/Automation-Labs/Unit1_Tools>
 - Root or sudo command access
 
 #### Downloads
@@ -46,11 +47,14 @@ Execute some simple commands within your bash shell.
    echo $SHELL
    ```
 
-4. Loop over your target servers #Use your target servers
+4. Loop over your target servers (use your target servers).  
    ```bash linenums="1"
    for server in target1-1 target1-2; do timeout 10 ssh svc_ansible@$server 'uptime'; done
    ```
    Enter your password for the `svc_ansible` user from the lab guide.
+    - If doing the lab on Killercoda, your target servers are `controlplane` and `node01`.  
+    - If in the ProLUG lab environment, check the [lab guide](./lab-guide.md) for 
+      your target servers.  
 
 ### Python Execution
 
@@ -82,7 +86,6 @@ Test and execute Ansible.
    ```bash linenums="1"
    ansible- <tab><tab>
    ```
-
    The ++tab+tab++ will trigger autocompletion, showing what commands are
    available that start with `ansible-`.  
 
