@@ -97,7 +97,6 @@ ss -ntulp | grep 3306
     - Is it set properly on your system?
 
     Connect to MariaDB locally.
-
     ```bash linenums="1"
     mysql
     ```

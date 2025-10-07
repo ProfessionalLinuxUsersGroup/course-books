@@ -30,21 +30,18 @@ iostat -dx 1
 ### Fix
 
 1. Identify and stop unnecessary high I/O processes:
-
    ```bash linenums="1"
    # Forcefully terminate a process (use with caution)
    kill -9 <PID>
    ```
 
 2. Optimize filesystem writes (for ext4):
-
    ```bash linenums="1"
    # Enable writeback mode for better performance
    tune2fs -o journal_data_writeback /dev/sdX
    ```
 
 3. Reduce excessive metadata writes:
-
    ```bash linenums="1"
    # Disable access time updates and set commit interval
    mount -o noatime,commit=60 /mnt/data
@@ -80,14 +77,12 @@ du -ahx / | sort -rh | head -20
 ### Fix
 
 1. Find and remove large unnecessary files:
-
    ```bash linenums="1"
    # Remove specific log file
    rm -f /var/log/large_old_log.log
    ```
 
 2. Truncate logs safely without deleting them:
-
    ```bash linenums="1"
    # Clear log contents while preserving file
    truncate -s 0 /var/log/syslog
@@ -97,7 +92,6 @@ du -ahx / | sort -rh | head -20
    ```
 
 3. Expand disk space if using LVM:
-
    ```bash linenums="1"
    # Extend logical volume
    lvextend -L +10G /dev/examplegroup/lv_data
@@ -129,7 +123,6 @@ cat /etc/fstab
 ### Fix
 
 1. Manually remount the filesystem (if missing):
-
    ```bash linenums="1"
    # Remount all fstab entries
    mount -a
@@ -143,7 +136,6 @@ cat /etc/fstab
    ```
 
 3. If an LVM mount is missing after reboot, reactivate it:
-
    ```bash linenums="1"
    # Activate volume groups
    vgchange -ay
@@ -153,7 +145,6 @@ cat /etc/fstab
    ```
 
 4. For NFS issues, check connectivity and restart services:
-
    ```bash linenums="1"
    # Check NFS exports
    showmount -e <NFS_SERVER_IP>
@@ -184,7 +175,6 @@ xfs_repair -n /dev/sdX  # for XFS
 ### Fix
 
 1. Repair the filesystem (if unmounted):
-
    ```bash linenums="1"
    # Unmount first
    umount /dev/sdX
@@ -222,7 +212,6 @@ find . -type f | wc -l
 ### Fix
 
 1. Clean up temporary files:
-
    ```bash linenums="1"
    # Remove old files in /tmp
    rm -rf /tmp/*

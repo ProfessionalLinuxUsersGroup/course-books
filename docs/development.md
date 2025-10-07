@@ -103,7 +103,6 @@ Outside of system packages all files will be localized to the `/root/course-book
 on the container or machine.
 
 === "APT"
-
     ```bash linenums="1"
     #!/bin/bash
     apt-get update && apt-get -y install git python3-full hostname apache2
@@ -115,7 +114,6 @@ on the container or machine.
     ```
 
 === "DNF"
-
     ```bash linenums="1"
     #!/bin/bash
     dnf install -y httpd git python3 hostname httpd

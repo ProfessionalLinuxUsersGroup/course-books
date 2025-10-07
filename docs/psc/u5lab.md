@@ -64,7 +64,6 @@ run their own repo on their network.
     - What file is fixed for all of them to be remediated?
 
 2. Install httpd on your Hammer server
-
    ```bash linenums="1"
    systemctl stop wwclient
    dnf install -y httpd

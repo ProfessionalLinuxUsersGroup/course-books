@@ -71,13 +71,11 @@ Browsers sometimes like to format characters in a way that doesn't always play n
 A very important thing to note before starting this lab. You’re connected into that server on ssh via port 22. If you do anything to lockout **port 22** in this lab, you will be blocked from that connection and we’ll have to reset it.
 
 1. Check firewall status
-
    ```bash linenums="1"
    systemctl status firewalld
    ```
 
    Example Output:
-
    ```bash linenums="1"
    firewalld.service - firewalld - dynamic firewall daemon
    Loaded: loaded (/usr/lib/systemd/system/firewalld.service; enabled; vendor preset: enabled)
@@ -260,13 +258,11 @@ public
 We can be even more granular with our ports and services. We can block or allow services by port number, or we can assign port numbers to a service name and then block or allow those service names.
 
 1. List all services assigned in firewalld
-
    ```bash linenums="1"
    firewall-cmd --get-services
    ```
 
    Example Output:
-
    ```bash linenums="1"
    RH-Satellite-6 amanda-client bacula bacula-client dhcp dhcpv6 dhcpv6-client dns freeipa-ldap freeipa-ldaps freeipa-replication ftp high-availability http https imaps ipp ipp-client ipsec iscsi-target kerberos kpasswd ldap ldaps libvirt libvirt-tls mdns mountd ms-wbt mysql nfs ntp openvpn pmcd pmproxy pmwebapi pmwebapis pop3s postgresql proxy-dhcp radius rpc-bind rsyncd samba samba-client smtp ssh telnet tftp tftp-client transmission-client vdsm vnc-server wbem-https
    ```
@@ -274,13 +270,11 @@ We can be even more granular with our ports and services. We can block or allow 
    This next part is just to show you where the service definitions exist. They are simple xml format and can easily be manipulated or changed to make new services. This would require a restart of the firewalld service to re-read this directory.
 
    Next Command:
-
    ```bash linenums="1"
    ls /usr/lib/firewalld/services/
    ```
 
    Example Output:
-
    ```bash linenums="1"
    amanda-client.xml        iscsi-target.xml  pop3s.xml
    bacula-client.xml        kerberos.xml      postgresql.xml
@@ -303,13 +297,11 @@ We can be even more granular with our ports and services. We can block or allow 
    ```
 
    Next Command:
-
    ```bash linenums="1"
    cat /usr/lib/firewalld/services/http.xml
    ```
 
    Example Output:
-
    ```bash linenums="1"
    <?xml version="1.0" encoding="utf-8"?>
    <service>
@@ -322,25 +314,21 @@ We can be even more granular with our ports and services. We can block or allow 
 2. Adding a service or port to a zone
 
    Ensuring we are working on a public zone
-
    ```bash linenums="1"
    firewall-cmd --set-default-zone=public
    ```
 
    Example Output:
-
    ```bash linenums="1"
    success
    ```
 
    Listing Services
-
    ```bash linenums="1"
    firewall-cmd --list-services
    ```
 
    Example Ouput:
-
    ```bash linenums="1"
    dhcpv6-client ssh
    ```
@@ -348,85 +336,71 @@ We can be even more granular with our ports and services. We can block or allow 
    **Note:** We have 2 services
 
    Permanently adding a service with the `--permanent` switch
-
    ```bash linenums="1"
    firewall-cmd --permanent --add-service ftp
    ```
 
    Example Output:
-
    ```bash linenums="1"
    success
    ```
 
    Reloading
-
    ```bash linenums="1"
    firewall-cmd --reload
    ```
 
    Example Output:
-
    ```bash linenums="1"
    success
    ```
 
    Verifying we are in the correct **Zone**
-
    ```bash linenums="1"
    firewall-cmd --get-default-zone
    ```
 
    Example Output:
-
    ```bash linenums="1"
    public
    ```
 
    Verifying that we have successfully added the **FTP** service
-
    ```bash linenums="1"
    firewall-cmd --list-services
    ```
 
    Example Output:
-
    ```bash linenums="1"
    dhcpv6-client ftp ssh
    ```
 
    Alternatively, we can do almost the same thing but not use a defined service name. If I just want to allow port 1147 through for TCP traffic, it is very simple as well.
-
    ```bash linenums="1"
    firewall-cmd --permanent --add-port=1147/tcp
    ```
 
    Example Output:
-
    ```bash linenums="1"
    success
    ```
 
    Reloading once again
-
    ```bash linenums="1"
    firewall-cmd --reload
    ```
 
    Example Output:
-
    ```bash linenums="1"
    success
    ```
 
    Listing open ports now
-
    ```bash linenums="1"
    firewall-cmd --list-ports
    ```
 
    Example Output:
-
    ```bash linenums="1"
    1147/tcp
    ```
@@ -436,55 +410,46 @@ We can be even more granular with our ports and services. We can block or allow 
    To remove those values and permanently fix the configuration back we simply use remove.
 
    Firstly, we will permanently remove ftp service
-
    ```bash linenums="1"
    firewall-cmd --permanent --remove-service=ftp
    ```
 
    Example Output:
-
    ```bash linenums="1"
    success
    ```
 
    Then we will permanently remove the ports
-
    ```bash linenums="1"
    firewall-cmd --permanent --remove-port=1147/tcp
    ```
 
    Example Output:
-
    ```bash linenums="1"
    success
    ```
 
    Now lets do a reload
-
    ```bash linenums="1"
    firewall-cmd --reload
    ```
 
    Example Output:
-
    ```bash linenums="1"
    success
    ```
 
    Now we can list services again to confirm our work
-
    ```bash linenums="1"
    firewall-cmd --list-services
    ```
 
    Example Output:
-
    ```bash linenums="1"
    dhcpv6-client ssh
    ```
 
    Now we can list ports
-
    ```bash linenums="1"
    firewall-cmd --list-ports
    ```

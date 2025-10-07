@@ -82,7 +82,6 @@ There are 4 files that comprise of the shadow password suite. We'll investigate 
 how they secure the system. The four files are `/etc/passwd`, `/etc/group`, `/etc/shadow`, and `/etc/gshadow`.
 
 1. Look at each of the files and see if you can determine some basic information about them
-
    ```bash linenums="1"
    more /etc/passwd
    more /etc/group
@@ -91,13 +90,11 @@ how they secure the system. The four files are `/etc/passwd`, `/etc/group`, `/et
    ```
 
    There is one other file you may want to become familiar with:
-
    ```bash linenums="1"
    more /etc/login.defs
    ```
 
    Check the file permissions:
-
    ```bash linenums="1"
    ls -l /etc/passwd
    ```
@@ -144,7 +141,6 @@ Your `/etc/login.defs` file is default and contains a lot of the values that con
 work
 
 5. Creating users
-
    ```bash linenums="1"
    useradd user1
    useradd user2
@@ -152,7 +148,6 @@ work
    ```
 
    Do a quick check on our main files:
-
    ```bash linenums="1"
    tail -5 /etc/passwd
    tail -5 /etc/shadow
@@ -160,7 +155,6 @@ work
 
    What `UID` and `GID` were each of these given? Do they match up?
    Verify your users all have home directories. Where would you check this?
-
    ```bash linenums="1"
    ls /home
    ```
@@ -168,20 +162,17 @@ work
    Your users `/home/<username>` directories have hidden files that were all pulled from a
    directory called `/etc/skel`. If you wanted to test this and verify you might do something like
    this:
-
    ```bash linenums="1"
    cd /etc/skel
    vi .bashrc
    ```
 
    Use `vi` commands to add the line:
-
    ```bash linenums="1"
    alias dinosaur='echo "Rarw"'
    ```
 
    Your file should now look like this:
-
    ```bash linenums="1"
    # .bashrc
    # Source global definitions
@@ -195,7 +186,6 @@ work
    ```
 
    Save the file with `:wq`.
-
    ```bash linenums="1"
    useradd user4
    su - user4
@@ -209,7 +199,6 @@ work
 
    We can test this with the same steps on an existing user.
    Pick an existing user and verify they don't have that command
-
    ```bash linenums="1"
    su - user1
    dinosaur # Command not found
@@ -217,7 +206,6 @@ work
    ```
 
    Then, as root:
-
    ```bash linenums="1"
    cd /home/user1
    mkdir old_dot_files
@@ -230,7 +218,6 @@ work
 6. Creating groups
    From our `/etc/login.defs` we can see that the default range for UIDs on this system, when created by
    `useradd` are:
-
    ```bash linenums="1"
    UID_MIN 1000
    UID_MAX 60000
@@ -239,7 +226,6 @@ work
    So an easy way to make sure that we don't get confused on our group numbering is to ensure we create
    groups outside of that range.
    This isn't required, but can save you headache in the future.
-
    ```bash linenums="1"
    groupadd -g 60001 project
    tail -5 /etc/group
@@ -247,7 +233,6 @@ work
 
    You can also make groups the old fashioned way by putting a line right into the `/etc/group` file.  
    Try this:
-
    ```bash linenums="1"
    vi /etc/group
    ```
@@ -257,21 +242,18 @@ work
    - Add `project2:x:60002:user4`
    - Hit `Esc`
    - `:wq!` to write quit the file explicit force because it's a read only file.
-
    ```bash linenums="1"
    id user 4 # Should now see the project2 in the user's groups
    ```
 
 7. Modifying or deleting users
    So maybe now we need to move our users into that group.
-
    ```bash linenums="1"
    usermod -G project user4
    tail -f /etc/group # Should see user4 in the group
    ```
 
    But, maybe we want to add more users and we want to just put them in there:
-
    ```bash linenums="1"
    vi /etc/group
    ```
@@ -282,7 +264,6 @@ work
    - Hit `Esc`.
    - `:wq` to save and exit.  
      Verify your users are in the group now
-
    ```bash linenums="1"
    id user4
    id user1
@@ -295,7 +276,6 @@ work
 
    Currently we have `user1,2,4` belonging to group `project` but not `user3`. So we will verify these
    permissions are enforced by the filesystem.
-
    ```bash linenums="1"
    mkdir /project
    ls -ld /project
@@ -308,7 +288,6 @@ work
    You've also given group `project` users the ability to write into your directory.
    Everyone can still read from your directory.
    Check permissions with users:
-
    ```bash linenums="1"
    su - user1
    cd /project
@@ -322,13 +301,11 @@ work
 
    Anyone not in the `project` group doesn't have permissions to write a file into that directory.
    Now, as the root user:
-
    ```bash linenums="1"
    chmod 770 /project
    ```
 
    Check permissions with users:
-
    ```bash linenums="1"
    su - user1
    cd /project
