@@ -86,13 +86,6 @@ https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/ref/ulab.m
 https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/ref/uws.md
 https://github.com/ProfessionalLinuxUsersGroup/course-books/issues/new
 https://github.com/ProfessionalLinuxUsersGroup/course-books/wiki
-https://github.com/ProfessionalLinuxUsersGroup/img/blob/main/Assets/Dia/lma.png
-https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/ref/intro.md
-https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/ref/ub.md
-https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/ref/ulab.md
-https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/ref/uws.md
-https://github.com/ProfessionalLinuxUsersGroup/lac/wiki
-https://github.com/ProfessionalLinuxUsersGroup/psc/
 https://github.com/ansible/ansible
 https://github.com/fail2ban/fail2ban
 https://github.com/het-tanis/HPC_Deploy.git
@@ -101,7 +94,6 @@ https://github.com/het-tanis/stream_setup/blob/master/roles/bastion_deploy/tasks
 https://github.com/tmux/tmux/wiki
 https://github.com/user-attachments/assets/a3b0fbcb-6ac6-402c-8e3f-4c0a39ca858b
 https://github.com/user-attachments/assets/d3a4bdaf-43ad-4317-b7b3-232395765b25
-https://github.com/user-attachments/assets/e882e555-773f-43c2-b6df-a12fe34e64eb
 https://github.com/vim/vim
 https://google.github.io/building-secure-and-reliable-systems/raw/ch14.html#treat_configuration_as_code
 https://google.github.io/building-secure-and-reliable-systems/raw/ch15.html#collect_appropriate_and_useful_logs
@@ -125,6 +117,7 @@ https://killercoda.com/het-tanis/course/Ansible-Labs/102-Enterprise-Ansible-Patc
 https://killercoda.com/het-tanis/course/Ansible-Labs/12-Ansible-System-Facts-Grouping
 https://killercoda.com/het-tanis/course/Ansible-Labs/16-Ansible-Web-Server-Env-Deploy
 https://killercoda.com/het-tanis/course/Ansible-Labs/19-Ansible-csv-report
+https://killercoda.com/het-tanis/course/Automation-Labs/Unit1_Tools
 https://killercoda.com/het-tanis/course/Automation-Labs/Unit2_Interacting_with_OS
 https://killercoda.com/het-tanis/course/Hashicorp-Labs/004-vault-read-secrets-ansible
 https://killercoda.com/het-tanis/course/Linux-Labs
@@ -238,9 +231,6 @@ https://www.digitalocean.com/community/tutorials/linux-commands
 https://www.fluentd.org/architecture
 https://www.fortinet.com/resources/cyberglossary/public-key-infrastructure
 https://www.freecodecamp.org/news/git-squash-commits/
-https://www.gnu.org/software/bash/manual/bash.html
-https://www.gnu.org/software/screen/
-https://www.gnu.org/software/screen/manual/screen.html
 https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html
 https://www.howtogeek.com/448323/what-is-markdown-and-how-do-you-use-it/
 https://www.kaggle.com/learn
@@ -289,7 +279,6 @@ https://www.youtube.com/watch?v=54VgGHr99Qg
 https://www.youtube.com/watch?v=alcsTPQsruM&list=PLyuZ_vuAWmpqHEm-Js2gZleKzUY5uBWcM
 https://www.youtube.com/watch?v=d8XtNXutVto
 https://www.youtube.com/watch?v=e9lnsKot_SQ
-https://www.youtube.com/watch?v=eHB8WKWz2eQ&list=PLyuZ_vuAWmprPIqsG11yoUG49Z5dE5TDu
 https://yaml.org/
 https://youtu.be/HkdAHXoRtos
 https://youtu.be/RGOj5yH7evk
