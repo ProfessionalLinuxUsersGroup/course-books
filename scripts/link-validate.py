@@ -1,4 +1,4 @@
-# v 1.5.211
+# v 1.5.237
 # Authored by Christian McKee - cmckee786@github.com
 # Attempts to validate links within ProLUG Course-Books repo
 
@@ -28,7 +28,7 @@ RESET = "\033[0m"
 # Worker count dependent on host limitations
 WORKER_COUNT = 20
 # Regex intended to match http(s) links unique to this project
-REGEX = r"(?<!\[)https?://\S+[^\s\.\"\'\,\>\)\{\}]"
+REGEX = r"(?<!\[)\bhttps?://\S+\b/?"
 PATTERN = re.compile(REGEX)
 
 STORAGE = 'scripts/link-storage/successfullinks.txt'
@@ -178,6 +178,8 @@ def get_unique_links(stored: list, ignored: list):
 def main():
     """The place we call home"""
     try:
+        cur_time =datetime.now().strftime('%Y-%m-%d')
+        report = f"failed_links.{cur_time}"
         successful_links: list = []
         failed_links: list = []
 
@@ -207,29 +209,24 @@ def main():
                     except Exception as e:
                         print(f'{futures[future]} - Unexpected error: {e}')
 
-            report = f"failed_links.{datetime.now().strftime('%Y-%m-%d')}"
-            with open(report, 'w', encoding='utf-8') as f_report, \
-                 open(STORAGE, 'a', encoding='utf-8') as f_updated:
-                print(
-                    f'\nFailed Links: {RED}{len(failed_links)}{RESET}\n'
-                    f'Writing report to {Path.cwd()}/{report}...'
-                )
-                f_report.write(
-                    f'Report ran on: {datetime.now().strftime("%Y-%m-%d %H:%M")}\n{"-"*50}\n'
-                )
-                if failed_links:
-                    [f_report.writelines(f'{link}\n') for link in failed_links]
-
-                if successful_links:
-                    [f_updated.writelines(f'{link}\n') for link in successful_links]
+        if failed_links:
+            print(f'\nFailed Links: {RED}{len(failed_links)}{RESET}\n{"-"*50}')
+            [print(item) for item in failed_links]
+            print(f'\nWriting report to {Path.cwd()}/{report}...')
+            with open(report, 'w', encoding='utf-8') as f_report:
+                f_report.write(f'Report ran on: {cur_time}\n{"-"*50}\n')
+                [f_report.writelines(f'{link}\n') for link in failed_links]
+        else:
+            print('No failed links!')
+        if successful_links:
+            with open(STORAGE, 'a', encoding='utf-8') as f_updated:
+                [f_updated.writelines(f'{link}\n') for link in successful_links]
+            sort_file(STORAGE)
 
     except Exception as e:
         print(e)
     finally:
-        if Path(STORAGE).exists():
-            sort_file(STORAGE)
-        if Path(IGNORED).exists():
-            sort_file(IGNORED)
+        sort_file(IGNORED)
 
 if __name__ == '__main__':
     main()
