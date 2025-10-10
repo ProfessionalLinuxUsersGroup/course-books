@@ -28,7 +28,7 @@ RESET = "\033[0m"
 # Worker count dependent on host limitations
 WORKER_COUNT = 20
 # Regex intended to match http(s) links unique to this project
-REGEX = r"(?<!\[)\bhttps?://\S+\b\/?"
+REGEX = r"(?<!\[)\bhttps?://\S+\b/?"
 PATTERN = re.compile(REGEX)
 
 STORAGE = 'scripts/link-storage/successfullinks.txt'
