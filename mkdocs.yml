@@ -188,9 +188,9 @@ nav:
     #   - Intro: pcae/u2intro.md
       - Worksheet: pcae/u2ws.md
     #   - Lab: pcae/u2lab.md
-    # - Unit 3 - Creating && Using Inventories:
+    - Unit 3 - Creating && Using Inventories:
     #   - Intro: pcae/u3intro.md
-    #   - Worksheet: pcae/u3ws.md
+      - Worksheet: pcae/u3ws.md
     #   - Lab: pcae/u3lab.md
     # - Unit 4 - Admin Commands && Ad-Hoc Commands:
     #   - Intro: pcae/u4intro.md
