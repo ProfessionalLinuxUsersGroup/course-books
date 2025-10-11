@@ -16,8 +16,8 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/BOOK/downloads/u3/u3_worksheet.md.txt" target="_blank" download="u3_worksheet.md">:material-download: u_worksheet(`.md`)</a>  
-- <a href="../../assets/BOOK/downloads/u3/u_3worksheet.txt" target="_blank" download>:material-download: u3_worksheet(`.txt`)</a>  
+- <a href="../../assets/pcae/downloads/u3/u3_worksheet.md.txt" target="_blank" download="u3_worksheet.md">:material-download: u_worksheet(`.md`)</a>  
+- <a href="../../assets/pcae/downloads/u3/u3_worksheet.txt" target="_blank" download>:material-download: u3_worksheet(`.txt`)</a>  
 
 ### Unit 3 Recording
 
