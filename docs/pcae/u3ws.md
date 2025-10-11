@@ -7,9 +7,8 @@ Hold your worksheets until the end to turn them in as a final submission packet.
 
 ### Resources / Important Links
 
-- [PLACEHOLDER](LINK_HERE)
-- [PLACEHOLDER](LINK_HERE)
-- [PLACEHOLDER](LINK_HERE)
+- <https://killercoda.com/hettanis/course/Ansible-Labs/02-Ansible-Host-File>
+- <https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html>
 
 #### Downloads
 
@@ -17,9 +16,8 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-<!-- Change to whatever downloads are currently available. -->
-<!-- - <a href="../../assets/BOOK/downloads/u3/u3_worksheet.md.txt" target="_blank" download="u3_worksheet.md>📥 u_worksheet(`.md`)</a> -->
-- <a href="../../assets/BOOK/downloads/u3/u_3worksheet.txt" target="_blank" download>📥 u3_worksheet(`.txt`)</a>
+- <a href="../../assets/BOOK/downloads/u3/u3_worksheet.md.txt" target="_blank" download="u3_worksheet.md">:material-download: u_worksheet(`.md`)</a>  
+- <a href="../../assets/BOOK/downloads/u3/u_3worksheet.txt" target="_blank" download>:material-download: u3_worksheet(`.txt`)</a>  
 
 ### Unit 3 Recording
 
