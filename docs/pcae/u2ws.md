@@ -21,8 +21,6 @@ could be transposed to a `.md` file.
 
 ### Unit 2 Recording
 
-Coming soon!
-
 <iframe
     style="width: 100%; height: 100%; border: none;
     aspect-ratio: 16/9; border-radius: 1rem; background:black"
