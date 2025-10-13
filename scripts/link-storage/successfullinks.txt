@@ -135,6 +135,7 @@ https://killercoda.com/het-tanis/course/Linux-Labs/207-OS_STIG_Scan_with_SCC_Too
 https://killercoda.com/het-tanis/course/Linux-Labs/210-building-a-bastion-host
 https://killercoda.com/het-tanis/course/Linux-Labs/211-setting-up-rsyslog-with-tls
 https://killercoda.com/het-tanis/course/Linux-Labs/212-public-private-keys-with-ssh
+https://killercoda.com/hettanis/course/Ansible-Labs/02-Ansible-Host-File
 https://killercoda.com/k3s/scenario/intro
 https://killercoda.com/killer-shell-cks/scenario/certificate-signing-requests-sign-k8s
 https://killercoda.com/killer-shell-cks/scenario/certificate-signing-requests-sign-manually

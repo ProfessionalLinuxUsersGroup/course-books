@@ -1,4 +1,4 @@
-# v 1.5.237
+# v 1.6.1
 # Authored by Christian McKee - cmckee786@github.com
 # Attempts to validate links within ProLUG Course-Books repo
 
@@ -13,6 +13,7 @@
 # USE RESPONSIBLY
 
 import re
+import argparse
 import urllib.request
 import urllib.error
 from datetime import datetime
@@ -25,8 +26,10 @@ BLUE = "\033[34m"
 ORANGE = "\033[33m"
 RESET = "\033[0m"
 
-# Worker count dependent on host limitations
-WORKER_COUNT = 20
+# If max_workers is None or not given, it will default
+# to the number of processors on the machine, multiplied by 5
+WORKER_COUNT = None
+
 # Regex intended to match http(s) links unique to this project
 REGEX = r"(?<!\[)\bhttps?://\S+\b/?"
 PATTERN = re.compile(REGEX)
@@ -34,6 +37,36 @@ PATTERN = re.compile(REGEX)
 STORAGE = 'scripts/link-storage/successfullinks.txt'
 IGNORED = 'scripts/link-storage/ignoredlinks.txt'
 
+
+def cli_args():
+    """ Provide CLI options to skip validated or ignored link storage and skip URL validation"""
+
+    args_parser = argparse.ArgumentParser(
+        description='''
+            Attempts to parse any http(s) found within docs/ project directory and stores successfully
+            validated URLs to reduce subsequent script executions.
+            '''
+    )
+    args_parser.add_argument(
+        '-s', '-skip-storage',
+        action='store_true',
+        help='Skip inclusion of stored successfullinks.txt URLs',
+        dest='skip_store'
+    )
+    args_parser.add_argument(
+        '-i', '-skip-ignored',
+        action='store_true',
+        help='Skip inclusion of stored ignoredlinks.txt URLs',
+        dest='skip_ignore'
+    )
+    args_parser.add_argument(
+        '-n', '-no-validation',
+        action='store_true',
+        help='Skip validation of any return URLs and print default reporting to stdout',
+        dest='skip_validation'
+    )
+
+    return args_parser
 
 def get_file_links(path: str):
     """Populate stored/ignored links from files or instantiate files if missing"""
@@ -180,14 +213,21 @@ def main():
     try:
         cur_time =datetime.now().strftime('%Y-%m-%d')
         report = f"failed_links.{cur_time}"
+        parser = cli_args().parse_args()
         successful_links: list = []
         failed_links: list = []
 
-        storage_links = get_file_links(STORAGE)
-        ignored_storage_links = get_file_links(IGNORED)
+        if parser.skip_store is False:
+            storage_links = get_file_links(STORAGE)
+        else:
+            storage_links = []
+        if parser.skip_ignore is False:
+            ignored_storage_links = get_file_links(IGNORED)
+        else:
+            ignored_storage_links = []
         test_links = get_unique_links(storage_links, ignored_storage_links)
 
-        if test_links:
+        if test_links and parser.skip_validation is False:
             print(f'Attempting to resolve links for testing...\n{"-"*50}')
             with ThreadPoolExecutor(max_workers=WORKER_COUNT) as executor:
                 futures = {
@@ -209,16 +249,19 @@ def main():
                     except Exception as e:
                         print(f'{futures[future]} - Unexpected error: {e}')
 
-        if failed_links:
+        if failed_links and parser.skip_validation is False:
             print(f'\nFailed Links: {RED}{len(failed_links)}{RESET}\n{"-"*50}')
             [print(item) for item in failed_links]
             print(f'\nWriting report to {Path.cwd()}/{report}...')
             with open(report, 'w', encoding='utf-8') as f_report:
                 f_report.write(f'Report ran on: {cur_time}\n{"-"*50}\n')
                 [f_report.writelines(f'{link}\n') for link in failed_links]
+        elif parser.skip_validation is True:
+            print('Skipped link validation!')
         else:
             print('No failed links!')
-        if successful_links:
+
+        if successful_links and parser.skip_store is False:
             with open(STORAGE, 'a', encoding='utf-8') as f_updated:
                 [f_updated.writelines(f'{link}\n') for link in successful_links]
             sort_file(STORAGE)
