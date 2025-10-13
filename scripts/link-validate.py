@@ -48,19 +48,19 @@ def cli_args():
             '''
     )
     args_parser.add_argument(
-        '-s', '-skip-storage',
+        '-s', '--skip-storage',
         action='store_true',
         help='Skip inclusion of stored successfullinks.txt URLs',
         dest='skip_store'
     )
     args_parser.add_argument(
-        '-i', '-skip-ignored',
+        '-i', '--skip-ignored',
         action='store_true',
         help='Skip inclusion of stored ignoredlinks.txt URLs',
         dest='skip_ignore'
     )
     args_parser.add_argument(
-        '-n', '-no-validation',
+        '-n', '--no-validation',
         action='store_true',
         help='Skip validation of any return URLs and print default reporting to stdout',
         dest='skip_validation'
