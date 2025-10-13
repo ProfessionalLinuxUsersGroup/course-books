@@ -1,4 +1,4 @@
-# v 1.6.1
+# v 1.6.3
 # Authored by Christian McKee - cmckee786@github.com
 # Attempts to validate links within ProLUG Course-Books repo
 
@@ -39,12 +39,16 @@ IGNORED = 'scripts/link-storage/ignoredlinks.txt'
 
 
 def cli_args():
-    """ Provide CLI options to skip validated or ignored link storage and skip URL validation"""
+    """ Provide CLI options to skip validated or ignored link storage and skip URL validation
+        Create and return argparse object with configured argument attributes
+    """
 
     args_parser = argparse.ArgumentParser(
         description='''
-            Attempts to parse any http(s) found within docs/ project directory and stores successfully
-            validated URLs to reduce subsequent script executions.
+            Attempts to parse any http(s) URL links found within docs/**/*.md project directory and stores
+            successfully validated URLs to reduce subsequent script executions. Reads from
+            scripts/link-storage/successfullinks.txt and scripts/link-storage/ignoredlinks.txt to reduce
+            subsequent runtimes and any user define URLs they wish to ignore.
             '''
     )
     args_parser.add_argument(
@@ -62,14 +66,14 @@ def cli_args():
     args_parser.add_argument(
         '-n', '--no-validation',
         action='store_true',
-        help='Skip validation of any return URLs and print default reporting to stdout',
+        help='Skip validation of URLs and print default reporting to stdout',
         dest='skip_validation'
     )
 
     return args_parser
 
 def get_file_links(path: str):
-    """Populate stored/ignored links from files or instantiate files if missing"""
+    """Populate stored/ignored links from passed path or instantiate file from path if missing"""
     if Path(path).exists():
         with open(path, 'r', encoding='utf-8') as f_stored:
             stored_links: list = [line.strip() for line in f_stored]
@@ -91,7 +95,7 @@ def sort_file(path: str):
 
 def validate_link(matched_item: dict):
     """ Attempt to resolve link and return error or status code for processing
-        Utilizes user-agent headers lest webservers return false negatives
+        Utilizes user-agent headers to reduce false negative returns
     """
     headers = {
         "User-Agent": (
@@ -141,9 +145,8 @@ def validate_link(matched_item: dict):
     return link_status, matched_item
 
 def get_unique_links(stored: list, ignored: list):
-    """ Aggregate files and URLs for link validation
-        Returns per file total and total unique links found
-        Must be run from root of git repo directory
+    """ Aggregate URLs for link validation into dictionary for processing
+        Returns per file total and total unique links found into list for reporting
     """
 
     stored_links: list = stored
