@@ -44,12 +44,12 @@ def cli_args():
     """
 
     args_parser = argparse.ArgumentParser(
-        description='''
-            Attempts to parse any http(s) URL links found within docs/**/*.md project directory and stores
-            successfully validated URLs to reduce subsequent script executions. Reads from
-            scripts/link-storage/successfullinks.txt and scripts/link-storage/ignoredlinks.txt to reduce
-            subsequent runtimes and any user defined URLs they wish to ignore.
-            '''
+        description='Attempts to parse any http(s) URL links found within '\
+        'docs/**/*.md project directory \nand stores successfully validated URLs '\
+        'to reduce subsequent script executions. \n\nReads from scripts/link-storage/successfullinks.txt '\
+        'and ignoredlinks.txt to \nreduce subsequent runtimes and any user defined '\
+        'URLs they wish to ignore.',
+        formatter_class=argparse.RawDescriptionHelpFormatter
     )
     args_parser.add_argument(
         '-s', '--skip-storage',
