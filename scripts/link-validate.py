@@ -1,4 +1,4 @@
-# v 1.6.3
+# v 1.6.4
 # Authored by Christian McKee - cmckee786@github.com
 # Attempts to validate links within ProLUG Course-Books repo
 
@@ -106,7 +106,7 @@ def validate_link(matched_item: dict):
         "Connection": "keep-alive",
     }
 
-    link_status: int = 0
+    link_status: tuple = ()
     req = urllib.request.Request(matched_item["link"], headers=headers)
 
     try:
@@ -116,31 +116,31 @@ def validate_link(matched_item: dict):
                     f'{matched_item['link']}\n'
                     f'\t- Responded {GREEN}{response.status} {response.reason}{RESET}'
                 )
-                link_status = 0
+                link_status = 0, response.status
             else:
                 print(
                     f'{matched_item['link']}\n'
-                    f'\t- Unknown error {RED}[FAILED]{RESET}'
+                    f'\t- {RED}Unknown error{RESET}'
                 )
-                link_status = 1
+                link_status = 1, 'Unknown Error'
     except urllib.error.HTTPError as e:
         print(
             f'{matched_item["link"]}\n'
             f'\t- Responded HTTP Error: {RED}{e.code} {e.reason}{RESET}'
         )
-        link_status = 1
+        link_status = 1, e
     except urllib.error.URLError as e:
         print(
             f'{matched_item['link']}\n'
             f'\t- Responded URL Error: {RED}{e.reason}{RESET}'
         )
-        link_status = 1
+        link_status = 1, e
     except TimeoutError as e:
         print(
             f'{matched_item['link']}\n'
             f'\t- Responded {RED}Timeout Error{RESET}'
         )
-        link_status = 1
+        link_status = 1, e
 
     return link_status, matched_item
 
@@ -242,10 +242,11 @@ def main():
                         link_status, link = future.result()
                         troubleshoot_output: str = \
                                 f'{link['link']}'\
+                                f' {RED}{link_status[1]}{RESET}'\
                                 f' {ORANGE}File:{RESET}{link["file"]}'\
                                 f' {BLUE}L:{link["line"]}{RESET}'
 
-                        if link_status == 1:
+                        if link_status[0] == 1:
                             failed_links.append(troubleshoot_output)
                         else:
                             successful_links.append(link['link'])
