@@ -48,7 +48,7 @@ def cli_args():
             Attempts to parse any http(s) URL links found within docs/**/*.md project directory and stores
             successfully validated URLs to reduce subsequent script executions. Reads from
             scripts/link-storage/successfullinks.txt and scripts/link-storage/ignoredlinks.txt to reduce
-            subsequent runtimes and any user define URLs they wish to ignore.
+            subsequent runtimes and any user defined URLs they wish to ignore.
             '''
     )
     args_parser.add_argument(
