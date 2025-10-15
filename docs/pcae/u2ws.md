@@ -21,18 +21,16 @@ could be transposed to a `.md` file.
 
 ### Unit 2 Recording
 
-Coming soon!
-
-<!-- <iframe -->
-<!--     style="width: 100%; height: 100%; border: none; -->
-<!--     aspect-ratio: 16/9; border-radius: 1rem; background:black" -->
-<!--     src="PLACEHOLDER: Unit Embed Link" -->
-<!--     title="ProLUG Linux Automation Course - Unit 2 Lecture Recording" -->
-<!--     frameborder="0" -->
-<!--     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" -->
-<!--     referrerpolicy="strict-origin-when-cross-origin" -->
-<!--     allowfullscreen> -->
-<!-- </iframe> -->
+<iframe
+    style="width: 100%; height: 100%; border: none;
+    aspect-ratio: 16/9; border-radius: 1rem; background:black"
+    src="https://www.youtube.com/embed/2iWZTQy4eTU"
+    title="ProLUG Linux Automation Course - Unit 2 Lecture Recording"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+</iframe>
 
 #### Discussion Post #1
 
