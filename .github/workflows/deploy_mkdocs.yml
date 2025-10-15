@@ -2,7 +2,13 @@ name: Build site with MkDocs and deploy to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: ['main']
+    paths:
+    - 'docs/**'
+    - 'scripts/generate-resources'
+    - 'mkdocs.yml'
+    - '.github/workflows/deploy_mkdocs.yml'
+
   workflow_dispatch:
 
 permissions:
@@ -20,7 +26,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.13'
           cache: 'pip'
 
       - name: Install dependencies
