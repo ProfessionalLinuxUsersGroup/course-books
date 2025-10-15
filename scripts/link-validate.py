@@ -1,4 +1,4 @@
-# v 1.5.237
+# v 1.6.4
 # Authored by Christian McKee - cmckee786@github.com
 # Attempts to validate links within ProLUG Course-Books repo
 
@@ -13,6 +13,7 @@
 # USE RESPONSIBLY
 
 import re
+import argparse
 import urllib.request
 import urllib.error
 from datetime import datetime
@@ -25,8 +26,10 @@ BLUE = "\033[34m"
 ORANGE = "\033[33m"
 RESET = "\033[0m"
 
-# Worker count dependent on host limitations
-WORKER_COUNT = 20
+# If max_workers is None or not given, it will default
+# to the number of processors on the machine, multiplied by 5
+WORKER_COUNT = None
+
 # Regex intended to match http(s) links unique to this project
 REGEX = r"(?<!\[)\bhttps?://\S+\b/?"
 PATTERN = re.compile(REGEX)
@@ -35,8 +38,42 @@ STORAGE = 'scripts/link-storage/successfullinks.txt'
 IGNORED = 'scripts/link-storage/ignoredlinks.txt'
 
 
+def cli_args():
+    """ Provide CLI options to skip validated or ignored link storage and skip URL validation
+        Create and return argparse object with configured argument attributes
+    """
+
+    args_parser = argparse.ArgumentParser(
+        description='Attempts to parse any http(s) URL links found within '\
+        'docs/**/*.md project directory \nand stores successfully validated URLs '\
+        'to reduce subsequent script executions. \n\nReads from scripts/link-storage/successfullinks.txt '\
+        'and ignoredlinks.txt to \nreduce subsequent runtimes and any user defined '\
+        'URLs they wish to ignore.',
+        formatter_class=argparse.RawDescriptionHelpFormatter
+    )
+    args_parser.add_argument(
+        '-s', '--skip-storage',
+        action='store_true',
+        help='Skip inclusion of stored successfullinks.txt URLs',
+        dest='skip_store'
+    )
+    args_parser.add_argument(
+        '-i', '--skip-ignored',
+        action='store_true',
+        help='Skip inclusion of stored ignoredlinks.txt URLs',
+        dest='skip_ignore'
+    )
+    args_parser.add_argument(
+        '-n', '--no-validation',
+        action='store_true',
+        help='Skip validation of URLs and print default reporting to stdout',
+        dest='skip_validation'
+    )
+
+    return args_parser
+
 def get_file_links(path: str):
-    """Populate stored/ignored links from files or instantiate files if missing"""
+    """Populate stored/ignored links from passed path or instantiate file from path if missing"""
     if Path(path).exists():
         with open(path, 'r', encoding='utf-8') as f_stored:
             stored_links: list = [line.strip() for line in f_stored]
@@ -58,7 +95,7 @@ def sort_file(path: str):
 
 def validate_link(matched_item: dict):
     """ Attempt to resolve link and return error or status code for processing
-        Utilizes user-agent headers lest webservers return false negatives
+        Utilizes user-agent headers to reduce false negative returns
     """
     headers = {
         "User-Agent": (
@@ -69,7 +106,7 @@ def validate_link(matched_item: dict):
         "Connection": "keep-alive",
     }
 
-    link_status: int = 0
+    link_status: tuple = ()
     req = urllib.request.Request(matched_item["link"], headers=headers)
 
     try:
@@ -79,38 +116,37 @@ def validate_link(matched_item: dict):
                     f'{matched_item['link']}\n'
                     f'\t- Responded {GREEN}{response.status} {response.reason}{RESET}'
                 )
-                link_status = 0
+                link_status = 0, response.status
             else:
                 print(
                     f'{matched_item['link']}\n'
-                    f'\t- Unknown error {RED}[FAILED]{RESET}'
+                    f'\t- {RED}Unknown error{RESET}'
                 )
-                link_status = 1
+                link_status = 1, 'Unknown Error'
     except urllib.error.HTTPError as e:
         print(
             f'{matched_item["link"]}\n'
             f'\t- Responded HTTP Error: {RED}{e.code} {e.reason}{RESET}'
         )
-        link_status = 1
+        link_status = 1, e
     except urllib.error.URLError as e:
         print(
             f'{matched_item['link']}\n'
             f'\t- Responded URL Error: {RED}{e.reason}{RESET}'
         )
-        link_status = 1
+        link_status = 1, e
     except TimeoutError as e:
         print(
             f'{matched_item['link']}\n'
             f'\t- Responded {RED}Timeout Error{RESET}'
         )
-        link_status = 1
+        link_status = 1, e
 
     return link_status, matched_item
 
 def get_unique_links(stored: list, ignored: list):
-    """ Aggregate files and URLs for link validation
-        Returns per file total and total unique links found
-        Must be run from root of git repo directory
+    """ Aggregate URLs for link validation into dictionary for processing
+        Returns per file total and total unique links found into list for reporting
     """
 
     stored_links: list = stored
@@ -180,14 +216,21 @@ def main():
     try:
         cur_time =datetime.now().strftime('%Y-%m-%d')
         report = f"failed_links.{cur_time}"
+        parser = cli_args().parse_args()
         successful_links: list = []
         failed_links: list = []
 
-        storage_links = get_file_links(STORAGE)
-        ignored_storage_links = get_file_links(IGNORED)
+        if parser.skip_store is False:
+            storage_links = get_file_links(STORAGE)
+        else:
+            storage_links = []
+        if parser.skip_ignore is False:
+            ignored_storage_links = get_file_links(IGNORED)
+        else:
+            ignored_storage_links = []
         test_links = get_unique_links(storage_links, ignored_storage_links)
 
-        if test_links:
+        if test_links and parser.skip_validation is False:
             print(f'Attempting to resolve links for testing...\n{"-"*50}')
             with ThreadPoolExecutor(max_workers=WORKER_COUNT) as executor:
                 futures = {
@@ -199,26 +242,30 @@ def main():
                         link_status, link = future.result()
                         troubleshoot_output: str = \
                                 f'{link['link']}'\
+                                f' {RED}{link_status[1]}{RESET}'\
                                 f' {ORANGE}File:{RESET}{link["file"]}'\
                                 f' {BLUE}L:{link["line"]}{RESET}'
 
-                        if link_status == 1:
+                        if link_status[0] == 1:
                             failed_links.append(troubleshoot_output)
                         else:
                             successful_links.append(link['link'])
                     except Exception as e:
                         print(f'{futures[future]} - Unexpected error: {e}')
 
-        if failed_links:
+        if failed_links and parser.skip_validation is False:
             print(f'\nFailed Links: {RED}{len(failed_links)}{RESET}\n{"-"*50}')
             [print(item) for item in failed_links]
             print(f'\nWriting report to {Path.cwd()}/{report}...')
             with open(report, 'w', encoding='utf-8') as f_report:
                 f_report.write(f'Report ran on: {cur_time}\n{"-"*50}\n')
                 [f_report.writelines(f'{link}\n') for link in failed_links]
+        elif parser.skip_validation is True:
+            print('Skipped link validation!')
         else:
             print('No failed links!')
-        if successful_links:
+
+        if successful_links and parser.skip_store is False:
             with open(STORAGE, 'a', encoding='utf-8') as f_updated:
                 [f_updated.writelines(f'{link}\n') for link in successful_links]
             sort_file(STORAGE)
