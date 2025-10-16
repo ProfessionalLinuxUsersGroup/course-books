@@ -222,8 +222,10 @@ def main():
             print('Successful link storage has been reset...')
             open(STORAGE, 'w', encoding='utf-8').close()
         if parser.skip_store is False:
+            print('Skipping successful link storage...')
             storage_links = get_file_links(STORAGE)
         if parser.skip_ignore is False:
+            print('Skipping ignored links storage...')
             ignored_storage_links = get_file_links(IGNORED)
 
         test_links = get_unique_links(storage_links, ignored_storage_links)
