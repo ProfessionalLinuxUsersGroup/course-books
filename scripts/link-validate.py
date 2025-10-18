@@ -1,4 +1,4 @@
-# v 1.7.1
+# v 1.7.2
 # Authored by Christian McKee - cmckee786@github.com
 # Attempts to validate links within ProLUG Course-Books repo
 
