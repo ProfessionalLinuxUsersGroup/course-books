@@ -1,4 +1,5 @@
-# THIS IS A TEMPLATE DOCUMENT
+# Unit <N> Bonus
+## <TITLE>
 
 (However, these are not hard fast templates, as long as the style is maintained
 there is a degree of freedom.)
