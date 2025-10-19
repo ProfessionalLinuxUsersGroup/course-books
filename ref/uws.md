@@ -1,3 +1,5 @@
+# Unit <N> Worksheet
+
 ## Instructions
 
 Fill out the worksheet as you progress through the lab and discussions.
@@ -15,10 +17,12 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="./assets/downloads/u/u_worksheet.txt" target="_blank" download>📥 u_worksheet(`.txt`)</a>
-- <a href="./assets/downloads/u/u_worksheet.docx" target="_blank" download>📥 u_worksheet(`.docx`)</a>
+<!-- Change to whatever downloads are currently available. -->
+- <a href="../../assets/BOOK/downloads/uN/uN_worksheet.md.txt" target="_blank" download="uN_worksheet.md>:material-download: uN_worksheet.md</a>
+- <a href="../../assets/BOOK/downloads/uN/uN_worksheet.txt" target="_blank" download>:material-download: uN_worksheet.txt</a>
+- <a href="../../assets/BOOK/downloads/uN/uN_worksheet.docx" target="_blank" download>:material-download: uN_worksheet.docx</a>
 
-### Unit N Recording
+### Unit <N> Recording
 
 <iframe
     style="width: 100%; height: 100%; border: none;
@@ -49,11 +53,10 @@ could be transposed to a `.md` file.
 
 !!! notes
 
-    Submit your input by following the link below:
+    Submit your input by following the link below. The discussion posts are done in Discord Forums.
 
-    The discussion posts are done in Discord threads. Click the 'Threads' icon on the top right and search for the discussion post.
+    - [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
 
-- [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1098309490681598072)
 
 ## Definitions
 

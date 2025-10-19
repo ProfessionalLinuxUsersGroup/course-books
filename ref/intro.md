@@ -1,4 +1,5 @@
-# THIS IS A TEMPLATE DOCUMENT
+# Unit <N>
+## <UNIT_TITLE>
 
 ## Overview
 
@@ -18,7 +19,7 @@ etc..
 2.
 3.
 
-## Key terms and Definitions
+## Key Terms and Definitions
 
 (Any important terms relating to the unit)
 
