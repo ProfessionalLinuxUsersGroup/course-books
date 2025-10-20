@@ -1,5 +1,5 @@
 # Unit <N> Lab
-## <Unit Title>
+## <UNIT_TITLE>
 
 !!! info
 
