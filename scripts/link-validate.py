@@ -1,4 +1,4 @@
-# v 1.7.3
+# v 1.7.4
 # Authored by Christian McKee - cmckee786@github.com
 # Attempts to validate links within ProLUG Course-Books repo
 
@@ -81,6 +81,7 @@ def cli_args():
     args_parser.add_argument(
         '-d', '--directory',
         type=str,
+        default=Path.cwd(),
         help='Aggregate links from a specified directory',
         dest='directory'
     )
@@ -221,7 +222,7 @@ def get_unique_links(stored, ignored, arg_path):
 
 def main():
     """The place we call home"""
-    arg_path = '.'
+    arg_path = ()
     successful_links = []
     failed_links = []
     storage_links = []

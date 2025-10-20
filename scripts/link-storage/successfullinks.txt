@@ -1,4 +1,3 @@
-http://example.com
 http://professionallinuxusersgroup.github.io/course-books
 http://purl.org/dc/elements/1.1/
 http://python.org/
