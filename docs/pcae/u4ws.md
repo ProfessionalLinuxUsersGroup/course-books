@@ -56,9 +56,11 @@ could be transposed to a `.md` file.
 
 #### Discussion Post #2
 
-You and your security team have an accurate inventory after last
-week's misunderstanding. You have 110 servers currently in your inventory. What are some
-methods you can use to verify those systems are operational?
+!!! abstract "Scenario"
+
+    You and your security team have an accurate inventory after last
+    week's misunderstanding. You have 110 servers currently in your inventory. What are some
+    methods you can use to verify those systems are operational?
 
 1. How might you "touch" those servers every day?
 
