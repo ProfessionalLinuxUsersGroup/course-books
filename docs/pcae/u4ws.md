@@ -7,9 +7,8 @@ Hold your worksheets until the end to turn them in as a final submission packet.
 
 ### Resources / Important Links
 
-- [PLACEHOLDER](LINK_HERE)
-- [PLACEHOLDER](LINK_HERE)
-- [PLACEHOLDER](LINK_HERE)
+- <https://docs.ansible.com/ansible/latest/command_guide/intro_adhoc.html>
+- <https://killercoda.com/het-tanis/course/AutomationLabs/Unit4_Admin_Commands>
 
 #### Downloads
 
@@ -19,7 +18,7 @@ could be transposed to a `.md` file.
 
 - <a href="../../assets/pcae/downloads/u4/u4_worksheet.md.txt" target="_blank" download="u4_worksheet.md">:material-download: u4_worksheet.md</a>
 - <a href="../../assets/pcae/downloads/u4/u4_worksheet.txt" target="_blank" download>:material-download: u4_worksheet.txt</a>
-- <a href="../../assets/pcae/downloads/u4/u4_worksheet.docx" target="_blank" download>:material-download: u4_worksheet.docx</a>
+- <a href="../../assets/pcae/downloads/u4/u4_worksheet.pdf" target="_blank" download>:material-download: u4_worksheet.pdf</a>
 
 ### Unit 4 Recording
 

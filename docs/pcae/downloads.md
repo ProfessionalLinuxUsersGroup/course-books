@@ -37,6 +37,7 @@ Unit 3 Lab: Coming soon.
 ### Worksheet
 - <a href="../../assets/pcae/downloads/u4/u4_worksheet.md.txt" target="_blank" download="u4_worksheet.md">:material-download: u_worksheet.md</a>  
 - <a href="../../assets/pcae/downloads/u4/u4_worksheet.txt" target="_blank" download>:material-download: u4_worksheet.txt</a>  
+- <a href="../../assets/pcae/downloads/u4/u4_worksheet.pdf" target="_blank" download>:material-download: u4_worksheet.pdf</a>  
 
 ### Lab
 
