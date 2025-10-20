@@ -1,4 +1,5 @@
-# THIS IS A TEMPLATE DOCUMENT
+# Unit <N> Lab
+## <UNIT_TITLE>
 
 !!! info
 
@@ -7,24 +8,26 @@
 
 ### Resources / Important Links
 
-[Link Template](example.org)
+- [Link Template](example.org)
 
-[Link Template](example.org)
+- [Link Template](example.org)
 
-[Link Template](example.org)
+- [Link Template](example.org)
 
 ### Required Materials
 
 - Rocky 9.4+ - ProLUG Lab
-  - Or comparable Linux box
+    - Or comparable Linux box
 - root or sudo command access
 
 #### Downloads
 
 The lab has been provided for convenience below:
-
-- <a href="./assets/downloads/u/u_lab.pdf" target="_blank" download>📥 u_lab(`.pdf`)</a>
-- <a href="./assets/downloads/u/u_lab.docx" target="_blank" download>📥 u_lab(`.docx`)</a>
+<!-- Change to whatever downloads are currently available. -->
+- <a href="../../assets/BOOK/downloads/uN/uN_lab.md.txt" target="_blank" download="uN_lab.md">:material-download: uN_lab.md</a>
+- <a href="../../assets/BOOK/downloads/uN/uN_lab.txt" target="_blank" download>:material-download: uN_lab.txt</a>
+- <a href="../../assets/BOOK/downloads/uN/uN_lab.docx" target="_blank" download>:material-download: uN_lab.docx</a>
+- <a href="../../assets/BOOK/downloads/uN/uN_lab.pdf" target="_blank" download>:material-download: uN_lab.pdf</a>
 
 ## Pre-Lab Warm-Up
 
