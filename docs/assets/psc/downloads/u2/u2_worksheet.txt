@@ -15,8 +15,7 @@ There are 401 stigs for RHEL 9. If you filter in your stig viewer for sysctl the
 
 
 Unit 2 Discussion Post 2: 
-Read this: https://ciq.com/blog/demystifying-and-
-troubleshooting-name-resolution-in-rocky-linux/ or similar blogs on DNS and host file configurations.
+Read this: https://ciq.com/blog/demystifying-and-troubleshooting-name-resolution-in-rocky-linux/ or similar blogs on DNS and host file configurations.
 1. What is the significance of the nsswitch.conf file?
 2. What are security problems associated with DNS and common exploits? (May have to look into some more blogs or posts for this)
 
@@ -38,7 +37,7 @@ Links:
 * https://www.sans.org/information-security-policy/
 * https://www.sans.org/blog/the-ultimate-list-of-sans-cheat-sheets/
 * https://docs.rockylinux.org/gemstones/core/view_kernel_conf/
-* https://ciq.com/blog/demystifying-and-troubleshooting-name-resolution-in- rocky-linux/
+* https://ciq.com/blog/demystifying-and-troubleshooting-name-resolution-in-rocky-linux/
 * https://www.activeresponse.org/wp-content/uploads/2013/07/diamond.pdf
 
 

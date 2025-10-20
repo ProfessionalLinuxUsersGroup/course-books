@@ -21,7 +21,7 @@ could be transposed to a `.md` file.
 ### Unit 10 Recording
 
 <iframe
-    style="width: 100%; height: 100%; border: none; aspect-ratio: 16/9; border-radius: 1rem; background:black;"
+    style="width: 100%; height: 100%; border: none; aspect-ratio: 16/9; border-radius: 0.25rem; background:black;"
     src="https://www.youtube.com/embed/LqvoE0UXiOo?si=g2otC2JAo7O2qscC"
     title="Unit 10 Recording - ProLUG Linux Security Engineering Course - Free in Discord;
     frameborder="0;

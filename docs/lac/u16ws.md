@@ -10,7 +10,7 @@ No worksheet or discussion for this unit, course wrap up and lecture only.
 
 <iframe
     src="https://www.youtube.com/embed/VJ0Z9O_7j48"
-    style="width: 100%; height: 100%; border: none; aspect-ratio: 16/9; border-radius: 1rem; background:black"
+    style="width: 100%; height: 100%; border: none; aspect-ratio: 16/9; border-radius: 0.25rem; background:black"
     title="Unit 16 Recording - ProLUG Linux Systems Administration Course - Free in Discord"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

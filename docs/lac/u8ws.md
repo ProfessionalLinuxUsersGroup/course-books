@@ -26,7 +26,7 @@ could be transposed to a `.md` file.
 
 <iframe
     style="width: 100%; height: 100%; border: none;
-    aspect-ratio: 16/9; border-radius: 1rem; background:black"
+    aspect-ratio: 16/9; border-radius: 0.25rem; background:black"
     src="https://www.youtube.com/embed/sn_LwfIObQw?si=aBqkZL1RIzKN9mWx"
     title="Unit 7: Package Management on Linux - System Administrator Course"
     frameborder="0"

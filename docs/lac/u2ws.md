@@ -25,7 +25,7 @@ could be transposed to a `.md` file.
 
 <iframe
     src="https://www.youtube.com/embed/miVuSoHTuP4?si=9swKZSbFG0PvVp51"
-    style="width: 100%; height: 100%; border: none; aspect-ratio: 16/9; border-radius: 1rem; background:black"
+    style="width: 100%; height: 100%; border: none; aspect-ratio: 16/9; border-radius: 0.25rem; background:black"
     title="Unit 2 Recording - ProLUG Linux Systems Administration Course - Free in Discord"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 

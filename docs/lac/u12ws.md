@@ -24,7 +24,7 @@ could be transposed to a `.md` file.
 
 <iframe
     style="width: 100%; height: 100%; border: none;
-    aspect-ratio: 16/9; border-radius: 1rem; background:black"
+    aspect-ratio: 16/9; border-radius: 0.25rem; background:black"
     src="https://www.youtube.com/embed/8psu0D4rSmc?si=8QOnuGhcCA_0Fp7S"
     title="Unit 12 - Baselining and Benchmarking Systems"
     frameborder="0"

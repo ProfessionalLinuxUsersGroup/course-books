@@ -21,8 +21,7 @@ i. Do you recognize them from other IT activities?
 Unit 8 Discussion Post 2:
 Review the SRE guide to treating configurations as code. Read as
 much as you like, but focus down on the “Practical Advice” section:
-https://google.github.io/building-secure-and-reliable-
-systems/raw/ch14.html#treat_configuration_as_code
+https://google.github.io/building-secure-and-reliable-systems/raw/ch14.html#treat_configuration_as_code
 a. What are the best practices that you can use in your configuration management adherence?
 b. What are the security threats and how can you mitigate them?
 a. Why might it be good to know this as you design a CMDB or CI/CD pipeline?
