@@ -1,11 +1,15 @@
 http://example.com
 http://professionallinuxusersgroup.github.io/course-books
+http://purl.org/dc/elements/1.1/
+http://python.org/
 http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_03.html
 http://tldp.org/LDP/abs/html/arithexp.html
 http://tldp.org/LDP/abs/html/fto.html
 http://tldp.org/LDP/abs/html/tests.html
 http://www.cprogramming.com/tutorial/c-tutorial.html
+http://www.example.com
 http://www.tldp.org/LDP/lame/LAME/linux-admin-made-easy/using-cron.html
+http://www.w3.org/1999/02/22-rdf-syntax-ns
 https://ProLUG.org/
 https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_high_availability_clusters/index
 https://aide.github.io/
@@ -68,6 +72,7 @@ https://en.wikipedia.org/wiki/Cron
 https://en.wikipedia.org/wiki/Next-generation_firewall
 https://en.wikipedia.org/wiki/Truth_table
 https://en.wikipedia.org/wiki/Yellow_Dog_Linux
+https://example.com
 https://excalidraw.com
 https://firewalld.org/documentation/
 https://firewalld.org/documentation/architecture.html
@@ -223,6 +228,7 @@ https://squidfunk.github.io/mkdocs-material/getting-started/
 https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types
 https://sre.google/books/
 https://sre.google/sre-book/monitoring-distributed-systems/
+https://sre.google/workbook/implementing-slos/
 https://sre.google/workbook/monitoring/
 https://tldp.org/LDP/Bash-Beginners-Guide/html/chap_01.html
 https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html
@@ -233,6 +239,7 @@ https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview
 https://ubuntu.com/tutorials/install-ubuntu-server#1-overview
 https://vim-adventures.com/
 https://wazuh.com/platform/siem/
+https://web.archive.org/web/20230406205817/https://wiki.bash-hackers.org/
 https://wiki.debian.org/nftables
 https://wiki.rockylinux.org/rocky/repo/
 https://www.activeresponse.org/wp-content/uploads/2013/07/diamond.pdf
