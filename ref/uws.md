@@ -18,7 +18,7 @@ the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
 <!-- Change to whatever downloads are currently available. -->
-- <a href="../../assets/BOOK/downloads/uN/uN_worksheet.md.txt" target="_blank" download="uN_worksheet.md>:material-download: uN_worksheet.md</a>
+- <a href="../../assets/BOOK/downloads/uN/uN_worksheet.md.txt" target="_blank" download="uN_worksheet.md">:material-download: uN_worksheet.md</a>
 - <a href="../../assets/BOOK/downloads/uN/uN_worksheet.txt" target="_blank" download>:material-download: uN_worksheet.txt</a>
 - <a href="../../assets/BOOK/downloads/uN/uN_worksheet.docx" target="_blank" download>:material-download: uN_worksheet.docx</a>
 
