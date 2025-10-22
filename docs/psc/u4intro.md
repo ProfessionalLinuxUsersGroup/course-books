@@ -20,4 +20,4 @@ In this unit, we look at how we can seperate systems and create safe disconnects
 |**Jailed process**|**Isolation**|
 |**Ingress**|**Egress**|
 |**Exfiltration**|**Cgroups**|
-|**Namespaces**<br>- Mount, PID, IPC, UTS||
+|**Namespaces**<br>- Mount, PID, IPC, UTS|

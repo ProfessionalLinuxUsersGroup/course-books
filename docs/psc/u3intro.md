@@ -17,4 +17,4 @@ In this chapter, you will learn why AD and LDAP are popular choices.
 |:------------------:|:------------------:|
 |**LDAP**|**sssd**|
 |**oddjob**|**krb5**|
-|**realm/realmd**|**wheel (system group in RHEL**|
+|**realm/realmd**|**wheel (system group in RHEL)**|

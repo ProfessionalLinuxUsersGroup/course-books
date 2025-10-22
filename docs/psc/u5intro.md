@@ -19,4 +19,4 @@ In this unit, we will examine how this process is implemented in adjacent distri
 |:------------------:|:------------------:|
 |**Software**<br>- EPEL, BaseOS v. Appstream (in RHEL/Rocky)<br>- Other types you can find?|**httpd**|
 |**patching**|**GPG Key**|
-|**DNF/YUM**| |
+|**DNF/YUM**|

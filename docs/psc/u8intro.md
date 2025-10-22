@@ -33,4 +33,4 @@ resilient systems that can identify and self-correct unauthorized changes.
 |**Build Book / Run Book**|**Immutable Infrastructure**|
 |**Hashing **|**IaC (Infrastructure as Code)**|
 |**Orchestration**|**Automation**|
-|**AIDE (Advanced Intrusion Detection Environment)**
+|**AIDE (Advanced Intrusion Detection Environment)**|
