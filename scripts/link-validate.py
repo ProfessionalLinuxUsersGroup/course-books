@@ -1,4 +1,4 @@
-# v 1.7.2
+# v 1.7.4
 # Authored by Christian McKee - cmckee786@github.com
 # Attempts to validate links within ProLUG Course-Books repo
 
@@ -13,6 +13,7 @@
 # USE RESPONSIBLY
 
 import re
+import sys
 import argparse
 import urllib.request
 import urllib.error
@@ -77,6 +78,13 @@ def cli_args():
         help='Skip validation of URLs and print default reporting to stdout',
         dest='skip_validation'
     )
+    args_parser.add_argument(
+        '-d', '--directory',
+        type=str,
+        default=Path.cwd(),
+        help='Aggregate links from a specified directory',
+        dest='directory'
+    )
 
     return args_parser
 
@@ -136,60 +144,68 @@ def validate_link(matched_item):
 
     return link_status, matched_item
 
-def get_unique_links(stored, ignored):
+def get_unique_links(stored, ignored, arg_path):
     """ Aggregate URLs for link validation into dictionary for processing
         Returns per file total and total unique links found into list for reporting
     """
 
     stored_links = stored
     ignored_links = ignored
+    file_paths = []
     matched_links = []
     unique_links = []
     file_matches = int(0)
     total_links = int(0)
-    file_paths = [
-        _ for _ in Path('.').rglob('*')
-        if _.is_file() and _.suffix.lower() not in
-        {'.png', '.gif', '.jpg', '.jpeg', '.pdf', '.docx'}
-        and _ != Path(STORAGE)
-        and _ != Path(IGNORED)
-        and _ != Path(FAILED_REPORT)
-    ]
     link_item = {
         "link": "",
         "file": "",
         "line": ""
     }
+    for p in Path(arg_path).rglob('*'):
+        try:
+            if (p.is_file()
+                and p not in {
+                    Path(STORAGE),
+                    Path(IGNORED),
+                    Path(FAILED_REPORT)
+                }):
+                file_paths.append(p)
+            else:
+                continue
+        except PermissionError:
+            pass
 
     for path in file_paths:
-        with open(path, 'r', encoding='utf-8') as f:
-            contents = f.read().splitlines()
-            for i, line in enumerate(contents, 1):
-                str_match = PATTERN.search(line)
-                if str_match:
-                    match = str_match.group(0)
-                    if '(' in match and 'localhost' not in match:
-                        split_match = match.split('/')
-                        if '(' in split_match[-1] and ')' not in split_match[-1]:
-                            split_match[-1] = split_match[-1] + ')'
-                            match = '/'.join(split_match)
-                    elif 'localhost' in match :
+        try:
+            with open(path, 'r', encoding='utf-8') as f:
+                contents = f.read().splitlines()
+                for i, line in enumerate(contents, 1):
+                    str_match = PATTERN.search(line)
+                    if str_match:
+                        match = str_match.group(0)
+                        if '(' in match and 'localhost' not in match:
+                            split_match = match.split('/')
+                            if '(' in split_match[-1] and ')' not in split_match[-1]:
+                                split_match[-1] = split_match[-1] + ')'
+                                match = '/'.join(split_match)
+                        elif 'localhost' in match :
+                            match = ''
+                    else:
                         match = ''
-                else:
-                    match = ''
-                if match:
-                    link_item = {
-                        "link": match,
-                        "file": path,
-                        "line": i
-                    }
-                    matched_links.append(link_item)
-                    file_matches += 1
-            total_links += file_matches
-            file_matches = 0
+                    if match:
+                        link_item = {
+                            "link": match,
+                            "file": path,
+                            "line": i
+                        }
+                        matched_links.append(link_item)
+                        file_matches += 1
+                total_links += file_matches
+                file_matches = 0
+        except UnicodeDecodeError:
+            pass
 
     unique_links = list({i['link']:i for i in reversed(matched_links)}.values())
-    # print(f'bob:\n{unique_links}')
 
     print(
         f'Total links found: {ORANGE}{total_links}{RESET}\n'
@@ -202,11 +218,11 @@ def get_unique_links(stored, ignored):
     if ignored_links:
         unique_links[:] = [d for d in unique_links if d['link'] not in ignored_links]
 
-
     return unique_links
 
 def main():
     """The place we call home"""
+    arg_path = ()
     successful_links = []
     failed_links = []
     storage_links = []
@@ -222,13 +238,16 @@ def main():
             print('Successful link storage has been reset...')
             open(STORAGE, 'w', encoding='utf-8').close()
         if parser.skip_store is False:
-            print('Skipping successful link storage...')
             storage_links = get_file_links(STORAGE)
         if parser.skip_ignore is False:
-            print('Skipping ignored links storage...')
             ignored_storage_links = get_file_links(IGNORED)
+        if parser.directory and Path(parser.directory).exists():
+            arg_path = parser.directory
+        else:
+            print('Path may not exist\nExiting...')
+            sys.exit(1)
 
-        test_links = get_unique_links(storage_links, ignored_storage_links)
+        test_links = get_unique_links(storage_links, ignored_storage_links, arg_path)
 
         if test_links and parser.skip_validation is False:
             print('Attempting to resolve links for testing...')
@@ -253,6 +272,12 @@ def main():
                         print(f'{futures[future]} - Unexpected error: {e}')
 
             print()
+        if successful_links and parser.skip_store is False:
+            print('Appending successful links...')
+            with open(STORAGE, 'a', encoding='utf-8') as f_updated:
+                [f_updated.writelines(f'{link["link"]}\n') for link in successful_links]
+            sort_file(STORAGE)
+
         if failed_links and parser.skip_validation is False:
             print(f'Failed Links: {RED}{len(failed_links)}{RESET}')
             print(f'Writing report to {Path.cwd()}/{FAILED_REPORT}...')
@@ -276,16 +301,8 @@ def main():
             print('Skipped link validation!')
         else:
             print('No failed links!')
-
-        if successful_links and parser.skip_store is False:
-            print('Appending successful links...')
-            with open(STORAGE, 'a', encoding='utf-8') as f_updated:
-                [f_updated.writelines(f'{link["link"]}\n') for link in successful_links]
-            sort_file(STORAGE)
-
     except Exception as e:
         print(e)
 
 if __name__ == '__main__':
     main()
-    print('Done!')

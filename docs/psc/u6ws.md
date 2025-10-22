@@ -25,7 +25,7 @@ could be transposed to a `.md` file.
 
 ### Unit 6 Recording
   
-<iframe style="width: 100%; height: 100%; border: none; aspect-ratio: 16/9; border-radius: 1rem; background:black" src="https://www.youtube.com/embed/pnCC-FX-aag?si=Y9zt3V_f5osfmGYn" title="Unit 6 Recording - ProLUG Linux Security Engineering Course - Free in Discord" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe style="width: 100%; height: 100%; border: none; aspect-ratio: 16/9; border-radius: 0.25rem; background:black" src="https://www.youtube.com/embed/pnCC-FX-aag?si=Y9zt3V_f5osfmGYn" title="Unit 6 Recording - ProLUG Linux Security Engineering Course - Free in Discord" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 #### Discussion Post #1
 
