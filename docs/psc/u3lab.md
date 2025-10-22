@@ -6,12 +6,9 @@
 
 ### Required Materials
 
-Putty or other connection tool Lab Server  
-Root or sudo command access
-
-STIG Viewer 2.18 (download from https://public.cyber.mil/stigs/downloads/ )  
-Download the STIG for RHEL 9 and the import it into your STIG viewer  
-Create a checklist from the opened STIG for RHEL 9
+- Putty or other connection tool Lab Server  
+- Root or sudo command access
+- STIG Viewer 2.18 (download from https://public.cyber.mil/stigs/downloads/ )  
 
 #### Downloads
 
