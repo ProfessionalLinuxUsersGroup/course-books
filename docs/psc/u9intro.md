@@ -14,13 +14,9 @@ In today’s interconnected world, the integrity and security of transmitted dat
 
 ## Key Terms & Definitions
 
+|**TLS**|**Symmetric Keys**|
 |:------------------:|:------------------:|
-TLS
-Symmetric Keys
-Asymmetric Keys
-Non-Repudiation
-Anti-Replay
-Plaintext
-Cypher-Text
-Fingerprints
-Passphrase (in key generation)
+|**Asymmetric Keys**|**Non-Repudiation**|
+|**Anti-Replay**|**Plaintext**|
+|**Cypher-Text**|**Fingerprints**|
+|**Passphrase (in key generation)**|
