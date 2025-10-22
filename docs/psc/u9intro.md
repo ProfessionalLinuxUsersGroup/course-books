@@ -12,24 +12,15 @@ In today’s interconnected world, the integrity and security of transmitted dat
 4. Explore the process of certificate signing and validation (PKI).
 5. Use tools like `openssl` to generate keys and inspect certificates.
 
-## Prerequisites
-
-1. Basic command line navigation and editing skills (`vi`, `cat`, `grep`)
-2. Experience with editing config files using Vim
-3. Familiarity with key generation (Learned in prior chapters)
-
-## Relevance & Context
-
-Certificates and Keys ensure trust and authenticity in both human and machine interactions. Whether securing APIs, internal services, or user sessions over HTTPS, public key infrastructure (PKI) allows systems to validate each other’s identities and encrypt traffic accordingly. These concepts are foundational in implementing secure DevOps pipelines, enforcing compliance standards like HIPAA or PCI-DSS, and ensuring resilience in infrastructure. Understanding how keys are generated, used, and validated is a critical skill for system administrators, security engineers, and DevOps professionals alike.
-
 ## Key Terms & Definitions
 
-- TLS
-- Symmetric Keys
-- Asymmetric Keys
-- Non-Repudiation
-- Anti-Replay
-- Plaintext
-- Cypher-Text
-- Fingerprints
-- Passphrase (in key generation)
+|:------------------:|:------------------:|
+TLS
+Symmetric Keys
+Asymmetric Keys
+Non-Repudiation
+Anti-Replay
+Plaintext
+Cypher-Text
+Fingerprints
+Passphrase (in key generation)

@@ -14,45 +14,21 @@ This unit focuses on Nohup environments and firewalls.
 ---
 
 1. **Become familiar with the `nohup` command:**
-
-   - Learn real-life use cases of the `nohup` command.
-   - Understand the correlation between jump boxes and Nohup environments, including `screen` and `tmux`.
+    - Learn real-life use cases of the `nohup` command.
+    - Understand the correlation between jump boxes and Nohup environments, including `screen` and `tmux`.
 
 2. **Implement and manage Nohup environments:**
-
-   - Learn how `nohup` allows processes to continue running after a user logs out, ensuring that long-running tasks are not interrupted.
-   - Develop skills in managing background processes effectively using `nohup`, `screen`, and `tmux`.
+    - Learn how `nohup` allows processes to continue running after a user logs out, ensuring that long-running tasks are not interrupted.
+    - Develop skills in managing background processes effectively using `nohup`, `screen`, and `tmux`.
 
 3. **Develop effective troubleshooting methodologies:**
-   - Acquire systematic approaches to diagnosing firewall misconfigurations, network connectivity issues, and unauthorized access attempts.
-   - Apply structured troubleshooting strategies to minimize downtime and maintain high availability.
-
-## Prerequisites
-
----
-
-- A basic understanding of how processes work.
-- Familiarity with the `firewalld` service.
-- The ability to understand `.xml` files.
+    - Acquire systematic approaches to diagnosing firewall misconfigurations, network connectivity issues, and unauthorized access attempts.
+    - Apply structured troubleshooting strategies to minimize downtime and maintain high availability.
 
 ## Key Terms and Definitions
 
----
-
-**Firewall**
-
-**Zone**
-
-**Service**
-
-**DMZ (Demilitarized Zone)**
-
-**Proxy**
-
-**Stateful Packet Filtering**
-
-**Stateless Packet Filtering**
-
-**WAF (Web Application Firewall)**
-
-**NGFW (Next-Generation Firewall)**:
+|**Firewall**|**Zone**|
+| :------------------: | :------------------: |
+|**DMZ (Demilitarized Zone)**|**Proxy**|
+|**Stateful Packet Filtering**|**WAF (Web Application Firewall)**|
+|**NGFW (Next-Generation Firewall)**| |

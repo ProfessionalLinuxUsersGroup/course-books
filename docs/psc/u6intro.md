@@ -24,54 +24,14 @@ By the end of Unit 6, students will:
 4. Analyze real-world security events using log data and query languages.
 5. Learn how log immutability and integrity contribute to reliable forensics and compliance.
 
-## Relevance & Context
-
-Logs are often the first and best source of truth when diagnosing an incident,
-auditing a system, or responding to a breach.  
-Without well-structured, searchable, and preserved logs, response teams are blind to
-what actually happened.
-
-This unit trains students to think like operators and defenders -- ensuring logs are
-complete, available, immutable, and actionable.
-
-It builds directly on previous units around compliance and auditing, preparing
-learners to create scalable observability strategies that support both security and
-performance goals.
-
-## Prerequisites
-
-Before beginning Unit 6, students should:
-
-1. Be comfortable working at the command line using `journalctl`, `grep`, `less`, and
-   related tools.
-2. Understand system service management with `systemctl`.
-3. Have basic familiarity with syslog, log rotation, and the concept of standard
-   input/output streams.
-4. Be able to interact with YAML and JSON-formatted configuration files.
-5. Have installed or downloaded STIG Viewer 2.18 for compliance reference.
-
 ## Key terms and Definitions
 
-Types of Logs
-
-- Application Logs  
-- Host Logs  
-- Network Logs  
-- Database Logs
-
-Log Structure
-
-- RFC 3164 BSD Syslog
-- RFC 5424 IETF Syslog
-- Systemd Journal
-
-Log Rotation
-
-Log Aggregation
-
-- ELK Stack
-- Splunk
-- Loki
-- Graylog
-
-SIEM (Security Information and Event Management)
+|**Types of Logs**|**Application Logs**|
+|:------------------:|:------------------:|
+|**Host Logs**|**Network Logs**|
+|**Database Logs**|**Log Structure**|
+|**RFC 3164 BSD Syslog**|**RFC 5424 IETF Syslog**|
+|**Systemd Journal**|**Log Rotation**|
+|**Log Aggregation**|**ELK Stack**|
+|**Splunk**|**Loki**|
+|**Graylog**|**SIEM (Security Information and Event Management)**|

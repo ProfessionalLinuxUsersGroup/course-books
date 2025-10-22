@@ -22,59 +22,16 @@ You’ll explore structured approaches like the **Scientific Method**, **5 Whys*
 - Leverage concepts from **Six Sigma** and **5S methodology** to organize your workflows
 - Document and communicate incidents effectively with post-mortem writeups
 
-## Relevance & Context
-
----
-
-Troubleshooting is not guesswork — it’s a discipline. Whether you’re debugging a failed deployment or analyzing a high watermark in system performance, incident management requires both technical skill and structured reasoning.
-
-This unit bridges **engineering troubleshooting** and **administrative troubleshooting**, providing multiple models to approach problems methodically. These frameworks are used by professionals across industries to maintain uptime, solve complex problems, and continuously improve system reliability.
-
-## Prerequisites
-
----
-
-**Before starting Unit 15, you should have**:
-
-- A working knowledge of **Linux system administration**
-- Familiarity with logs, alerts, and system metrics
-- Understanding of basic **monitoring and baseline performance concepts**
-- Comfort using Linux command-line tools and interpreting output
-
 ## Key Terms and Definitions
 
----
+|**Incident**|**Problem**|
+|:------------------:|:------------------:|
+|**FMEA**|**Six Sigma**|
+|**TQM**|**Post Mortem**|
+|**ScientificMethod**|**Iterative**|
+|**Discrete Data**| **Discrete Data** - Ordinal|
+|**Discrete Data** - Nominal(binary - attribute)|**Continuousdata**|
+|**Risk Priority Number(RPN)**|**5 Whys**|
+|**Fishbone Diagram (Ishikawa)**|**Fault Tree Analysis(FTA)**|
+|**PDCA**|**SIPOC**|
 
-**Incident**  
-
-**Problem**  
-
-**FMEA**  
-
-**Six Sigma**  
-
-**TQM**  
-
-**Post Mortem**  
-
-**Scientific Method**  
-
-**Iterative**  
-
-**Discrete data**  
-  - Ordinal
-  - Nominal (binary - attribute)
-
-**Continuous data**  
-
-**Risk Priority Number (RPN)**  
-
-**5 Whys**  
-
-**Fishbone Diagram (Ishikawa)**  
-
-**Fault Tree Analysis (FTA)**  
-
-**PDCA**  
-
-**SIPOC**
