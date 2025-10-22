@@ -1,7 +1,8 @@
 # Unit 1 Lab - Build Standards and Compliance
 
-> If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot`
-> the machine from the command line so that other students will have the intended environment.
+!!! info
+
+    If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot` the machine from the command line so that other students will have the intended environment.
 
 ### Required Materials
 
@@ -131,4 +132,6 @@ ss -ntulp | grep 3306
     - What type of control is being implemented?
     - Is it set properly on your system?
 
-> Be sure to `reboot` the lab machine from the command line when you are done.
+!!! info
+
+    Be sure to `reboot` the lab machine from the command line when you are done.

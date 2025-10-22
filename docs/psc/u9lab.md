@@ -1,5 +1,15 @@
 # Unit 9 Lab - Certificate and Key Madness
 
+!!! info
+
+    If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot` the machine from the command line so that other students will have the intended environment.
+
+### Required Materials
+
+- Putty or other connection tool Lab Server
+- Root or sudo command access
+- STIG Viewer 2.18 (download from <https://public.cyber.mil/stigs/downloads/> )
+
 ## Lab 🧪
 
 These labs focus on pulling metric information and then visualizing that data quickly on dashboards for real time analysis.
@@ -40,3 +50,7 @@ could be transposed to a `.md` file.
 
     - How does that align with your understanding of zero-trust? if you haven't read about zero-trust, start here:
     - <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf>
+
+!!! info
+
+    Be sure to `reboot` the lab machine from the command line when you are done.

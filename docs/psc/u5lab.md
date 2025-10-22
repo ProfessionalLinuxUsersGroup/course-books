@@ -1,7 +1,8 @@
 # Unit 5 Lab - Repos and Patching
 
-> If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot`
-> the machine from the command line so that other students will have the intended environment.
+!!! info
+
+    If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot` the machine from the command line so that other students will have the intended environment.
 
 ### Required Materials
 
@@ -247,4 +248,6 @@ run their own repo on their network.
 3. Make a pull request to improve the enterprise patching tool that you just used. Write up, for the
    group, why you need that change and how it improves the efficacy of the patching.
 
-> Be sure to `reboot` the lab machine from the command line when you are done.
+!!! info
+
+    Be sure to `reboot` the lab machine from the command line when you are done.

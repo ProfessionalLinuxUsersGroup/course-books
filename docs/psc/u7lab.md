@@ -1,7 +1,8 @@
 # Unit 7 Lab - Monitoring and Alerting
 
-> If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot`
-> the machine from the command line so that other students will have the intended environment.
+!!! info
+
+    If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot` the machine from the command line so that other students will have the intended environment.
 
 ### Required Materials
 
@@ -67,4 +68,6 @@ These labs focus on pulling metric information and then visualizing that data qu
 
     - What is the relationship between critical and warning by default?
 
-> Be sure to `reboot` the lab machine from the command line when you are done.
+!!! info
+
+    Be sure to `reboot` the lab machine from the command line when you are done.
