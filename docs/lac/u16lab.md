@@ -40,39 +40,36 @@ To complete this event the following three must be correct.
 
 1. Web server must be running.
 
-    -  HINT:
-     ```bash linenums="1"
-     systemctl status httpd
-     ```
-
-<!-- - Answer: -->
-<!--   ```bash linenums="1" -->
-<!--   systemctl enable --now httpd # or some variation of that must have been run -->
-<!--   ``` -->
+    - HINT:
+      ```bash linenums="1"
+      systemctl status httpd
+      ```
+    <!-- - Answer: -->
+    <!--   ```bash linenums="1" -->
+    <!--   systemctl enable --now httpd # or some variation of that must have been run -->
+    <!--   ``` -->
 
 2. Web server must respond on port 80.
 
-    -  HINT: Can you check the open ports?
-
-<!-- - Answer: -->
-<!--   ```bash linenums="1" -->
-<!--   ss -ntulp  # Will show port 80 -->
-<!--   ``` -->
-<!-- The server is currently set on `8087` and needs to be fixed in `/etc/httpd/conf/http.conf`. -->
-<!-- The "Listen 8087" line must be changed to "Listen 80" and the service restarted `systemctl restart httpd`. -->
-
+    - HINT: Can you check the open ports?
+    <!-- - Answer: -->
+    <!--   ```bash linenums="1" -->
+    <!--   ss -ntulp  # Will show port 80 -->
+    <!--   ``` -->
+    <!-- The server is currently set on `8087` and needs to be fixed in `/etc/httpd/conf/http.conf`. -->
+    <!-- The "Listen 8087" line must be changed to "Listen 80" and the service restarted `systemctl restart httpd`. -->
+ 
 3. Ensure that the server can be reached by external connection attempts on port 80.
 
     -  HINT: Is the firewall running?
        ```bash linenums="1"
        systemctl status firewalld
        ```
-
-<!-- - Answer: Easiest is to turn off the firewall. -->
-<!--   ```bash linenums="1" -->
-<!--   systemctl stop firewalld. -->
-<!--   ``` -->
-<!--   - If they want to open the port, they can do that too. -->
+    <!-- - Answer: Easiest is to turn off the firewall. -->
+    <!--   ```bash linenums="1" -->
+    <!--   systemctl stop firewalld. -->
+    <!--   ``` -->
+    <!--   - If they want to open the port, they can do that too. -->
 
 <div class="warning">
 <b>Reboot the lab machine when finished.</b>
@@ -96,34 +93,31 @@ To complete this event the following four must be correct.
 1. The three disks must be properly set up in LVM.
 
     -  HINT: use `mkfs` to make a filesystem.
-
-<!-- - Answer: -->
-<!--   - First identify all disks: `fdisk -l | grep -i xvd`. Then `pvcreate /dev/xvd<whatever>`. -->
-<!--   - Then `vgcreate space /dev/xvd<disk1> /dev/xvd<disk2> /dev/xvd<disk3>`. -->
-<!--   - Then `lvcreate -n space -l +100%FREE space_vg` -->
+    <!-- - Answer: -->
+    <!--   - First identify all disks: `fdisk -l | grep -i xvd`. Then `pvcreate /dev/xvd<whatever>`. -->
+    <!--   - Then `vgcreate space /dev/xvd<disk1> /dev/xvd<disk2> /dev/xvd<disk3>`. -->
+    <!--   - Then `lvcreate -n space -l +100%FREE space_vg` -->
 
 2. EXT4 or XFS must be installed on the logical volume.
 
     -  HINT: Use your `pvs`, `vgs`, `lvs` tools
-
-<!-- - Answer: -->
-<!--   ```bash linenums="1" -->
-<!--   mkfs.ext4 /dev/mapper/<name of logical volume> -->
-<!--   ``` -->
+    <!-- - Answer: -->
+    <!--   ```bash linenums="1" -->
+    <!--   mkfs.ext4 /dev/mapper/<name of logical volume> -->
+    <!--   ``` -->
 
 3. `/space` must be created and mounted off on this filesystem.
 
     -  Hint: Make the directory
-
-<!-- - Answer: -->
-<!--   ```bash linenums="1" -->
-<!--   mkdir /space -->
-<!--   vi /etc/fstab -->
-<!--   ``` -->
-<!--   Add an entry like this: -->
-<!--   ```plaintxt -->
-<!--   /dev/mapper/<name of logical volume> /space <NFS or XFS> defaults 1 2 -->
-<!--   ``` -->
+    <!-- - Answer: -->
+    <!--   ```bash linenums="1" -->
+    <!--   mkdir /space -->
+    <!--   vi /etc/fstab -->
+    <!--   ``` -->
+    <!--   Add an entry like this: -->
+    <!--   ```plaintxt -->
+    <!--   /dev/mapper/<name of logical volume> /space <NFS or XFS> defaults 1 2 -->
+    <!--   ``` -->
 
 4. `/etc/fstab` or `systemd` must have an entry for `/space` (do not reboot during
    the lab, as this will not work).
@@ -147,21 +141,19 @@ To complete this event the following two must be correct.
 1. Fix the system to be able to update via `dnf`.
 
     -  HINT: DNF isn’t updating, so where are the repos that it looks for?
-
-<!-- - Answer: -->
-<!--   ```bash linenums="1" -->
-<!--   vi /etc/yum.repos.d/rocky.repo -->
-<!--   ``` -->
-<!--   Look for `enabled=0`. This needs to be changed back to `1`. -->
-<!--     * If you need a reference, the original is over in `/etc/yum.repos.d/rocky.repo.orig`. -->
-<!--       The EPEL repo is busted the same way, as it needs to be enabled. -->
+    <!-- - Answer: -->
+    <!--   ```bash linenums="1" -->
+    <!--   vi /etc/yum.repos.d/rocky.repo -->
+    <!--   ``` -->
+    <!--   Look for `enabled=0`. This needs to be changed back to `1`. -->
+    <!--     * If you need a reference, the original is over in `/etc/yum.repos.d/rocky.repo.orig`. -->
+    <!--       The EPEL repo is busted the same way, as it needs to be enabled. -->
 
 2. Verify that kernel updates are happening.
 
     -  HINT: Where can updates be excluded in DNF or Yum?
-
-<!-- - Answer: You need to comment out the line in `/etc/yum.conf` about `"exclude=kernel*"` because -->
-<!--   this is stopping any kernel updates from happening. -->
+    <!-- - Answer: You need to comment out the line in `/etc/yum.conf` about `"exclude=kernel*"` because -->
+    <!--   this is stopping any kernel updates from happening. -->
 
 !!! info
 

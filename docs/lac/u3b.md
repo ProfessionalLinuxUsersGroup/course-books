@@ -129,7 +129,6 @@ cat /etc/fstab
    ```
 
 2. Ensure correct fstab entry for persistence:
-
    ```ini
    # Add to /etc/fstab (replace UUID with actual value)
    UUID=xxx-yyy-zzz /mnt/data ext4 defaults 0 2
