@@ -14,7 +14,7 @@
 ### Required Materials
 
 - Rocky 9.4+ - ProLUG Lab
-  - Or comparable Linux box
+    - Or comparable Linux box
 - root or sudo command access
 
 #### Downloads
@@ -38,7 +38,6 @@ The lab has been provided for convenience below:
    ```bash linenums="1"
    which iostat
    ```
-
    If it’s not there:
    ```bash linenums="1"
    # Find which package provides iostat
@@ -58,7 +57,6 @@ The lab has been provided for convenience below:
    ```bash linenums="1"
    which stress
    ```
-
    If it’s not there:
    ```bash linenums="1"
    # Find which package provides stress
@@ -76,7 +74,6 @@ The lab has been provided for convenience below:
    ```bash linenums="1"
    which iperf3
    ```
-
    If it’s not there:
    ```bash linenums="1"
    # Find which package provides iperf3
@@ -201,47 +198,46 @@ issues. No one cares what you think, they care what you can show, or prove.
 
 - Do we have a system baseline to compare against?
 
-  - No? Make a baseline.
-    ```bash linenums="1"
-    iostat -xh 1 10
-    ```
+    - No? Make a baseline.
+      ```bash linenums="1"
+      iostat -xh 1 10
+      ```
 
 - Can we say that this system is not under heavy load?
 - What does a system under no load look like performing tasks in our environment?
 
-  - Assuming our systems are not running under load, capture SAR and baseline stats.
-  - Perform some basic tasks and get their completion times.
+    - Assuming our systems are not running under load, capture SAR and baseline stats.
+    - Perform some basic tasks and get their completion times.
 
-    - Writing/deleting 3000 empty files #modify as needed for your system
-    ```bash linenums="1"
-    # Speed: ~10s
-    time for i in `seq 1 3000`; do touch testfile$i; done
+        - Writing/deleting 3000 empty files #modify as needed for your system
+          ```bash linenums="1"
+          # Speed: ~10s
+          time for i in `seq 1 3000`; do touch testfile$i; done
 
-    # Removing them
-    time for i in `seq 1 3000`; do rm -rf testfile$i; done
+          # Removing them
+          time for i in `seq 1 3000`; do rm -rf testfile$i; done
 
-    # Writing large files
-    for i in `seq 1 5`; do time dd if=/dev/zero of=/root/lab_baseline/sizetest$i bs=1024k count=1000; done
+          # Writing large files
+          for i in `seq 1 5`; do time dd if=/dev/zero of=/root/lab_baseline/sizetest$i bs=1024k count=1000; done
 
-    # Removing the files
-    for i in `seq 1 5`; do rm -rf sizetest$i ; done
-    ```
+          # Removing the files
+          for i in `seq 1 5`; do rm -rf sizetest$i ; done
+          ```
 
-    - Testing processor speed
-      ```bash linenums="1"
-      time $(i=0; while (( i < 999999 )); do (( i ++ )); done)
-      # if this takes your system under 10 seconds, add a 9
-      ```
+        - Testing processor speed
+          ```bash linenums="1"
+          time $(i=0; while (( i < 999999 )); do (( i ++ )); done)
+          # if this takes your system under 10 seconds, add a 9
+          ```
 
-    - Alternate processor speed test
-    ```bash linenums="1"
-    time dd if=/dev/urandom bs=1024k count=20 | bzip2 -9 >> /dev/null
-    ```
+        - Alternate processor speed test
+          ```bash linenums="1"
+          time dd if=/dev/urandom bs=1024k count=20 | bzip2 -9 >> /dev/null
+          ```
+          This takes random numbers in blocks, zips them, and then throws them away.  
+          Tune to about ~10 seconds as needed.  
 
-    This takes random numbers in blocks, zips them, and then throws them away.  
-     Tune to about ~10 seconds as needed
-
-* What is the difference between systems under load with and without the agent?
+- What is the difference between systems under load with and without the agent?
 
 Run a load test (with `stress`) of what the agent is going to do against the system.
 
