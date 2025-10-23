@@ -80,7 +80,7 @@ tcp     LISTEN   0        4096                    *:8080                   *:*  
 
 1. What do you think the problem might be?
 
-   - How will you test this?
+    -  How will you test this?
 
 2. The developer tells you that he’s pulling a local image. Do you find this to be
    true, or is something else happening in their `run` command?
@@ -123,9 +123,9 @@ Repository:
 1. Find a blog on deployment of some service or application in a container that interests you.  
    See if you can get the deployment working in the lab.
 
-   - What worked well?
-   - What did you have to troubleshoot?
-   - What documentation can you make to be able to do this faster next time?
+    -  What worked well?
+    -  What did you have to troubleshoot?
+    -  What documentation can you make to be able to do this faster next time?
 
 2. Run this scenario and play with K3s: <https://killercoda.com/k3s/scenario/intro>
 
