@@ -13,7 +13,7 @@
 
 - Putty or other connection tool
 - Rocky 9.4+ - ProLUG Lab
-  - Or comparable Linux box
+    - Or comparable Linux box
 - root or sudo command access
 
 #### Downloads

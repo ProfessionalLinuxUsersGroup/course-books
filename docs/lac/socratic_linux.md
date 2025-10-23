@@ -463,7 +463,7 @@
 <summary>Can you describe the 7 fields of the /etc/passwd?</summary>
 
 - `Yes`
-  - `Colon Delimeted `
+    - `Colon Delimeted `
     Username : Password : UID : Primary Group GUID : Comment : Home : Default Shell
 
 <details>

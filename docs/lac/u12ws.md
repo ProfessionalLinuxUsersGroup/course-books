@@ -90,7 +90,7 @@ storage system and the new storage system.
 1. Write up a test procedure of how you may test these two systems.
 
 2. How are you assuring these test are objective?
-   - What is meant by the term Ceteris Paribus, in this context?
+    -  What is meant by the term Ceteris Paribus, in this context?
 
 <div class="warning">
 
@@ -132,18 +132,18 @@ Analytics:
 1. Analyzing data may open up a new field of interest to you. Go through some of the  
    free lessons on Kaggle, here: https://www.kaggle.com/learn
 
-   - What did you learn?
-   - How will you apply these lessons to data and monitoring you have already  
+    -  What did you learn?
+    -  How will you apply these lessons to data and monitoring you have already  
      collected as a system administrator?
 
 2. Find a blog or article that discusses the 4 types of data analytics.
 
-   - What did you learn about past operations?
-   - What did you learn about predictive operations?
+    -  What did you learn about past operations?
+    -  What did you learn about predictive operations?
 
 3. Download Spyder IDE (Open source).
-   - Find a blog post or otherwise try to evaluate some data.
-   - Perform some Linear regression. My block of code (but this requires some  
+    -  Find a blog post or otherwise try to evaluate some data.
+    -  Perform some Linear regression. My block of code (but this requires some  
      additional libraries to be added. I can help with that if you need it.)
      ```python
      import matplotlib.pyplot as plt

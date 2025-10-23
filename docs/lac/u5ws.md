@@ -95,13 +95,13 @@ Map the Internal ProLUG Network (`192.168.200.0/24`):
 
 2. Read this page: <https://owasp.org/www-project-top-ten/>
 
-   - What is the OWASP Top Ten?
-   - Why is this important to know as a system administrator?
+    -  What is the OWASP Top Ten?
+    -  Why is this important to know as a system administrator?
 
 3. Read this article: <https://www.cobalt.io/blog/defending-against-23-common-attack-vectors>
 
-   - What is an attack vector?
-   - Why might it be a good idea to keep up to date with these?
+    -  What is an attack vector?
+    -  Why might it be a good idea to keep up to date with these?
 
 ## Reflection Questions
 

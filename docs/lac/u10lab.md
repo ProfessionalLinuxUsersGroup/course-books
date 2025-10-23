@@ -15,7 +15,7 @@
 ### Required Materials
 
 - Rocky 9.4+ - ProLUG Lab
-  - Or comparable Linux box
+    - Or comparable Linux box
 - root or sudo command access
 
 #### Downloads
@@ -176,7 +176,10 @@ kubectl create deployment redis-deploy -n my-test --image=redis --replicas=2
 Your team reports an issue with the cluster:
 
 ```bash linenums="1"
-[root@Test_Cluster1 ~]# kubectl get nodes
+kubectl get nodes
+```
+Output:
+```plaintext
 NAME            STATUS      ROLES                AGE     VERSION
 Test_Cluster1   Ready       control-plane,master 17h     v1.30.6+k3s1
 Test_Cluster2   NotReady    worker               33m     v1.29.6+k3s1
@@ -209,12 +212,14 @@ journalctl -xeu k3s
 
 At the end of this lab, you should:
 
-✅ Have a fully operational K3s Kubernetes cluster.  
-✅ Be able to deploy and expose containerized applications.  
-✅ Know how to troubleshoot common Kubernetes errors.  
-✅ Understand security best practices for Kubernetes deployments.
+- Have a fully operational K3s Kubernetes cluster.  
+- Be able to deploy and expose containerized applications.  
+- Know how to troubleshoot common Kubernetes errors.  
+- Understand security best practices for Kubernetes deployments.
 
-📌 Next Steps: Continue testing deployments, set up monitoring tools like Prometheus or Grafana, and explore Ingress Controllers to manage external access.
+Next Steps: Continue testing deployments, set up monitoring tools like 
+Prometheus or Grafana, and explore Ingress Controllers to manage external 
+access.
 
 !!! info
 

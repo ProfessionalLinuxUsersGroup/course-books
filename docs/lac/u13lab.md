@@ -6,15 +6,15 @@
 
 ### Resources / Important Links
 
-- <https://killercoda.com/het-tanis/course/Linux-Labs/207-OS_STIG_Scan_with_SCC_Tool>
-- <https://public.cyber.mil/stigs/srg-stig-tools/>
-- <https://nvd.nist.gov/vuln/search>
+-   <https://killercoda.com/het-tanis/course/Linux-Labs/207-OS_STIG_Scan_with_SCC_Tool>
+-   <https://public.cyber.mil/stigs/srg-stig-tools/>
+-   <https://nvd.nist.gov/vuln/search>
 
 ### Required Materials
 
-- Rocky 9.4+ - ProLUG Lab
-  - Or comparable Linux box
-- root or sudo command access
+-   Rocky 9.4+ - ProLUG Lab
+    -   Or comparable Linux box
+-   root or sudo command access
 
 #### Downloads
 
@@ -31,29 +31,29 @@ The lab has been provided for convenience below:
 
 1. `ss -ntulp`
 
-   - What ports are open on this server?
-   - What is open on port 9080?
-   - What does this service do?
+    - What ports are open on this server?
+    - What is open on port 9080?
+    - What does this service do?
 
 2. `systemctl --failed`
 
-   - Are there any failed units?
+    - Are there any failed units?
 
 3. `systemctl list-units --state=active`
 
-   - About how many active units are there?
-     - `systemctl list-units --state=active | wc -l`
+    - About how many active units are there?
+        - `systemctl list-units --state=active | wc -l`
 
 4. `rpm -qa | wc -l`
 
-   - Approximately how many software packages do you have?
+    - Approximately how many software packages do you have?
 
 5. `rpm -qa | grep -i ssh`
 
-   - How many ssh packages do you have?
-   - What is the version of openssh?
-   - Do you know if there are any known vulnerabilities for that version?
-     - <https://nvd.nist.gov/vuln/search>
+    - How many ssh packages do you have?
+    - What is the version of openssh?
+    - Do you know if there are any known vulnerabilities for that version?
+        - <https://nvd.nist.gov/vuln/search>
 
 ## Lab 🧪
 
@@ -89,18 +89,17 @@ Look in the results to see output.
 ### Harden the system
 
 1. Harden sshd
+    <img src="../../assets/lac/downloads/u13/image2.jpeg"></img>
 
-   <img src="../../assets/lac/downloads/u13/image2.jpeg"></img>
-
-   - Is your system hardened in this capacity?
-   - How did you check?
-   - Did the fix check work for you?
-   - How did you check?
+    - Is your system hardened in this capacity?
+    - How did you check?
+    - Did the fix check work for you?
+    - How did you check?
 
 2. Remove unneeded Software
 
-   - Read about cowsay – `man cowsay`
-   - Remove cowsay – `dnf remove cowsay`
+    - Read about cowsay – `man cowsay`
+    - Remove cowsay – `dnf remove cowsay`
 
 <img src="../../assets/lac/downloads/u13/image3.png"></img>
 

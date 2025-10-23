@@ -118,10 +118,10 @@ HIPS:
 
 1. Run through this lab: <https://killercoda.com/het-tanis/course/Linux-Labs/107-server-startup-process>
 
-   - How does this help you better understand the discussion 13-2 question?
+    -  How does this help you better understand the discussion 13-2 question?
 
 2. Run through this lab: <https://killercoda.com/het-tanis/course/Linux-Labs/203-updating-golden-image>
-   - How does this help you better understand the process of hardening systems?
+    -  How does this help you better understand the process of hardening systems?
 
 ## Reflection Questions
 

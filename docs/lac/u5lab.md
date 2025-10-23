@@ -14,7 +14,7 @@
 ### Required Materials
 
 - Rocky 9.4+ - ProLUG Lab
-  - Or comparable Linux box
+    - Or comparable Linux box
 - root or sudo command access
 
 #### Downloads
@@ -33,18 +33,18 @@ Exercises (Warmup to quickly run through your system and practice commands)
 1. `mkdir lab_users`
 2. `cd /lab_users`
 3. `cat /etc/passwd`
-   - We'll be examining the contents of this file later
+    - We'll be examining the contents of this file later
 4. `cat /etc/passwd | tail -5`
-   - What did this do to the output of the file?
+    - What did this do to the output of the file?
 5. `cat /etc/passwd | tail -5 | nl`
 6. `cat /etc/passwd | tail -5 | awk -F : '{print $1, $3, $7}'`
-   - What did that do and what do each of the `$#` represent?
-   - Can you give the 2nd, 5th, and 6th fields?
+    - What did that do and what do each of the `$#` represent?
+    - Can you give the 2nd, 5th, and 6th fields?
 7. `cat /etc/passwd | tail -5 | awk -F : '{print $NF}'`
-   - What does this `$NF` mean? Why might this be useful to us as administrators?
+    - What does this `$NF` mean? Why might this be useful to us as administrators?
 8. `alias`
-   - Look at the things you have aliased.
-   - These come from defaults in your `.bashrc` file. We'll configure these later
+    - Look at the things you have aliased.
+    - These come from defaults in your `.bashrc` file. We'll configure these later
 9. `cd /root`
 10. `ls -l`
 11. `ll`
@@ -81,31 +81,27 @@ Browsers sometimes like to format characters in a way that doesn't always play n
 There are 4 files that comprise of the shadow password suite. We'll investigate them a bit and look at
 how they secure the system. The four files are `/etc/passwd`, `/etc/group`, `/etc/shadow`, and `/etc/gshadow`.
 
-1. Look at each of the files and see if you can determine some basic information about them
+- Look at each of the files and see if you can determine some basic information about them
    ```bash linenums="1"
    more /etc/passwd
    more /etc/group
    more /etc/shadow
    more /etc/gshadow
    ```
-
    There is one other file you may want to become familiar with:
    ```bash linenums="1"
    more /etc/login.defs
    ```
-
    Check the file permissions:
    ```bash linenums="1"
    ls -l /etc/passwd
    ```
-
-   Do this for each file to see how their permissions are set.
-
+   Do this for each file to see how their permissions are set.  
    You may note that `/etc/passwd` and `/etc/group` are readable by everyone on the system
    but `/etc/shadow` and `/etc/gshadow` are not readable by anyone on the system.
 
-2. Anatomy of the `/etc/passwd` file
-   `/etc/passwd` is broken down like this, a `:` (colon) delimited file:
+- Anatomy of the `/etc/passwd` file
+  `/etc/passwd` is broken down like this, a `:` (colon) delimited file:
 
    | Username | Password | User ID (UID) | Group ID (GID) | User Info              | Home Directory                             | Login Shell     |
    | -------- | -------- | ------------- | -------------- | ---------------------- | ------------------------------------------ | --------------- |
@@ -115,21 +111,22 @@ how they secure the system. The four files are `/etc/passwd`, `/etc/group`, `/et
 
 Are there always 7 fields?
 
-3. Anatomy of the `/etc/group` file
-   `/etc/group` is broken down like this, a `:` (colon) delimited file:
+- Anatomy of the `/etc/group` file
+  `/etc/group` is broken down like this, a `:` (colon) delimited file:
 
    | Groupname | Password | Group ID | Group Members            |
    | --------- | -------- | -------- | ------------------------ |
    | `puppet`  | `x`      | `991`    | `foreman, foreman-proxy` |
 
-   - `cat` or `more` the file to verify these are the values you see. Are there always 4 fields?
+- `cat` or `more` the file to verify these are the values you see. Are there always 4 fields?
 
-4. We're not going to break down the `g` files, but there are a lot of resources online that
-   can show you this same information.
-   Suffice it to say, the passwords, if they exist, are stored in
-   an md5 digest format up to RHEL 5. RHEL 6,7,8 and 9 use SHA-512 hash.
-   We cannot allow these to be read by just anyone because then they could brute force
-   and try to figure out our passwords.
+We're not going to break down the `g` files, but there are a lot of resources online that
+can show you this same information.
+
+Suffice it to say, the passwords, if they exist, are stored in
+an md5 digest format up to RHEL 5. RHEL 6,7,8 and 9 use SHA-512 hash.
+We cannot allow these to be read by just anyone because then they could brute force
+and try to figure out our passwords.
 
 #### Creating and modifying local users
 
@@ -140,90 +137,92 @@ according to active directory.
 Your `/etc/login.defs` file is default and contains a lot of the values that control how our next commands
 work
 
-5. Creating users
-   ```bash linenums="1"
-   useradd user1
-   useradd user2
-   useradd user3
-   ```
+##### **Creating Users**
+- Create users with `useradd`:
+  ```bash linenums="1"
+  useradd user1
+  useradd user2
+  useradd user3
+  ```
 
-   Do a quick check on our main files:
-   ```bash linenums="1"
-   tail -5 /etc/passwd
-   tail -5 /etc/shadow
-   ```
+- Do a quick check on our main files:
+  ```bash linenums="1"
+  tail -5 /etc/passwd
+  tail -5 /etc/shadow
+  ```
 
-   What `UID` and `GID` were each of these given? Do they match up?
-   Verify your users all have home directories. Where would you check this?
-   ```bash linenums="1"
-   ls /home
-   ```
+- What `UID` and `GID` were each of these given? Do they match up?
+  Verify your users all have home directories. Where would you check this?
+  ```bash linenums="1"
+  ls /home
+  ```
 
-   Your users `/home/<username>` directories have hidden files that were all pulled from a
-   directory called `/etc/skel`. If you wanted to test this and verify you might do something like
-   this:
-   ```bash linenums="1"
-   cd /etc/skel
-   vi .bashrc
-   ```
+- Your users `/home/<username>` directories have hidden files that were all pulled from a
+  directory called `/etc/skel`. If you wanted to test this and verify you might do something like
+  this:
+  ```bash linenums="1"
+  cd /etc/skel
+  vi .bashrc
+  ```
 
-   Use `vi` commands to add the line:
-   ```bash linenums="1"
-   alias dinosaur='echo "Rarw"'
-   ```
+- Use `vi` commands to add the line:
+  ```bash linenums="1"
+  alias dinosaur='echo "Rarw"'
+  ```
 
-   Your file should now look like this:
-   ```bash linenums="1"
-   # .bashrc
-   # Source global definitions
-   if [ -f /etc/bashrc ]; then
-   . /etc/bashrc
-   fi
-   alias dinosaur='echo "Rarw"'
-   # Uncomment the following line if you don't like systemctl's auto-paging feature:
-   # export SYSTEMD_PAGER=
-   # User specific aliases and functions
-   ```
+- Your file should now look like this:
+  ```bash linenums="1"
+  # .bashrc
+  # Source global definitions
+  if [ -f /etc/bashrc ]; then
+      . /etc/bashrc
+  fi
+  alias dinosaur='echo "Rarw"'
+  # Uncomment the following line if you don't like systemctl's auto-paging feature:
+  # export SYSTEMD_PAGER=
+  # User specific aliases and functions
+  ```
 
-   Save the file with `:wq`.
-   ```bash linenums="1"
-   useradd user4
-   su - user4
-   dinosaur # Should roar out to the screen
-   ```
+- Save the file with `:wq`.
+  ```bash linenums="1"
+  useradd user4
+  su - user4
+  dinosaur # Should roar out to the screen
+  ```
 
-   Doing that changed the `.bashrc` file for all new users that have home directories created on the server.
-   An old trick, when users mess up their login files (all the `.` files), is to move them all to a
-   directory and pull them from `/etc/skel` again.
-   If the user can log in with no problems, you know the problem was something they created.
+Doing that changed the `.bashrc` file for **all new users** that have home directories created on the server.  
+An old trick, when users mess up their login files (all the `.` files), is to move them all to a
+directory and pull them from `/etc/skel` again.
+If the user can log in with no problems, you know the problem was something they created.
 
-   We can test this with the same steps on an existing user.
-   Pick an existing user and verify they don't have that command
-   ```bash linenums="1"
-   su - user1
-   dinosaur # Command not found
-   exit
-   ```
+- We can test this with the same steps on an existing user.
+  Pick an existing user and verify they don't have that command
+  ```bash linenums="1"
+  su - user1
+  dinosaur # Command not found
+  exit
+  ```
 
-   Then, as root:
-   ```bash linenums="1"
-   cd /home/user1
-   mkdir old_dot_files
-   mv .* old_dot_files          # Ignore the errors, those are directories
-   cp /etc/skel/.* /home/user1  # Ignore the errors, those are directories
-   su - user1
-   dinosaur # Should 'roar' now because the .bashrc file is new from /etc/skel
-   ```
+- Then, as root:
+  ```bash linenums="1"
+  cd /home/user1
+  mkdir old_dot_files
+  mv .* old_dot_files          # Ignore the errors, those are directories
+  cp /etc/skel/.* /home/user1  # Ignore the errors, those are directories
+  su - user1
+  dinosaur # Should 'roar' now because the .bashrc file is new from /etc/skel
+  ```
 
-6. Creating groups
-   From our `/etc/login.defs` we can see that the default range for UIDs on this system, when created by
-   `useradd` are:
-   ```bash linenums="1"
-   UID_MIN 1000
-   UID_MAX 60000
-   ```
+##### **Creating Groups**
 
-   So an easy way to make sure that we don't get confused on our group numbering is to ensure we create
+- From our `/etc/login.defs` we can see that the default range for UIDs on this system, when created by
+  `useradd` are:
+  ```bash linenums="1"
+  UID_MIN 1000
+  UID_MAX 60000
+  ```
+
+-  So an easy way to make sure that we don't get confused on our group numbering is to ensure we create
    groups outside of that range.
    This isn't required, but can save you headache in the future.
    ```bash linenums="1"
@@ -231,94 +230,96 @@ work
    tail -5 /etc/group
    ```
 
-   You can also make groups the old fashioned way by putting a line right into the `/etc/group` file.  
+-  You can also make groups the old fashioned way by putting a line right into the `/etc/group` file.  
    Try this:
    ```bash linenums="1"
    vi /etc/group
    ```
 
-   - Shift+G to go to the bottom of the file.
-   - Hit `o` to create a new line and go to insert mode.
-   - Add `project2:x:60002:user4`
-   - Hit `Esc`
-   - `:wq!` to write quit the file explicit force because it's a read only file.
-   ```bash linenums="1"
-   id user 4 # Should now see the project2 in the user's groups
-   ```
+    - ++shift+g++ to go to the bottom of the file.
+    - Press ++o++ to create a new line and go to insert mode.
+    - Add `project2:x:60002:user4`
+    - Hit `Esc`
+    - `:wq!` to write quit the file explicit force because it's a read only file.
 
-7. Modifying or deleting users
-   So maybe now we need to move our users into that group.
-   ```bash linenums="1"
-   usermod -G project user4
-   tail -f /etc/group # Should see user4 in the group
-   ```
+- Check the changes:
+  ```bash linenums="1"
+  id user4 # Should now see the project2 in the user's groups
+  ```
 
-   But, maybe we want to add more users and we want to just put them in there:
-   ```bash linenums="1"
-   vi /etc/group
-   ```
+##### Modifying or deleting users
+- So maybe now we need to move our users into that group.
+  ```bash linenums="1"
+  usermod -G project user4
+  tail -f /etc/group # Should see user4 in the group
+  ```
 
-   - `Shift+G` Will take you to the bottom.
-   - Hit `i` (will put you into insert mode).
-   - Add `,user1,user2` after `user4`.
-   - Hit `Esc`.
-   - `:wq` to save and exit.  
-     Verify your users are in the group now
-   ```bash linenums="1"
-   id user4
-   id user1
-   id user2
-   ```
+- But, maybe we want to add more users and we want to just put them in there:
+  ```bash linenums="1"
+  vi /etc/group
+  ```
 
-8. Test group permissions
-   I included the permissions discussion from an earlier lab because it's important to see how
-   permissions affect what user can see what information.
+    - ++shift+g++ Will take you to the bottom.
+    - Hit ++i++ (will put you into insert mode).
+    - Add `,user1,user2` after `user4`.
+    - Hit ++esc++.
+    - `:wq` to save and exit.  
+    - Verify your users are in the group now
+      ```bash linenums="1"
+      id user4
+      id user1
+      id user2
+      ```
 
-   Currently we have `user1,2,4` belonging to group `project` but not `user3`. So we will verify these
-   permissions are enforced by the filesystem.
-   ```bash linenums="1"
-   mkdir /project
-   ls -ld /project
-   chown root:project /project
-   chmod 775 /project
-   ls -ld /project
-   ```
+##### Test group permissions
+I included the permissions discussion from an earlier lab because it's important to see how
+permissions affect what user can see what information.
 
-   If you do this, you now have a directory `/project` and you've changed the group ownership to `/project`.
-   You've also given group `project` users the ability to write into your directory.
-   Everyone can still read from your directory.
-   Check permissions with users:
-   ```bash linenums="1"
-   su - user1
-   cd /project
-   touch user1
-   exit
-   su - user3
-   cd /project
-   touch user3
-   exit
-   ```
+- Currently we have `user1,2,4` belonging to group `project` but not `user3`. So we will verify these
+  permissions are enforced by the filesystem.
+  ```bash linenums="1"
+  mkdir /project
+  ls -ld /project
+  chown root:project /project
+  chmod 775 /project
+  ls -ld /project
+  ```
 
-   Anyone not in the `project` group doesn't have permissions to write a file into that directory.
-   Now, as the root user:
-   ```bash linenums="1"
-   chmod 770 /project
-   ```
+- If you do this, you now have a directory `/project` and you've changed the group ownership to `/project`.
+  You've also given group `project` users the ability to write into your directory.
+  Everyone can still read from your directory.
+  Check permissions with users:
+  ```bash linenums="1"
+  su - user1
+  cd /project
+  touch user1
+  exit
+  su - user3
+  cd /project
+  touch user3
+  exit
+  ```
 
-   Check permissions with users:
-   ```bash linenums="1"
-   su - user1
-   cd /project
-   touch user1.1
-   exit
-   su - user3
-   cd /project # Should break right about here
-   touch user3
-   exit
-   ```
+- Anyone not in the `project` group doesn't have permissions to write a file into that directory.
+  Now, as the root user:
+  ```bash linenums="1"
+  chmod 770 /project
+  ```
 
-   You can play with these permissions a bit, but there's a lot of information online to help you
-   understand permissions better if you need more resources.
+- Check permissions with users:
+  ```bash linenums="1"
+  su - user1
+  cd /project
+  touch user1.1
+  exit
+  su - user3
+  cd /project # Should break right about here
+  touch user3
+  exit
+  ```
+
+You can play with these permissions a bit, but there's a lot of information online to help you
+understand permissions better if you need more resources.
 
 #### Working with permissions
 
@@ -348,18 +349,18 @@ drwx------. 5 scott domain_users 4096 Jun 22 09:11 /home/scott/
 
 The first character lets you know if the file is a directory, file, or link. In this case we are looking at my home directory.
 
-`rwx`: For UID (me).
+1. `rwx`: For UID (me).
 
-- What permissions do I have?
+    - What permissions do I have?
 
-`---`: For group.
+2. `---`: For group.
 
-- Who are they?
-- What can my group do?
+    - Who are they?
+    - What can my group do?
 
-`---`: For everyone else.
+3. `---`: For everyone else.
 
-- What can everyone else do?
+    - What can everyone else do?
 
 Go find some other interesting files or directories and see what you see there.  
 Can you identify their characteristics and permissions?

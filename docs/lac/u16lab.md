@@ -11,7 +11,7 @@ on systems in the ProLUG lab environment.
 ### Required Materials
 
 - Rocky 9.4+ - ProLUG Lab
-  - Or comparable Linux box
+    - Or comparable Linux box
 - root or sudo command access
 
 #### Downloads
@@ -40,7 +40,7 @@ To complete this event the following three must be correct.
 
 1. Web server must be running.
 
-   - HINT:
+    -  HINT:
      ```bash linenums="1"
      systemctl status httpd
      ```
@@ -52,7 +52,7 @@ To complete this event the following three must be correct.
 
 2. Web server must respond on port 80.
 
-   - HINT: Can you check the open ports?
+    -  HINT: Can you check the open ports?
 
 <!-- - Answer: -->
 <!--   ```bash linenums="1" -->
@@ -63,10 +63,10 @@ To complete this event the following three must be correct.
 
 3. Ensure that the server can be reached by external connection attempts on port 80.
 
-   - HINT: Is the firewall running?
-     ```bash linenums="1"
-     systemctl status firewalld
-     ```
+    -  HINT: Is the firewall running?
+       ```bash linenums="1"
+       systemctl status firewalld
+       ```
 
 <!-- - Answer: Easiest is to turn off the firewall. -->
 <!--   ```bash linenums="1" -->
@@ -95,7 +95,7 @@ To complete this event the following four must be correct.
 
 1. The three disks must be properly set up in LVM.
 
-   - HINT: use `mkfs` to make a filesystem.
+    -  HINT: use `mkfs` to make a filesystem.
 
 <!-- - Answer: -->
 <!--   - First identify all disks: `fdisk -l | grep -i xvd`. Then `pvcreate /dev/xvd<whatever>`. -->
@@ -104,7 +104,7 @@ To complete this event the following four must be correct.
 
 2. EXT4 or XFS must be installed on the logical volume.
 
-   - HINT: Use your `pvs`, `vgs`, `lvs` tools
+    -  HINT: Use your `pvs`, `vgs`, `lvs` tools
 
 <!-- - Answer: -->
 <!--   ```bash linenums="1" -->
@@ -113,7 +113,7 @@ To complete this event the following four must be correct.
 
 3. `/space` must be created and mounted off on this filesystem.
 
-   - Hint: Make the directory
+    -  Hint: Make the directory
 
 <!-- - Answer: -->
 <!--   ```bash linenums="1" -->
@@ -146,7 +146,7 @@ To complete this event the following two must be correct.
 
 1. Fix the system to be able to update via `dnf`.
 
-   - HINT: DNF isn’t updating, so where are the repos that it looks for?
+    -  HINT: DNF isn’t updating, so where are the repos that it looks for?
 
 <!-- - Answer: -->
 <!--   ```bash linenums="1" -->
@@ -158,7 +158,7 @@ To complete this event the following two must be correct.
 
 2. Verify that kernel updates are happening.
 
-   - HINT: Where can updates be excluded in DNF or Yum?
+    -  HINT: Where can updates be excluded in DNF or Yum?
 
 <!-- - Answer: You need to comment out the line in `/etc/yum.conf` about `"exclude=kernel*"` because -->
 <!--   this is stopping any kernel updates from happening. -->

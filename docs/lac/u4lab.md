@@ -13,7 +13,7 @@
 ### Required Materials
 
 - Rocky 9.4+ - ProLUG Lab
-  - Or comparable Linux box
+    - Or comparable Linux box
 - root or sudo command access
 
 #### Downloads
@@ -31,16 +31,16 @@ The lab has been provided for convenience below:
 2. `ls`
 3. `mkdir unit4`
 4. `mkdir unit4/test/round6`
-   - This fails.
+    -  This fails.
 5. `mkdir -p unit4/test/round6`
-   - This works, think about why. (`man mkdir`)
+    -  This works, think about why. (`man mkdir`)
 6. `cd unit4`
 7. `ps`
-   - Read `man ps`
+    -  Read `man ps`
 8. `ps -ef`
-   - What does this show differently?
+    -  What does this show differently?
 9. `ps -ef | grep -i root`
-   - What is the PID of the 4th line?
+    -  What is the PID of the 4th line?
 10. `ps -ef | grep -i root | wc -l`
     - What does this show you and why might it be useful?
 11. `top`
@@ -59,7 +59,7 @@ The lab has been provided for convenience below:
    dnf whatprovides iostat
    ```
 
-   - This should tell you that `sysstat` provides `iostat`.
+    -  This should tell you that `sysstat` provides `iostat`.
 
 3. Let's check to see if we have it
    ```bash linenums="1"
@@ -117,10 +117,10 @@ The lab has been provided for convenience below:
    fdisk -l
    ls /dev/sd*
    ```
-   - When might this command be useful?
-   - What are we assuming about the disks for this to work?
-   - How many disks are there on this system?
-   - How do you know if it's a partition or a disk?
+    -  When might this command be useful?
+    -  What are we assuming about the disks for this to work?
+    -  How many disks are there on this system?
+    -  How do you know if it's a partition or a disk?
 
 ```bash linenums="1"
 pvs # What system are we running if we have physical volumes?
@@ -131,8 +131,8 @@ pvs # What system are we running if we have physical volumes?
   Thinking back to last week's lab, what might be interesting from each of those?
 - Try a command like `lvdisplay | egrep "Path|Size"` and see what it shows.
 
-  - Does that output look useful?
-  - Try to `egrep` on some other values. Separate with `|` between search items.
+    - Does that output look useful?
+    - Try to `egrep` on some other values. Separate with `|` between search items.
 
 - Check some quick disk statistics
   ```bash linenums="1"
@@ -148,7 +148,7 @@ pvs # What system are we running if we have physical volumes?
    free -m
    ```
 
-   - What do each of these commands show you? How are they useful?
+    -  What do each of these commands show you? How are they useful?
 
 4. Check the number of processors and processor info
    ```bash linenums="1"
@@ -160,23 +160,20 @@ pvs # What system are we running if we have physical volumes?
    ```bash linenums="1"
    cat /proc/cpuinfo | grep proc | wc -l
    ```
-   - Does this command accurately count the processors?
-   - Check some quick processor statistics
-
-```bash linenums="1"
-iostat -c
-iostat -c 2 # Wait for a while, then use Ctrl+C to break. What did this do? Try changing this to a different number.
-iostat -c 2 5 # Don't break this, just wait. What did this do differently? Why might this be useful?
-```
-
-Does this look familiar to what we did earlier with `iostat`?
+    -  Does this command accurately count the processors?
+    -  Check some quick processor statistics
+     ```bash linenums="1"
+     iostat -c
+     iostat -c 2 # Wait for a while, then use Ctrl+C to break. What did this do? Try changing this to a different number.
+     iostat -c 2 5 # Don't break this, just wait. What did this do differently? Why might this be useful?
+     ```
+     Does this look familiar to what we did earlier with `iostat`?
 
 5. Check the system uptime
    ```bash linenums="1"
    uptime
    man uptime
    ```
-
    Read `man uptime` and figure out what those 3 numbers represent.  
    Referencing this server, do you think it is under high load? Why or why not?
 
@@ -184,14 +181,13 @@ Does this look familiar to what we did earlier with `iostat`?
    ```bash linenums="1"
    last
    ```
-
    Last is a command that outputs backwards. (Top is most recent).
    So it is less than useful without using the more command.
    ```bash linenums="1"
    last | more
    ```
 
-   - Were you the last person to log in? Who else has logged in today?
+    -  Were you the last person to log in? Who else has logged in today?
      ```bash linenums="1"
      w
      who
@@ -206,15 +202,15 @@ Does this look familiar to what we did earlier with `iostat`?
    ps -ef | wc -l
    ```
 
-   - Try to use what you've learned to see all the processes owned by your user
-   - Try to use what you've learned to count up all of those processes owned by your user
+    -  Try to use what you've learned to see all the processes owned by your user
+    -  Try to use what you've learned to count up all of those processes owned by your user
 
 8. Looking at system usage (historical)
-   - Check processing for last day
+    -  Check processing for last day
      ```bash linenums="1"
      sar | more
      ```
-   - Check memory for the last day
+    -  Check memory for the last day
      ```bash linenums="1"
      sar -r | more
      ```
@@ -260,7 +256,6 @@ You could do something like this:
   pwd
   ls
   ```
-
   We know the files we want are in this directory and all look like this `sa*`
 
 - Build a loop against that list of files
@@ -334,11 +329,9 @@ Let's do these steps.
 
 1. `crontab -e`
 2. Add this line (using vi commands - Revisit `vimtutor` if you need help with them)
-
-```bash linenums="1"
-* * * * * echo 'this is my cronjob running at' `date` | wall
-```
-
+   ```bash linenums="1"
+   * * * * * echo 'this is my cronjob running at' `date` | wall
+   ```
 3. Verify with `crontab -l`.
 4. Wait to see if it runs and echos out to wall.
 5. `cat /var/spool/cron/root` to see that it is actually stored where I said it was.
