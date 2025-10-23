@@ -21,34 +21,9 @@ By the end of this unit, you should be able to:
 - Automate common administrative tasks.
 - Use ad-hoc commands and Ansible modules effectively.
 
-## Relevance & Context
-
----
-
-1. **Consistency:** Automate repetitive tasks to ensure uniform configurations.
-2. **Scalability:** Manage thousands of servers with minimal manual intervention.
-3. **Security & Compliance:** Enforce policies and reduce misconfigurations.
-
-## Prerequisites
-
----
-
-Before beginning this unit, ensure you understand:
-
-1. Basic Linux command-line operations.
-2. SSH and remote system management.
-3. YAML syntax and basic scripting.
-
 ## Key Terms and Definitions
 
----
-
-**Playbook**
-
-**Task**
-
-**Inventory**
-
-**Ad-hoc Commands**
-
-**Roles**
+|**Playbook**|**Task**|
+|:------------------:|:------------------:|
+|**Inventory**|**Ad-hoc Commands**|
+|**Roles**| |

@@ -25,32 +25,10 @@ By the end of this unit, you will be able to:
 - Build custom container images using Dockerfiles and Podman
 - Analyze container processes, logs, and network interactions for troubleshooting
 
-## Prerequisites
-
----
-
-Before starting Unit 9, you should have:
-
-- Basic understanding of Linux command line and shell operations
-- Familiarity with package management and system services on RHEL-based systems (Rocky/Red Hat)
-- Root or sudo access to a Linux system (Rocky 9 or equivalent)
-- Completed previous units on system administration fundamentals (file permissions, processes, networking)
-- Optional but recommended: Initial exposure to virtualization or application deployment concepts
-
 ## Key Terms and Definitions
 
----
-
-**Containers**
-
-**Virtual Machines**
-
-**Podman**
-
-**Images**
-
-**Dockerfiles**
-
-**Virtualization**
-
-**Daemon-less**
+| **Containers**|**Virtual**|
+| :------------------: | :------------------: |
+| **Machines**|**Podman**|
+| **Images**|**Dockerfiles**|
+| **Virtualization**|**Daemon-less**|

@@ -1,15 +1,14 @@
 # Unit 8 Lab - Configuration Drift and Remediation
 
-> If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot`
-> the machine from the command line so that other students will have the intended environment.
+!!! info
+
+    If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot` the machine from the command line so that other students will have the intended environment.
 
 ### Required Materials
 
-Putty or other connection tool Lab Server
-
-Root or sudo command access
-
-STIG Viewer 2.18 (download from <https://public.cyber.mil/stigs/downloads/> )
+- Putty or other connection tool Lab Server
+- Root or sudo command access
+- STIG Viewer 2.18 (download from <https://public.cyber.mil/stigs/downloads/> )
 
 #### Downloads
 
@@ -129,4 +128,6 @@ These labs focus on configuration drift tracking and remediation.
           to your custom facts files, maybe the date of deployment:
           <https://killercoda.com/het-tanis/course/Ansible-Labs/12-Ansible-System-Facts-Grouping>
 
-> Be sure to `reboot` the lab machine from the command line when you are done.
+!!! info
+
+    Be sure to `reboot` the lab machine from the command line when you are done.

@@ -25,41 +25,11 @@ the concepts below:
 4. Understanding Risk Management and concepts surrounding risk vectors to organizations
 5. STIG Remediation and documentation skills
 
-## Relevance & Context
-
-As the shepherds of sensitive data and systems, it is the ethical and legal duty of individuals
-that administer and build these systems to protect them from malicious actors with no regard for
-propriety. To be successful in securing systems students will need to thoroughly understand the
-cybersecurity landscape, its myriad potential threats, and the tools engineers and administrators
-have at their disposal.
-
-The concepts presented in this unit play a pivotal role in organizing and structuring a resilient security
-posture against threats to enterprise and organizational entities. They provide processes and procedures
-that engineers and administrators can implement to significantly reduce the attack surface of the systems
-they administer along with building a system of logging and documentation in the eventuality of a security
-incident.
-
-By thoroughly understanding these concepts students will be armed with a set of tools in the eternal and
-ever evolving landscape of cybersecurity.
-
-## Prerequisites
-
-Students should have a strong understanding of such skills as presented
-in the Linux Administration Course including:
-
-1. The Command Line Interface and BASH shell skills
-2. Installing and Updating Linux System Packages
-3. Interacting with command line tools such as: `systemctl`, `mount`, `grep`, and `ss`
-4. Ability to interact with basic SQL queries using MariaDB
-5. Students will need to download the latest STIG viewer, v2.18
 
 ## Key terms and Definitions
 
-CIA Triad  
-Regulatory Compliance  
-HIPAA  
-Industry Standards  
-PCI/DSS  
-Security Frameworks  
-CIS  
-STIG
+|**CIA Triad**|**Regulatory Compliance**|
+|:------------------:|:------------------:|
+|**HIPAA**|**Industry Standard**|
+|**PCI/DS**|**Security Framework**|
+|**CIS**|**STIG**|

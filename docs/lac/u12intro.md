@@ -20,48 +20,12 @@ We’ll explore how to gather accurate system information using tools like **ios
 - Apply data analytics concepts: **descriptive, diagnostic, predictive, and prescriptive**
 - Communicate system performance clearly with stakeholders through objective evidence
 
-## Relevance & Context
-
----
-
-Understanding how your systems behave under normal and stressful conditions is a cornerstone of professional Linux administration. In today’s environments, decisions about agents, updates, or infrastructure changes require proof — not guesswork.
-
-This unit prepares you to be the voice of data in meetings with architects and management. From proving system utilization for budget requests to testing performance claims from vendors, these skills help you become a confident, evidence-driven engineer.
-
-## Prerequisites
-
----
-
-**Before starting Unit 12, you should have**:
-
-- Basic Linux administration skills and terminal comfort
-- Familiarity with resource categories: **CPU, memory, disk, and networking**
-- Access to a Rocky 9 (or similar) Linux system with **sudo or root access**
-- Ability to install and use CLI tools (`dnf install`, `rpm`, etc.)
-
 ## Key Terms and Definitions
 
----
-
-**Baseline**
-
-**Benchmark**
-
-**High Watermark**
-
-**Scope**
-
-**Methodology**
-
-**Testing**
-
-**Control**
-
-**Experiment**
-
-**Analytics**
-
-- **Descriptive**
-- **Diagnostic**
-- **Predictive**
-- **Prescriptive**
+|**Baseline**|**Benchmark**|
+|:------------------:|:------------------:|
+|**High Watermark**|**Scope**|
+|**Methodology**|**Testing**|
+|**Control**|**Experiment**|
+|**Analytics**|**Analytics** - **Descriptive**|
+|**Analytics** - **Predictive**| |

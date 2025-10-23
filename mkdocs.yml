@@ -168,8 +168,8 @@ nav:
     - Unit 10 - Recap and Final Project:
       - Intro: psc/u10intro.md
       - Worksheet: psc/u10ws.md
-      - Lab: psc/u10lab.md
-      - Bonus: psc/u10b.md
+      # - Lab: psc/u10lab.md
+      # - Bonus: psc/u10b.md
     - Course Resources:
       - External Resources: psc/resources.md
       # - Downloads: psc/downloads.md

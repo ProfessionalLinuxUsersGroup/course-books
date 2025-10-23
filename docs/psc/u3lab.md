@@ -1,16 +1,14 @@
 # Unit 3 Lab - User Access and System Integration
 
-> If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot`
-> the machine from the command line so that other students will have the intended environment.
+!!! info
+
+    If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot` the machine from the command line so that other students will have the intended environment.
 
 ### Required Materials
 
-Putty or other connection tool Lab Server  
-Root or sudo command access
-
-STIG Viewer 2.18 (download from https://public.cyber.mil/stigs/downloads/ )  
-Download the STIG for RHEL 9 and the import it into your STIG viewer  
-Create a checklist from the opened STIG for RHEL 9
+- Putty or other connection tool Lab Server  
+- Root or sudo command access
+- STIG Viewer 2.18 (download from https://public.cyber.mil/stigs/downloads/ )  
 
 #### Downloads
 
@@ -529,8 +527,9 @@ uid=15000(testuser) gid=15000 groups=15000
 
 Congratulations! Look at you, doing all the Linux.
 
-#### Please reboot the the lab machine when done.
-
 ```bash linenums="1"
 [root@hammer1 ~]# reboot
 ```
+!!! info
+
+    Be sure to `reboot` the lab machine from the command line when you are done.
