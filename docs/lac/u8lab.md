@@ -16,7 +16,7 @@
 ### Required Materials
 
 - Rocky 9.4+ - ProLUG Lab
-  - Or comparable Linux box
+    - Or comparable Linux box
 - root or sudo command access
 
 #### Downloads
@@ -56,10 +56,10 @@ rpm -qi gcc
 ### Compilers
 
 A brief look at compilers and compiling code
-So we did all this just to show you a quick rundown of how compiled code works on your system. We are going to be doing scripting today, which is not compiled, but rather interpreted code according to a type of interpreter so we’ll just breeze through this part. You can come back and play with this at your leisure, I will provide links for more study.
+So we did all this just to show you a quick rundown of how compiled code works on your system. We are going to be doing scripting today, which is not compiled, but rather interpreted code according to a type of interpreter so we'll just breeze through this part. You can come back and play with this at your leisure, I will provide links for more study.
 
 ```bash linenums="1"
-Let’s write a C program
+Let's write a C program
 mkdir c_practice
 cd c_practice
 
@@ -82,7 +82,7 @@ return 0;
 ```
 
 ```bash linenums="1"
-#Let’s use gcc to compile that program
+#Let's use gcc to compile that program
 gcc a.c
 #This will create a file for you called a.out
 #If there is an error, does it still work?
@@ -110,9 +110,9 @@ Log into your Rocky server and become root.
 
 ## Module 2.1: Scripting
 
-After all that pre-lab discussion, we won’t be using `gcc` today—or compiling any programs, for that matter. Instead, we’ll focus on scripting, where we write code that the system interprets and executes step by step. Think of it like reading lines from a play, following sheet music, or executing a script—each command is processed in order.
+After all that pre-lab discussion, we won't be using `gcc` today—or compiling any programs, for that matter. Instead, we'll focus on scripting, where we write code that the system interprets and executes step by step. Think of it like reading lines from a play, following sheet music, or executing a script—each command is processed in order.
 
-There are plenty of resources available to learn scripting, but the key to improving is daily practice. If you’re serious about getting better, I recommend studying additional concepts over time. However, to get started, you only need to understand three fundamental ideas:
+There are plenty of resources available to learn scripting, but the key to improving is daily practice. If you're serious about getting better, I recommend studying additional concepts over time. However, to get started, you only need to understand three fundamental ideas:
 
 1. **Input and Output** - How to receive input and where to send the output.
 2. **Conditionals** - How to test and evaluate conditions.
@@ -120,7 +120,7 @@ There are plenty of resources available to learn scripting, but the key to impro
 
 ### 2.2 Getting Input
 
-Let’s use examples from our [Operate Running Systems lab](https://professionallinuxusersgroup.github.io/lac/u4lab.html) to see what it looks like to gather system information and store it in variables. Variables in scripting can be thought of as named boxes where we put things we want to look at or compare later. We can, by and large, stuff anything we want into these boxes.
+Let's use examples from our [Operate Running Systems lab](https://professionallinuxusersgroup.github.io/lac/u4lab.html) to see what it looks like to gather system information and store it in variables. Variables in scripting can be thought of as named boxes where we put things we want to look at or compare later. We can, by and large, stuff anything we want into these boxes.
 
 ```bash linenums="1"
 # Try this:
@@ -234,23 +234,23 @@ I will prove that here shortly.
 
 - The `right bunny` is `Red` and `Tall`.
 
-  - This evaluates to `true` for the _Red_ test but `false` for the _Tall_ test.
-  - The statement evaluates to `false`.
+    - This evaluates to `true` for the _Red_ test but `false` for the _Tall_ test.
+    - The statement evaluates to `false`.
 
 - The `left bunny` is `Blue` and `Tall`.
-  - This evaluates to `true` for the _Blue_ test and `true` for the _Tall_ test.
-  - The statement evaluates to `true`.
+    - This evaluates to `true` for the _Blue_ test and `true` for the _Tall_ test.
+    - The statement evaluates to `true`.
 
 #### `OR` Examples
 
 - The `right bunny` is `Red` or `Tall`.
 
-  - This evaluates to `true` for the _Red_ test but `false` for the _Tall_ test.
-  - The statement evaluates to `true`.
+    - This evaluates to `true` for the _Red_ test but `false` for the _Tall_ test.
+    - The statement evaluates to `true`.
 
 - The `left bunny` is `Red` or `Short`.
-  - This evaluates to `false` for _Red_ and `false` for _Short_.
-  - The statement evaluates to `false`.
+    - This evaluates to `false` for _Red_ and `false` for _Short_.
+    - The statement evaluates to `false`.
 
 ### 2.6 - Truth Tables
 
@@ -269,7 +269,7 @@ Some common symbols you'll see as we go through drawing out our logic. This exam
 
 ### 2.8 - 3 Types of Decisions
 
-There are 3 primary types of decisions you’ll run into with scripting, they are:
+There are 3 primary types of decisions you'll run into with scripting, they are:
 
 1. `Single` alternative
 2. `Dual` alternative
@@ -290,11 +290,11 @@ if [ $superCheck -eq "0" ]; then echo "super exists"; fi
 if [ $gccCheck -eq "0" ]; then echo "gcc exists"; fi
 ```
 
-You’ll note that only one of them caused any output to come to the screen, the other simply ran and the condition never had to execute.
+You'll note that only one of them caused any output to come to the screen, the other simply ran and the condition never had to execute.
 
 #### 2.8.2 - Dual alternative (if/then/else)
 
-Dual alternatives forces the code to split. A decision must be made. These are logically `if, then, else`. We test for a truth, and then, if that condition does not exist we execute the alternative. If you’re a parent or if you ever had a parent, this is the dreaded `or else`. One of two things is going to happen here, the path splits.
+Dual alternatives forces the code to split. A decision must be made. These are logically `if, then, else`. We test for a truth, and then, if that condition does not exist we execute the alternative. If you're a parent or if you ever had a parent, this is the dreaded `or else`. One of two things is going to happen here, the path splits.
 
 ```bash linenums="1"
 if [ $superCheck -eq "0" ]; then echo "super exists"; else echo "super does not exist"; fi #super does not exist
@@ -306,7 +306,7 @@ if [ $gccCheck -eq "0" ]; then echo "gcc exists"; else echo "gcc does not exist"
 
 #### 2.8.3 - Multiple Alternative (if/then/elif/…/else or Case)
 
-Multiple alternatives provide a branch for any numbers of ways that a program can go. They can be structured as if, then, `else if` `elif` in bash, `else`. They can also be framed in the case statement, which can select any number of cases (like doors) that can be selected from. There should always be a default `else` value for case statements, that is to say, if one of the many conditions don’t exist there is something that happens anyways (\*) in case statements.
+Multiple alternatives provide a branch for any numbers of ways that a program can go. They can be structured as if, then, `else if` `elif` in bash, `else`. They can also be framed in the case statement, which can select any number of cases (like doors) that can be selected from. There should always be a default `else` value for case statements, that is to say, if one of the many conditions don't exist there is something that happens anyways (\*) in case statements.
 
 
 ```bash linenums="1"
@@ -321,15 +321,15 @@ if [ $gccCheck -eq "0" ]; then echo "gcc exists"; elif [ $gccCheck -gt "1" ]; th
 
 Set those variables to the conditions of 0, 1, and `anything else` to see what happens.
 
-Think about why greater than 1 does not hit the condition of 1. Might it be easier to think of as greater than or equal to 2? Here’s a list of things you can test against.
-http://tldp.org/LDP/abs/html/tests.html
+Think about why greater than 1 does not hit the condition of 1. Might it be easier to think of as greater than or equal to 2? Here's a list of things you can test against.
+<http://tldp.org/LDP/abs/html/tests.html>
 
-Also a huge concept we don’t have a lot of time to cover is found here: File test operators http://tldp.org/LDP/abs/html/fto.html, do files exist and can you do operating system level things with them?
+Also a huge concept we don't have a lot of time to cover is found here: File test operators http://tldp.org/LDP/abs/html/fto.html, do files exist and can you do operating system level things with them?
 
-We didn’t get to go into case, but they are pretty straight forward with the following examples:
-http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_03.html
+We didn't get to go into case, but they are pretty straight forward with the following examples:
+<http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_03.html>
 
-We didn’t get to explore these much earlier, but to test `AND` and `OR` functionality use this.
+We didn't get to explore these much earlier, but to test `AND` and `OR` functionality use this.
 
 `AND` condition
 ```bash linenums="1"
@@ -346,9 +346,16 @@ We can't install someprogram
 
 #### 2.8.4 - Looping around
 
-As with everything today, this is simply a primer and there are hundreds to thousands of examples online a simple google away. There are only two types of loops; counting loops and conditional loops. At the most basic level, we use counting loops when we (or the system) know how many times we want to go through something. Some examples of this are actual hard counts, lists, or lengths of files typically by line. While loops will continue until a condition exists or stops existing. The difference is until that condition occurs there’s no reasonable way of knowing how many times the loop may have to occur.
+As with everything today, this is simply a primer and there are hundreds to 
+thousands of examples online a simple google away. There are only two types of 
+loops; counting loops and conditional loops. At the most basic level, we use 
+counting loops when we (or the system) know how many times we want to go 
+through something. Some examples of this are actual hard counts, lists, or 
+lengths of files typically by line. While loops will continue until a condition 
+exists or stops existing. The difference is until that condition occurs there's 
+no reasonable way of knowing how many times the loop may have to occur.
 
-`For` loops
+##### `for` loops
 
 Counting is iteration.
 
@@ -362,7 +369,7 @@ We can count items
 for dessert in pie cake icecream sugar soda; do echo "this is my favorite $dessert"; done
 ```
 
-But, it’s impractical to count for ourselves sometimes so we let the system do it for us.
+But, it's impractical to count for ourselves sometimes so we let the system do it for us.
 ```bash linenums="1"
 seq 100 \
 seq 4 100 \
@@ -370,7 +377,7 @@ seq 6 2 100 \
 man seq
 ```
 
-What did each of those do? Let’s put them in a loop we can use
+What did each of those do? Let's put them in a loop we can use
 
 Maybe we want to count our 1000 servers and connect to them by name.
 ```bash linenums="1"
@@ -388,9 +395,9 @@ Maybe someone else gave us a list of servers and we need to read from that list 
 for server in `cat serverfile`; do echo "connecting to server $server"; done
 ```
 
-So, while those are even just a limited set of cases those are all times when, at the start, we know how many times we’re going to go through the loop. Counting or For loops always have a set number of times they’re going to run. That can change, but when it starts the end number of runs is known.
+So, while those are even just a limited set of cases those are all times when, at the start, we know how many times we're going to go through the loop. Counting or For loops always have a set number of times they're going to run. That can change, but when it starts the end number of runs is known.
 
-`While` loops
+##### `while` loops
 
 While loops are going to test conditions and loop while that condition evaluates to true. We can invert that, as we can with all logic, but I find that testing for truth is always easiest.
 
@@ -404,14 +411,14 @@ while true; do date; free -m; uptime; sleep 2; done
 
 This will run until you break it with `CTRL + C`. This will loop over the date, `free -m`, `uptime`, and `sleep 2` commands until the condition evaluates to false, which it will never do.
 
-Let’s run something where we actually have a counter and see what that output is
+Let's run something where we actually have a counter and see what that output is
 ```bash linenums="1"
 counter=0
 while [[ $counter -lt 100 ]]; do echo "counter is at $counter"; (( counter++ )); done
 ```
 What numbers were counted through?
 
-If you immediately run this again, what happens? Why didn’t anything happen?
+If you immediately run this again, what happens? Why didn't anything happen?
 ```bash linenums="1"
 #Reset counter to 0
 counter=0
@@ -430,10 +437,13 @@ while [[ $counter -lt $memFree ]]; do echo "counter is at $counter"; (( counter+
 
 ## 3.0 - Scripting System Checks
 
-The main thing we haven’t covered is what to actually do with these things we’ve done. We can put them into a file and then execute them sequentially until the file is done executing. To do that we need to know the interpreter (bash is default) and then what we want to do.
+The main thing we haven't covered is what to actually do with these things we've done.  
+We can put them into a file and then execute them sequentially until 
+the file is done executing. To do that we need to know the interpreter (bash is 
+default) and then what we want to do.
 ```bash linenums="1"
 touch scriptfile.sh
-chmod 755 scriptfile.sh #let’s just make it executable now and save trouble later
+chmod 755 scriptfile.sh #let's just make it executable now and save trouble later
 vi scriptfile.sh
 ```
 add the following lines:
@@ -456,7 +466,7 @@ else
 fi
 ```
 
-Execute this with the following command and you’ll have your first completed script.
+Execute this with the following command and you'll have your first completed script.
 ```bash linenums="1"
 ./scriptfile.sh
 ```

@@ -11,9 +11,9 @@ If you're planning to work with Linux, you’ll use **Bash every day** -- whethe
 ### Why is bash important?
 
 - Bash is everywhere:
-  - Bash is the default shell on all **major Linux distributions** (RedHat, Debian, etc), and most other distributions
-  - It automates common sysadmin tasks (backups, log analysis, deployments)
-  - Bash is essential for DevOps and administrative workflows (writing scripts, configuring CI/CD pipelines).
+    - Bash is the default shell on all **major Linux distributions** (RedHat, Debian, etc), and most other distributions
+    - It automates common sysadmin tasks (backups, log analysis, deployments)
+    - Bash is essential for DevOps and administrative workflows (writing scripts, configuring CI/CD pipelines).
 
 ### Why learn Bash?
 
@@ -51,16 +51,15 @@ Let's create a simple script that prints a message.
   ./first-script.sh
   ```
 - **Expected output:**
-
   ```plaintext
   Hello, admin!
   ```
 
 - **Key Takeaways:**
-  - The `#!/bin/bash` **shebang line** tells the system which interpreter to use to
-    execute the script.
-  - `chmod +x` or `chmod 755` **makes the script executable**.
-  - `./` is required because the script is **not in the system’s `PATH`**.
+    - The `#!/bin/bash` **shebang line** tells the system which interpreter to use to
+      execute the script.
+    - `chmod +x` or `chmod 755` **makes the script executable**.
+    - `./` is required because the script is **not in the system’s `PATH`**.
 
 It's worth noting that including a `.sh` file extension is **completely optional**.  
 If you decide to replace the Bash script with an executable binary down the line,
@@ -85,7 +84,7 @@ These operators allow you to **chain and control command execution** in Bash.
 | `$(...)` | Capture command output (from a subshell)      | `DATE=$(date)`                  |
 
 - **Why does this matter?**
-  - These operators **control execution flow** and are fundamental to Bash scripting.
+    - These operators **control execution flow** and are fundamental to Bash scripting.
 
 ## **10 Common Conditionals**
 
@@ -106,20 +105,20 @@ Bash conditionals allow scripts to **make decisions**.
 
 - **Why does this matter?**
 
-  - These tests are used in `if`-statements and loops.
+    - These tests are used in `if`-statements and loops.
 
 - **Single brackets vs. double brackets?**
-  - Single brackets `[ ... ]` are used in POSIX shell scripts. Using single
-    brackets is equivalent to using the `test` command (see `help test` and `help [`)
-    - These are generally more subject to shell injection attacks, since they
-      allow anything to expand within them.
-    - You **must** quote all variables and subshell command (i.e., `"$(...)"`)
-      within single brackets.
-  - Double brackets `[[ ... ]]` are **keywords** (also builtins) in bash (see `help [[`).
-    - These do not require you to quote variables, and provide some extended
-      functionality.
-    - If you're writing a **Bash** script, there's no reason to use single
-      brackets for conditionals.
+    - Single brackets `[ ... ]` are used in POSIX shell scripts. Using single
+      brackets is equivalent to using the `test` command (see `help test` and `help [`)
+        - These are generally more subject to shell injection attacks, since they
+          allow anything to expand within them.
+        - You **must** quote all variables and subshell command (i.e., `"$(...)"`)
+          within single brackets.
+    - Double brackets `[[ ... ]]` are **keywords** (also builtins) in bash (see `help [[`).
+        - These do not require you to quote variables, and provide some extended
+          functionality.
+        - If you're writing a **Bash** script, there's no reason to use single
+          brackets for conditionals.
 
 ## 10 Bash Scripting Scenarios
 
@@ -139,7 +138,7 @@ Below are 10 **real-world examples** of using bash from the command line.
 | **Find and replace text in files**         | `sed -i 's/old/new/g' file.txt`                             |
 
 - **Why does this matter?**
-  - These scenarios show **how Bash automates real-world tasks**.
+    - These scenarios show **how Bash automates real-world tasks**.
 
 ## Debugging Bash Scripts
 
@@ -172,16 +171,16 @@ rm -rf /tmp/mydir
 Now that you understand the fundamentals, here’s what to do next:
 
 - Practice writing scripts:
-  - Automate a daily task (e.g., installing a program, creating backups, user management)
+    - Automate a daily task (e.g., installing a program, creating backups, user management)
 - Master error handling:
-  - Learn signals and `trap`, and learn about logging techniques.
+    - Learn signals and `trap`, and learn about logging techniques.
 - Explore advanced topics:
-  - Look into writing functions, using arrays, and job control.
+    - Look into writing functions, using arrays, and job control.
 - Read `man bash`:
-  - The ultimate built-in reference.
-  - This resource has everything you need to know about Bash and then some!
+    - The ultimate built-in reference.
+    - This resource has everything you need to know about Bash and then some!
 - Join ProLUG community:
-  - Learn from others, contribute, and improve your Linux skillset.
+    - Learn from others, contribute, and improve your Linux skillset.
 
 🚀 **Happy scripting!**
 

@@ -81,16 +81,16 @@
 **Segment 1: Core Movement Commands**
 
 - Master the basics:
-  - `h` - Left
-  - `j` - Down
-  - `k` - Up
-  - `l` - Right
-  - `w` - Next word
-  - `b` - Previous word
-  - `0` - Line start
-  - `$` - Line end
-  - `^` - First non-blank character of the line
-  - `g_` - Last non-blank character of the line
+    - `h` - Left
+    - `j` - Down
+    - `k` - Up
+    - `l` - Right
+    - `w` - Next word
+    - `b` - Previous word
+    - `0` - Line start
+    - `$` - Line end
+    - `^` - First non-blank character of the line
+    - `g_` - Last non-blank character of the line
 
 **Segment 2: Movement Drills**
 
@@ -112,12 +112,12 @@
 **Segment 1: Extended Movement**
 
 - Learn efficient jumps:
-  - `gg` - File start
-  - `G` - File end
-  - `{` - Previous paragraph
-  - `}` - Next paragraph
-  - `Ctrl+f` - Page down
-  - `Ctrl+b` - Page up
+    - `gg` - File start
+    - `G` - File end
+    - `{` - Previous paragraph
+    - `}` - Next paragraph
+    - `Ctrl+f` - Page down
+    - `Ctrl+b` - Page up
 
 **Segment 2: Speed Training**
 
@@ -142,16 +142,16 @@
 **Segment 1: Edit Commands**
 
 - Master core editing:
-  - `x` - Delete character
-  - `dd` - Delete line
-  - `yy` - Copy line
-  - `p` - Paste after
-  - `P` - Paste before
-  - `u` - Undo
-  - `Ctrl + r` - Redo
-  - `s` - Substitute a character
-  - `r` - Replace a character
-  - `c` - Change character
+    - `x` - Delete character
+    - `dd` - Delete line
+    - `yy` - Copy line
+    - `p` - Paste after
+    - `P` - Paste before
+    - `u` - Undo
+    - `Ctrl + r` - Redo
+    - `s` - Substitute a character
+    - `r` - Replace a character
+    - `c` - Change character
 
 **Segment 2: Editing Drills**
 
@@ -173,13 +173,13 @@
 **Segment 1: Combined Commands**
 
 - Learn efficient combinations:
-  - `dw` - Delete word
-  - `d$` - Delete to line end
-  - `d0` - Delete to line start
-  - `cc` - Change whole line
-  - `cw` - Change word
-  - `D` - Delete to line end
-  - `C` - Change to line end
+    - `dw` - Delete word
+    - `d$` - Delete to line end
+    - `d0` - Delete to line start
+    - `cc` - Change whole line
+    - `cw` - Change word
+    - `D` - Delete to line end
+    - `C` - Change to line end
 
 **Segment 2: Practical Application**
 
@@ -200,13 +200,13 @@
 **Segment 1: Advanced Operations**
 
 - Master text objects:
-  - `ciw` - Change inner word
-  - `ci"` - Change inside quotes
-  - `di(` - Delete inside parentheses
-  - `yi{` - Yank inside braces
-  - `ca"` - Change a quotes block
-  - `da{` - Delete a `{` `}` block
-  - `ya(` - Yank a `(` `)` block
+    - `ciw` - Change inner word
+    - `ci"` - Change inside quotes
+    - `di(` - Delete inside parentheses
+    - `yi{` - Yank inside braces
+    - `ca"` - Change a quotes block
+    - `da{` - Delete a `{` `}` block
+    - `ya(` - Yank a `(` `)` block
 
 **Segment 2: Integration Practice**
 

@@ -43,7 +43,7 @@ rpm -V openssh-server
 ```
 
 - `-V`: Stands for **verify**.
-  - This option checks timestamps, permissions, ownership, and hashes of installed files.
+    - This option checks timestamps, permissions, ownership, and hashes of installed files.
 
 If you don't see any output, that's a good thing.
 
@@ -84,8 +84,8 @@ Let's get all files from a package.
   dnf download openssh-server
   ```
 
-  - This will download the `openssh-server-<version>.rpm` package in the current directory.
-  - These `.rpm` packages are not stored on the system by default.
+    - This will download the `openssh-server-<version>.rpm` package in the current directory.
+    - These `.rpm` packages are not stored on the system by default.
 
 - You can inspect the file of your choice with `rpm -qp --dump`:
   ```bash linenums="1"
@@ -114,6 +114,7 @@ If the hashes are different, the file has been modified.
    rpm -Va
    ```
    - This will verify every file from every package and report anything suspicious.
+
 1. Narrow the scope. Only show actual modified files:
    ```bash linenums="1"
    rpm -Va | grep -v '^..5'
@@ -126,9 +127,7 @@ If the hashes are different, the file has been modified.
    ```bash linenums="1"
    .M....... c /etc/ssh/sshd_config
    ```
-
    That means:
-
    - The permissions (`M`) have changed.
    - It's a config file (`c`).
 
@@ -186,4 +185,3 @@ This is foundational to change management, compliance, and intrusion detection.
 - [AIDE Documentation](https://aide.github.io/)
 - [Using sha256sum](https://man7.org/linux/man-pages/man1/sha256sum.1.html)
  
-## Downloads
