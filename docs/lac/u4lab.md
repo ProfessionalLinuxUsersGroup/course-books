@@ -13,7 +13,7 @@
 ### Required Materials
 
 - Rocky 9.4+ - ProLUG Lab
-  - Or comparable Linux box
+    - Or comparable Linux box
 - root or sudo command access
 
 #### Downloads
@@ -131,8 +131,8 @@ pvs # What system are we running if we have physical volumes?
   Thinking back to last week's lab, what might be interesting from each of those?
 - Try a command like `lvdisplay | egrep "Path|Size"` and see what it shows.
 
-  - Does that output look useful?
-  - Try to `egrep` on some other values. Separate with `|` between search items.
+    - Does that output look useful?
+    - Try to `egrep` on some other values. Separate with `|` between search items.
 
 - Check some quick disk statistics
   ```bash linenums="1"
@@ -162,21 +162,18 @@ pvs # What system are we running if we have physical volumes?
    ```
    - Does this command accurately count the processors?
    - Check some quick processor statistics
-
-```bash linenums="1"
-iostat -c
-iostat -c 2 # Wait for a while, then use Ctrl+C to break. What did this do? Try changing this to a different number.
-iostat -c 2 5 # Don't break this, just wait. What did this do differently? Why might this be useful?
-```
-
-Does this look familiar to what we did earlier with `iostat`?
+     ```bash linenums="1"
+     iostat -c
+     iostat -c 2 # Wait for a while, then use Ctrl+C to break. What did this do? Try changing this to a different number.
+     iostat -c 2 5 # Don't break this, just wait. What did this do differently? Why might this be useful?
+     ```
+     Does this look familiar to what we did earlier with `iostat`?
 
 5. Check the system uptime
    ```bash linenums="1"
    uptime
    man uptime
    ```
-
    Read `man uptime` and figure out what those 3 numbers represent.  
    Referencing this server, do you think it is under high load? Why or why not?
 
@@ -184,7 +181,6 @@ Does this look familiar to what we did earlier with `iostat`?
    ```bash linenums="1"
    last
    ```
-
    Last is a command that outputs backwards. (Top is most recent).
    So it is less than useful without using the more command.
    ```bash linenums="1"
@@ -260,7 +256,6 @@ You could do something like this:
   pwd
   ls
   ```
-
   We know the files we want are in this directory and all look like this `sa*`
 
 - Build a loop against that list of files
@@ -334,11 +329,9 @@ Let's do these steps.
 
 1. `crontab -e`
 2. Add this line (using vi commands - Revisit `vimtutor` if you need help with them)
-
-```bash linenums="1"
-* * * * * echo 'this is my cronjob running at' `date` | wall
-```
-
+   ```bash linenums="1"
+   * * * * * echo 'this is my cronjob running at' `date` | wall
+   ```
 3. Verify with `crontab -l`.
 4. Wait to see if it runs and echos out to wall.
 5. `cat /var/spool/cron/root` to see that it is actually stored where I said it was.
