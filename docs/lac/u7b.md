@@ -113,23 +113,23 @@ If the hashes are different, the file has been modified.
    ```bash linenums="1"
    rpm -Va
    ```
-   - This will verify every file from every package and report anything suspicious.
+    -  This will verify every file from every package and report anything suspicious.
 
 1. Narrow the scope. Only show actual modified files:
    ```bash linenums="1"
    rpm -Va | grep -v '^..5'
    ```
 
-   - This removes lines where only the MD5 checksum differs (which could be expected in some config files).
-   - You’ll now see files where size, mode, owner, or timestamp changed — higher confidence indicators of real change.
+    -  This removes lines where only the MD5 checksum differs (which could be expected in some config files).
+    -  You’ll now see files where size, mode, owner, or timestamp changed — higher confidence indicators of real change.
 
 1. Investigate a suspicious result. If you see something like:
    ```bash linenums="1"
    .M....... c /etc/ssh/sshd_config
    ```
    That means:
-   - The permissions (`M`) have changed.
-   - It's a config file (`c`).
+    -  The permissions (`M`) have changed.
+    -  It's a config file (`c`).
 
 1. Check the file in question:
    ```bash linenums="1"

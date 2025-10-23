@@ -14,14 +14,14 @@
 
 1. Complete first section of `vimtutor`
 2. Learn essential commands:
-   - `vim filename` - Open/create file
-   - `i` - Enter insert mode (before the cursor)
-   - `a` - Enter insert mode (after the cursor)
-   - `Esc` - Return to normal mode
-   - `:w` - Save changes
-   - `:q` - Quit
-   - `:wq` or `ZZ` - Save and quit
-   - `:q!` - Quit without saving
+    -  `vim filename` - Open/create file
+    -  `i` - Enter insert mode (before the cursor)
+    -  `a` - Enter insert mode (after the cursor)
+    -  `Esc` - Return to normal mode
+    -  `:w` - Save changes
+    -  `:q` - Quit
+    -  `:wq` or `ZZ` - Save and quit
+    -  `:q!` - Quit without saving
 
 **Segment 2: Building Muscle Memory**
 
@@ -29,18 +29,18 @@
 2. Practice mode switching 50 times
 3. Write and save content in each file
 4. Practice recovering from common mistakes:
-   - Accidentally pressed keys in normal mode
-   - Forgot to enter insert mode
-   - Trying to quit without saving
+    -  Accidentally pressed keys in normal mode
+    -  Forgot to enter insert mode
+    -  Trying to quit without saving
 
 **Segment 3: First Real Task**
 
 1. Create a simple bash script template
 2. Add standard sections:
-   - Shebang line
-   - Comments
-   - Basic variables
-   - Simple functions
+    -  Shebang line
+    -  Comments
+    -  Basic variables
+    -  Simple functions
 3. Save and reopen multiple times
 
 ### Day 2: Comfort Zone
@@ -51,26 +51,26 @@
 2. Practice quick save and exit combinations
 3. Learn to read VIM messages and errors
 4. Understand modes in depth:
-   - Normal mode
-   - Insert mode
-   - Visual mode (introduction)
+    -  Normal mode
+    -  Insert mode
+    -  Visual mode (introduction)
 
 **Segment 2: Error Recovery**
 
 1. Create deliberate errors and fix them:
-   - Write without insert mode
-   - Exit without saving needed changes
-   - Get stuck in different modes
+    -  Write without insert mode
+    -  Exit without saving needed changes
+    -  Get stuck in different modes
 2. Practice until you can recover without thinking
 
 **Segment 3: Real Config Practice**
 
 1. Copy `/etc/hosts` file
 2. Make various modifications:
-   - Add new host entries
-   - Modify existing entries
-   - Add comments
-   - Save different versions
+    -  Add new host entries
+    -  Modify existing entries
+    -  Add comments
+    -  Save different versions
 
 ## Module 2: Navigation (Days 3-4)
 
@@ -102,10 +102,10 @@
 **Segment 3: Applied Navigation**
 
 1. Navigate through `/etc/ssh/sshd_config`:
-   - Find specific settings
-   - Move between sections
-   - Locate comments
-   - Jump to line numbers
+    -  Find specific settings
+    -  Move between sections
+    -  Locate comments
+    -  Jump to line numbers
 
 ### Day 4: Advanced Movement
 
@@ -163,10 +163,10 @@
 **Segment 3: System File Editing**
 
 1. Work with `/etc/fstab` copy:
-   - Add mount points
-   - Remove entries
-   - Comment lines
-   - Fix formatting
+    -  Add mount points
+    -  Remove entries
+    -  Comment lines
+    -  Fix formatting
 
 ### Day 6: Intermediate Editing
 

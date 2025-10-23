@@ -34,8 +34,8 @@ This unit centers on a focus on security and troubleshooting.
     - Learn to articulate and document troubleshooting processes and system configurations for continuous improvement.
 
 6. **Build a Foundation for Advanced Security Practices:**
-   - Understand how SELinux and ACLs fit into the broader context of system security and operational stability.
-   - Prepare for more advanced topics by reinforcing the fundamental skills needed to manage and secure Red Hat Enterprise Linux environments.
+    -  Understand how SELinux and ACLs fit into the broader context of system security and operational stability.
+    -  Prepare for more advanced topics by reinforcing the fundamental skills needed to manage and secure Red Hat Enterprise Linux environments.
 
 These objectives aim to ensure that learners not only acquire specific technical skills but also develop a holistic understanding of how to secure and manage Linux systems in enterprise settings.
 

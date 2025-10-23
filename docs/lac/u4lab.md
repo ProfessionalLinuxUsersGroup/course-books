@@ -31,16 +31,16 @@ The lab has been provided for convenience below:
 2. `ls`
 3. `mkdir unit4`
 4. `mkdir unit4/test/round6`
-   - This fails.
+    -  This fails.
 5. `mkdir -p unit4/test/round6`
-   - This works, think about why. (`man mkdir`)
+    -  This works, think about why. (`man mkdir`)
 6. `cd unit4`
 7. `ps`
-   - Read `man ps`
+    -  Read `man ps`
 8. `ps -ef`
-   - What does this show differently?
+    -  What does this show differently?
 9. `ps -ef | grep -i root`
-   - What is the PID of the 4th line?
+    -  What is the PID of the 4th line?
 10. `ps -ef | grep -i root | wc -l`
     - What does this show you and why might it be useful?
 11. `top`
@@ -59,7 +59,7 @@ The lab has been provided for convenience below:
    dnf whatprovides iostat
    ```
 
-   - This should tell you that `sysstat` provides `iostat`.
+    -  This should tell you that `sysstat` provides `iostat`.
 
 3. Let's check to see if we have it
    ```bash linenums="1"
@@ -117,10 +117,10 @@ The lab has been provided for convenience below:
    fdisk -l
    ls /dev/sd*
    ```
-   - When might this command be useful?
-   - What are we assuming about the disks for this to work?
-   - How many disks are there on this system?
-   - How do you know if it's a partition or a disk?
+    -  When might this command be useful?
+    -  What are we assuming about the disks for this to work?
+    -  How many disks are there on this system?
+    -  How do you know if it's a partition or a disk?
 
 ```bash linenums="1"
 pvs # What system are we running if we have physical volumes?
@@ -148,7 +148,7 @@ pvs # What system are we running if we have physical volumes?
    free -m
    ```
 
-   - What do each of these commands show you? How are they useful?
+    -  What do each of these commands show you? How are they useful?
 
 4. Check the number of processors and processor info
    ```bash linenums="1"
@@ -160,8 +160,8 @@ pvs # What system are we running if we have physical volumes?
    ```bash linenums="1"
    cat /proc/cpuinfo | grep proc | wc -l
    ```
-   - Does this command accurately count the processors?
-   - Check some quick processor statistics
+    -  Does this command accurately count the processors?
+    -  Check some quick processor statistics
      ```bash linenums="1"
      iostat -c
      iostat -c 2 # Wait for a while, then use Ctrl+C to break. What did this do? Try changing this to a different number.
@@ -187,7 +187,7 @@ pvs # What system are we running if we have physical volumes?
    last | more
    ```
 
-   - Were you the last person to log in? Who else has logged in today?
+    -  Were you the last person to log in? Who else has logged in today?
      ```bash linenums="1"
      w
      who
@@ -202,15 +202,15 @@ pvs # What system are we running if we have physical volumes?
    ps -ef | wc -l
    ```
 
-   - Try to use what you've learned to see all the processes owned by your user
-   - Try to use what you've learned to count up all of those processes owned by your user
+    -  Try to use what you've learned to see all the processes owned by your user
+    -  Try to use what you've learned to count up all of those processes owned by your user
 
 8. Looking at system usage (historical)
-   - Check processing for last day
+    -  Check processing for last day
      ```bash linenums="1"
      sar | more
      ```
-   - Check memory for the last day
+    -  Check memory for the last day
      ```bash linenums="1"
      sar -r | more
      ```
