@@ -158,7 +158,9 @@ Entry for hammer1 for example:
 [root@hammer1 ~]# firewall-cmd --list-all
 ```
 
-#### 6. Generate a password (Our example uses `testpassword`) This will return a salted SSHA password. *Save this password and salted hash for later input*
+#### 6. Generate a password 
+
+(Our example uses `testpassword`) This will return a salted SSHA password. *Save this password and salted hash for later input*
 
 ```bash linenums="1"
 [root@hammer1 ~]# slappasswd
@@ -210,7 +212,9 @@ ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/nis.ldif
 ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/inetorgperson.ldif
 ```
 
-#### 9. Set up the domain (USE THE PASSWORD YOU GENERATED EARLIER)
+#### 9. Set up the domain 
+
+(USE THE PASSWORD YOU GENERATED EARLIER)
 
 ```bash linenums="1"
 [root@hammer1 ~]# vi setdomain.ldif
