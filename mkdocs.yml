@@ -155,12 +155,12 @@ nav:
       - Intro: psc/u7intro.md
       - Worksheet: psc/u7ws.md
       - Lab: psc/u7lab.md
-      - Bonus: psc/u7b.md
+      # - Bonus: psc/u7b.md
     - Unit 8 - Configuration Drift and Remediation:
       - Intro: psc/u8intro.md
       - Worksheet: psc/u8ws.md
       - Lab: psc/u8lab.md
-      - Bonus: psc/u8b.md
+      # - Bonus: psc/u8b.md
     - Unit 9 - Certificate and Key Madness:
       - Intro: psc/u9intro.md
       - Worksheet: psc/u9ws.md
