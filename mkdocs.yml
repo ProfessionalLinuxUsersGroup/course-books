@@ -138,7 +138,7 @@ nav:
       - Intro: psc/u3intro.md
       - Worksheet: psc/u3ws.md
       - Lab: psc/u3lab.md
-      - Bonus: psc/u3b.md
+      # - Bonus: psc/u3b.md
     - Unit 4 - Bastion Hosts and Airgaps:
       - Intro: psc/u4intro.md
       - Worksheet: psc/u4ws.md
