@@ -20,7 +20,7 @@ could be transposed to a `.md` file.
 - <a href="../../assets/psc/downloads/u5/u5_lab.pdf" target="_blank" download>📥 u5_lab(`.pdf`)</a>
 <!-- - <a href="../../assets/psc/downloads/u5/u5_lab.docx" target="_blank" download>📥 u5_lab(`.docx`)</a> -->
 
-## PreLAB
+## Pre-Lab Warm-Up
 
 Download the STIG Viewer 2.18 from - <https://public.cyber.mil/stigs/downloads/>
 
@@ -47,7 +47,7 @@ After that find a distribution of your choice and play with their tool.
 You do not have to download or move this into our environment, I have already provided them in our lab.
 </div>
 
-## LAB
+## Lab 🧪
 
 This lab is designed to have the engineer practice deploying patches in a Linux environment. The
 engineer will create repos and then deploy patches through an automated enterprise level Ansible

@@ -20,13 +20,13 @@ could be transposed to a `.md` file.
 - <a href="../../assets/psc/downloads/u4/u4_lab.pdf" target="_blank" download>📥 u4_lab(`.pdf`)</a>
 
 
-## PreLAB
+## Pre-Lab Warm-Up
 
 Review lab diagram for the Bastion design.
 
 <img src="../../assets/psc/images/u4/u4_lab_bastion_diagram.png" />
 
-## LAB
+## Lab 🧪
 
 This lab is designed to have the engineer practice securing a Linux environment by the use of bastion
 hosts and jailing users as they enter an air-gapped environment.
