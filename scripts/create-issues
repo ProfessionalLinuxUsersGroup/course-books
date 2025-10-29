@@ -2,7 +2,7 @@
 #===============================================================================
 #
 #          FILE:  create-issues
-#       VERSION:  1.3.1
+#       VERSION:  1.3.2
 #
 #         USAGE:  ./create-issues OPTIONS
 #
@@ -43,6 +43,29 @@
 #       CREATED:  2025-04-23
 #
 #===============================================================================
+
+usage() {
+    cat <<- EOF
+	NAME: create-issues
+	USAGE:
+	  ./scripts/create-issues [-b|--book BOOK] [-t|--type TYPE] [-u|--unit UNIT] [-a|--all]
+	
+	OPTIONS:
+	    -u | --unit UNIT_NUMBER     Specify the unit number for the issue 
+	
+	    -t | --type TYPE            Specify the type of document for the issue 
+	                                This can be one of 'worksheet', 'lab', 'intro', 'bonus'.
+	                                Set to 'all' to create an issue of each type.
+	
+	    -b | --book BOOK            Specify the book the issue is for
+	                                Valid options: lac|admin, psc|security, pcae|automation, 
+	
+	    -a | --all                  Shorthand for '--type all'
+	
+	SYNOPSIS:
+	Creates an issue for the upstream repo. The 'gh' tool must be configured beforehand.
+	EOF
+}
 
 declare -i UNIT
 declare TYPE
@@ -116,28 +139,7 @@ while [[ -n $1 ]]; do
             shift;
             ;;
         -h|--help)
-            cat <<- EOF
-NAME: create-issues
-USAGE:
-  ./scripts/create-issues [-b|--book BOOK] [-t|--type TYPE] [-u|--unit UNIT] [-a|--all]
-
-OPTIONS:
-    -u | --unit UNIT_NUMBER     Specify the unit number for the issue 
-
-    -t | --type TYPE            Specify the type of document for the issue 
-                                This can be one of 'worksheet', 'lab', 'intro', 'bonus'.
-                                Set to 'all' to create an issue of each type.
-
-    -b | --book BOOK            Specify the book the issue is for
-                                Valid options: lac|admin, psc|security, pcae|automation, 
-
-    -a | --all                  Shorthand for '--type all'
-
-SYNOPSIS:
-Creates an issue for the upstream repo. The 'gh' tool must be configured beforehand.
-			EOF
-            shift;
-            exit 0
+            usage && exit 0
             ;;
     esac
 done
