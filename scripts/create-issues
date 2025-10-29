@@ -2,7 +2,7 @@
 #===============================================================================
 #
 #          FILE:  create-issues
-#       VERSION:  1.2.1
+#       VERSION:  1.3.1
 #
 #         USAGE:  ./create-issues OPTIONS
 #
@@ -86,25 +86,25 @@ _set_type_vars() {
 
 while [[ -n $1 ]]; do
     case $1 in
-        -u|--unit)
+        -u|-unit|--unit)
             { [[ -n $2 && ! $2 =~ ^- ]] && UNIT=$2 && shift; } || {
                 printf >&2 "[ERROR]: Missing or bad argument to -u/--unit.\n"
                 exit 1
             }
             shift;
             ;;
-        -t|--type)
+        -t|-type|--type)
             { [[ -n $2 && ! $2 =~ ^- ]] && TYPE=$2 && shift; } || {
                 printf >&2 "[ERROR]: Missing or bad argument to -t/--type.\n"
                 exit 1
             } 
             shift; 
             ;;
-        -a|--all)
+        -a|-all|--all)
             TYPE="all"
             shift;
             ;;
-        -b|--book)
+        -b|-book|--book)
             { [[ -n $2 && ! $2 =~ ^- ]] && BOOK=$2 && shift; } || {
                 printf >&2 "[ERROR]: Missing or bad argument to -b/--book.\n"
                 exit 1
