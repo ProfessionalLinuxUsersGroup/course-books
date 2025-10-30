@@ -181,11 +181,11 @@ nav:
       - Lab Guide: pcae/lab-guide.md
       - Table of Contents: pcae/unitindex.md
     - Unit 1 - Automation Tools:
-    #   - Intro: pcae/u1intro.md
+      - Intro: pcae/u1intro.md
       - Worksheet: pcae/u1ws.md
       - Lab: pcae/u1lab.md
     - Unit 2 - Interacting with the OS:
-    #   - Intro: pcae/u2intro.md
+      - Intro: pcae/u2intro.md
       - Worksheet: pcae/u2ws.md
       - Lab: pcae/u2lab.md
     - Unit 3 - Creating && Using Inventories:
