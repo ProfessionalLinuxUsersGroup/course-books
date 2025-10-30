@@ -13,13 +13,13 @@ This unit continues to address the course objective to deploy various automation
 
 1. Automation Cycle
 
-    - situations where you want automation to finish to completion
-    - situations where you want automation to fail gracefully
+    - Situations where you want automation to finish to completion
+    - Situations where you want automation to fail gracefully
 
 2. System Checking
 
-    - validating that the system is in a good state to move forward
-    - grouping systems by server function, variables, software packages, et. al.
+    - Validating that the system is in a good state to move forward
+    - Grouping systems by server function, variables, software packages, et. al.
     
 3.  Pareto Rule
 
