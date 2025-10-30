@@ -4,6 +4,7 @@
 ## Overview
 
 This unit introduces the types of triggers used in automation.
+
 - Timed Triggers
 - Event Triggers
 - Alert Triggers
@@ -17,24 +18,30 @@ This unit addresses the course objective to deploy various automation tools for 
 ## Learning Objectives
 
 1. Scientific Method
-    As engineers we use these six steps as a real/ repeatable practice.
-    "Engineering puts the scientific method into repeatable practice."
+
+    - As engineers we use these six steps as a real/ repeatable practice.
+    - "Engineering puts the scientific method into repeatable practice."
 2. Eight function cycle of operation
-    The engineering process explained using an analogy of the firearm cycle of operation.
-    "Any deviation from our normal acceptable process is the absolute enemy of engineering."
+
+    - The engineering process explained using an analogy of the firearm cycle of operation.
+    - "Any deviation from our normal acceptable process is the absolute enemy of engineering."
 3. Automation
-    Using triggers to start a set of steps in a process.
-    "You have to have things work through [specific steps] to completion to complete a cycle.."
+
+    - Using triggers to start a set of steps in a process.
+    - "You have to have things work through [specific steps] to completion to complete a cycle.."
 4. Triggers
-    Time, Events & Alerts
+
+    - Time, Events & Alerts
 5. The concept of an automation mindset for engineers.
-    Consistency / repeatability
-    Timeliness
+
+    - Consistency / repeatability
+    - Timeliness
 6. DevOps Methodology
-    Dev is always 'spinning' in a constant cycle.
+
+    - Dev is always 'spinning' in a constant cycle.
 
 ## Key Terms and Definitions
 
-EOL     End of Life
-CI/CD   Continuous Implementation / Continuous Deployment
-SDLC    Software Delivery  Life Cycle
+EOL     End of Life  
+CI/CD   Continuous Implementation / Continuous Deployment  
+SDLC    Software Delivery  Life Cycle  
