@@ -196,9 +196,9 @@ nav:
     #   - Intro: pcae/u4intro.md
       - Worksheet: pcae/u4ws.md
     #   - Lab: pcae/u4lab.md
-    # - Unit 5 - Environment and Local Variables:
+    - Unit 5 - Environment and Local Variables:
     #   - Intro: pcae/u5intro.md
-    #   - Worksheet: pcae/u5ws.md
+      - Worksheet: pcae/u5ws.md
     #   - Lab: pcae/u5lab.md
     # - Unit 6 - Automating Docker Builds:
     #   - Intro: pcae/u6intro.md

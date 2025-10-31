@@ -52,8 +52,8 @@ and answer the following questions:
 
 #### Discussion Post #2
 
-You’ve stumbled on a playbook and you’re trying to figure out what the following line means:
-<!-- TODO(PICTURE): <PICTURE_HERE> -->
+You've stumbled on a playbook and you're trying to figure out what the following line means:
+<img src="../../assets/pcae/images/u5/u5_dp2_playbook.png" />
 
 You have reviewed Jinja2 filters
 <https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_filters.html#providingdefault-values>
@@ -99,17 +99,18 @@ and think you have a good handle on what is happening.
 
 ## Digging Deeper
 
-1. Work through the following labs to practice the topics from this week’s presentation
-    1. Ansible Facts: <https://killercoda.com/het-tanis/course/Ansible-Labs/12-Ansible-System-Facts-Grouping>
-    2. Ansible Vault: <https://killercoda.com/het-tanis/course/Ansible-Labs/10-Ansible-Vaulting-Password-and-Variables>
-    3. Ansible API Calls: <https://killercoda.com/het-tanis/course/HashicorpLabs/004-vault-read-secrets-ansible>
-    4. Stamping servers: <https://killercoda.com/het-tanis/course/Ansible-Labs/07-Ansible-Playbook-Jinja-Templates>
-    5. Reporting back values: <https://killercoda.com/het-tanis/course/AnsibleLabs/08-Ansible-Playbook-Jinja-Reporting>
-    6. Generating CSV for management: <https://killercoda.com/hettanis/course/Ansible-Labs/19-Ansible-csv-report>
+Work through the following labs to practice the topics from this week's presentation.  
+
+1. Ansible Facts: <https://killercoda.com/het-tanis/course/Ansible-Labs/12-Ansible-System-Facts-Grouping>
+2. Ansible Vault: <https://killercoda.com/het-tanis/course/Ansible-Labs/10-Ansible-Vaulting-Password-and-Variables>
+3. Ansible API Calls: <https://killercoda.com/het-tanis/course/HashicorpLabs/004-vault-read-secrets-ansible>
+4. Stamping servers: <https://killercoda.com/het-tanis/course/Ansible-Labs/07-Ansible-Playbook-Jinja-Templates>
+5. Reporting back values: <https://killercoda.com/het-tanis/course/AnsibleLabs/08-Ansible-Playbook-Jinja-Reporting>
+6. Generating CSV for management: <https://killercoda.com/hettanis/course/Ansible-Labs/19-Ansible-csv-report>
 
 
 ## Reflection Questions
 1. What questions do you still have about this week?
 
-2. How are you going to use what you’ve learned in your current role?
+2. How are you going to use what you've learned in your current role?
 
