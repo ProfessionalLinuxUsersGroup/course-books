@@ -32,7 +32,6 @@
 <!-- TODO: Add unit 3 lab downloads -->
 Unit 3 Lab: Coming soon.
 
-<!-- TODO: Add unit 4 downloads -->
 ## Unit 4 - Admin Commands and One-Offs
 ### Worksheet
 - <a href="../../assets/pcae/downloads/u4/u4_worksheet.md.txt" target="_blank" download="u4_worksheet.md">:material-download: u_worksheet.md</a>  
@@ -42,5 +41,11 @@ Unit 3 Lab: Coming soon.
 ### Lab
 
 - Lab on Killercoda: <https://killercoda.com/het-tanis/course/AutomationLabs/Unit4_Admin_Commands>
+
+## Unit 5
+### Worksheet
+- <a href="../../assets/pcae/downloads/u5/u5_worksheet.md.txt" target="_blank" download="u5_worksheet.md">:material-download: u_worksheet.md</a>  
+- <a href="../../assets/pcae/downloads/u5/u5_worksheet.txt" target="_blank" download>:material-download: u5_worksheet.txt</a>  
+- <a href="../../assets/pcae/downloads/u5/u5_worksheet.pdf" target="_blank" download>:material-download: u5_worksheet.pdf</a>  
 
 
