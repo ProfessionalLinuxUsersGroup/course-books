@@ -146,6 +146,7 @@ https://killercoda.com/het-tanis/course/AnsibleLabs/08-Ansible-Playbook-Jinja-Re
 https://killercoda.com/het-tanis/course/Automation-Labs/Unit1_Tools
 https://killercoda.com/het-tanis/course/Automation-Labs/Unit2_Interacting_with_OS
 https://killercoda.com/het-tanis/course/Automation-Labs/Unit3_Inventories
+https://killercoda.com/het-tanis/course/Automation-Labs/Unit4_Admin_Commands
 https://killercoda.com/het-tanis/course/AutomationLabs/Unit2_Interacting_with_OS
 https://killercoda.com/het-tanis/course/AutomationLabs/Unit4_Admin_Commands
 https://killercoda.com/het-tanis/course/Hashicorp-Labs/004-vault-read-secrets-ansible
