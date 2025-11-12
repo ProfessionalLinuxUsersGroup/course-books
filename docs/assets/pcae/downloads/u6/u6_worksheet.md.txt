@@ -1,0 +1,94 @@
+# ProLUG Automation
+
+## Unit 6 Worksheet
+
+## Instructions
+
+Fill out this sheet as you progress through the lab and discussions. Hold your worksheets until
+the end to turn them in as a final submission packet.
+
+
+## Discussion Questions:
+
+### Unit 6 Discussion Post 1
+Your infrastructure engineering teams have been experiencing
+problems re-creating environments. The main problems have been around reliably building
+the exact same environment and also making those builds happen in a timely manner.
+
+Read <https://sre.google/sre-book/release-engineering/> and
+<https://sre.google/workbook/canarying-releases/> to answer the following questions.
+
+1. What is release engineering?
+
+2. What are the release engineering principles?
+
+3. How do the tools we’ve discussed this week, Apptainer, Packer, Terraform, or 
+   even Ansible fit into these topics?
+
+
+### Unit 6 Discussion Post 2
+Your team is trying to decide between the Apptainer and Packer
+tools for container deployments. You’ve been tasked with making the decision between the
+two packages. Read the following: https://developer.hashicorp.com/packer/docs/intro and
+https://apptainer.org/docs/user/latest/introduction.html#why-use-apptainer
+
+1. Can you describe apptainer and packer?
+
+2. How would you make the decision between the two of these tools? (You may want to make a table)
+
+    1. What do they both do?
+
+    2. What do only one or the other do?
+
+    3. What are the strengths and weaknesses of each?
+
+3. Modify or fix the drawing to show how your team will deploy containers.
+
+
+## Definitions/Terminology
+
+- Docker Images
+
+- Docker processes
+
+- Container/Runtime Environment
+
+- CI/CD
+
+- Release engineering
+    - Releases
+    - Code base
+    - Code changes
+    - Build configuration
+        - Building
+        - Branching
+        - Testing
+
+
+## Notes During Lecture/Class
+
+### Links
+
+- Apptainer: https://apptainer.org/docs/user/latest/
+- Packer Tutorial Library: https://developer.hashicorp.com/tutorials/library?product=packer&edition=open_source
+    - Packer with github actions: https://developer.hashicorp.com/packer/tutorials/cloud-production/github-actions
+    - Provisioning: https://developer.hashicorp.com/packer/tutorials/docker-get-started/docker-get-started-provision
+- Terraform
+    - With Docker: https://developer.hashicorp.com/terraform/tutorials/docker-get-started
+
+
+### Terms
+
+### Useful tools
+
+
+## Lab and Assignment
+
+Unit 6 Lab from Lab book
+
+## Digging Deeper
+
+## Reflection Questions
+1. What questions do you still have about this week?
+2. How are you going to use what you’ve learned in your current role?
+
