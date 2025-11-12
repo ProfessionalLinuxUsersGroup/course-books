@@ -116,6 +116,12 @@ Read the following: <https://developer.hashicorp.com/packer/docs/intro> and
 
 ## Digging Deeper
 
+Read about Terraform providers here:
+<https://developer.hashicorp.com/terraform/language/providers>
+
+1. What are Terraform providers?  
+
+2. How would we find a specific provider?
 
 ## Reflection Questions
 

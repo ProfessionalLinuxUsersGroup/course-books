@@ -81,8 +81,16 @@ Useful tools:
 Lab and Assignment
 Unit6 Lab from Lab book
 
+
 Digging Deeper
-1.
+
+Read about Terraform providers here:
+https://developer.hashicorp.com/terraform/language/providers
+
+1. What are Terraform providers?  
+
+2. How would we find a specific provider?
+
 
 Reflection Questions
 1. What questions do you still have about this week?

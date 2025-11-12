@@ -88,6 +88,14 @@ Unit 6 Lab from Lab book
 
 ## Digging Deeper
 
+Read about Terraform providers here:
+<https://developer.hashicorp.com/terraform/language/providers>
+
+1. What are Terraform providers?  
+
+2. How would we find a specific provider?
+
+
 ## Reflection Questions
 1. What questions do you still have about this week?
 2. How are you going to use what you’ve learned in your current role?
