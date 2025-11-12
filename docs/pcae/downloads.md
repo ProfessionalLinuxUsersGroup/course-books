@@ -48,4 +48,17 @@ Unit 3 Lab: Coming soon.
 - <a href="../../assets/pcae/downloads/u5/u5_worksheet.txt" target="_blank" download>:material-download: u5_worksheet.txt</a>  
 - <a href="../../assets/pcae/downloads/u5/u5_worksheet.pdf" target="_blank" download>:material-download: u5_worksheet.pdf</a>  
 
+### Lab
+Unit 5 lab coming soon.
+
+## Unit 6
+### Worksheet
+- <a href="../../assets/pcae/downloads/u6/u6_worksheet.md.txt" target="_blank" download="u6_worksheet.md">:material-download: u_worksheet.md</a>  
+- <a href="../../assets/pcae/downloads/u6/u6_worksheet.txt" target="_blank" download>:material-download: u6_worksheet.txt</a>  
+- <a href="../../assets/pcae/downloads/u6/u6_worksheet.pdf" target="_blank" download>:material-download: u6_worksheet.pdf</a>  
+
+### Lab
+Unit 6 lab coming soon.
+
+
 
