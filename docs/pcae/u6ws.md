@@ -116,8 +116,6 @@ Read the following: <https://developer.hashicorp.com/packer/docs/intro> and
 
 ## Digging Deeper
 
-1. PLACEHOLDER - Questions will be in ordered lists.
-   - Related sub-questions will be in nested unordered lists.
 
 ## Reflection Questions
 
