@@ -200,9 +200,9 @@ nav:
     #   - Intro: pcae/u5intro.md
       - Worksheet: pcae/u5ws.md
     #   - Lab: pcae/u5lab.md
-    # - Unit 6 - Automating Docker Builds:
+    - Unit 6 - Automating Docker Builds:
     #   - Intro: pcae/u6intro.md
-    #   - Worksheet: pcae/u6ws.md
+      - Worksheet: pcae/u6ws.md
     #   - Lab: pcae/u6lab.md
     # - Unit 7 - Automating Docker Environments:
     #   - Intro: pcae/u7intro.md
