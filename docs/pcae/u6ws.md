@@ -7,9 +7,15 @@ Hold your worksheets until the end to turn them in as a final submission packet.
 
 ### Resources / Important Links
 
-- [PLACEHOLDER](LINK_HERE)
-- [PLACEHOLDER](LINK_HERE)
-- [PLACEHOLDER](LINK_HERE)
+- [Apptainer](https://apptainer.org/docs/user/latest/)
+    - [Intro to Apptainer](https://apptainer.org/docs/user/latest/introduction.html#why-use-apptainer)
+- [Intro to Packer](https://developer.hashicorp.com/packer/docs/intro) 
+    - [Packer Tutorial Library](https://developer.hashicorp.com/tutorials/library?product=packer&edition=open_source)
+    - [Packer with GitHub Actions](https://developer.hashicorp.com/packer/tutorials/cloud-production/github-actions)
+    - [Provisioning](https://developer.hashicorp.com/packer/tutorials/docker-get-started/docker-get-started-provision)
+- [Terraform with Docker](https://developer.hashicorp.com/terraform/tutorials/docker-get-started)
+- [Release Engineering](https://sre.google/sre-book/release-engineering/)
+- ["Canarying" Releases](https://sre.google/workbook/canarying-releases/) 
 
 #### Downloads
 
