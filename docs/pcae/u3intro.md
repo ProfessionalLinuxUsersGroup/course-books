@@ -5,7 +5,7 @@
 
 This unit describes best practices for inventory management. It will clarify details about our inventory sources such as flat files and API calls from other programs.  We learn that we cannot do anything properly without a good inventory and are guided on how best to achieve this goal.
 
-We learn that a good inventory is complete, accurate and properly formatted.  Inventories must use consistent identifiers of the same type sch as IP vs FQDN values.  The semi-structured nature of our inventory must be readable and properly formatted for use by our tool of choice (e.g. bash, python, ansible).
+We learn that a good inventory is complete, accurate and properly formatted.  Inventories must use consistent identifiers of the same type such as IP vs FQDN values.  The semi-structured nature of our inventory must be readable and properly formatted for use by our tool of choice (e.g. bash, python, ansible).
 
 ### What is the skill/tech/concept we are dealing with?
 
@@ -29,7 +29,7 @@ This unit continues to address the course objective to maintain inventories of s
         (otherwise the missing 2% will become your focus) 
     - Commonly maintained with bash, python & ansible.
         (this course focuses on ansible)
-    - Understanding the various types of sem-structured lists
+    - Understanding the various types of semi-structured lists
         - flat files 
         - CSV files
         - json files
