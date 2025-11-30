@@ -3,12 +3,12 @@
 
 ## Overview
 
-This unit explains what are administration and one-off/ad-hoc commands.  We will learn what triggers automation administration commands.  We also clarify how we get into a state where we need to interact with our systems. Once we are in this state we will learn how to interact with our automation using one-off commands.
+This unit explains administration and one-off/ad-hoc commands.  We will learn what triggers automation administration commands.  We also clarify how we get into a state where we need to interact with our systems. Once we are in this state, we will learn how to interact with our automation, using one-off commands.
 
 
 ### What is the skill/tech/concept we are dealing with?
 
-This unit continues to address the course objective to deploy various automation tools for engineering and operations activities.   Our main responsibility on the job is to perform admin and engineering tasks but we ultimately want to use automation to properly fullfil our roles.  A second course objective being addressed is to maintain system configuration and remediating drift via automation.  Remediation of drift is essentially keeping the computing environment in-line with user expectations.
+This unit continues to address the course objective to deploy various automation tools for engineering and operations activities.   Our main responsibility on the job, is to perform admin and engineering tasks, but we ultimately want to use automation to properly address our roles.  A second course objective being addressed is to maintain system configuration and remediate drift via automation.  Remediation of drift is essentially keeping the computing environment in-line with user expectations.
 
 
 
@@ -16,8 +16,8 @@ This unit continues to address the course objective to deploy various automation
 
 1. What types of admin commands will we use : Commands that change existing and running systems with the goal of keeping systems at 99.999% uptime.
 
-    -  Observe - Check a system and note exactly how it is configured.   Later, ensure nothing has changed, since the last check.
-    - Benchmark - Perform a load lest to check the how the system behaves / handles itself.
+    -  Observe - Check any system and note exactly how it is configured.   Later, ensure nothing has changed, since the last check.
+    - Benchmark - Perform a load lest to check how the system behaves / handles itself.
     - Tune - Change the system configuration then restart the related services for the changes to take effect.
 
 2. What triggers our need to perform admin commands
