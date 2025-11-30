@@ -35,7 +35,6 @@ This unit continues to address the course objective to deploy various automation
     
 3. PPDIOO Deployment methodology
 
-
     - focus on Optimize & Operate stages 
 
 
