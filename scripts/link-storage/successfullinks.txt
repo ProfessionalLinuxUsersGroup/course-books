@@ -12,6 +12,8 @@ http://www.w3.org/1999/02/22-rdf-syntax-ns
 https://ProLUG.org/
 https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_high_availability_clusters/index
 https://aide.github.io/
+https://apptainer.org/docs/user/latest/
+https://apptainer.org/docs/user/latest/introduction.html#why-use-apptainer
 https://attack.mitre.org/
 https://aws.amazon.com/blogs/big-data/tag/amazon-msk/
 https://aws.amazon.com/blogs/security/logging-strategies-for-security-incident-response/
@@ -23,6 +25,12 @@ https://ciq.com/blog/demystifying-and-troubleshooting-name-resolution-in-rocky-l
 https://cli.github.com/
 https://commonmark.org/help/
 https://csrc.nist.gov/projects/risk-management/about-rmf
+https://developer.hashicorp.com/packer/docs/intro
+https://developer.hashicorp.com/packer/tutorials/cloud-production/github-actions
+https://developer.hashicorp.com/packer/tutorials/docker-get-started/docker-get-started-provision
+https://developer.hashicorp.com/terraform/language/providers
+https://developer.hashicorp.com/terraform/tutorials/docker-get-started
+https://developer.hashicorp.com/tutorials/library?product=packer&edition=open_source
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/400
 https://developers.cloudflare.com/waf/get-started/
 https://devhints.io/bash
@@ -242,6 +250,8 @@ https://squidfunk.github.io/mkdocs-material/getting-started/
 https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types
 https://sre.google/books/
 https://sre.google/sre-book/monitoring-distributed-systems/
+https://sre.google/sre-book/release-engineering/
+https://sre.google/workbook/canarying-releases/
 https://sre.google/workbook/implementing-slos/
 https://sre.google/workbook/monitoring/
 https://tldp.org/LDP/Bash-Beginners-Guide/html/chap_01.html
@@ -321,6 +331,7 @@ https://www.youtube.com/embed/wCVj3qeLTMg?si=ozEReY_17DOyjUAv
 https://www.youtube.com/embed/wyVhGtFFYIQ?si=6-SPB7mVJL4LcIMV
 https://www.youtube.com/embed/x1kgXOWv-eM
 https://www.youtube.com/embed/xLv7CIJD6UI
+https://www.youtube.com/playlist?list=PLyuZ_vuAWmpoiB5_fo9zXd_leFwzfbA5o
 https://www.youtube.com/watch?v=54VgGHr99Qg
 https://www.youtube.com/watch?v=alcsTPQsruM&list=PLyuZ_vuAWmpqHEm-Js2gZleKzUY5uBWcM
 https://www.youtube.com/watch?v=d8XtNXutVto
