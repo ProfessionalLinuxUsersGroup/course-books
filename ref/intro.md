@@ -5,12 +5,6 @@
 
 (Small paragraph overviewing the unit)
 
-### What is the skill/tech/concept we are dealing with?
-
-(Skills, tech, or concepts related to the unit)
-
-etc..
-
 ## Learning Objectives
 
 (Objectives and learning goals related to the unit)
@@ -23,8 +17,7 @@ etc..
 
 (Any important terms relating to the unit)
 
-Term 1
-
-Term 2
-
-etc..
+|Terms|Definitions|
+|:------------------:|:------------------:|
+|Term 1|Breakdown of acronym if applicable|
+|Term 2|etc..|
