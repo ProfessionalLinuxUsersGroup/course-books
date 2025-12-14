@@ -1,11 +1,12 @@
 # Unit 3
+
 ## Making and Using Inventories
 
 ## Overview
 
-This unit describes best practices for inventory management. It will clarify details about our inventory sources such as flat files and API calls from other programs.  We learn that we cannot do anything properly without a good inventory and are guided on how best to achieve this goal.
+This unit describes best practices for inventory management. It will clarify details about our inventory sources such as flat files and API calls from other programs. We learn that we cannot do anything properly without a good inventory and are guided on how best to achieve this goal.
 
-We learn that a good inventory is complete, accurate and properly formatted.  Inventories must use consistent identifiers of the same type such as IP vs FQDN values.  The semi-structured nature of our inventory must be readable and properly formatted for use by our tool of choice (e.g. bash, python, ansible).
+We learn that a good inventory is complete, accurate and properly formatted. Inventories must use consistent identifiers of the same type such as IP vs FQDN values. The semi-structured nature of our inventory must be readable and properly formatted for use by our tool of choice (e.g. bash, python, ansible).
 
 ## Learning Objectives
 
@@ -14,26 +15,27 @@ We learn that a good inventory is complete, accurate and properly formatted.  In
     - Flat files
     - API calls
 
-2. Aspects of a good inventory
+1. Aspects of a good inventory
 
     - Accurate
     - Readable
     - Useful
-    
-3.  Inventories are structured and useful lists of items.
-    - With the goal of being 100% complete 
-        (otherwise the missing 2% will become your focus) 
+
+1. Inventories are structured and useful lists of items.
+
+    - With the goal of being 100% complete
+     (otherwise the missing 2% will become your focus)
     - Commonly maintained with bash, python & ansible.
-        (this course focuses on ansible)
+     (this course focuses on ansible)
     - Understanding the various types of semi-structured lists
-        - flat files 
+        - flat files
         - CSV files
         - json files
         - yaml files
 
 ## Key Terms and Definitions
 
-|Terms||||
+|Terms|Definitions|||
 |:------------------:|:------------------:|:------------------:|:------------------:|
 |**Flat files**|Just a list of servers or a basic list of tab/space separated values|||
 |**IP address**|Internet Protocol address|[RFC 1918]||

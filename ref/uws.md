@@ -26,7 +26,7 @@ could be transposed to a `.md` file.
 
 <iframe
     style="width: 100%; height: 100%; border: none;
-    aspect-ratio: 16/9; border-radius: 1rem; background:black"
+    aspect-ratio: 16/9; border-radius: 0.25rem; background:black"
     src="PLACEHOLDER: Unit Embed Link"
     title="PLACEHOLDER: Unit recording title"
     frameborder="0"
