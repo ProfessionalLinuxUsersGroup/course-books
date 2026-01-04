@@ -1,0 +1,77 @@
+# ProLUG Automation
+
+## Unit 8 Worksheet
+
+## Instructions
+
+Fill out this sheet as you progress through the lab and discussions. Hold your worksheets until
+the end to turn them in as a final submission packet.
+
+
+## Discussion Questions:
+
+### Unit 8 Discussion Post 1
+Your infrastructure engineering teams have been experiencing
+problems re-creating environments. The main problems have been around reliably building
+the exact same environment and also making those builds happen in a timely manner. Last
+week you read https://sre.google/sre-book/release-engineering/ and
+https://sre.google/workbook/canarying-releases/ to answer the following questions.
+
+1. How is a Kubernetes environment different, in release context from a virtual or
+physical server environment?
+	a. What does the term ephemeral mean, and are all Kubernetes environments
+	ephemeral? Why or why not?
+	b. How does blue/green or canary deployments help maintain uptime in release
+	management?
+		i. What is the use case of each?
+
+### Unit 8 Discussion Post 2
+Your team needs to develop a “push button” solution for
+deploying Kubernetes for a number of different development teams. You have a
+development cluster that they can use and capacity is not a consideration for this
+discussion.
+
+1. What pieces of information will you need to supply on your side for this type of
+automation?
+2. What pieces of information will the team need to supply on their side for each
+deployment?
+	1. How can the different dev teams feed this into your automation?
+		a. What do you prefer?
+3. What are some potential default variables you would want to use for this
+deployment?
+
+## Definitions/Terminology
+
+- Kubernetes
+	- Namespaces
+	- Pods
+	- Deployments
+	- Labels
+
+## Notes During Lecture/Class
+
+Links:
+	• Ansible Kubernetes core module:
+	https://docs.ansible.com/projects/ansible/latest/collections/kubernetes/core/k8s_module.html
+
+### Useful tools
+
+
+## Lab and Assignment
+
+Unit8 Lab Kubernetes Automation - https://killercoda.com/het-tanis/course/Automation-Labs/Unit8_Kubernetes_Automation
+
+## Digging Deeper
+
+1. Read other use cases for the Kubernetes module in Ansible:
+https://docs.ansible.com/projects/ansible/latest/collections/kubernetes/core/k8s_module.html
+	1. How might you use these other use cases in your environments?
+	2. Do you have another tool you’d use instead of this? Does it have the same, or
+	more functionality?
+2. Deployment practices with Kubernetes blue/green and canary labs:
+	1. https://killercoda.com/het-tanis/course/Kubernetes-Labs/blue-green-deployments
+	2. https://killercoda.com/het-tanis/course/Kubernetes-Labs/canary-deployments
+
+## Reflection Questions
+1. What questions do you still have about this week?
+2. How are you going to use what you’ve learned in your current role?

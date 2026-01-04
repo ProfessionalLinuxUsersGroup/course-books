@@ -62,7 +62,7 @@ cannot have security in the system."
     1. Can you do that in this situation, or must this be corrected? Why or why not?
 
 
-!!! notes
+!!! note
 
     Submit your input by following the link below. The discussion posts are done in Discord Forums.
 

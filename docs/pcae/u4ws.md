@@ -71,7 +71,7 @@ could be transposed to a `.md` file.
 4. How might you present a report for these servers (to your team or others?)
 
 
-!!! notes
+!!! note
 
     Submit your input by following the link below. The discussion posts are done in Discord Forums.
 

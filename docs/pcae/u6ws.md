@@ -29,18 +29,16 @@ could be transposed to a `.md` file.
 
 ### Unit 6 Recording
 
-Recording coming soon.  
-<!-- Playlist: https://www.youtube.com/playlist?list=PLyuZ_vuAWmpoiB5_fo9zXd_leFwzfbA5o -->
-<!-- <iframe -->
-<!--     style="width: 100%; height: 100%; border: none; -->
-<!--     aspect-ratio: 16/9; border-radius: 1rem; background:black" -->
-<!--     src="PLACEHOLDER: Unit Embed Link" -->
-<!--     title="PLACEHOLDER: Unit recording title" -->
-<!--     frameborder="0" -->
-<!--     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" -->
-<!--     referrerpolicy="strict-origin-when-cross-origin" -->
-<!--     allowfullscreen> -->
-<!-- </iframe> -->
+<iframe
+    style="width: 100%; height: 100%; border: none;
+    aspect-ratio: 16/9; border-radius: 0.25rem; background:black"
+    src="https://www.youtube.com/embed/1OQXN5_oyu0"
+    title="Unit 6 Recording - ProLUG Linux Automation Engineering Course - Free in Discord"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+</iframe>
 
 #### Discussion Post #1
 
@@ -78,8 +76,9 @@ Read the following: <https://developer.hashicorp.com/packer/docs/intro> and
 
 3. Modify or fix the drawing to show how your team will deploy containers.
 
+<img src="../../assets/pcae/images/u6/containerimgworkflow.png" />
 
-!!! notes
+!!! note
 
     Submit your input by following the link below. The discussion posts are done in Discord Forums.
 
@@ -112,7 +111,6 @@ Read the following: <https://developer.hashicorp.com/packer/docs/intro> and
         - Branching
 
         - Testing
-
 
 ## Digging Deeper
 

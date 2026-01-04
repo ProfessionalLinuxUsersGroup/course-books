@@ -58,7 +58,7 @@ Read about the **Pareto Rule** or the **Rule of 80/20**.
     2. What examples can you find where this has not proven true?
 
 
-!!! notes
+!!! note
 
     Submit your input by following the link below. The discussion posts are done in Discord Forums.
 

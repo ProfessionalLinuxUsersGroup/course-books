@@ -72,7 +72,7 @@ and think you have a good handle on what is happening.
     2. Where will you use these in your automations?
 
 
-!!! notes
+!!! note
 
     Submit your input by following the link below. The discussion posts are done in Discord Forums.
 

@@ -1,0 +1,53 @@
+# ProLUG Automation
+
+## Unit 9 Worksheet
+
+## Instructions
+
+Fill out this sheet as you progress through the lab and discussions. Hold your worksheets until
+the end to turn them in as a final submission packet.
+
+
+## Discussion Questions:
+
+### Unit 9 Discussion Post 1
+Read sections “Container Usage” and “Diskless Booting” on
+pages 8 and 9 of this doc:
+https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-223.ipd.pdf
+
+1. What are the main security concerns given about using containers in HPC?
+2. What is the PXE or IPXE protocol defined for diskless booting?
+
+### Unit 9 Discussion Post 2
+Read about chrooted environments here:
+https://en.wikipedia.org/wiki/Chroot and the Ansible connector here:
+https://docs.ansible.com/projects/ansible/latest/collections/community/general/chroot_connection.html
+
+1. What are the uses of a chrooted environment? (there are 5 on Wikipedia)
+2. How might using Ansible to build chrooted images help improve your build process?
+
+## Definitions/Terminology
+
+- Warewulf terminology
+	- Image repository
+	- System Overlays
+	- Runtime Overlays
+	- Wwctl language
+
+## Notes During Lecture/Class
+
+### Useful tools
+
+## Lab and Assignment
+
+Unit 9 Build Modern Linux - https://killercoda.com/het-tanis/course/Automation-Labs/Unit9_Build_Modern_Linux
+
+## Digging Deeper
+
+1. Read other parts of this doc for more HPC understanding:
+https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-223.ipd.pdf
+	1. What are the components on the drawing on page 3 of doc (pg. 11 in the webviewer)
+
+## Reflection Questions
+1. What questions do you still have about this week?
+2. How are you going to use what you’ve learned in your current role?
