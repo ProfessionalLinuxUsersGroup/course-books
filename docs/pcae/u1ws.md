@@ -67,7 +67,7 @@ What is meant by a trigger in automation?
 3. Where would you place these triggers to positively affect your ability to
    build or administer Linux systems?
 
-!!! notes
+!!! note
 
     Submit your input by following the link below:
 

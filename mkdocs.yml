@@ -204,19 +204,19 @@ nav:
     #   - Intro: pcae/u6intro.md
       - Worksheet: pcae/u6ws.md
     #   - Lab: pcae/u6lab.md
-    # - Unit 7 - Automating Docker Environments:
+    - Unit 7 - Automating Docker Environments:
     #   - Intro: pcae/u7intro.md
-    #   - Worksheet: pcae/u7ws.md
+      - Worksheet: pcae/u7ws.md
     #   - Lab: pcae/u7lab.md
     #   - Bonus: pcae/u7b.md
-    # - Unit 8 - Automating K8s Environments:
+    - Unit 8 - Automating K8s Environments:
     #   - Intro: pcae/u8intro.md
-    #   - Worksheet: pcae/u8ws.md
+      - Worksheet: pcae/u8ws.md
     #   - Lab: pcae/u8lab.md
     #   - Bonus: pcae/u8b.md
-    # - Unit 9 - Build && Deploy Linux Systems:
+    - Unit 9 - Build && Deploy Linux Systems:
     #   - Intro: pcae/u9intro.md
-    #   - Worksheet: pcae/u9ws.md
+      - Worksheet: pcae/u9ws.md
     #   - Lab: pcae/u9lab.md
     # - Unit 10 - Harden Linux Systems:
     #   - Intro: pcae/u10intro.md

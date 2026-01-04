@@ -79,7 +79,7 @@ Read the following: <https://developer.hashicorp.com/packer/docs/intro> and
 3. Modify or fix the drawing to show how your team will deploy containers.
 
 
-!!! notes
+!!! note
 
     Submit your input by following the link below. The discussion posts are done in Discord Forums.
 
