@@ -38,15 +38,16 @@ could be transposed to a `.md` file.
 
 #### Discussion Post #1
 
-Your infrastructure engineering teams have been experiencing problems re-creating environments. The main problems 
-have been around reliably building the exact same environment and also making those builds happen in a timely manner.
+You are the team lead of a small Linux team maintaining 700 servers. Your management is always pushing for getting more 
+from the systems and has been asking you to explore container environments, especially in the cloud. You read some
+blog posts about services and decide to write out your notes:
+<https://aws.amazon.com/blogs/containers/amazon-ecs-vs-amazon-eks-making-sense-of-aws-container-services/>
 
-Read <https://sre.google/sre-book/release-engineering/> and <https://sre.google/workbook/canarying-releases/> to 
-answer the following questions.
-
-1. What is release engineering?
-2. What are the release engineering principles?
-3. How do the tools we've discussed this week, Apptainer, Packer, Terraform, or even Ansible fit into these topics?
+1. What are the major differences between container environments and Kubernetes
+orchestrated environments?
+    1. Why might you just want a containerized environment?
+    1. Why might you want an orchestrated environment?
+    1. Can you compare and contrast them?
 
 #### Discussion Post #2
 

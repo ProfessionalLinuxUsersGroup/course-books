@@ -1,3 +1,4 @@
+http://example.com
 http://professionallinuxusersgroup.github.io/course-books
 http://purl.org/dc/elements/1.1/
 http://python.org/
@@ -16,15 +17,18 @@ https://apptainer.org/docs/user/latest/
 https://apptainer.org/docs/user/latest/introduction.html#why-use-apptainer
 https://attack.mitre.org/
 https://aws.amazon.com/blogs/big-data/tag/amazon-msk/
+https://aws.amazon.com/blogs/containers/amazon-ecs-vs-amazon-eks-making-sense-of-aws-container-services/
 https://aws.amazon.com/blogs/security/logging-strategies-for-security-incident-response/
 https://aws.amazon.com/blogs/security/tag/bastion-host/
 https://aws.amazon.com/search/?searchQuery=air+gapped#facet_type=blogs&page=1
 https://catalog.workshops.aws/well-architected-security/en-US/3-detection/40-vpc-flow-logs-analysis-dashboard/1-enable-vpc-flow-logs
 https://cio-wiki.org/wiki/Operations_Bridge
 https://ciq.com/blog/demystifying-and-troubleshooting-name-resolution-in-rocky-linux/
+https://ciq.com/products/apptainer/
 https://cli.github.com/
 https://commonmark.org/help/
 https://csrc.nist.gov/projects/risk-management/about-rmf
+https://developer.hashicorp.com/packer
 https://developer.hashicorp.com/packer/docs/intro
 https://developer.hashicorp.com/packer/tutorials/cloud-production/github-actions
 https://developer.hashicorp.com/packer/tutorials/docker-get-started/docker-get-started-provision
@@ -51,6 +55,8 @@ https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_templating.html
 https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_variables.html
 https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_variables.html#understanding-variable-precedence
 https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html
+https://docs.ansible.com/projects/ansible/latest/collections/community/general/chroot_connection.html
+https://docs.ansible.com/projects/ansible/latest/collections/kubernetes/core/k8s_module.html
 https://docs.aws.amazon.com/pdfs/whitepapers/latest/real-time-communication-on-aws/real-time-communication-on-aws.pdf
 https://docs.aws.amazon.com/pdfs/whitepapers/latest/real-time-communication-on-aws/real-time-communication-on-aws.pdf#high-availability-and-scalability-on-aws
 https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs-records-examples.html
@@ -79,6 +85,7 @@ https://draw.io
 https://editor.networkpolicy.io/
 https://en.wikipedia.org/wiki/Battle_drill
 https://en.wikipedia.org/wiki/C_(programming_language)
+https://en.wikipedia.org/wiki/Chroot
 https://en.wikipedia.org/wiki/Compiler
 https://en.wikipedia.org/wiki/Configuration_management
 https://en.wikipedia.org/wiki/Cron
@@ -155,10 +162,15 @@ https://killercoda.com/het-tanis/course/Automation-Labs/Unit1_Tools
 https://killercoda.com/het-tanis/course/Automation-Labs/Unit2_Interacting_with_OS
 https://killercoda.com/het-tanis/course/Automation-Labs/Unit3_Inventories
 https://killercoda.com/het-tanis/course/Automation-Labs/Unit4_Admin_Commands
+https://killercoda.com/het-tanis/course/Automation-Labs/Unit7_Container_Environments
+https://killercoda.com/het-tanis/course/Automation-Labs/Unit8_Kubernetes_Automation
+https://killercoda.com/het-tanis/course/Automation-Labs/Unit9_Build_Modern_Linux
 https://killercoda.com/het-tanis/course/AutomationLabs/Unit2_Interacting_with_OS
 https://killercoda.com/het-tanis/course/AutomationLabs/Unit4_Admin_Commands
 https://killercoda.com/het-tanis/course/Hashicorp-Labs/004-vault-read-secrets-ansible
 https://killercoda.com/het-tanis/course/HashicorpLabs/004-vault-read-secrets-ansible
+https://killercoda.com/het-tanis/course/Kubernetes-Labs/blue-green-deployments
+https://killercoda.com/het-tanis/course/Kubernetes-Labs/canary-deployments
 https://killercoda.com/het-tanis/course/Linux-Labs
 https://killercoda.com/het-tanis/course/Linux-Labs/102-monitoring-linux-logs
 https://killercoda.com/het-tanis/course/Linux-Labs/103-monitoring-linux-telemetry
@@ -202,6 +214,7 @@ https://nginx.org/
 https://nginx.org/en/docs/beginners_guide.html
 https://nvd.nist.gov/vuln/search
 https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf
+https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-223.ipd.pdf
 https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r2.pdf
 https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r5.pdf
 https://overleaf.com
@@ -302,6 +315,7 @@ https://www.sixsigmacouncil.org/wp-content/uploads/2018/08/Six-Sigma-A-Complete-
 https://www.youtube.com/@het_tanis8213
 https://www.youtube.com/embed/-4FhZ2q4RSo
 https://www.youtube.com/embed/-tk73llgt3E?si=QZUdffq1sxsPzU8X
+https://www.youtube.com/embed/1OQXN5_oyu0
 https://www.youtube.com/embed/2iWZTQy4eTU
 https://www.youtube.com/embed/2yhCRQ-QmlE?si=mAZH3NRoJmnnopif
 https://www.youtube.com/embed/6VOHFYkptOw
