@@ -78,6 +78,7 @@ Read the following: <https://developer.hashicorp.com/packer/docs/intro> and
 
 3. Modify or fix the drawing to show how your team will deploy containers.
 
+<img src="../../assets/pcae/images/u6/containerimgworkflow.png" />
 
 !!! note
 
