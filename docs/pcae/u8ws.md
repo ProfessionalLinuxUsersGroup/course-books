@@ -46,10 +46,10 @@ have been around reliably building the exact same environment and also making th
 
 1. How is a Kubernetes environment different, in release context from a virtual or
 physical server environment?
-	- a. What does the term ephemeral mean, and are all Kubernetes environments
-	ephemeral? Why or why not?
-    - b. How does blue/green or canary deployments help maintain uptime in release management?
-        - i. What is the use case of each?
+	1. What does the term ephemeral mean, and are all Kubernetes environments 
+    ephemeral? Why or why not?
+    1.  How does blue/green or canary deployments help maintain uptime in release management?
+        1. What is the use case of each?
 
 #### Discussion Post #2
 

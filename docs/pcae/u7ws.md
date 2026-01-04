@@ -54,12 +54,12 @@ Your team is having problems with a deployment. This is the code snippet they ar
 
 1. What is the provider they are using?
 2. How many docker instance are they trying to run, and what are their names?
-    a. What ports are they going to be running on?
+    1. What ports are they going to be running on?
 3. Your team is having problems executing this and have brought it to you. What might
 you check, or do with terraform to try to resolve the issue?
-    - a. If it’s telling you there are no providers?
-    - b. If it’s saying there’s a syntax problem (how can you find it)?
-    - c. If there are no resources created?
+    1. If it’s telling you there are no providers?
+    1. If it’s saying there’s a syntax problem (how can you find it)?
+    1. If there are no resources created?
 
 ```terraform linenums="1" title="terraform.tf"
 terraform {
