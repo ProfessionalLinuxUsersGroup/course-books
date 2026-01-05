@@ -1,11 +1,11 @@
-# Unit 6 Lab
-## Automating Docker Builds
+# Unit 7 Lab
+## Automating Docker Environments
 
 This lab is designed to have the engineer verify and execute their automation 
 tools to interact with the OS in a controlled fashion.
 
 Follow [this link](https://killercoda.com/het-tanis/course/Automation-Labs/)
-and find the lab for Unit 6 to complete it.  
+and find the lab for Unit 7 to complete it.  
 
 !!! warning
 
