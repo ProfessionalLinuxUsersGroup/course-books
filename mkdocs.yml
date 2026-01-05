@@ -199,29 +199,29 @@ nav:
     - Unit 5 - Environment and Local Variables:
     #   - Intro: pcae/u5intro.md
       - Worksheet: pcae/u5ws.md
-    #   - Lab: pcae/u5lab.md
+      - Lab: pcae/u5lab.md
     - Unit 6 - Automating Docker Builds:
     #   - Intro: pcae/u6intro.md
       - Worksheet: pcae/u6ws.md
-    #   - Lab: pcae/u6lab.md
+      - Lab: pcae/u6lab.md
     - Unit 7 - Automating Docker Environments:
     #   - Intro: pcae/u7intro.md
       - Worksheet: pcae/u7ws.md
-    #   - Lab: pcae/u7lab.md
+      - Lab: pcae/u7lab.md
     #   - Bonus: pcae/u7b.md
     - Unit 8 - Automating K8s Environments:
     #   - Intro: pcae/u8intro.md
       - Worksheet: pcae/u8ws.md
-    #   - Lab: pcae/u8lab.md
+      - Lab: pcae/u8lab.md
     #   - Bonus: pcae/u8b.md
     - Unit 9 - Build && Deploy Linux Systems:
     #   - Intro: pcae/u9intro.md
       - Worksheet: pcae/u9ws.md
-    #   - Lab: pcae/u9lab.md
-    # - Unit 10 - Harden Linux Systems:
+      - Lab: pcae/u9lab.md
+    - Unit 10 - Harden Linux Systems:
     #   - Intro: pcae/u10intro.md
     #   - Worksheet: pcae/u10ws.md
-    #   - Lab: pcae/u10lab.md
+      - Lab: pcae/u10lab.md
     # - Unit 11 - Update && Patch Systems:
     #   - Intro: pcae/u11intro.md
     #   - Worksheet: pcae/u11ws.md
