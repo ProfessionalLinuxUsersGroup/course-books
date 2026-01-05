@@ -218,10 +218,10 @@ nav:
     #   - Intro: pcae/u9intro.md
       - Worksheet: pcae/u9ws.md
       - Lab: pcae/u9lab.md
-    # - Unit 10 - Harden Linux Systems:
+    - Unit 10 - Harden Linux Systems:
     #   - Intro: pcae/u10intro.md
     #   - Worksheet: pcae/u10ws.md
-    #   - Lab: pcae/u10lab.md
+      - Lab: pcae/u10lab.md
     # - Unit 11 - Update && Patch Systems:
     #   - Intro: pcae/u11intro.md
     #   - Worksheet: pcae/u11ws.md
