@@ -210,7 +210,7 @@ nav:
       - Lab: pcae/u7lab.md
     #   - Bonus: pcae/u7b.md
     - Unit 8 - Automating K8s Environments:
-    #   - Intro: pcae/u8intro.md
+      - Intro: pcae/u8intro.md
       - Worksheet: pcae/u8ws.md
       - Lab: pcae/u8lab.md
     #   - Bonus: pcae/u8b.md
