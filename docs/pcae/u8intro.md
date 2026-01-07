@@ -8,8 +8,6 @@ So far, you've built a solid foundation in automation fundamentals - from Bash s
 
 The critical insight of this unit is this: **Kubernetes doesn't automate itself.** Organizations require reliable, repeatable mechanisms to stand up environments, deploy applications, test infrastructure changes, manage resource lifecycles, and maintain compliance records. This unit teaches you how to provide these mechanisms using Ansible - the same tool your team already knows and trusts. By mastering this unit, you become capable of solving real infrastructure problems that directly impact your organization's reliability and velocity.
 
----
-
 ## Learning Objectives
 
 1. **Distinguish Between Container Deployment Approaches**
@@ -42,8 +40,6 @@ The critical insight of this unit is this: **Kubernetes doesn't automate itself.
    - Implement comprehensive resource cleanup and deletion procedures
    - Log and audit all infrastructure changes for compliance and capacity planning
    - Generate reports on resource creation, modification, and destruction for organizational records
-
----
 
 ## Key Concepts
 
