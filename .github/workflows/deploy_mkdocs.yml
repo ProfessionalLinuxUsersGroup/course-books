@@ -29,8 +29,11 @@ jobs:
           python-version: '3.13'
           cache: 'pip'
 
-      - name: Install dependencies
-        run: pip install -U mkdocs mkdocs-material mkdocs-glightbox
+      - name: Install mkdocs-to-pdf dependencies
+        run: apt-get install -y weasyprint
+
+      - name: Install pip dependencies
+        run: pip install -U mkdocs mkdocs-material mkdocs-glightbox mkdocs-to-pdf
 
       - name: Generate resources.md files
         run: ./scripts/generate-resources

@@ -158,6 +158,7 @@ https://killercoda.com/het-tanis/course/Ansible-Labs/16-Ansible-Web
 https://killercoda.com/het-tanis/course/Ansible-Labs/16-Ansible-Web-Server-Env-Deploy
 https://killercoda.com/het-tanis/course/Ansible-Labs/19-Ansible-csv-report
 https://killercoda.com/het-tanis/course/AnsibleLabs/08-Ansible-Playbook-Jinja-Reporting
+https://killercoda.com/het-tanis/course/Automation-Labs/
 https://killercoda.com/het-tanis/course/Automation-Labs/Unit1_Tools
 https://killercoda.com/het-tanis/course/Automation-Labs/Unit2_Interacting_with_OS
 https://killercoda.com/het-tanis/course/Automation-Labs/Unit3_Inventories
@@ -320,6 +321,7 @@ https://www.youtube.com/embed/2iWZTQy4eTU
 https://www.youtube.com/embed/2yhCRQ-QmlE?si=mAZH3NRoJmnnopif
 https://www.youtube.com/embed/6VOHFYkptOw
 https://www.youtube.com/embed/8psu0D4rSmc?si=8QOnuGhcCA_0Fp7S
+https://www.youtube.com/embed/C4dzRI_bFCQ
 https://www.youtube.com/embed/C5F6i9zDgJ4?si=rHKecMF9MDg3tmGl
 https://www.youtube.com/embed/ESsUM0Gz8Jk
 https://www.youtube.com/embed/F6loIx9WwGM
@@ -336,8 +338,10 @@ https://www.youtube.com/embed/YyK5doWENY8
 https://www.youtube.com/embed/_lo50mgERJY?si=diwjdV3x4pZfO7F_
 https://www.youtube.com/embed/acKjnxuGjVI?si=ciAIk0jE9pWefKIa
 https://www.youtube.com/embed/alcsTPQsruM?si=Dluz0h-UCgg9YfsW
+https://www.youtube.com/embed/dfQsb8GJA3k
 https://www.youtube.com/embed/dnz92v71Tr4?si=tKBN9rcjWLBtecPO
 https://www.youtube.com/embed/eHB8WKWz2eQ
+https://www.youtube.com/embed/ef8Dzk5wVm8
 https://www.youtube.com/embed/miVuSoHTuP4?si=9swKZSbFG0PvVp51
 https://www.youtube.com/embed/pnCC-FX-aag?si=Y9zt3V_f5osfmGYn
 https://www.youtube.com/embed/sn_LwfIObQw?si=aBqkZL1RIzKN9mWx
