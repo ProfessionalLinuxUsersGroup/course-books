@@ -301,6 +301,13 @@ plugins:
   - glightbox
   - search
   - blog
+  - to-pdf:
+      author: Scott Champine
+      copyright: Copyright © Professional Linux Users Group 2026
+      cover_subtitle: Produced by Scott Champine and ProLUG
+      output_path: prolugcoursebooks.pdf
+      download_link: header
+
   # - git-revision-date-localized:
   #     enable_creation_date: true
   # - git-committers:
