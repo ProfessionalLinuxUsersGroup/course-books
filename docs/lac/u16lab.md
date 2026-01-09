@@ -22,9 +22,7 @@ The lab has been provided for convenience below:
 - <a href="../../assets/lac/downloads/u16/u16_lab.txt" target="_blank" download>📥 u16_lab(`.txt`)</a>
 - <a href="../../assets/lac/downloads/u16/u16_lab.docx" target="_blank" download>📥 u16_lab(`.docx`)</a>
 
-## LAB
-
----
+## Lab
 
 You have the answers here, if they ask, you may give them hints. Otherwise, you can help them find the
 right solution any way you want to.

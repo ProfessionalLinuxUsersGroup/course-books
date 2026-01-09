@@ -28,8 +28,6 @@ Let's get into it.
 
 ## Verifying Package Integrity
 
----
-
 Start by finding a package you know is installed and used in your environment -- for example, `sshd`:
 
 ```bash linenums="1"
@@ -63,8 +61,6 @@ It's also helpful in troubleshooting when a package isn't working as expected.
 
 
 ## Auditing a File in a Package
-
----
 
 Let's say you suspect something has been changed or tampered with.
 Let's get all files from a package.  
@@ -107,8 +103,6 @@ If the hashes are different, the file has been modified.
 
 ## Bonus Challenge 💡
 
----
-
 1. Run this one-liner to verify all installed packages:
    ```bash linenums="1"
    rpm -Va
@@ -145,16 +139,12 @@ Then you can reinstall the package or extract the original file from the `.rpm` 
 
 ### Reflection Questions
 
----
-
 - What happens if you manually modify a file, then verify with `rpm -V`?
 - Can you identify if changes were made outside of DNF/RPM?
 - What types of files are typically most important to verify?
 
 
 ### Example of Real-World Security Tools
-
----
 
 Large enterprises often use tools like AIDE (Advanced Intrusion Detection Environment) or Tripwire to baseline their systems and detect changes over time.
 
@@ -178,8 +168,6 @@ AIDE compares the current state of the system to a known baseline.
 This is foundational to change management, compliance, and intrusion detection.
 
 ## Resources
-
----
 
 - [RPM Man Page](https://man7.org/linux/man-pages/man8/rpm.8.html)
 - [AIDE Documentation](https://aide.github.io/)

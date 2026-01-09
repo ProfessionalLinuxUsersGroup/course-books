@@ -8,8 +8,6 @@ Enhance productivity by enabling the management of multiple sessions and windows
 
 ## Key Features of Terminal Multiplexors
 
----
-
 ### Create Multiple Windows/Panes 🪟
 
 Split your terminal into panes (or windows) so you can run different commands or tasks simultaneously.
@@ -27,8 +25,6 @@ If your network connection drops, the tasks keep running on the server, and you 
 Some terminal multiplexers allow multiple users to connect to the same session, enabling collaborative work on a single system.
 
 ## Popular Terminal Multiplexors
-
----
 
 ### Tmux
 

@@ -25,8 +25,6 @@ The lab has been provided for convenience below:
 
 ## Pre-Lab Warm-Up
 
----
-
 1. `cd ~`
 2. `ls`
 3. `mkdir unit4`
@@ -87,8 +85,6 @@ The lab has been provided for convenience below:
    ```
 
 ## Lab 🧪
-
----
 
 1. Gathering system information release and kernel information
    ```bash linenums="1"

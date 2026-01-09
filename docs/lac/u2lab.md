@@ -25,8 +25,6 @@ The lab has been provided for convenience below:
 
 ## Pre-Lab Warm-Up
 
----
-
 EXERCISES (Warmup to quickly run through your system and familiarize yourself)
 
 ```bash linenums="1"
@@ -62,8 +60,6 @@ ls -l
 ```
 
 ## Lab 🧪
-
----
 
 This lab is designed to help you get familiar with the basics of the systems you will be working on. Some of you will find that you know the basic material but the techniques here allow you to put it together in a more complex fashion.
 

@@ -21,8 +21,6 @@ could be transposed to a `.md` file.
 
 ## Pre-Lab Warm-Up
 
----
-
 **EXERCISES** (Warmup to quickly run through your system and familiarize yourself)
 
 ```bash linenums="1"
@@ -61,8 +59,6 @@ Create a checklist from the opened STIG for RHEL 9
 <img src="../../assets/psc/images/u2/image4.png"></img>
 
 ## Lab 🧪
-
----
 
 This lab is designed to have the engineer practice securing a Linux server or service against a set of configuration standards. These standards are sometimes called benchmarks, checklists, or guidelines. The engineer will be using STIG Viewer 2.18 to complete this lab.
 

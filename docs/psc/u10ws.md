@@ -2,8 +2,6 @@
 
 ## Instructions
 
----
-
 Fill out this sheet as you progress through the lab and discussions. Hold your worksheets until
 the end to turn them in as a final submission packet.
 
@@ -15,8 +13,8 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/psc/downloads/u10/u10_worksheet.txt" target="_blank" download>📥 u10_worksheet(`.txt`)</a>
-- <a href="../../assets/psc/downloads/u10/u10_worksheet.pdf" target="_blank" download>📥 u10_worksheet(`.pdf`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/psc/downloads/u10/u10_worksheet.txt" target="_blank">📥 u10_worksheet(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/psc/downloads/u10/u10_worksheet.pdf" target="_blank">📥 u10_worksheet(`.pdf`)</a>
 
 ### Unit 10 Recording
 
@@ -29,6 +27,8 @@ could be transposed to a `.md` file.
     referrerpolicy="strict-origin-when-cross-origin;
     allowfullscreen;>
 </iframe>
+
+Link: <https://www.youtube.com/watch?v=LqvoE0UXiOo>
 
 #### Discussion Post #1
 
@@ -50,27 +50,16 @@ Capture all the terms and concepts that we talk about in this week’s recording
         1. Which would you include?
         2. Which don’t you feel comfortable including?
 
----
+!!! info
 
-<div class="warning">
-
-Submit your input by following the link below.
-
-The discussion posts are done in Discord Forums.
-
-</div>
-
-- [Link to Discussion Forum](https://discord.com/channels/611027490848374811/1365776270800977962)
+    Submit your input by following the link below. The discussion posts are done in Discord Forums.
+    - [Link to Discussion Forum](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 ## Definitions
-
----
 
 - Capture terms and definitions from this week's lesson or recording
 
 ## Digging Deeper
-
----
 
 1. Review more of the SRE books from Google: <https://sre.google/books/> to try to find
    more useful change management practices and policies.

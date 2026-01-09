@@ -26,8 +26,6 @@ The lab has been provided for convenience below:
 
 ## Pre-Lab Warm-Up
 
----
-
 Exercises (Warmup to quickly run through your system and practice commands)
 
 1. `mkdir lab_users`
@@ -65,8 +63,6 @@ We just put the aliases back.
     - Test with `alias` to see them added and also use `ll` and `ls` to see them work properly.
 
 ## Lab 🧪
-
----
 
 This lab is designed to help you get familiar with the basics of the systems you will be working on.
 

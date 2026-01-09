@@ -27,8 +27,6 @@ The lab has been provided for convenience below:
 
 ## Pre-Lab: Quick Warmup and System Checks
 
----
-
 Before installing K3s, verify system compatibility and gather initial data.
 
 ### Step 1: Download and Inspect K3s Installer
@@ -207,8 +205,6 @@ journalctl -xeu k3s
 - Does restarting resolve the issue?
 
 ## Conclusion
-
----
 
 At the end of this lab, you should:
 

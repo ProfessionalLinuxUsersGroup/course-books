@@ -25,8 +25,6 @@ The lab has been provided for convenience below:
 
 ## Pre-Lab Warm-Up
 
----
-
 **EXERCISES** (Warmup to quickly run through your system and familiarize yourself)
 
 1. `ss -ntulp`
@@ -56,8 +54,6 @@ The lab has been provided for convenience below:
         - <https://nvd.nist.gov/vuln/search>
 
 ## Lab 🧪
-
----
 
 There will be three basic tasks for today’s labs:
 

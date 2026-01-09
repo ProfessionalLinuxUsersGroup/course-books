@@ -26,8 +26,6 @@ The lab has been provided for convenience below:
 
 ## Pre-Lab Warm-Up
 
----
-
 A couple commands to get the noodle and fingers warmed up.
 
 **For clarity:**
@@ -99,8 +97,6 @@ with precision. There are very useful tools though, and I would highly encourage
 you to examine them. <http://tldp.org/LDP/abs/html/arithexp.html>
 
 ## Lab 🧪
-
----
 
 Log into your Rocky server and become root.
 

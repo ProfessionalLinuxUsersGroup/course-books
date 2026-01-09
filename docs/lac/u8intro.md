@@ -2,8 +2,6 @@
 
 ## Overview
 
----
-
 This unit focuses on scripting and system checks in Linux environments, with particular
 emphasis on bash scripting for system administration tasks. It covers:
 
@@ -26,8 +24,6 @@ emphasis on bash scripting for system administration tasks. It covers:
   automatically through cron jobs or systemd timers, reducing manual intervention.
 
 ## Learning Objectives
-
----
 
 1. **Create and Execute Bash Scripts:**
     - Develop proficiency in writing and executing bash scripts for system administration tasks.

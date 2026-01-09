@@ -2,8 +2,6 @@
 
 ## Instructions
 
----
-
 Fill out this sheet as you progress through the lab and discussions. Hold your worksheets until
 the end to turn them in as a final submission packet.
 
@@ -21,12 +19,10 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/psc/downloads/u2/u2_worksheet.txt" target="_blank" download>📥 u2_worksheet(`.txt`)</a>
-- <a href="../../assets/psc/downloads/u2/u2_worksheet.docx" target="_blank" download>📥 u2_worksheet(`.docx`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/psc/downloads/u2/u2_worksheet.txt" target="_blank">📥 u2_worksheet(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/psc/downloads/u2/u2_worksheet.pdf" target="_blank">📥 u2_worksheet(`.pdf`)</a>
 
 ### Unit 2 Recording
-
-<!-- <img src="../../assets/psc/images/under-construction.jpg" style="border-radius:2%"></img> -->
 
 <iframe
     style="width: 100%; height: 100%; border: none;
@@ -38,6 +34,8 @@ could be transposed to a `.md` file.
     referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen>
 </iframe>
+
+Link: <https://www.youtube.com/watch?v=x1kgXOWv-eM>
 
 #### Discussion Post #1
 
@@ -62,18 +60,12 @@ or similar blogs on DNS and host file configurations.
 2. What are security problems associated with DNS and common exploits? (May have
    to look into some more blogs or posts for this)
 
-<div class="warning">
-Submit your input by following the link below.
+!!! info
 
-The discussion posts are done in Discord threads. Click the 'Threads' icon on the top right and search for the discussion post.
-
-</div>
-
-- [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1098309490681598072)
+    Submit your input by following the link below. The discussion posts are done in Discord Forums.
+    - [Link to Discussion Forum](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 ## Definitions
-
----
 
 sysctl:
 
@@ -93,15 +85,11 @@ ngrep:
 
 ## Digging Deeper
 
----
-
 1. See if you can find any DNS exploits that have been used and written up in the
    diamond model of intrusion analysis format. If you can, what are the primary actors
    and actions that made up the attack?
 
 ## Reflection Questions
-
----
 
 1. What questions do you still have about this week?
 

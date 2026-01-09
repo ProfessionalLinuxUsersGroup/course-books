@@ -2,8 +2,6 @@
 
 ## Instructions
 
----
-
 No worksheet or discussion for this unit, course wrap up and lecture only.
 
 ### Unit 16 Recording
@@ -17,3 +15,5 @@ No worksheet or discussion for this unit, course wrap up and lecture only.
     referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen>
 </iframe>
+
+Link: <https://www.youtube.com/watch?v=VJ0Z9O_7j48>

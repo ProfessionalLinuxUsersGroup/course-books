@@ -19,15 +19,9 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/pcae/downloads/u1/u1_worksheet.md.txt" target="_blank" download="u1_worksheet.md">
-  :material-download: u1_worksheet(`.md`)
-  </a>
-- <a href="../../assets/pcae/downloads/u1/u1_worksheet.txt" target="_blank" download>
-  :material-download: u1_worksheet(`.txt`)
-  </a>
-- <a href="../../assets/pcae/downloads/u1/u1_worksheet.docx" target="_blank" download>
-  :material-download: u1_worksheet(`.docx`)
-  </a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u1/u1_worksheet.md.txt" target="_blank">📥 u1_worksheet(`.md`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u1/u1_worksheet.txt" target="_blank">📥 u1_worksheet(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u1/u1_worksheet.pdf" target="_blank">📥 u1_worksheet(`.pdf`)</a>
 
 ### Unit 1 Recording
 
@@ -35,12 +29,14 @@ could be transposed to a `.md` file.
     style="width: 100%; height: 100%; border: none;
     aspect-ratio: 16/9; border-radius: 0.25rem; background:black"
     src="https://www.youtube.com/embed/wyVhGtFFYIQ?si=6-SPB7mVJL4LcIMV"
-    title="Automation Unit 1: Automation Tools - Lecure Recording"
+    title="Unit 1 Recording - ProLUG Linux Automation Engineering Course - Free in Discord"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen>
 </iframe>
+
+Link: <https://youtu.be/wyVhGtFFYIQ>
 
 #### Discussion Post #1
 
@@ -67,7 +63,7 @@ What is meant by a trigger in automation?
 3. Where would you place these triggers to positively affect your ability to
    build or administer Linux systems?
 
-!!! note
+!!! info
 
     Submit your input by following the link below:
 

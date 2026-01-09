@@ -101,9 +101,6 @@ their structure and their output.
 
 - If you would add something, how does it improve the code?
 
-
----
-
 ### Python Execution
 
 1. Run the u2_script1.py and look at what it shows you.
@@ -141,8 +138,6 @@ their structure and their output.
 - Is there anything you would add for your scripts?  
 
 - If you would add something, how does it improve the code?
-
----
 
 ### Ansible Execution
 
@@ -185,8 +180,6 @@ their structure and their output.
 - Is there anything you would add for your scripts?
 
 - If you would add something, how does it improve the code?
-
----
 
 !!! note
 

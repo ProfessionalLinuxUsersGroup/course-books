@@ -2,8 +2,6 @@
 
 ## Instructions
 
----
-
 Fill out the worksheet as you progress through the lab and discussions.
 Hold your worksheets until the end to turn them in as a final submission packet.
 
@@ -18,8 +16,8 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/lac/downloads/u13/u13_worksheet.txt" target="_blank" download>📥 u13_worksheet(`.txt`)</a>
-- <a href="../../assets/lac/downloads/u13/u13_worksheet.docx" target="_blank" download>📥 u13_worksheet(`.docx`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u13/u13_worksheet.txt" target="_blank">📥 u13_worksheet(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u13/u13_worksheet.pdf" target="_blank">📥 u13_worksheet(`.pdf`)</a>
 
 ### Unit 13 Recording
 
@@ -34,18 +32,16 @@ could be transposed to a `.md` file.
     allowfullscreen>
 </iframe>
 
+Link: <https://www.youtube.com/watch?v=ESsUM0Gz8Jk>
+
 #### Discussion Post #1
 
-Scenario:
+!!! abstract "Scenario"
 
-<blockquote>
-
-Your security team comes to you with a discrepancy between
-the production security baseline and something that is running on one of your servers in
-production. There are 5 servers in a web cluster and only one of them is showing this
-behavior. They want you to account for why something is different.
-
-</blockquote>
+    Your security team comes to you with a discrepancy between
+    the production security baseline and something that is running on one of your servers in
+    production. There are 5 servers in a web cluster and only one of them is showing this
+    behavior. They want you to account for why something is different.
 
 1. How are you going to validate that the difference between the systems?
 
@@ -55,15 +51,11 @@ behavior. They want you to account for why something is different.
 
 #### Discussion Post #2
 
-Scenario:
+!!! abstract "Scenario"
 
-<blockquote>
-
-Your team has been giving you more and more engineering responsibilities.  
-You are being asked to build out the next set of servers to integrate into the
-development environment. Your team is going from RHEL 8 to Rocky 9.4.
-
-</blockquote>
+    Your team has been giving you more and more engineering responsibilities.  
+    You are being asked to build out the next set of servers to integrate into the
+    development environment. Your team is going from RHEL 8 to Rocky 9.4.
 
 1. How might you start to plan out your migration?
 
@@ -71,20 +63,13 @@ development environment. Your team is going from RHEL 8 to Rocky 9.4.
 
 3. What kind of validation plan might you use for your new Rocky 9.4 systems?
 
-<div class="warning">
+!!! info
 
-Submit your input by following the link below.
-
-The discussion posts are done in Discord Forums.
-
-</div>
-
-- [Link to Discussion Forum](https://discord.com/channels/611027490848374811/1365776270800977962)
+    Submit your input by following the link below. The discussion posts are done in Discord Forums.
+    - [Link to Discussion Forum](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 
 ## Definitions
-
----
 
 Hardening:
 
@@ -114,8 +99,6 @@ HIPS:
 
 ## Digging Deeper (Optional)
 
----
-
 1. Run through this lab: <https://killercoda.com/het-tanis/course/Linux-Labs/107-server-startup-process>
 
     -  How does this help you better understand the discussion 13-2 question?
@@ -124,8 +107,6 @@ HIPS:
     -  How does this help you better understand the process of hardening systems?
 
 ## Reflection Questions
-
----
 
 1. What questions do you still have about this week?
 

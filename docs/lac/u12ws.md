@@ -2,8 +2,6 @@
 
 ## Instructions
 
----
-
 Fill out the worksheet as you progress through the lab and discussions.
 Hold your worksheets until the end to turn them in as a final submission packet.
 
@@ -17,8 +15,8 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/lac/downloads/u12/u12_worksheet.txt" target="_blank" download>📥 u12_worksheet(`.txt`)</a>
-- <a href="../../assets/lac/downloads/u12/u12_worksheet.docx" target="_blank" download>📥 u12_worksheet(`.docx`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u12/u12_worksheet.txt" target="_blank">📥 u12_worksheet(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u12/u12_worksheet.pdf" target="_blank">📥 u12_worksheet(`.pdf`)</a>
 
 ### Unit 12 Recording
 
@@ -26,25 +24,23 @@ could be transposed to a `.md` file.
     style="width: 100%; height: 100%; border: none;
     aspect-ratio: 16/9; border-radius: 0.25rem; background:black"
     src="https://www.youtube.com/embed/8psu0D4rSmc?si=8QOnuGhcCA_0Fp7S"
-    title="Unit 12 - Baselining and Benchmarking Systems"
+    title="Unit 12 Recording - ProLUG Linux Systems Administration Course - Free in Discord"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen>
 </iframe>
 
+Link: <https://www.youtube.com/watch?v=8psu0D4rSmc>
+
 #### Discussion Post #1
 
-Scenario:
+!!! abstract "Scenario"
 
-<blockquote>
+    Your manager has come to you with another emergency.
 
-Your manager has come to you with another emergency.
-
-He has a meeting next week to discuss capacity planning and usage of the system with IT upper management.
-He doesn’t want to lose his budget, but he has to prove that the system utilization warrants spending more.
-
-</blockquote>
+    He has a meeting next week to discuss capacity planning and usage of the system with IT upper management.
+    He doesn’t want to lose his budget, but he has to prove that the system utilization warrants spending more.
 
 1. What information can you show your manager from your systems?
 
@@ -55,18 +51,14 @@ He doesn’t want to lose his budget, but he has to prove that the system utiliz
 
 #### Discussion Post #2
 
-Scenario:
+!!! abstract "Scenario"
 
-<blockquote>
+    You are in a capacity planning meeting with a few of the architects.
+    They have decided to add 2 more agents to your Linux systems, a Bacula Agent and an Avamar Agent.
+    They expect these agents to run their work starting at 0400 every morning.
 
-You are in a capacity planning meeting with a few of the architects.
-They have decided to add 2 more agents to your Linux systems, a Bacula Agent and an Avamar Agent.
-They expect these agents to run their work starting at 0400 every morning.
-
-</blockquote>
-
-![7 day view](https://github.com/user-attachments/assets/d3a4bdaf-43ad-4317-b7b3-232395765b25)
-![24 hour view](https://github.com/user-attachments/assets/a3b0fbcb-6ac6-402c-8e3f-4c0a39ca858b)
+    ![7 day view](https://github.com/user-attachments/assets/d3a4bdaf-43ad-4317-b7b3-232395765b25)
+    ![24 hour view](https://github.com/user-attachments/assets/a3b0fbcb-6ac6-402c-8e3f-4c0a39ca858b)
 
 1. What do these agents do? (May have to look them up)
 
@@ -76,36 +68,25 @@ They expect these agents to run their work starting at 0400 every morning.
 
 #### Discussion Post #3
 
-Scenario:
+!!! example
 
-<blockquote>
-
-Your team has recently tested a proof of concept of a new storage system. 
-The vendor has published the blazing fast speeds that are capable of being
-run through this storage system. You have a set of systems connected to both the old
-storage system and the new storage system.
-
-</blockquote>
+    Your team has recently tested a proof of concept of a new storage system. 
+    The vendor has published the blazing fast speeds that are capable of being
+    run through this storage system. You have a set of systems connected to both the old
+    storage system and the new storage system.
 
 1. Write up a test procedure of how you may test these two systems.
 
 2. How are you assuring these test are objective?
     -  What is meant by the term Ceteris Paribus, in this context?
 
-<div class="warning">
+!!! info
 
-Submit your input by following the link below.
-
-The discussion posts are done in Discord Forums.
-
-</div>
-
-- [Link to Discussion Forum](https://discord.com/channels/611027490848374811/1365776270800977962)
+    Submit your input by following the link below. The discussion posts are done in Discord Forums.
+    - [Link to Discussion Forum](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 
 ## Definitions
-
----
 
 Baseline:
 
@@ -127,8 +108,6 @@ Analytics:
 
 ## Digging Deeper (optional)
 
----
-
 1. Analyzing data may open up a new field of interest to you. Go through some of the  
    free lessons on Kaggle, here: https://www.kaggle.com/learn
 
@@ -145,7 +124,7 @@ Analytics:
     -  Find a blog post or otherwise try to evaluate some data.
     -  Perform some Linear regression. My block of code (but this requires some  
      additional libraries to be added. I can help with that if you need it.)
-     ```python
+     ```python title='spyder-ide.py' linenums='1'
      import matplotlib.pyplot as plt
      from sklearn.linear_model import LinearRegression
      size = [[5.0], [5.5], [5.9], [6.3], [6.9], [7.5]]
@@ -163,8 +142,6 @@ Analytics:
      ```
 
 ## Reflection Questions
-
----
 
 1. What questions do you still have about this week?
 

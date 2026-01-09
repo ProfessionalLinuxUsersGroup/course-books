@@ -28,8 +28,6 @@ The lab has been provided for convenience below:
 
 ## Pre-Lab Warm-Up
 
----
-
 ```bash linenums="1"
 vi /etc/passwd
 # Put a # in front of all your local users you created in a lab a few weeks back
@@ -103,8 +101,6 @@ strace ./firstprogram
 ```
 
 ## Lab 🧪
-
----
 
 Log into your Rocky server and become root.
 

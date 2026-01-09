@@ -23,9 +23,9 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/pcae/downloads/u6/u6_worksheet.md.txt" target="_blank" download="u6_worksheet.md">:material-download: u6_worksheet.md</a>
-- <a href="../../assets/pcae/downloads/u6/u6_worksheet.txt" target="_blank" download>:material-download: u6_worksheet.txt</a>
-- <a href="../../assets/pcae/downloads/u6/u6_worksheet.pdf" target="_blank" download>:material-download: u6_worksheet.pdf</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u6/u6_worksheet.md.txt" target="_blank">📥 u6_worksheet(`.md`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u6/u6_worksheet.txt" target="_blank">📥 u6_worksheet(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u6/u6_worksheet.pdf" target="_blank">📥 u6_worksheet(`.pdf`)</a>
 
 ### Unit 6 Recording
 
@@ -39,6 +39,8 @@ could be transposed to a `.md` file.
     referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen>
 </iframe>
+
+Link: <https://www.youtube.com/watch?v=1OQXN5_oyu0>
 
 #### Discussion Post #1
 
@@ -78,10 +80,9 @@ Read the following: <https://developer.hashicorp.com/packer/docs/intro> and
 
 <img src="../../assets/pcae/images/u6/containerimgworkflow.png" />
 
-!!! note
+!!! info
 
     Submit your input by following the link below. The discussion posts are done in Discord Forums.
-
     - [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 

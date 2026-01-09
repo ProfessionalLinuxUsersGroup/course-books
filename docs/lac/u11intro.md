@@ -2,15 +2,11 @@
 
 ## Overview
 
----
-
 In this unit, we focus on Linux system monitoring, using modern tools like **Grafana, Prometheus, Node Exporter, and Loki**. As Linux administrators, monitoring is essential to ensure system stability, performance, and security across environments.
 
 We will explore how to collect, analyze, and visualize system metrics, and discuss best practices for monitoring and dashboard design that can improve troubleshooting and proactive system management.
 
 ## Learning Objectives
-
----
 
 **By the end of this unit, you will be able to**:
 

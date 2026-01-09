@@ -2,8 +2,6 @@
 
 ## Instructions
 
----
-
 Fill out this sheet as you progress through the lab and discussions. Hold your worksheets until
 the end to turn them in as a final submission packet.
 
@@ -21,8 +19,8 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/psc/downloads/u1/u1_worksheet.txt" target="_blank" download>📥 u1_worksheet(`.txt`)</a>
-- <a href="../../assets/psc/downloads/u1/u1_worksheet.docx" target="_blank" download>📥 u1_worksheet(`.docx`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/psc/downloads/u1/u1_worksheet.txt" target="_blank">📥 u1_worksheet(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/psc/downloads/u1/u1_worksheet.pdf" target="_blank">📥 u1_worksheet(`.pdf`)</a>
 
 ### Unit 1 Recording
 
@@ -36,6 +34,8 @@ could be transposed to a `.md` file.
     referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen>
 </iframe>
+
+Link: <https://www.youtube.com/watch?v=F6loIx9WwGM>
 
 #### Discussion Post #1
 
@@ -53,19 +53,12 @@ Find a STIG or compliance requirement that you do not agree is necessary for a s
 2. What category and type of control is it?
 3. Defend why you think it is not necessary. (What type of defenses do you think you could present?)
 
-<div class="warning">
+!!! info
 
-Submit your input by following the link below.
-
-The discussion posts are done in Discord threads. Click the 'Threads' icon on the top right and search for the discussion post.
-
-</div>
-
-- [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1098309490681598072)
+    Submit your input by following the link below. The discussion posts are done in Discord Forums.
+    - [Link to Discussion Forum](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 ## Definitions
-
----
 
 CIA Triad:
 
@@ -85,8 +78,6 @@ STIG:
 
 ## Digging Deeper
 
----
-
 1. Research a risk management framework. <https://csrc.nist.gov/projects/risk-management/about-rmf>
 
     - What are the areas of concern for risk management?
@@ -100,8 +91,6 @@ STIG:
     - How do these help in the risk discussion?
 
 ## Reflection Questions
-
----
 
 1. What questions do you still have about this week?
 

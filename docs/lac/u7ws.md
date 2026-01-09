@@ -2,8 +2,6 @@
 
 ## Instructions
 
----
-
 Fill out the worksheet as you progress through the lab and discussions.
 Hold your worksheets until the end to turn them in as a final submission packet.
 
@@ -19,8 +17,8 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/lac/downloads/u7/u7_worksheet.txt" target="_blank" download>📥 u7_worksheet(`.txt`)</a>
-- <a href="../../assets/lac/downloads/u7/u7_worksheet.docx" target="_blank" download>📥 u7_worksheet(`.docx`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u7/u7_worksheet.txt" target="_blank">📥 u7_worksheet(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u7/u7_worksheet.pdf" target="_blank">📥 u7_worksheet(`.pdf`)</a>
 
 ### Unit 7 Recording
 
@@ -28,12 +26,14 @@ could be transposed to a `.md` file.
     style="width: 100%; height: 100%; border: none;
     aspect-ratio: 16/9; border-radius: 0.25rem; background:black"
     src="https://www.youtube.com/embed/SwrkhTwzN_4?si=oe8UTJdakReiGabM"
-    title="Unit 7: Package Management on Linux - System Administrator Course"
+    title="Unit 7 Recording - ProLUG Linux Systems Administration Course - Free in Discord"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen>
 </iframe>
+
+Link: <https://www.youtube.com/watch?v=SwrkhTwzN_4>
 
 #### Discussion Post #1
 
@@ -43,23 +43,19 @@ could be transposed to a `.md` file.
 
 #### Discussion Post #2
 
-Scenario:
+!!! abstract "Scenario"
 
-<blockquote>
+    You are new to a Linux team. A ticket has come in from an application team and has
+    already been escalated to your manager.
 
-You are new to a Linux team. A ticket has come in from an application team and has
-already been escalated to your manager.
+    They want software installed on one of their servers but you cannot find any
+    documentation. Your security team is out to lunch and not responding.
 
-They want software installed on one of their servers but you cannot find any
-documentation. Your security team is out to lunch and not responding.
+    You remember from some early documentation that you read that all the software in the
+    internal repos you currently have are approved for deployment on servers.
+    You want to also verify by checking other servers that this software exists.
 
-You remember from some early documentation that you read that all the software in the
-internal repos you currently have are approved for deployment on servers.
-You want to also verify by checking other servers that this software exists.
-
-This is an urgent task and your manager is hovering.
-
-</blockquote>
+    This is an urgent task and your manager is hovering.
 
 1. How can you check all the repos on your system to see which are active?
 
@@ -69,16 +65,12 @@ This is an urgent task and your manager is hovering.
 
 #### Discussion Post #3
 
-Scenario:
+!!! abstract "Scenario"
 
-<blockquote>
-
-Looking at the concept of group install from DNF or Yum.
-Why do you think an administrator may never want to use that in a running system?
-Why might an engineer want to or not want to use that?
-This is a thought exercise, so it’s not a “right or wrong” answer it’s for you to think about.
-
-</blockquote>
+    Looking at the concept of group install from DNF or Yum.
+    Why do you think an administrator may never want to use that in a running system?
+    Why might an engineer want to or not want to use that?
+    This is a thought exercise, so it’s not a “right or wrong” answer it’s for you to think about.
 
 1. What is the concept of software bloat, and how do you think it relates?
 
@@ -86,20 +78,12 @@ This is a thought exercise, so it’s not a “right or wrong” answer it’s f
 
 3. How do you think something like this affects performance baselines?
 
-<div class="warning">
+!!! info
 
-Submit your input by following the link below.
-
-The discussion posts are done in Discord Forums.
-
-</div>
-
-- [Link to Discussion Forum](https://discord.com/channels/611027490848374811/1365776270800977962)
-
+    Submit your input by following the link below. The discussion posts are done in Discord forums.
+    - [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 ## Definitions
-
----
 
 Yum:
 
@@ -117,13 +101,9 @@ Semantic Version:
 
 ## Digging Deeper
 
----
-
 1.  What is semantic versioning? <https://semver.org/>
 
 ## Reflection Questions
-
----
 
 1. What questions do you still have about this week?
 

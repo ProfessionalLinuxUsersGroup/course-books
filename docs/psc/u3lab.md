@@ -33,8 +33,6 @@ cat /etc/pam.d/sshd
 
 ## Pre-Lab Warm-Up
 
----
-
 Download the STIG Viewer 2.18 from - https://public.cyber.mil/stigs/downloads/
 
 <img src="../../assets/psc/images/u3/image6.png"></img>
@@ -48,8 +46,6 @@ Create a checklist from the opened STIG for RHEL 9
 <img src="../../assets/psc/images/u3/image2.png"></img>
 
 ## Lab 🧪
-
----
 
 This lab is designed to have the engineer practice securing a Linux server or service against a set of configuration standards. These standards are sometimes called benchmarks, checklists, or guidelines. The engineer will be using STIG Viewer 2.18 to complete this lab.
 

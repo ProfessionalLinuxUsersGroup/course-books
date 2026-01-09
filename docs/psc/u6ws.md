@@ -2,8 +2,6 @@
 
 ## Instructions
 
----
-
 Fill out this sheet as you progress through the lab and discussions. Hold your worksheets until
 the end to turn them in as a final submission packet.
 
@@ -20,12 +18,23 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/psc/downloads/u6/u6_worksheet.pdf" target="_blank" download>📥 u6_worksheet(`.pdf`)</a>
-- <a href="../../assets/psc/downloads/u6/u6_worksheet.txt" target="_blank" download>📥 u6_worksheet(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/psc/downloads/u6/u6_worksheet.txt" target="_blank">📥 u6_worksheet(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/psc/downloads/u6/u6_worksheet.pdf" target="_blank">📥 u6_worksheet(`.pdf`)</a>
 
 ### Unit 6 Recording
-  
-<iframe style="width: 100%; height: 100%; border: none; aspect-ratio: 16/9; border-radius: 0.25rem; background:black" src="https://www.youtube.com/embed/pnCC-FX-aag?si=Y9zt3V_f5osfmGYn" title="Unit 6 Recording - ProLUG Linux Security Engineering Course - Free in Discord" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe
+    style="width: 100%; height: 100%; border: none;
+    aspect-ratio: 16/9; border-radius: 0.25rem; background:black"
+    src="https://www.youtube.com/embed/pnCC-FX-aag?si=Y9zt3V_f5osfmGYn"
+    title="Unit 6 Recording - ProLUG Linux Security Engineering Course - Free in Discord"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+</iframe>
+
+Link: <https://www.youtube.com/watch?v=pnCC-FX-aag>
 
 #### Discussion Post #1
 
@@ -52,18 +61,12 @@ Read <https://sre.google/sre-book/monitoring-distributed-systems/>.
 - After reading these, why is immutability so important to logging? What do you
   think the other required items are for logging to be effective?
 
-<div class="warning">
-Submit your input by following the link below.
+!!! info
 
-The discussion posts are done in Discord threads. Click the 'Threads' icon on the top right and search for the discussion post.
-
-</div>
-
-- [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
+    Submit your input by following the link below. The discussion posts are done in Discord Forums.
+    - [Link to Discussion Forum](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 ## Definitions
-
----
 
 Types of logs
 
@@ -95,8 +98,6 @@ SIEM
 
 ## Digging Deeper
 
----
-
 1. Find a cloud service and see what their logging best practices are for security
    incident response. Here is AWS: <https://aws.amazon.com/blogs/security/logging-strategies-for-security-incident-response/>
 
@@ -114,8 +115,6 @@ SIEM
         - Does it make sense why all admin actions, even just attempted admin actions, are logged?
 
 ## Reflection Questions
-
----
 
 1. What architectures have you used in your career?
 

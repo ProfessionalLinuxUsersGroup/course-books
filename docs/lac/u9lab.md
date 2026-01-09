@@ -26,8 +26,6 @@ The lab has been provided for convenience below:
 
 ## Pre-Lab Warmup
 
----
-
 1. `which podman`
 
 2. `dnf whatprovides podman`
@@ -44,8 +42,6 @@ The lab has been provided for convenience below:
    Why might it be important to know on a system?
 
 ## Lab 🧪
-
----
 
 ### Building and running containers
 

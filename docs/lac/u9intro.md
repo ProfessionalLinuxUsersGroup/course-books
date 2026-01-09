@@ -2,8 +2,6 @@
 
 ## Overview
 
----
-
 In this unit, we dive into the modern world of containerization, focusing on **Podman**—an open-source, daemon-less container engine. As Linux administrators, understanding containerization is crucial for supporting developers, managing production systems, and deploying services efficiently.
 
 We’ll explore what containers are, how to manage them, and how to build container images.
@@ -15,8 +13,6 @@ Containerization is a critical part of modern IT, powering development pipelines
 This unit focuses on **Podman**, a secure, rootless, and daemon-less alternative to Docker, widely used in enterprise environments like Red Hat and Rocky Linux. Whether you work in a NOC, DevOps, or traditional SysAdmin role, understanding containerization is essential to being an effective part of any IT team.
 
 ## Learning Objectives
-
----
 
 By the end of this unit, you will be able to:
 

@@ -7,8 +7,6 @@ When storage issues arise, troubleshooting step by step ensures a quick resoluti
 
 ## 🔍 Step 1: Is Storage Performance Slow?
 
----
-
 If everything feels sluggish, your disk might be the bottleneck.
 
 ### Check
@@ -53,11 +51,8 @@ iostat -dx 1
    lvextend -L +5G /dev/examplegroup/lv_data
    ```
 
----
 
 ## 🔍 Step 2: Is the Filesystem Full? ("No Space Left on Device")
-
----
 
 👉 Disk space exhaustion is one of the most common causes of storage failures.
 
@@ -102,8 +97,6 @@ du -ahx / | sort -rh | head -20
    ```
 
 ## 🔍 Step 3: Are Mounts Failing? (LVM, fstab, NFS, SMB)
-
----
 
 If files suddenly disappear or applications complain about missing storage, a mount issue may be the cause.
 
@@ -152,11 +145,7 @@ cat /etc/fstab
    systemctl restart nfs-server
    ```
 
----
-
 ## 🔍 Step 4: Is the Filesystem Corrupted?
-
----
 
 👉 Power losses, unexpected shutdowns, and failing drives can cause corruption.
 
@@ -190,8 +179,6 @@ xfs_repair -n /dev/sdX  # for XFS
    ```
 
 ## 🔍 Step 5: Are You Out of Inodes?
-
----
 
 You might have disk space but still can't create files? Check your inodes!
 

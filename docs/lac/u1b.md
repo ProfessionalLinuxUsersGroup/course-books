@@ -6,8 +6,6 @@
 
 ## Module 1: Getting Started  (Days 1-2)
 
----
-
 ### Day 1: First Contact with VIM
 
 **Segment 1: The Basics**
@@ -74,8 +72,6 @@
 
 ## Module 2: Navigation (Days 3-4)
 
----
-
 ### Day 3: Basic Movement
 
 **Segment 1: Core Movement Commands**
@@ -134,8 +130,6 @@
 4. Practice quick file browsing
 
 ## Module 3: Essential Editing (Days 5-7)
-
----
 
 ### Day 5: Basic Editing
 
@@ -217,8 +211,6 @@
 
 ## Daily Success Metrics
 
----
-
 By end of each day, you should be able to:
 
 - Day 1: Open, edit, save, and exit files confidently
@@ -231,8 +223,6 @@ By end of each day, you should be able to:
 
 ## Practice Tips
 
----
-
 1. Use `vimtutor` during breaks
 2. Disable arrow keys completely
 3. Keep a command log of new discoveries
@@ -240,5 +230,3 @@ By end of each day, you should be able to:
 5. Practice with real system files (copies)
 
 Remember: Focus on accuracy first, then build speed.
- 
-## Downloads

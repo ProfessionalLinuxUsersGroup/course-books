@@ -2,8 +2,6 @@
 
 ## Overview
 
----
-
 This unit introduces **Ansible Automation**, a powerful open-source tool used for IT automation, configuration management, and application deployment. By the end of this unit, you will understand how to implement Ansible in enterprise environments to manage Linux infrastructure efficiently.
 
 1. **Configuration Management:** Automate system configurations across multiple hosts.
@@ -11,8 +9,6 @@ This unit introduces **Ansible Automation**, a powerful open-source tool used fo
 3. **Automation:** Execute tasks across multiple systems in an efficient, repeatable manner.
 
 ## Learning Objectives
-
----
 
 By the end of this unit, you should be able to:
 

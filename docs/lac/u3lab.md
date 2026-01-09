@@ -24,8 +24,6 @@ The lab has been provided for convenience below:
 
 ## Pre-Lab Warm-Up
 
----
-
 EXERCISES (Warmup to quickly run through your system and familiarize yourself)
 
 ```bash linenums="1"
@@ -124,8 +122,6 @@ sure there is not some type of filesystem caching going on to optimize. This
 is especially true in SAN write tests.
 
 ## Lab 🧪
-
----
 
 start in root (#); cd /root
 

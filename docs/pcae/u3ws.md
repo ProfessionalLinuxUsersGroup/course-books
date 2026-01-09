@@ -16,8 +16,9 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/pcae/downloads/u3/u3_worksheet.md.txt" target="_blank" download="u3_worksheet.md">:material-download: u_worksheet(`.md`)</a>  
-- <a href="../../assets/pcae/downloads/u3/u3_worksheet.txt" target="_blank" download>:material-download: u3_worksheet(`.txt`)</a>  
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u3/u3_worksheet.md.txt" target="_blank">📥 u3_worksheet(`.md`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u3/u3_worksheet.txt" target="_blank">📥 u3_worksheet(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u3/u3_worksheet.pdf" target="_blank">📥 u3_worksheet(`.pdf`)</a>
 
 ### Unit 3 Recording
 
@@ -25,12 +26,14 @@ could be transposed to a `.md` file.
     style="width: 100%; height: 100%; border: none;
     aspect-ratio: 16/9; border-radius: 0.25rem; background:black"
     src="https://www.youtube.com/embed/Xsz7MXJPU58"
-    title="ProLUG Linux Automation Course - Unit 3 Lecture Recording"
+    title="Unit 3 Recording - ProLUG Linux Automation Engineering Course - Free in Discord"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen>
 </iframe>
+
+Link: <https://www.youtube.com/watch?v=acKjnxuGjVI>
 
 #### Discussion Post #1
 
@@ -62,10 +65,9 @@ cannot have security in the system."
     1. Can you do that in this situation, or must this be corrected? Why or why not?
 
 
-!!! note
+!!! info
 
     Submit your input by following the link below. The discussion posts are done in Discord Forums.
-
     - [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 

@@ -56,8 +56,6 @@ run their own repo on their network.
 
 ### Apache STIGs Review
 
----
-
 1. Look at the 4 STIGs for "tls"
 
     - What file is fixed for all of them to be remediated?
@@ -221,8 +219,6 @@ run their own repo on their network.
    ```
 
 ### Enterprise patching
-
----
 
 1. Complete the killercoda lab found here: <https://killercoda.com/het-tanis/course/Ansible-Labs/102-Enterprise-Ansible-Patching>
 

@@ -25,8 +25,6 @@ The lab has been provided for convenience below:
 
 ## Pre-Lab Warm-Up
 
----
-
 Exercises (Warmup to quickly run through your system and practice commands)
 
 1. `cd~`
@@ -55,8 +53,6 @@ We just put the aliases back.
     - Think about some of those commands and when you might use them. Try to change command #15 to remove all of those files (rm -rf file$i)
 
 ## Lab 🧪
-
----
 
 This lab is designed to help you get familiar with the basics of the systems you will be working on.
 

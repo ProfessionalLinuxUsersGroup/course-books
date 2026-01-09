@@ -26,8 +26,6 @@ The lab has been provided for convenience below:
 
 ## Pre-Lab Warm-Up
 
----
-
 1. Create a working directory
    ```bash linenums="1"
    mkdir lab_baseline
@@ -88,8 +86,6 @@ The lab has been provided for convenience below:
    ```
 
 ## Lab 🧪
-
----
 
 ### Baseline Information Gathering
 
@@ -299,8 +295,6 @@ Put command you're using for load here:
 | Disk write - small files (retry) |          |
 | Disk write - large files         |          |
 | Processor benchmark              |          |
-
----
 
 #### System Tests while under significant load
 

@@ -2,8 +2,6 @@
 
 ## Instructions
 
----
-
 Fill out the worksheet as you progress through the lab and discussions.
 Hold your worksheets until the end to turn them in as a final submission packet.
 
@@ -21,8 +19,8 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/lac/downloads/u10/u10_worksheet.txt" target="_blank" download>📥 u10_worksheet(`.txt`)</a>
-- <a href="../../assets/lac/downloads/u10/u10_worksheet.docx" target="_blank" download>📥 u10_worksheet(`.docx`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u10/u10_worksheet.txt" target="_blank">📥 u10_worksheet(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u10/u10_worksheet.pdf" target="_blank">📥 u10_worksheet(`.pdf`)</a>
 
 ### Unit 10 Recording
 
@@ -37,6 +35,8 @@ could be transposed to a `.md` file.
     allowfullscreen>
 </iframe>
 
+Link: <https://www.youtube.com/watch?v=KycsHfZoAQs>
+
 #### Discussion Post #1
 
 Read: [Kubernetes Overview](https://kubernetes.io/docs/concepts/overview/)
@@ -47,26 +47,22 @@ Read: [Kubernetes Overview](https://kubernetes.io/docs/concepts/overview/)
 
 #### Discussion Post #2
 
-Scenario:
+!!! abstract "Scenario"
 
-<blockquote>
+    Your team is troubleshooting a Kubernetes cluster where applications are failing to deploy. They send you the following output:
 
-Your team is troubleshooting a Kubernetes cluster where applications are failing to deploy. They send you the following output:
+    ```sh
+    [root@Test_Cluster1 ~]# kubectl version
+    Client Version: v1.31.6+k3s3
+    Kustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3
+    Server Version: v1.30.6+k3s1
 
-```sh
-[root@Test_Cluster1 ~]# kubectl version
-Client Version: v1.31.6+k3s3
-Kustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3
-Server Version: v1.30.6+k3s1
-
-[root@rocky15 ~]# kubectl get nodes
-NAME            STATUS      ROLES                  AGE   VERSION
-Test_Cluster1   Ready       control-plane,master   17h   v1.30.6+k3s1
-Test_Cluster2   NotReady    worker                 33m   v1.29.6+k3s1
-Test_Cluster3   Ready       worker                 17h   v1.28.6+k3s1
-```
-
-</blockquote>
+    [root@rocky15 ~]# kubectl get nodes
+    NAME            STATUS      ROLES                  AGE   VERSION
+    Test_Cluster1   Ready       control-plane,master   17h   v1.30.6+k3s1
+    Test_Cluster2   NotReady    worker                 33m   v1.29.6+k3s1
+    Test_Cluster3   Ready       worker                 17h   v1.28.6+k3s1
+    ```
 
 1. How would you validate the error?
 
@@ -76,14 +72,10 @@ Test_Cluster3   Ready       worker                 17h   v1.28.6+k3s1
 
 ### Discussion Post #3
 
-Scenario:
+!!! abstract "Scenario"
 
-<blockquote>
-
-You are the Network Operations Center (NOC) lead, and your team is responsible
-for monitoring development, test, and QA Kubernetes clusters.
-
-</blockquote>
+    You are the Network Operations Center (NOC) lead, and your team is responsible
+    for monitoring development, test, and QA Kubernetes clusters.
 
 Write a basic cluster health check procedure for new NOC personnel.
 
@@ -91,20 +83,13 @@ Write a basic cluster health check procedure for new NOC personnel.
 
 2. What did you learn during this process?
 
-<div class="warning">
+!!! info
 
-Submit your input by following the link below.
-
-The discussion posts are done in Discord Forums.
-
-</div>
-
-- [Link to Discussion Forum](https://discord.com/channels/611027490848374811/1365776270800977962)
+    Submit your input by following the link below. The discussion posts are done in Discord Forums.
+    - [Link to Discussion Forum](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 
 ## Key Terminology & Definitions
-
----
 
 Define the following Kubernetes terms:
 
@@ -150,8 +135,6 @@ Topics:
 
 ## Digging Deeper
 
----
-
 1. Build a custom container and deploy it in Kubernetes securely.
 
 2. Read about container security:
@@ -162,8 +145,6 @@ Topics:
     -  [KillerShell Kubernetes Security](https://killercoda.com/killer-shell-cks/scenario/static-manual-analysis-k8s)
 
 ## Reflection Questions
-
----
 
 1. What questions do you still have about Kubernetes?
 
