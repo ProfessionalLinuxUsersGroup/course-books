@@ -69,7 +69,7 @@ Read the summary at the top of:
 !!! info
 
     Submit your input by following the link below. The discussion posts are done in Discord Forums.
-    - [Link to Discussion Forum](https://discord.com/channels/611027490848374811/1365776270800977962)
+    [Link to Discussion Forum](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 ## Definitions
 
@@ -110,8 +110,8 @@ Monitoring for defensive operations
 
 1. Look into Wazuh: [Security Information and Event Management (SIEM). Real Time Monitoring | Wazuh](https://wazuh.com/platform/siem/)
 
-   1. What are their major capabilities and features (what they advertise)?
-   1. What are they doing with logs that increases visibility and usefulness in the security space?
+    1. What are their major capabilities and features (what they advertise)?
+    1. What are they doing with logs that increases visibility and usefulness in the security space?
       [Log data analysis - Use cases · Wazuh documentation](https://documentation.wazuh.com/current/getting-started/use-cases/log-analysis.html)
 
 ## Reflection Questions

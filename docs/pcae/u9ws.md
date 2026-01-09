@@ -54,7 +54,7 @@ Read about chrooted environments here: <https://en.wikipedia.org/wiki/Chroot> an
 !!! info
 
     Submit your input by following the link below. The discussion posts are done in Discord Forums.
-    - [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
+    [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 
 ## Definitions
@@ -69,7 +69,7 @@ Read about chrooted environments here: <https://en.wikipedia.org/wiki/Chroot> an
 
 1. Read other parts of this doc for more HPC understanding:
 <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-223.ipd.pdf>
-	1. What are the components on the drawing on page 3 of doc (pg. 11 in the webviewer)
+    1. What are the components on the drawing on page 3 of doc (pg. 11 in the webviewer)
 
 ## Reflection Questions
 

@@ -59,7 +59,7 @@ Read this article: <https://cio-wiki.org/wiki/Operations_Bridge>
 !!! info
 
     Submit your input by following the link below. The discussion posts are done in Discord forums.
-    - [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
+    [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 ## Definitions
 
@@ -94,5 +94,5 @@ Operations Bridge:
 1. What questions do you still have about this week?
 
 2. How much better has your note taken gotten since you started?
-   What do you still need to work on? Have you started using a different tool?
-   Have you taken more notes?
+    What do you still need to work on? Have you started using a different tool?
+    Have you taken more notes?

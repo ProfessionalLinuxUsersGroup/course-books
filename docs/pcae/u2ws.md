@@ -38,7 +38,7 @@ Link: <https://youtu.be/Xsz7MXJPU58>
 
 Review the automation cycle as it is presented below and answer the following questions.
 
-<img src="../../assets/pcae/images/u2/automation-lifecycle.png" alt="Automation Lifecycle" />
+<img src="../../assets/pcae/images/u2/automation-lifecycle.png" alt="Automation Lifecycle"/>
 
 
 1. What would you add or take away from this drawing?

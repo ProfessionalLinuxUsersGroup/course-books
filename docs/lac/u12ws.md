@@ -78,12 +78,12 @@ Link: <https://www.youtube.com/watch?v=8psu0D4rSmc>
 1. Write up a test procedure of how you may test these two systems.
 
 2. How are you assuring these test are objective?
-    -  What is meant by the term Ceteris Paribus, in this context?
+    -   What is meant by the term Ceteris Paribus, in this context?
 
 !!! info
 
     Submit your input by following the link below. The discussion posts are done in Discord Forums.
-    - [Link to Discussion Forum](https://discord.com/channels/611027490848374811/1365776270800977962)
+    [Link to Discussion Forum](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 
 ## Definitions

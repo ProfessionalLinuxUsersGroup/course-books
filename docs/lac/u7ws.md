@@ -81,7 +81,7 @@ Link: <https://www.youtube.com/watch?v=SwrkhTwzN_4>
 !!! info
 
     Submit your input by following the link below. The discussion posts are done in Discord forums.
-    - [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
+    [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 ## Definitions
 

@@ -62,7 +62,7 @@ Do a Google or AI search of topics around jailing a user or processes in Linux.
 !!! info
 
     Submit your input by following the link below. The discussion posts are done in Discord Forums.
-    - [Link to Discussion Forum](https://discord.com/channels/611027490848374811/1365776270800977962)
+    [Link to Discussion Forum](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 ## Definitions
 

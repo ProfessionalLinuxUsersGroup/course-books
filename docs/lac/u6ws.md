@@ -74,7 +74,7 @@ Next, answer these questions here:
 !!! info
 
     Submit your input by following the link below. The discussion posts are done in Discord forums.
-    - [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
+    [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 ## Definitions
 
@@ -99,8 +99,8 @@ NGFW:
 ## Digging Deeper
 
 1. Read <https://docs.rockylinux.org/zh/guides/security/firewalld-beginners/>  
-   What new things did you learn that you didn’t learn in the lab?  
-   What functionality of firewalld are you likely to use in your professional work?
+    What new things did you learn that you didn’t learn in the lab?  
+    What functionality of firewalld are you likely to use in your professional work?
 
 ## Reflection Questions
 

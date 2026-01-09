@@ -46,10 +46,10 @@ have been around reliably building the exact same environment and also making th
 
 1. How is a Kubernetes environment different, in release context from a virtual or
    physical server environment?
-   1. What does the term ephemeral mean, and are all Kubernetes environments
+    1. What does the term ephemeral mean, and are all Kubernetes environments
       ephemeral? Why or why not?
-   1. How does blue/green or canary deployments help maintain uptime in release management?
-      1. What is the use case of each?
+    1. How does blue/green or canary deployments help maintain uptime in release management?
+        1. What is the use case of each?
 
 #### Discussion Post #2
 
@@ -60,34 +60,34 @@ teams. You have a development cluster that they can use and capacity is not a co
    automation?
 1. What pieces of information will the team need to supply on their side for each
    deployment?
-   1. How can the different dev teams feed this into your automation?
-   1. What do you prefer?
+    1. How can the different dev teams feed this into your automation?
+    1. What do you prefer?
 1. What are some potential default variables you would want to use for this
    deployment?
 
 !!! info
 
     Submit your input by following the link below. The discussion posts are done in Discord Forums.
-    - [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
+    [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 ## Definitions
 
 - Kubernetes
-  - Namespaces
-  - Pods
-  - Deployments
-  - Labels
+    - Namespaces
+    - Pods
+    - Deployments
+    - Labels
 
 ## Digging Deeper
 
 1. Read other use cases for the Kubernetes module in Ansible:
    https://docs.ansible.com/projects/ansible/latest/collections/kubernetes/core/k8s_module.html
-   1. How might you use these other use cases in your environments?
-   1. Do you have another tool you’d use instead of this? Does it have the same, or
-      more functionality?
+    1. How might you use these other use cases in your environments?
+    1. Do you have another tool you’d use instead of this? Does it have the same, or
+    more functionality?
 1. Deployment practices with Kubernetes blue/green and canary labs:
-   1. <https://killercoda.com/het-tanis/course/Kubernetes-Labs/blue-green-deployments>
-   1. <https://killercoda.com/het-tanis/course/Kubernetes-Labs/canary-deployments>
+    1. <https://killercoda.com/het-tanis/course/Kubernetes-Labs/blue-green-deployments>
+    1. <https://killercoda.com/het-tanis/course/Kubernetes-Labs/canary-deployments>
 
 ## Reflection Questions
 

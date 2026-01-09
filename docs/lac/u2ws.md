@@ -69,7 +69,7 @@ and it is not a “one answer solution”. This is for you to think through.
 !!! abstract "Scenario"
 
     Submit your input by following the link below. The discussion posts are done in Discord forums.
-    - [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
+    [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 ### Start thinking about your project ideas (more to come in future weeks):
 

@@ -76,7 +76,7 @@ How might you implement a simple fix to stop gap the problem before all the engi
 !!! info
 
     Submit your input by following the link below. The discussion posts are done in Discord forums.
-    - [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
+    [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 ## Definitions
 
@@ -108,7 +108,6 @@ What did you learn about capabilities of bash that can help you in your scriptin
 
 1. What questions do you still have about this week?
 
-2. Just knowing a lot about scripting doesn’t help much against actually doing it in
-   a practical sense.
-   What things are you doing currently at work or in a lab that you can apply some of
-   this logic to?
+2. Just knowing a lot about scripting doesn’t help much against actually doing it in a practical sense.
+    What things are you doing currently at work or in a lab that you can apply some of
+    this logic to?

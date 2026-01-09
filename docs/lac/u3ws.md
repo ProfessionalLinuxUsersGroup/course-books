@@ -42,14 +42,14 @@ Scan the chapter [here](https://google.github.io/building-secure-and-reliable-sy
 Read the section called "Operation Security" in this same chapter: [Building Secure and Reliable Systems](https://google.github.io/building-secure-and-reliable-systems/raw/ch17.html)
 
 1. What important concepts do you learn about how we behave during an
-   operational response to an incident?
+    operational response to an incident?
 
 #### Discussion Post #2
 
 Ask Google, find a blog, or ask an AI about high availability. (Here's one if you need it: [AWS Real-Time Communication Whitepaper](https://docs.aws.amazon.com/pdfs/whitepapers/latest/real-time-communication-on-aws/real-time-communication-on-aws.pdf#high-availability-and-scalability-on-aws)
 
 1. What are some important terms you read about? Why do you think understanding
-   HA will help you better in the context of triaging incidents?
+    HA will help you better in the context of triaging incidents?
 
 
 !!! info

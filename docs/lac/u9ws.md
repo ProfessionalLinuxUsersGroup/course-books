@@ -85,7 +85,7 @@ It’s a slow day in the NOC and you have heard that a new system of container d
 !!! info
 
     Submit your input by following the link below. The discussion posts are done in Discord forums.
-    - [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
+    [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 ## Definitions
 
@@ -108,7 +108,7 @@ Repository:
 ## Digging Deeper
 
 1. Find a blog on deployment of some service or application in a container that interests you.  
-   See if you can get the deployment working in the lab.
+    See if you can get the deployment working in the lab.
 
     -  What worked well?
     -  What did you have to troubleshoot?

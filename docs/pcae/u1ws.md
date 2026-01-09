@@ -96,10 +96,10 @@ What is meant by a trigger in automation?
 
 1. Go to serverless land: <https://serverlessland.com/patterns>
 
-   1. Can you implement one of the serverless architectures in the cloud via one
+    1. Can you implement one of the serverless architectures in the cloud via one
       of the automation tools we have talked about?
 
-   2. Do you see any other automation tools you may use in your career?
+    2. Do you see any other automation tools you may use in your career?
 
 2. While we will be going over many concepts in this course, reviewing
    <https://killercoda.com/het-tanis/course/Ansible-Labs> and ensuring

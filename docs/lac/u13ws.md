@@ -66,7 +66,7 @@ Link: <https://www.youtube.com/watch?v=ESsUM0Gz8Jk>
 !!! info
 
     Submit your input by following the link below. The discussion posts are done in Discord Forums.
-    - [Link to Discussion Forum](https://discord.com/channels/611027490848374811/1365776270800977962)
+    [Link to Discussion Forum](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 
 ## Definitions
@@ -100,7 +100,6 @@ HIPS:
 ## Digging Deeper (Optional)
 
 1. Run through this lab: <https://killercoda.com/het-tanis/course/Linux-Labs/107-server-startup-process>
-
     -  How does this help you better understand the discussion 13-2 question?
 
 2. Run through this lab: <https://killercoda.com/het-tanis/course/Linux-Labs/203-updating-golden-image>
