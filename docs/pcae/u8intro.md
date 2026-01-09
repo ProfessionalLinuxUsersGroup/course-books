@@ -11,11 +11,13 @@ The critical insight of this unit is this: **Kubernetes doesn't automate itself.
 ## Learning Objectives
 
 1. **Distinguish Between Container Deployment Approaches**
+
    - Understand the differences between running containers directly on Linux vs. full Kubernetes orchestration
    - Recognize when simpler container solutions suffice vs. when Kubernetes is warranted
    - Consider resource constraints, operational maturity, and team expertise in architectural decisions
 
 2. **Automate Kubernetes Operations Using Ansible**
+
    - Install and configure Ansible Kubernetes modules for API interaction
    - Write idempotent Ansible playbooks that interact with the Kubernetes API
    - Replicate `kubectl` operations programmatically at scale
@@ -23,6 +25,7 @@ The critical insight of this unit is this: **Kubernetes doesn't automate itself.
    - Implement proper error handling and state verification
 
 3. **Design and Implement Modern Deployment Strategies**
+
    - Understand ephemeral pod architecture and why IP addresses are ephemeral but non-critical
    - Leverage Kubernetes services as reverse proxies for reliable routing to temporary resources
    - Implement blue/green deployments for zero-downtime application updates
@@ -30,11 +33,13 @@ The critical insight of this unit is this: **Kubernetes doesn't automate itself.
    - Understand the release engineering principles underlying each deployment pattern
 
 4. **Build Self-Service Infrastructure Platforms**
+
    - Design "push-button" deployment solutions using Ansible Automation Platform
    - Enable development teams to provision test environments without direct cluster access
    - Implement parameterized automation driven by environment variables
 
 5. **Automate Complete Resource Lifecycles**
+
    - Create Kubernetes resources dynamically within automation workflows
    - Test deployed resources programmatically to verify functionality
    - Implement comprehensive resource cleanup and deletion procedures
