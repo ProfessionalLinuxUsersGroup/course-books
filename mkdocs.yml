@@ -215,7 +215,7 @@ nav:
       - Lab: pcae/u8lab.md
     #   - Bonus: pcae/u8b.md
     - Unit 9 - Build && Deploy Linux Systems:
-    #   - Intro: pcae/u9intro.md
+      - Intro: pcae/u9intro.md
       - Worksheet: pcae/u9ws.md
       - Lab: pcae/u9lab.md
     - Unit 10 - Harden Linux Systems:
