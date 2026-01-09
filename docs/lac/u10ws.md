@@ -70,7 +70,7 @@ Read: [Kubernetes Overview](https://kubernetes.io/docs/concepts/overview/)
 
 3. Has someone already attempted to fix this problem? Why or why not?
 
-### Discussion Post #3
+#### Discussion Post #3
 
 !!! abstract "Scenario"
 
