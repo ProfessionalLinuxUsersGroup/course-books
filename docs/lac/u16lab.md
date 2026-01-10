@@ -122,10 +122,6 @@ To complete this event the following four must be correct.
 
 Same way as above.
 
-<div class="warning">
-<b>Reboot the lab machine when finished.</b>
-</div>
-
 ### Scenario 3
 
 - Connect to `tshoot3@prolug.asuscomm.com`

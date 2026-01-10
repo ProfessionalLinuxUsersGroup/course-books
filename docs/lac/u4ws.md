@@ -54,8 +54,9 @@ Read this article: <https://cio-wiki.org/wiki/Operations_Bridge>
     Write out a procedure of what you think an operations person should be doing on the
     system they suspect is not working properly.
 
-    This may help, to get you started <https://zeltser.com/media/docs/security-incident-survey-cheat-sheet.pdf?msc=Cheat+Sheet+Blog>
-    You may use AI for this, but let us know if you do.
+
+This may help, to get you started <https://zeltser.com/media/docs/security-incident-survey-cheat-sheet.pdf?msc=Cheat+Sheet+Blog>
+You may use AI for this, but let us know if you do.
 
 !!! info
 

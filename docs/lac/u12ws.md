@@ -69,7 +69,7 @@ Link: <https://www.youtube.com/watch?v=8psu0D4rSmc>
 
 #### Discussion Post #3
 
-!!! example
+!!! abstract "Scenario"
 
     Your team has recently tested a proof of concept of a new storage system. 
     The vendor has published the blazing fast speeds that are capable of being
