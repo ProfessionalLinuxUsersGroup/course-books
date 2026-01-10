@@ -20,6 +20,7 @@ the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
 - <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u10/u10_worksheet.txt" target="_blank">📥 u10_worksheet(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u10/u10_worksheet.docx" target="_blank">📥 u10_worksheet(`.docx`)</a>
 - <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u10/u10_worksheet.pdf" target="_blank">📥 u10_worksheet(`.pdf`)</a>
 
 ### Unit 10 Recording
@@ -65,10 +66,9 @@ Read: [Kubernetes Overview](https://kubernetes.io/docs/concepts/overview/)
     ```
 
 1. How would you validate the error?
-
 2. What do you suspect is causing the problem?
-
 3. Has someone already attempted to fix this problem? Why or why not?
+
 
 #### Discussion Post #3
 

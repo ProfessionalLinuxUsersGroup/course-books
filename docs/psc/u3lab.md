@@ -16,8 +16,8 @@ The lab has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.docx`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/psc/downloads/u3/u3_lab.pdf" target="_blank" download>📥 u3_lab(`.pdf`)</a>
-- <a href="../../assets/psc/downloads/u3/u3_lab.docx" target="_blank" download>📥 u3_lab(`.docx`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/psc/downloads/u3/u3_lab.txt" target="_blank">📥 u3_lab(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/psc/downloads/u3/u3_lab.docx" target="_blank">📥 u3_lab(`.docx`)</a>
 
 **EXERCISES** (Warmup to quickly run through your system and familiarize yourself)
 

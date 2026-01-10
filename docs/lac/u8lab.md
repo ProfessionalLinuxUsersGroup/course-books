@@ -23,8 +23,8 @@
 
 The lab has been provided for convenience below:
 
-- <a href="../../assets/lac/downloads/u8/u8_lab.pdf" target="_blank" download>📥 u8_lab(`.pdf`)</a>
-- <a href="../../assets/lac/downloads/u8/u8_lab.docx" target="_blank" download>📥 u8_lab(`.docx`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u8/u8_lab.pdf" target="_blank">📥 u8_lab(`.pdf`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u8/u8_lab.docx" target="_blank">📥 u8_lab(`.docx`)</a>
 
 ## Pre-Lab Warm-Up
 

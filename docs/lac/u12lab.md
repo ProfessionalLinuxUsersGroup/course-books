@@ -21,8 +21,8 @@
 
 The lab has been provided for convenience below:
 
-- <a href="../../assets/lac/downloads/u12/u12_lab.pdf" target="_blank" download>📥 u12_lab(`.pdf`)</a>
-- <a href="../../assets/lac/downloads/u12/u12_lab.docx" target="_blank" download>📥 u12_lab(`.docx`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u12/u12_lab.pdf" target="_blank">📥 u12_lab(`.pdf`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u12/u12_lab.docx" target="_blank">📥 u12_lab(`.docx`)</a>
 
 ## Pre-Lab Warm-Up
 

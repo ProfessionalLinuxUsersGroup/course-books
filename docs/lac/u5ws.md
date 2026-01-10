@@ -18,6 +18,7 @@ the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
 - <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u5/u5_worksheet.txt" target="_blank">📥 u5_worksheet(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u5/u5_worksheet.docx" target="_blank">📥 u5_worksheet(`.docx`)</a>
 - <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u5/u5_worksheet.pdf" target="_blank">📥 u5_worksheet(`.pdf`)</a>
 
 ### Unit 5 Recording

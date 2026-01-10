@@ -16,6 +16,7 @@ the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
 - <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u12/u12_worksheet.txt" target="_blank">📥 u12_worksheet(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u12/u12_worksheet.docx" target="_blank">📥 u12_worksheet(`.docx`)</a>
 - <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u12/u12_worksheet.pdf" target="_blank">📥 u12_worksheet(`.pdf`)</a>
 
 ### Unit 12 Recording
@@ -23,7 +24,7 @@ could be transposed to a `.md` file.
 <iframe
     style="width: 100%; height: 100%; border: none;
     aspect-ratio: 16/9; border-radius: 0.25rem; background:black"
-    src="https://www.youtube.com/embed/8psu0D4rSmc?si=8QOnuGhcCA_0Fp7S"
+    src="https://www.youtube.com/embed/8psu0D4rSmc"
     title="Unit 12 Recording - ProLUG Linux Systems Administration Course - Free in Discord"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

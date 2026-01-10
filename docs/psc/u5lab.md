@@ -16,9 +16,8 @@ The lab has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/psc/downloads/u5/u5_lab.txt" target="_blank" download>📥 u5_lab(`.txt`)</a>
-- <a href="../../assets/psc/downloads/u5/u5_lab.pdf" target="_blank" download>📥 u5_lab(`.pdf`)</a>
-<!-- - <a href="../../assets/psc/downloads/u5/u5_lab.docx" target="_blank" download>📥 u5_lab(`.docx`)</a> -->
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/psc/downloads/u5/u5_lab.txt" target="_blank">📥 u5_lab(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/psc/downloads/u5/u5_lab.pdf" target="_blank">📥 u5_lab(`.pdf`)</a>
 
 ## Pre-Lab Warm-Up
 

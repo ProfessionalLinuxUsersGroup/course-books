@@ -22,11 +22,8 @@
 
 The lab has been provided for convenience below:
 
-- <a href="../../assets/pcae/downloads/u3/u3_lab.txt" target="_blank" download>:material-download: u3_lab.txt</a>
-- <a href="../../assets/pcae/downloads/u3/u3_lab.md.txt" target="_blank" download="u3_lab.md">:material-download: u3_lab.md</a>
-
-<!-- - <a href="../../assets/pcae/downloads/u3/u3_lab.docx" target="_blank" download>:material-download: u3_lab.docx</a> -->
-<!-- - <a href="../../assets/pcae/downloads/u3/u3_lab.pdf" target="_blank" download>:material-download: u3_lab.pdf</a> -->
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u3/u3_lab.txt" target="_blank">📥 u3_lab(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u3/u3_lab.md.txt" target="_blank">📥 u3_lab(`.md`)</a>
 
 ## Pre-Lab (Lab Setup) 
 If you're not doing the lab on Killercoda, make sure to follow the setup guide

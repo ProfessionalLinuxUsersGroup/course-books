@@ -28,11 +28,9 @@ in `/labs/automation/unit2`.
 #### Downloads
 
 The lab has been provided for convenience below:
-- <a href="../../assets/pcae/downloads/u2/u2_lab.txt" target="_blank" download>:material-download: u2_lab.txt</a>
-- <a href="../../assets/pcae/downloads/u2/u2_lab.md.txt" target="_blank" download="u2_lab.md">:material-download: u2_lab.md</a>
 
-<!-- - <a href="../../assets/pcae/downloads/u2/u2_lab.docx" target="_blank" download>:material-download: u2_lab.docx</a> -->
-<!-- - <a href="../../assets/pcae/downloads/u2/u2_lab.pdf" target="_blank" download>:material-download: u2_lab.pdf</a> -->
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u2/u2_lab.txt" target="_blank">📥 u2_lab(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u2/u2_lab.md.txt" target="_blank">📥 u2_lab(`.md`)</a>
 
 
 ## Pre-Lab (Lab Setup) 
