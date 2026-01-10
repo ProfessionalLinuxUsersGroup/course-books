@@ -2,7 +2,7 @@ name: Build site with MkDocs and deploy to GitHub Pages
 
 on:
   push:
-    branches: ['fixups']
+    branches: ['main']
     paths:
     - 'docs/**'
     - 'scripts/generate-resources'
