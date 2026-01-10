@@ -17,9 +17,9 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/pcae/downloads/u7/u7_worksheet.md.txt" target="_blank" download="u7_worksheet.md">:material-download: u7_worksheet.md</a>
-- <a href="../../assets/pcae/downloads/u7/u7_worksheet.txt" target="_blank" download>:material-download: u7_worksheet.txt</a>
-- <a href="../../assets/pcae/downloads/u7/u7_worksheet.pdf" target="_blank" download>:material-download: u7_worksheet.pdf</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u7/u7_worksheet.md.txt" target="_blank">📥 u7_worksheet(`.md`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u7/u7_worksheet.txt" target="_blank">📥 u7_worksheet(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u7/u7_worksheet.pdf" target="_blank">📥 u7_worksheet(`.pdf`)</a>
 
 ### Unit 7 Recording
 
@@ -33,6 +33,8 @@ could be transposed to a `.md` file.
     referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen>
 </iframe>
+
+Link: <https://www.youtube.com/watch?v=dfQsb8GJA3k>
 
 #### Discussion Post #1
 
@@ -103,7 +105,7 @@ resource "docker_container" "nginx8082" {
 }
 ```
 
-!!! note
+!!! info
 
     Submit your input by following the link below. The discussion posts are done in Discord Forums.
 

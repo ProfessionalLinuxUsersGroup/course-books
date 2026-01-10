@@ -2,8 +2,6 @@
 
 ## Instructions
 
----
-
 Fill out the worksheet as you progress through the lab and discussions.
 Hold your worksheets until the end to turn them in as a final submission packet.
 
@@ -19,32 +17,33 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/lac/downloads/u14/u14_worksheet.txt" target="_blank" download>📥 u14_worksheet(`.txt`)</a>
-- <a href="../../assets/lac/downloads/u14/u14_worksheet.docx" target="_blank" download>📥 u14_worksheet(`.docx`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u14/u14_worksheet.txt" target="_blank">📥 u14_worksheet(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u14/u14_worksheet.docx" target="_blank">📥 u14_worksheet(`.docx`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u14/u14_worksheet.pdf" target="_blank">📥 u14_worksheet(`.pdf`)</a>
 
 ### Unit 14 Recording
 
 <iframe
     style="width: 100%; height: 100%; border: none;
     aspect-ratio: 16/9; border-radius: 0.25rem; background:black"
-    src="https://www.youtube.com/embed/-tk73llgt3E?si=QZUdffq1sxsPzU8X"
-    title="Ansible Automation Unit 14"
+    src="https://www.youtube.com/embed/-tk73llgt3E"
+    title="Unit 14 Recording - ProLUG Linux Systems Administration Course - Free in Discord"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen>
 </iframe>
 
+Link: <https://www.youtube.com/watch?v=-tk73llgt3E>
+
 #### Discussion Post 1
 
 Refer to your Unit 5 scan of the systems.
 
-<blockquote>
+!!! abstract "Scenario"
 
-You know that Ansible is a tool that you want to maintain in the environment. Review this
-online documentation: <https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html>
-
-</blockquote>
+    You know that Ansible is a tool that you want to maintain in the environment. Review this
+    online documentation: <https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html>
 
 <img src="../../assets/lac/images/u14/u14-dp1-prolug-lab.png"></img>
 
@@ -54,13 +53,10 @@ online documentation: <https://docs.ansible.com/ansible/latest/inventory_guide/i
 
 #### Discussion Post 2
 
-<blockquote>
+!!! abstract "Scenario"
 
-You have been noticing drift on your server configurations, so you want a way to generate a report on them every day to validate the configurations are the same.
-
-</blockquote>
-
-Use any lab in here to find ideas: <https://killercoda.com/het-tanis/course/Ansible-Labs>
+    You have been noticing drift on your server configurations, so you want a way to generate a report on them every day to validate the configurations are the same.
+    Use any lab in here to find ideas: <https://killercoda.com/het-tanis/course/Ansible-Labs>
 
 #### Discussion Post 3
 
@@ -70,15 +66,10 @@ Using ansible module for git, pull down this repo: <https://github.com/het-tanis
 2. What is in the roles directory?
 3. How are these playbooks called, and how do roles differ from tasks?
 
-<div class="warning">
+!!! info
 
-Submit your input by following the link below.
-
-The discussion posts are done in Discord Forums.
-
-</div>
-
-- [Link to Discussion Forum](https://discord.com/channels/611027490848374811/1365776270800977962)
+    Submit your input by following the link below. The discussion posts are done in Discord Forums.
+    [Link to Discussion Forum](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 
 ## Definitions

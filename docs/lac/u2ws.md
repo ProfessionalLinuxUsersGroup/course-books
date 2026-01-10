@@ -2,8 +2,6 @@
 
 ## Instructions
 
----
-
 Fill out the worksheet as you progress through the lab and discussions.
 Hold your worksheets until the end to turn them in as a final submission packet.
 
@@ -18,20 +16,23 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/lac/downloads/u2/u2_worksheet.txt" target="_blank" download>📥 u2_worksheet(`.txt`)</a>
-- <a href="../../assets/lac/downloads/u2/u2_worksheet.docx" target="_blank" download>📥 u2_worksheet(`.docx`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u2/u2_worksheet.txt" target="_blank">📥 u2_worksheet(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u2/u2_worksheet.docx" target="_blank">📥 u2_worksheet(`.docx`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u2/u2_worksheet.pdf" target="_blank">📥 u2_worksheet(`.pdf`)</a>
 
 ### Unit 2 Recording
 
 <iframe
-    src="https://www.youtube.com/embed/miVuSoHTuP4?si=9swKZSbFG0PvVp51"
     style="width: 100%; height: 100%; border: none; aspect-ratio: 16/9; border-radius: 0.25rem; background:black"
+    src="https://www.youtube.com/embed/miVuSoHTuP4"
     title="Unit 2 Recording - ProLUG Linux Systems Administration Course - Free in Discord"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
     referrerpolicy="strict-origin-when-cross-origin" 
     allowfullscreen>
 </iframe>
+
+Link: <https://www.youtube.com/watch?v=miVuSoHTuP4>
 
 #### Unit 2 Discussion Post #1
 
@@ -48,21 +49,17 @@ Think about how week 1 went for you.
 Read a blog, check a search engine, or ask an AI about SELinux.  
 What is the significance of contexts? What are the significance of labels?
 
-Scenario:
+!!! abstract "Scenario"
 
-<blockquote>
+    You follow your company instructions to add a new user to a set of 10 Linux
+    servers. They cannot access just one of the servers.
 
-You follow your company instructions to add a new user to a set of 10 Linux
-servers. They cannot access just one of the servers.
+    When you review the differences in the servers you see that the server they
+    cannot access is running SELINUX. On checking other users have no problem
+    getting into the system.
 
-When you review the differences in the servers you see that the server they
-cannot access is running SELINUX. On checking other users have no problem
-getting into the system.
-
-You find nothing in the documentation (typical) about this different system or
-how these users are accessing it.
-
-</blockquote>
+    You find nothing in the documentation (typical) about this different system or
+    how these users are accessing it.
 
 What do you do?  
 Where do you check?
@@ -70,14 +67,10 @@ Where do you check?
 You may use any online resources to help you answer this. This is not a trick
 and it is not a “one answer solution”. This is for you to think through.
 
-<div class="warning">
-Submit your input by following the link below.
+!!! abstract "Scenario"
 
-The discussion posts are done in Discord threads. Click the 'Threads' icon on the top right and search for the discussion post.
-
-</div>
-
-- [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1098309490681598072)
+    Submit your input by following the link below. The discussion posts are done in Discord forums.
+    [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 ### Start thinking about your project ideas (more to come in future weeks):
 
@@ -93,8 +86,6 @@ Topics:
 You will research, design, deploy, and document a system that improves your administration of Linux systems in some way.
 
 ## Definitions
-
----
 
 Uptime:
 
@@ -114,8 +105,6 @@ SELinux operating modes:
 
 ## Digging Deeper
 
----
-
 1. How does troubleshooting differ between system administration and system
    engineering? To clarify, how might you troubleshoot differently if you know a
    system was previously running correctly. If you’re building a new system out?
@@ -124,8 +113,6 @@ SELinux operating modes:
    Does the methodology fit for you in an IT sense, why or why not?
 
 ## Reflection Questions
-
----
 
 1. What questions do you still have about this week?
 

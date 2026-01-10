@@ -2,15 +2,11 @@
 
 ## Overview
 
----
-
 In this unit, we focus on **system hardening** — the process of configuring Linux systems to meet defined security standards. As threats evolve, system administrators play a key role in ensuring confidentiality, integrity, and availability by reducing attack surfaces and enforcing secure configurations.
 
 We will explore industry benchmarks like **STIGs and CIS**, implement hardening techniques for services like SSH, identify unneeded software, and analyze system security posture using tools like the **SCC Tool**. You’ll also revisit baselining and documentation as part of security validation and compliance.
 
 ## Learning Objectives
-
----
 
 **By the end of this unit, you will be able to**:
 

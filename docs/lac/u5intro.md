@@ -2,15 +2,11 @@
 
 ## Overview
 
----
-
 This unit focuses on managing user's environments and scanning and enumerating Systems.
     - Become familiar with networking scanning tools
     - Understand the functionality systems files and customized .(dot) files.
 
 ## Learning Objectives
-
----
 
 1.  **Become familiar with Networking mapping:**
     - Learn how to find your network inventory by using nmap.

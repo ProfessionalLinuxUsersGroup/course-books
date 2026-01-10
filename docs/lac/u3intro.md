@@ -2,16 +2,12 @@
 
 ## Overview
 
----
-
 The unit focuses on understanding and implementing techniques to ensure systems remain operational with minimal downtime.
 
 - The process of quickly assessing, prioritizing, and addressing system incidents.
 - Leveraging performance indicators (KPIs, SLIs) and setting clear operational targets (SLOs, SLAs) to guide troubleshooting and recovery efforts.
 
 ## Learning Objectives
-
----
 
 1. **Understand Fundamental Concepts of System Reliability and High Availability:**
     - Explain the importance of uptime and the implications of “Five 9’s” availability in mission-critical environments.

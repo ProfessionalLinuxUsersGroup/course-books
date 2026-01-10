@@ -2,16 +2,12 @@
 
 ## Overview
 
----
-
 This unit focuses on Nohup environments and firewalls.
 
 - We will cover Nohup tools and how to properly use Nohup environments.
 - We will explore different types of firewalls and learn the use cases for each firewall type.
 
 ## Learning Objectives
-
----
 
 1. **Become familiar with the `nohup` command:**
     - Learn real-life use cases of the `nohup` command.

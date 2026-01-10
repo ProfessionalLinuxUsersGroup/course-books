@@ -20,12 +20,10 @@
 
 The lab has been provided for convenience below:
 
-- <a href="../../assets/lac/downloads/u2/u2_lab.pdf" target="_blank" download>📥 u2_lab(`.pdf`)</a>
-- <a href="../../assets/lac/downloads/u2/u2_lab.docx" target="_blank" download>📥 u2_lab(`.docx`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u2/u2_lab.pdf" target="_blank">📥 u2_lab(`.pdf`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u2/u2_lab.docx" target="_blank">📥 u2_lab(`.docx`)</a>
 
 ## Pre-Lab Warm-Up
-
----
 
 EXERCISES (Warmup to quickly run through your system and familiarize yourself)
 
@@ -62,8 +60,6 @@ ls -l
 ```
 
 ## Lab 🧪
-
----
 
 This lab is designed to help you get familiar with the basics of the systems you will be working on. Some of you will find that you know the basic material but the techniques here allow you to put it together in a more complex fashion.
 

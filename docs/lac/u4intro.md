@@ -2,15 +2,11 @@
 
 ## Overview
 
----
-
 This unit concentrates on the core tasks involved in **operating running systems** in a Linux environment, particularly with Red Hat Enterprise Linux (RHEL). It covers:
     - Understanding resource usage CPU, memory, disk I/O.
     - Become familiar with service management frameworks.
 
 ## Learning Objectives
-
----
 
 1. **Monitor and Manage System Resources:**
     - Learn to track CPU, memory, disk, and network usage.
@@ -32,8 +28,6 @@ These objectives ensure learners can sustain, troubleshoot, and improve actively
 within enterprise environments, reducing downtime and increasing system reliability.
 
 ## Key Terms and Definitions
-
----
 
 |**Systemd**|**Journalctl**|
 | :------------------: | :------------------: |

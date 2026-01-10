@@ -2,16 +2,12 @@
 
 ## Overview
 
----
-
 This unit centers on a focus on security and troubleshooting.
 
 - The use of **SELinux** for implementing mandatory access controls, managing file permissions with **ACLs (Access Control Lists)**,
 - Understanding operational methodologies for incident triage.
 
 ## Learning Objectives
-
----
 
 1. **Understand and Configure SELinux:**
     - Grasp the core concepts of SELinux, including security contexts, labels, and its role in enforcing mandatory access control.

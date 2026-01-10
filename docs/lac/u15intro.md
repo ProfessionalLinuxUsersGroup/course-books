@@ -2,15 +2,11 @@
 
 ## Overview
 
----
-
 In this unit, we focus on **incident management, root cause analysis, and troubleshooting frameworks**. These are foundational skills for Linux administrators who are responsible for maintaining system reliability and responding effectively to issues.
 
 You’ll explore structured approaches like the **Scientific Method**, **5 Whys**, **FMEA**, and **PDCA**, as well as methodologies like **Six Sigma**, **TQM**, and systems thinking. We’ll also look at tools for visual problem solving, including the **Fishbone Diagram** and **Fault Tree Analysis**, and discuss how data types play a role in investigations.
 
 ## Learning Objectives
-
----
 
 **By the end of this unit, you will be able to**:
 

@@ -15,9 +15,9 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/pcae/downloads/u2/u2_worksheet.md.txt" target="_blank" download="u2_worksheet.md">📥 u2_worksheet(`.md`)</a>
-- <a href="../../assets/pcae/downloads/u2/u2_worksheet.txt" target="_blank" download>📥 u2_worksheet(`.txt`)</a>
-- <a href="../../assets/pcae/downloads/u2/u2_worksheet.pdf" target="_blank" download>📥 u2_worksheet(`.pdf`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u2/u2_worksheet.md.txt" target="_blank">📥 u2_worksheet(`.md`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u2/u2_worksheet.txt" target="_blank">📥 u2_worksheet(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u2/u2_worksheet.pdf" target="_blank">📥 u2_worksheet(`.pdf`)</a>
 
 ### Unit 2 Recording
 
@@ -25,18 +25,20 @@ could be transposed to a `.md` file.
     style="width: 100%; height: 100%; border: none;
     aspect-ratio: 16/9; border-radius: 0.25rem; background:black"
     src="https://www.youtube.com/embed/2iWZTQy4eTU"
-    title="ProLUG Linux Automation Course - Unit 2 Lecture Recording"
+    title="Unit 2 Recording - ProLUG Linux Automation Engineering Course - Free in Discord"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen>
 </iframe>
 
+Link: <https://youtu.be/Xsz7MXJPU58>
+
 #### Discussion Post #1
 
 Review the automation cycle as it is presented below and answer the following questions.
 
-<img src="../../assets/pcae/images/u2/automation-lifecycle.png" alt="Automation Lifecycle" />
+<img src="../../assets/pcae/images/u2/automation-lifecycle.png" alt="Automation Lifecycle"/>
 
 
 1. What would you add or take away from this drawing?
@@ -58,7 +60,7 @@ Read about the **Pareto Rule** or the **Rule of 80/20**.
     2. What examples can you find where this has not proven true?
 
 
-!!! note
+!!! info
 
     Submit your input by following the link below. The discussion posts are done in Discord Forums.
 

@@ -20,12 +20,10 @@
 
 The lab has been provided for convenience below:
 
-- <a href="../../assets/lac/downloads/u6/u6_lab.pdf" target="_blank" download>📥 u6_lab(`.pdf`)</a>
-- <a href="../../assets/lac/downloads/u6/u6_lab.docx" target="_blank" download>📥 u6_lab(`.docx`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u6/u6_lab.pdf" target="_blank">📥 u6_lab(`.pdf`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u6/u6_lab.docx" target="_blank">📥 u6_lab(`.docx`)</a>
 
 ## Pre-Lab Warm-Up
-
----
 
 Exercises (Warmup to quickly run through your system and practice commands)
 
@@ -55,8 +53,6 @@ We just put the aliases back.
     - Think about some of those commands and when you might use them. Try to change command #15 to remove all of those files (rm -rf file$i)
 
 ## Lab 🧪
-
----
 
 This lab is designed to help you get familiar with the basics of the systems you will be working on.
 

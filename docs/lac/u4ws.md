@@ -2,8 +2,6 @@
 
 ## Instructions
 
----
-
 Fill out the worksheet as you progress through the lab and discussions.
 Hold your worksheets until the end to turn them in as a final submission packet.
 
@@ -19,8 +17,9 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/lac/downloads/u4/u4_worksheet.txt" target="_blank" download>📥 u4_worksheet(`.txt`)</a>
-- <a href="../../assets/lac/downloads/u4/u4_worksheet.docx" target="_blank" download>📥 u4_worksheet(`.docx`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u4/u4_worksheet.txt" target="_blank">📥 u4_worksheet(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u4/u4_worksheet.docx" target="_blank">📥 u4_worksheet(`.docx`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u4/u4_worksheet.pdf" target="_blank">📥 u4_worksheet(`.pdf`)</a>
 
 ### Unit 4 Recording
 
@@ -28,12 +27,14 @@ could be transposed to a `.md` file.
     style="width: 100%; height: 100%; border: none;
     aspect-ratio: 16/9; border-radius: 0.25rem; background:black"
     src="https://www.youtube.com/embed/MulGrUKSMRg"
-    title="Unit 4: Linux System Administrator Course"
+    title="Unit 4 Recording - ProLUG Linux Systems Administration Course - Free in Discord"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen>
 </iframe>
+
+Link: <https://www.youtube.com/watch?v=MulGrUKSMRg>
 
 #### Discussion Post #1
 
@@ -47,31 +48,21 @@ Read this article: <https://cio-wiki.org/wiki/Operations_Bridge>
 
 #### Discussion Post #2
 
-Scenario:
+!!! abstract "Scenario"
 
-<blockquote>
+    Your team has no documentation around how to check out a server during an incident.
+    Write out a procedure of what you think an operations person should be doing on the
+    system they suspect is not working properly.
 
-Your team has no documentation around how to check out a server during an incident.
-Write out a procedure of what you think an operations person should be doing on the
-system they suspect is not working properly.
+    This may help, to get you started <https://zeltser.com/media/docs/security-incident-survey-cheat-sheet.pdf?msc=Cheat+Sheet+Blog>
+    You may use AI for this, but let us know if you do.
 
-</blockquote>
+!!! info
 
-This may help, to get you started <https://zeltser.com/media/docs/security-incident-survey-cheat-sheet.pdf?msc=Cheat+Sheet+Blog>
-You may use AI for this, but let us know if you do.
-
-<div class="warning">
-Submit your input by following the link below.
-
-The discussion posts are done in Discord threads. Click the 'Threads' icon on the top right and search for the discussion post.
-
-</div>
-
-- [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1098309490681598072)
+    Submit your input by following the link below. The discussion posts are done in Discord forums.
+    [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 ## Definitions
-
----
 
 Detection:
 
@@ -93,8 +84,6 @@ Operations Bridge:
 
 ## Digging Deeper
 
----
-
 1. Read about battle drills here <https://en.wikipedia.org/wiki/Battle_drill>
 
 2. Why might it be important to practice incident handling before an incident occurs?
@@ -103,10 +92,8 @@ Operations Bridge:
 
 ## Reflection Questions
 
----
-
 1. What questions do you still have about this week?
 
 2. How much better has your note taken gotten since you started?
-   What do you still need to work on? Have you started using a different tool?
-   Have you taken more notes?
+    What do you still need to work on? Have you started using a different tool?
+    Have you taken more notes?

@@ -20,12 +20,10 @@
 
 The lab has been provided for convenience below:
 
-- <a href="../../assets/lac/downloads/u4/u4_lab.pdf" target="_blank" download>📥 u4_lab(`.pdf`)</a>
-- <a href="../../assets/lac/downloads/u4/u4_lab.docx" target="_blank" download>📥 u4_lab(`.docx`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u4/u4_lab.pdf" target="_blank">📥 u4_lab(`.pdf`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u4/u4_lab.docx" target="_blank">📥 u4_lab(`.docx`)</a>
 
 ## Pre-Lab Warm-Up
-
----
 
 1. `cd ~`
 2. `ls`
@@ -87,8 +85,6 @@ The lab has been provided for convenience below:
    ```
 
 ## Lab 🧪
-
----
 
 1. Gathering system information release and kernel information
    ```bash linenums="1"

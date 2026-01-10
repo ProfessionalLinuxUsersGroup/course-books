@@ -2,8 +2,6 @@
 
 ## Overview
 
----
-
 This unit introduces **Kubernetes (K8s)**, an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications. The unit covers:
 
 - **Understanding Kubernetes Architecture** - Nodes, Control Plane, and Cluster Components.
@@ -15,8 +13,6 @@ This unit introduces **Kubernetes (K8s)**, an open-source container orchestratio
 Kubernetes plays a critical role in **modern enterprise infrastructure**, enabling **scalability, high availability, and automation** in cloud-native applications.
 
 ## Learning Objectives
-
----
 
 By the end of this unit, learners will:
 

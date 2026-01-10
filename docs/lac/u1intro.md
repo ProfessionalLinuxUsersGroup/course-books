@@ -2,8 +2,6 @@
 
 ## Overview
 
----
-
 This unit introduces the foundational skills needed for effective Linux system administration with an emphasis on Red Hat Enterprise Linux (RHEL). It covers:
 
 - **Command-Line Proficiency:** Mastery of the shell environment is essential for routine tasks such as navigating the file system, managing processes, and automating scripts.
@@ -12,8 +10,6 @@ This unit introduces the foundational skills needed for effective Linux system a
 - **Basic Utilities and System Management:** Along with the command-line and text editors, the unit touches on fundamental utilities that are pivotal for system configuration, troubleshooting, and maintenance on enterprise systems.
 
 ## Learning Objectives
-
----
 
 1. **Master Command-Line Fundamentals:**
     - Develop proficiency in navigating the Linux command-line interface (CLI) for everyday system management tasks.
