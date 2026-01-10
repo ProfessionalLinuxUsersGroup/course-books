@@ -63,8 +63,7 @@ Read about the **Pareto Rule** or the **Rule of 80/20**.
 !!! info
 
     Submit your input by following the link below. The discussion posts are done in Discord Forums.
-
-    - [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
+    [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 ## Definitions
 
@@ -80,10 +79,7 @@ System Validation
 
 Reporting
 
-
-## Digging Deeper
-
-### Reflection Questions
+## Reflection Questions
 
 1. What questions do you still have about this week?
 

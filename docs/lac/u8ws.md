@@ -45,9 +45,8 @@ Link: <https://www.youtube.com/watch?v=sn_LwfIObQw>
     You’ve noticed a pattern of logs filling up on a set of web servers from increased traffic.
     Your research shows, and then you verify, that the logs are being sent off real time to Splunk.
     Your team has just been deleting the logs every few days, but one of the 3rd shift engineers didn’t
-    read the notes and your team suffered downtime.
-
-How might you implement a simple fix to stop gap the problem before all the engineering resources come back next week?
+    read the notes and your team suffered downtime. How might you implement a simple fix to stop gap the
+    problem before all the engineering resources come back next week?
 
 1. What resources helped you answer this?
 

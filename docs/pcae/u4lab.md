@@ -62,7 +62,8 @@ server you have connected to.
 !!! warning
 
     This lab is designed to be run in the killercoda environment and will take significant user tooling
-    to change over to their own environment. This is not supported in this run of the course but the learner is welcome to work with it and tool it over for that purpose as time permits.
+    to change over to their own environment. This is not supported in this run of the course but the learner is welcome 
+    to work with it and tool it over for that purpose as time permits.
 
 !!! note
 

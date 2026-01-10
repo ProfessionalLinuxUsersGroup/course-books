@@ -68,7 +68,7 @@ participate. It is also a place to ask questions or get involved in projects.
         aspect-ratio: 16/9;
         border-radius: 0.25rem;
         background:black"
-    src="https://www.youtube.com/embed/alcsTPQsruM?si=Dluz0h-UCgg9YfsW"
+    src="https://www.youtube.com/embed/alcsTPQsruM"
     title="Beginners Start Here"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

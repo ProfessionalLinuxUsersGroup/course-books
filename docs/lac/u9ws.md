@@ -37,7 +37,8 @@ Link: <https://www.youtube.com/watch?v=_lo50mgERJY>
 
 #### Discussion Post #1
 
-It’s a slow day in the NOC and you have heard that a new system of container deployments are being used by your developers. Do some reading about containers, docker, and podman.
+It’s a slow day in the NOC and you have heard that a new system of container deployments are being used by your developers.
+Do some reading about containers, docker, and podman.
 
 1.  What resources helped you answer this?
 
@@ -51,7 +52,8 @@ It’s a slow day in the NOC and you have heard that a new system of container d
 
 !!! abstract "Scenario"
 
-    You get your first ticket about a problem with containers. One of the engineers is trying to move his container up to the Dev environment shared server. He sends you over this information about the command he’s trying to run.
+    You get your first ticket about a problem with containers. One of the engineers is trying to move his container up to the Dev environment
+    shared server. He sends you over this information about the command he’s trying to run.
 
     ```plaintext
     [developer1@devserver read]$ podman ps

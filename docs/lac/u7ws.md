@@ -71,7 +71,8 @@ Link: <https://www.youtube.com/watch?v=SwrkhTwzN_4>
     Looking at the concept of group install from DNF or Yum.
     Why do you think an administrator may never want to use that in a running system?
     Why might an engineer want to or not want to use that?
-    This is a thought exercise, so it’s not a “right or wrong” answer it’s for you to think about.
+
+This is a thought exercise, so it’s not a “right or wrong” answer it’s for you to think about.
 
 1. What is the concept of software bloat, and how do you think it relates?
 

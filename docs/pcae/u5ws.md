@@ -76,7 +76,7 @@ and think you have a good handle on what is happening.
 !!! info
 
     Submit your input by following the link below. The discussion posts are done in Discord Forums.
-    - [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
+    [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 
 ## Definitions
@@ -110,7 +110,7 @@ Work through the following labs to practice the topics from this week's presenta
 
 
 ## Reflection Questions
-1. What questions do you still have about this week?
 
+1. What questions do you still have about this week?
 2. How are you going to use what you've learned in your current role?
 

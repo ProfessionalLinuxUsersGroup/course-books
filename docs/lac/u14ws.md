@@ -56,7 +56,8 @@ Refer to your Unit 5 scan of the systems.
 !!! abstract "Scenario"
 
     You have been noticing drift on your server configurations, so you want a way to generate a report on them every day to validate the configurations are the same.
-    Use any lab in here to find ideas: <https://killercoda.com/het-tanis/course/Ansible-Labs>
+
+Use any lab in here to find ideas: <https://killercoda.com/het-tanis/course/Ansible-Labs>
 
 #### Discussion Post 3
 
