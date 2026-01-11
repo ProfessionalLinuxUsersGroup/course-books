@@ -19,7 +19,6 @@ could be transposed to a `.md` file.
 
 - <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u3/u3_worksheet.txt" target="_blank">📥 u3_worksheet(`.txt`)</a>
 - <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u3/u3_worksheet.docx" target="_blank">📥 u3_worksheet(`.docx`)</a>
-- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u3/u3_worksheet.pdf" target="_blank">📥 u3_worksheet(`.pdf`)</a>
 
 ### Unit 3 Recording
 

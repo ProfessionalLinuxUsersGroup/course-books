@@ -20,7 +20,7 @@ the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
 - <a href="https://professionallinuxusersgroup.github.io/course-books/assets/psc/downloads/u2/u2_worksheet.txt" target="_blank">📥 u2_worksheet(`.txt`)</a>
-- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/psc/downloads/u2/u2_worksheet.pdf" target="_blank">📥 u2_worksheet(`.pdf`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/psc/downloads/u2/u2_worksheet.docx" target="_blank">📥 u2_worksheet(`.docx`)</a>
 
 ### Unit 2 Recording
 

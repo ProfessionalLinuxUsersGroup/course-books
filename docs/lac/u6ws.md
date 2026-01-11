@@ -20,7 +20,6 @@ could be transposed to a `.md` file.
 
 - <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u6/u6_worksheet.txt" target="_blank">📥 u6_worksheet(`.txt`)</a>
 - <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u6/u6_worksheet.docx" target="_blank">📥 u6_worksheet(`.docx`)</a>
-- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u6/u6_worksheet.pdf" target="_blank">📥 u6_worksheet(`.pdf`)</a>
 
 ### Unit 6 Recording
 

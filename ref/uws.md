@@ -35,6 +35,8 @@ could be transposed to a `.md` file.
     allowfullscreen>
 </iframe>
 
+Link: PLACEHOLDER
+
 #### Discussion Post #1
 
 1. PLACEHOLDER - Questions will be in ordered lists.
@@ -43,7 +45,7 @@ could be transposed to a `.md` file.
 
 #### Discussion Post #2
 
-!!! abstract
+!!! abstract "Scenario"
 
     PLACEHOLDER - Scenarios go inside abstract [admonitions](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types).
 
@@ -51,24 +53,23 @@ could be transposed to a `.md` file.
 
 2. PLACEHOLDER - Questions will be in ordered lists.
 
-!!! notes
+!!! info
 
     Submit your input by following the link below. The discussion posts are done in Discord Forums.
-
-    - [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
+    [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 
 ## Definitions
 
-PLACEHOLDER: The terms will be left blank for the student to fill in.
+PLACEHOLDER - The terms will be left blank for the student to fill in.
 
-PLACEHOLDER:
+PLACEHOLDER
 
-PLACEHOLDER:
+PLACEHOLDER
 
-PLACEHOLDER:
+PLACEHOLDER
 
-PLACEHOLDER:
+PLACEHOLDER
 
 ## Digging Deeper
 
