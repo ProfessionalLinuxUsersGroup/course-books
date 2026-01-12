@@ -110,7 +110,7 @@ on the container or machine.
     git clone https://github.com/ProfessionalLinuxUsersGroup/course-books
     cd course-books
     python3.13 -m venv "$PWD"
-    source "$PWD"/bin/activate
+    source venv/bin/activate
     pip install -U pip
     pip install -U mkdocs mkdocs-material mkdocs-glightbox mkdocs-to-pdf
     # use mkdocs serve -a "$(hostname -I | awk '{print $1}'):8000" for live reloading after changes
@@ -124,7 +124,7 @@ on the container or machine.
     git clone https://github.com/ProfessionalLinuxUsersGroup/course-books
     cd course-books
     python3.13 -m venv "$PWD"
-    source "$PWD"/bin/activate
+    source venv/bin/activate
     pip install -U pip
     pip install -U mkdocs mkdocs-material mkdocs-glightbox mkdocs-to-pdf
     # use mkdocs serve -a "$(hostname -I | awk '{print $1}'):8000" for live reloading after changes
@@ -137,8 +137,8 @@ The ProLUG Linux Course Books website should now be available from your web brow
 From here you can use such commands from your localhost to implement changes:
 
 ```bash linenums="1"
-cd "$HOME"/course-books 
-source bin/activate
+cd "$HOME"/course-books
+source venv/bin/activate
 mkdocs build -d /var/www/html
 systemctl restart {httpd or apache}
 ```
@@ -158,5 +158,5 @@ Or send commands over to a networked container or machine:
 
 ```bash linenums="1"
 scp {working directory}/{targeted document} {TARGET_IP}:/root/course-books/{targeted document}
-ssh {TARGET_IP} "cd /root/course-books && /root/course-books/bin/mkdocks build -d /var/www/html && systemctl restart httpd"
+ssh {TARGET_IP} "cd /root/course-books && /root/course-books/venv/bin/mkdocks build -d /var/www/html && systemctl restart httpd"
 ```

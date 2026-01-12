@@ -1,4 +1,4 @@
-# v 1.7.4
+# v 1.8.1
 # Authored by Christian McKee - cmckee786@github.com
 # Attempts to validate links within ProLUG Course-Books repo
 
@@ -7,7 +7,6 @@
 # validated links in flat file to reduce subsequent runtimes
 
 # Not intended for use in runner builds for the time being
-# Delete or empty successfullinks.txt for now to retest all links
 
 # USE RESPONSIBLY
 
