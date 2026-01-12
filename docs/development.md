@@ -79,7 +79,8 @@ can utilize a virtual python environment with the required dependencies.
 
     - `httpd` or `apache2`
     - `git`
-    - Python 3.8+
+    - `weasyprint`
+    - Python 3.13+
     - Python virtual environment with `mkdoc-material` required pip packages
     - a clone of the [ProLUG course-books repository](https://github.com/ProfessionalLinuxUsersGroup/course-books)
 
@@ -105,10 +106,13 @@ on the container or machine.
 === "APT"
     ```bash linenums="1"
     #!/bin/bash
-    apt-get update && apt-get -y install git python3-full hostname apache2
-    git clone https://github.com/ProfessionalLinuxUsersGroup/course-books && cd course-books
-    python3 -m venv . && source "$PWD"/bin/activate
-    pip install -U pip && pip install -U mkdocs mkdocs-material mkdocs-glightbox
+    apt-get update && apt-get -y install git python3.13-full hostname apache2 weasyprint
+    git clone https://github.com/ProfessionalLinuxUsersGroup/course-books
+    cd course-books
+    python3.13 -m venv "$PWD"
+    source venv/bin/activate
+    pip install -U pip
+    pip install -U mkdocs mkdocs-material mkdocs-glightbox mkdocs-to-pdf
     # use mkdocs serve -a "$(hostname -I | awk '{print $1}'):8000" for live reloading after changes
     mkdocs build -d /var/www/html/ && systemctl enable --now apache2
     ```
@@ -116,21 +120,25 @@ on the container or machine.
 === "DNF"
     ```bash linenums="1"
     #!/bin/bash
-    dnf install -y httpd git python3 hostname httpd
-    git clone https://github.com/ProfessionalLinuxUsersGroup/course-books && cd course-books
-    python3 -m venv . && source "$PWD"/bin/activate
-    pip install -U pip && pip install -U mkdocs mkdocs-material mkdocs-glightbox
+    dnf install -y httpd git python3.13 hostname httpd weasyprint
+    git clone https://github.com/ProfessionalLinuxUsersGroup/course-books
+    cd course-books
+    python3.13 -m venv "$PWD"
+    source venv/bin/activate
+    pip install -U pip
+    pip install -U mkdocs mkdocs-material mkdocs-glightbox mkdocs-to-pdf
     # use mkdocs serve -a "$(hostname -I | awk '{print $1}'):8000" for live reloading after changes
     mkdocs build -d /var/www/html/ && systemctl enable --now httpd
     ```
 
 The ProLUG Linux Course Books website should now be available from your web browser either at
-<http://localhost> or its designated IP address.
+<http://localhost:{assigned_port}> or its designated IP address and port.
 
 From here you can use such commands from your localhost to implement changes:
 
 ```bash linenums="1"
-cd "$HOME"/course-books && source bin/activate
+cd "$HOME"/course-books
+source venv/bin/activate
 mkdocs build -d /var/www/html
 systemctl restart {httpd or apache}
 ```
@@ -150,5 +158,5 @@ Or send commands over to a networked container or machine:
 
 ```bash linenums="1"
 scp {working directory}/{targeted document} {TARGET_IP}:/root/course-books/{targeted document}
-ssh {TARGET_IP} "cd /root/course-books && /root/course-books/bin/mkdocks build -d /var/www/html && systemctl restart httpd"
+ssh {TARGET_IP} "cd /root/course-books && /root/course-books/venv/bin/mkdocks build -d /var/www/html && systemctl restart httpd"
 ```

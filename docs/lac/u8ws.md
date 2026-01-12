@@ -19,7 +19,6 @@ could be transposed to a `.md` file.
 
 - <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u8/u8_worksheet.txt" target="_blank">📥 u8_worksheet(`.txt`)</a>
 - <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u8/u8_worksheet.docx" target="_blank">📥 u8_worksheet(`.docx`)</a>
-- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u8/u8_worksheet.pdf" target="_blank">📥 u8_worksheet(`.pdf`)</a>
 
 ### Unit 8 Recording
 
