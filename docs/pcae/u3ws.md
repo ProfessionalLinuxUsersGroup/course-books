@@ -7,7 +7,7 @@ Hold your worksheets until the end to turn them in as a final submission packet.
 
 ### Resources / Important Links
 
-- <https://killercoda.com/hettanis/course/Ansible-Labs/02-Ansible-Host-File>
+- <https://killercoda.com/het-tanis/course/Ansible-Labs/02-Ansible-Host-File>
 - <https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html>
 
 #### Downloads
@@ -97,7 +97,7 @@ cannot have security in the system."
        and formatting.
 
     2. Run through this lab for understanding:
-       <https://killercoda.com/hettanis/course/Ansible-Labs/02-Ansible-Host-File>
+       <https://killercoda.com/het-tanis/course/Ansible-Labs/02-Ansible-Host-File>
 
 
 
