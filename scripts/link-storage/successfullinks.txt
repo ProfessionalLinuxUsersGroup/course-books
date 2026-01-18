@@ -103,6 +103,7 @@ https://github.com/ProfessionalLinuxUsersGroup
 https://github.com/ProfessionalLinuxUsersGroup/course-books
 https://github.com/ProfessionalLinuxUsersGroup/course-books.git
 https://github.com/ProfessionalLinuxUsersGroup/course-books/
+https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/docs/contributing.md
 https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/ref/intro.md
 https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/ref/ub.md
 https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/ref/ulab.md
@@ -115,8 +116,10 @@ https://github.com/ProfessionalLinuxUsersGroup/lac
 https://github.com/ProfessionalLinuxUsersGroup/pcae
 https://github.com/ProfessionalLinuxUsersGroup/psc
 https://github.com/ansible/ansible
+https://github.com/esnet/iperf
 https://github.com/fail2ban/fail2ban
 https://github.com/het
+https://github.com/het-tanis
 https://github.com/het-tanis/HPC_Deploy.git
 https://github.com/het-tanis/prolug-labs.git
 https://github.com/het-tanis/prolug-labs/tree/main/Linux-Labs/210-building-a-bastion-host
@@ -136,7 +139,6 @@ https://grafana.com/docs/loki/latest/reference/loki-http-api/#query-logs-within-
 https://grafana.com/solutions/linux-node/monitor/
 https://help.ubuntu.com/community/UFW
 https://httpd.apache.org/
-https://iperf.fr/
 https://jvns.ca/blog/2019/06/23/a-few-debugging-resources/
 https://k3s.io/
 https://kafka.apache.org/uses
@@ -144,6 +146,7 @@ https://killercoda.com
 https://killercoda.com/
 https://killercoda.com/fishermanguybro
 https://killercoda.com/het-tanis/course/Ansible-Labs
+https://killercoda.com/het-tanis/course/Ansible-Labs/02-Ansible-Host-File
 https://killercoda.com/het-tanis/course/Ansible-Labs/07-Ansible-Playbook-Jinja-Templates
 https://killercoda.com/het-tanis/course/Ansible-Labs/10-Ansible-Vaulting-Password-and-Variables
 https://killercoda.com/het-tanis/course/Ansible-Labs/102-Enterprise-Ansible-Patching
@@ -182,8 +185,6 @@ https://killercoda.com/het-tanis/course/Linux-Labs/207-OS_STIG_Scan_with_SCC_Too
 https://killercoda.com/het-tanis/course/Linux-Labs/210-building-a-bastion-host
 https://killercoda.com/het-tanis/course/Linux-Labs/211-setting-up-rsyslog-with-tls
 https://killercoda.com/het-tanis/course/Linux-Labs/212-public-private-keys-with-ssh
-https://killercoda.com/hettanis/course/Ansible-Labs/02-Ansible-Host-File
-https://killercoda.com/hettanis/course/Ansible-Labs/19-Ansible-csv-report
 https://killercoda.com/k3s/scenario/intro
 https://killercoda.com/killer-shell-cks/scenario/apparmor
 https://killercoda.com/killer-shell-cks/scenario/certificate-signing-requests-sign-k8s
@@ -203,6 +204,7 @@ https://man7.org/linux/man-pages/man1/sar.1.html
 https://man7.org/linux/man-pages/man1/sha256sum.1.html
 https://man7.org/linux/man-pages/man8/pam_access.8.html
 https://man7.org/linux/man-pages/man8/rpm.8.html
+https://media.defense.gov/2022/Aug/29/2003066362/-1/-1/0/CTR_KUBERNETES_HARDENING_GUIDANCE_1.2_20220829.PDF
 https://microsoft.github.io/code-with-engineering-playbook/observability/log-vs-metric-vs-trace/
 https://network.nvidia.com/products/infiniband-drivers/linux/mlnx_ofed/
 https://nginx.org/
@@ -385,6 +387,9 @@ https://professionallinuxusersgroup.github.io/lac/u8b.html
 https://prolug.org/
 https://prometheus.io/docs/alerting/latest/configuration/
 https://promlabs.com/promql-cheat-sheet/
+https://public.cyber.mil/stigs/downloads
+https://public.cyber.mil/stigs/downloads/
+https://public.cyber.mil/stigs/srg-stig-tools/
 https://semver.org/
 https://serverlessland.com/
 https://serverlessland.com/patterns
@@ -429,6 +434,7 @@ https://www.gnu.org/software/screen/manual/screen.html
 https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html
 https://www.howtogeek.com/448323/what-is-markdown-and-how-do-you-use-it/
 https://www.kaggle.com/learn
+https://www.linux.org/pages/download/
 https://www.mkdocs.org/user-guide/writing-your-docs/#writing-with-markdown
 https://www.nagios.com/solutions/linux-monitoring/
 https://www.nist.gov/

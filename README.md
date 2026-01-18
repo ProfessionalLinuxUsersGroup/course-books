@@ -49,7 +49,7 @@ Outlined below are a set of objectives this repository attempts to provide.
 ## To Begin Contributing
 
 ProLUG asks all contributors to understand and adhere to the principles and guidelines detailed
-in the [contributing.md](https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/src/contributing.md) markdown file.
+in the [contributing.md](https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/docs/contributing.md) markdown file.
 Contributors found significantly deviating from these policies will have their work discarded appropriately.
 
 Contributors will be provided with supplementary material to begin building out unit worksheet labs
@@ -58,7 +58,7 @@ and templates within the project managed issues board.
 To start contributing:
 
 - Understand the repository objectives
-- Read the [contributing.md](https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/src/contributing.md) markdown
+- Read the [contributing.md](https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/docs/contributing.md) markdown
 - Look over the [template pages wiki](https://github.com/ProfessionalLinuxUsersGroup/course-books/wiki), or directly here:
   - Pages: [intro](https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/ref/intro.md),
     [bonus](https://github.com/ProfessionalLinuxUsersGroup/course-books/blob/main/ref/ub.md),

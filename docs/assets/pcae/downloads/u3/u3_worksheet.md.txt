@@ -103,7 +103,7 @@ Unit3 Lab from Lab book
 <https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html>
     1. Parse these down using ansible-inventory to see if you understand the syntax
        and formatting.
-2. Run through this lab for understanding: <https://killercoda.com/hettanis/course/Ansible-Labs/02-Ansible-Host-File>
+2. Run through this lab for understanding: <https://killercoda.com/het-tanis/course/Ansible-Labs/02-Ansible-Host-File>
 
 
 ## Reflection Questions
