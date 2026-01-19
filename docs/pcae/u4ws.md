@@ -16,23 +16,24 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/pcae/downloads/u4/u4_worksheet.md.txt" target="_blank" download="u4_worksheet.md">:material-download: u4_worksheet.md</a>
-- <a href="../../assets/pcae/downloads/u4/u4_worksheet.txt" target="_blank" download>:material-download: u4_worksheet.txt</a>
-- <a href="../../assets/pcae/downloads/u4/u4_worksheet.pdf" target="_blank" download>:material-download: u4_worksheet.pdf</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u4/u4_worksheet.md.txt" target="_blank">📥 u4_worksheet(`.md`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u4/u4_worksheet.txt" target="_blank">📥 u4_worksheet(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u4/u4_worksheet.pdf" target="_blank">📥 u4_worksheet(`.pdf`)</a>
 
 ### Unit 4 Recording
 
 <iframe
     style="width: 100%; height: 100%; border: none;
     aspect-ratio: 16/9; border-radius: 0.25rem; background:black"
-    src="https://www.youtube.com/embed/acKjnxuGjVI?si=ciAIk0jE9pWefKIa"
-    title="ProLUG Automation Course - Unit 4 Recording"
+    src="https://www.youtube.com/embed/acKjnxuGjVI"
+    title="Unit 4 Recording - ProLUG Linux Automation Engineering Course - Free in Discord"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen>
 </iframe>
 
+Link: <https://www.youtube.com/watch?v=acKjnxuGjVI>
 
 #### Discussion Post #1
 
@@ -71,11 +72,10 @@ could be transposed to a `.md` file.
 4. How might you present a report for these servers (to your team or others?)
 
 
-!!! note
+!!! info
 
     Submit your input by following the link below. The discussion posts are done in Discord Forums.
-
-    - [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
+    [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 
 ## Definitions
@@ -121,4 +121,3 @@ could be transposed to a `.md` file.
 1. What questions do you still have about this week?
 
 2. How are you going to use what you've learned in your current role?
-

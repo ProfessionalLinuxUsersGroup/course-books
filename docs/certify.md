@@ -24,8 +24,6 @@ There are four main components to earning the certification.
 
 ## Worksheet Completion
 
----
-
 Each unit has a corresponding worksheet.  
 On this worksheet are discussion questions, terms/definitions, **optional** "digging
 deeper" sections, and reflection questions.
@@ -33,9 +31,7 @@ deeper" sections, and reflection questions.
 These worksheets must be filled out and kept until the end of the course.  
 Upon reaching the end, they are to be submitted to the instructor (Scott Champine).
 
-### Worksheet Submission Format
-
----
+## Worksheet Submission Format
 
 The format in which you submit these worksheets is up to you.
 
@@ -43,8 +39,6 @@ Some students prefer to keep them in a GitHub repository, others prefer to just 
 them as files on their machines and submit via email.
 
 ## Discussion Questions
-
----
 
 Each unit's worksheet contains multiple discussion questions.  
 Each discussion question has its own thread in the ProLUG Discord server, in the
@@ -60,8 +54,6 @@ from other points of view.
 
 ## Lab Completion
 
----
-
 Each unit has a lab that is to be completed.
 
 The labs, like the worksheets, should be also completed and saved until the end of
@@ -70,8 +62,6 @@ the course.
 These labs should be submitted to the instructor along with the worksheets in the same format of your choice.
 
 ## Final Project
-
----
 
 Each ProLUG course has students complete a capstone project.
 

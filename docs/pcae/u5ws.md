@@ -18,23 +18,24 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-<!-- Change to whatever downloads are currently available. -->
-- <a href="../../assets/pcae/downloads/u5/u5_worksheet.md.txt" target="_blank" download="u5_worksheet.md">:material-download: u5_worksheet.md</a>
-- <a href="../../assets/pcae/downloads/u5/u5_worksheet.txt" target="_blank" download>:material-download: u5_worksheet.txt</a>
-- <a href="../../assets/pcae/downloads/u5/u5_worksheet.pdf" target="_blank" download>:material-download: u5_worksheet.pdf</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u5/u5_worksheet.md.txt" target="_blank">📥 u5_worksheet(`.md`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u5/u5_worksheet.txt" target="_blank">📥 u5_worksheet(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u5/u5_worksheet.pdf" target="_blank">📥 u5_worksheet(`.pdf`)</a>
 
 ### Unit 5 Recording
 
 <iframe
     style="width: 100%; height: 100%; border: none;
     aspect-ratio: 16/9; border-radius: 0.25rem; background:black"
-    src="https://www.youtube.com/embed/LQ9aXRU3vts?si=jqJ8GasBlMh0QE2a"
-    title="ProLUG Automation Course - Unit 5"
+    src="https://www.youtube.com/embed/LQ9aXRU3vts"
+    title="Unit 5 Recording - ProLUG Linux Automation Engineering Course - Free in Discord"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen>
 </iframe>
+
+Link: <https://www.youtube.com/watch?v=LQ9aXRU3vts>
 
 #### Discussion Post #1
 
@@ -53,7 +54,7 @@ and answer the following questions:
 #### Discussion Post #2
 
 You've stumbled on a playbook and you're trying to figure out what the following line means:
-<img src="../../assets/pcae/images/u5/u5_dp2_playbook.png" />
+<img src="../../assets/pcae/images/u5/u5_dp2_playbook.png"/>
 
 You have reviewed Jinja2 filters
 <https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_filters.html#providingdefault-values>
@@ -72,11 +73,10 @@ and think you have a good handle on what is happening.
     2. Where will you use these in your automations?
 
 
-!!! note
+!!! info
 
     Submit your input by following the link below. The discussion posts are done in Discord Forums.
-
-    - [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
+    [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 
 ## Definitions
@@ -106,11 +106,11 @@ Work through the following labs to practice the topics from this week's presenta
 3. Ansible API Calls: <https://killercoda.com/het-tanis/course/HashicorpLabs/004-vault-read-secrets-ansible>
 4. Stamping servers: <https://killercoda.com/het-tanis/course/Ansible-Labs/07-Ansible-Playbook-Jinja-Templates>
 5. Reporting back values: <https://killercoda.com/het-tanis/course/AnsibleLabs/08-Ansible-Playbook-Jinja-Reporting>
-6. Generating CSV for management: <https://killercoda.com/hettanis/course/Ansible-Labs/19-Ansible-csv-report>
+6. Generating CSV for management: <https://killercoda.com/het-tanis/course/Ansible-Labs/19-Ansible-csv-report>
 
 
 ## Reflection Questions
-1. What questions do you still have about this week?
 
+1. What questions do you still have about this week?
 2. How are you going to use what you've learned in your current role?
 

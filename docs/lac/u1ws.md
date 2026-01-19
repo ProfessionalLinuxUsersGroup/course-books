@@ -2,8 +2,6 @@
 
 ## Instructions
 
----
-
 Fill out the worksheet as you progress through the lab and discussions.
 Hold your worksheets until the end to turn them in as a final submission packet.
 
@@ -19,8 +17,8 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/lac/downloads/u1/u1_worksheet.txt" target="_blank" download>📥 u1_worksheet(`.txt`)</a>
-- <a href="../../assets/lac/downloads/u1/u1_worksheet.docx" target="_blank" download>📥 u1_worksheet(`.docx`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u1/u1_worksheet.txt" target="_blank">📥 u1_worksheet(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u1/u1_worksheet.docx" target="_blank">📥 u1_worksheet(`.docx`)</a>
 
 ### Unit 1 Recording
 
@@ -34,6 +32,8 @@ could be transposed to a `.md` file.
     referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen>
 </iframe>
+
+Link: <https://www.youtube.com/watch?v=eHB8WKWz2eQ>
 
 #### Discussion Post #1
 
@@ -69,14 +69,10 @@ Next, answer these questions here:
 
 4. What are you doing to close the gap? What can you do to remedy the difference?
 
-<div class="warning">
-Submit your input by following the link below.
+!!! info
 
-The discussion posts are done in Discord threads. Click the 'Threads' icon on the top right and search for the discussion post.
-
-</div>
-
-- [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1098309490681598072)
+    Submit your input by following the link below. The discussion posts are done in Discord forums.
+    [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 ### Start thinking about your project ideas (more to come in future weeks)
 
@@ -93,8 +89,6 @@ You will research, design, deploy, and document a system that improves your admi
 
 ## Definitions
 
----
-
 Kernel:
 
 Kernel Args:
@@ -109,8 +103,6 @@ Text Editor:
 
 ## Digging Deeper
 
----
-
 1. Use vimtutor and see how far you get. What did you learn that you did not know about vi/vim?
 
 2. Go to <https://vim-adventures.com/> and see how far you get. What did you learn that you did not already know about vi/vim?
@@ -118,8 +110,6 @@ Text Editor:
 3. Go to <https://www.youtube.com/watch?v=d8XtNXutVto> and see how far you get with vim. What did you learn that you did not already know about vi/vim?
 
 ## Reflection Questions
-
----
 
 1. What questions do you still have about this week?
 

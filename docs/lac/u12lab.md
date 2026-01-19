@@ -9,7 +9,7 @@
 - [SAR Documentation](https://man7.org/linux/man-pages/man1/sar.1.html)
 - [iostat Manual](https://man7.org/linux/man-pages/man1/iostat.1.html)
 - [stress GitHub](https://github.com/ColinIanKing/stress-ng.git)
-- [iperf3 Documentation](https://iperf.fr/)
+- [iperf3 Documentation](https://github.com/esnet/iperf)
 
 ### Required Materials
 
@@ -21,12 +21,10 @@
 
 The lab has been provided for convenience below:
 
-- <a href="../../assets/lac/downloads/u12/u12_lab.pdf" target="_blank" download>📥 u12_lab(`.pdf`)</a>
-- <a href="../../assets/lac/downloads/u12/u12_lab.docx" target="_blank" download>📥 u12_lab(`.docx`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u12/u12_lab.pdf" target="_blank">📥 u12_lab(`.pdf`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u12/u12_lab.docx" target="_blank">📥 u12_lab(`.docx`)</a>
 
 ## Pre-Lab Warm-Up
-
----
 
 1. Create a working directory
    ```bash linenums="1"
@@ -88,8 +86,6 @@ The lab has been provided for convenience below:
    ```
 
 ## Lab 🧪
-
----
 
 ### Baseline Information Gathering
 
@@ -299,8 +295,6 @@ Put command you're using for load here:
 | Disk write - small files (retry) |          |
 | Disk write - large files         |          |
 | Processor benchmark              |          |
-
----
 
 #### System Tests while under significant load
 

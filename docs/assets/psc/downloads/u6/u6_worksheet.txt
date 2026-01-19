@@ -77,8 +77,7 @@ Unit6_Logs_and_Parsing - To be completed outside of lecture time.
 Digging Deeper
  
 1. Find a cloud service and see what their logging best practices are for security 
-incident response. Here is AWS: https://aws.amazon.com/blogs/security/logging-
-strategies-for-security-incident-response/ 
+incident response. Here is AWS: https://aws.amazon.com/blogs/security/logging-strategies-for-security-incident-response/ 
 	a. What are the high level concepts mentioned? 
 	b. What are the tools available and what actions do they take? 
 	c. What are the manual and automated query capabilities provided, and how 

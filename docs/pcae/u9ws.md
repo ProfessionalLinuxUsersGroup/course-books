@@ -17,9 +17,9 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/pcae/downloads/u9/u9_worksheet.md.txt" target="_blank" download="u9_worksheet.md">:material-download: u9_worksheet.md</a>
-- <a href="../../assets/pcae/downloads/u9/u9_worksheet.txt" target="_blank" download>:material-download: u9_worksheet.txt</a>
-- <a href="../../assets/pcae/downloads/u9/u9_worksheet.pdf" target="_blank" download>:material-download: u9_worksheet.pdf</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u9/u9_worksheet.md.txt" target="_blank">📥 u9_worksheet(`.md`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u9/u9_worksheet.txt" target="_blank">📥 u9_worksheet(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u9/u9_worksheet.pdf" target="_blank">📥 u9_worksheet(`.pdf`)</a>
 
 ### Unit 9 Recording
 
@@ -33,6 +33,8 @@ could be transposed to a `.md` file.
     referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen>
 </iframe>
+
+Link: <https://www.youtube.com/watch?v=ef8Dzk5wVm8>
 
 #### Discussion Post #1
 
@@ -49,11 +51,10 @@ Read about chrooted environments here: <https://en.wikipedia.org/wiki/Chroot> an
 1. What are the uses of a chrooted environment? (there are 5 on Wikipedia)
 2. How might using Ansible to build chrooted images help improve your build process?
 
-!!! note
+!!! info
 
     Submit your input by following the link below. The discussion posts are done in Discord Forums.
-
-    - [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
+    [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 
 ## Definitions
@@ -68,7 +69,7 @@ Read about chrooted environments here: <https://en.wikipedia.org/wiki/Chroot> an
 
 1. Read other parts of this doc for more HPC understanding:
 <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-223.ipd.pdf>
-	1. What are the components on the drawing on page 3 of doc (pg. 11 in the webviewer)
+    1. What are the components on the drawing on page 3 of doc (pg. 11 in the webviewer)
 
 ## Reflection Questions
 

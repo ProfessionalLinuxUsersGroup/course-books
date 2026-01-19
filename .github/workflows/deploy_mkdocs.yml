@@ -22,15 +22,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
           cache: 'pip'
-
-      - name: Install mkdocs-to-pdf dependencies
-        run: sudo apt-get install -y weasyprint
+      - uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: weasyprint
+          version: 1.0
 
       - name: Install pip dependencies
         run: pip install -U mkdocs mkdocs-material mkdocs-glightbox mkdocs-to-pdf

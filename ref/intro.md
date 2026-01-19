@@ -17,7 +17,8 @@
 
 (Any important terms relating to the unit)
 
-|Terms|Definitions|
-|:------------------:|:------------------:|
-|Term 1|Breakdown of acronym if applicable|
-|Term 2|etc..|
+|Terms|
+|:------------------:|
+|Term 1|
+|Term 2|
+| etc..|

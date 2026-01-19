@@ -93,8 +93,8 @@ some of them. This is the real value of a security engineer focused Linux engine
 8. Download and extract a STIG remediation tool
 
 cd /root mkdir stigs cd stigs
-wget -O U_RHEL_9_V2R3_STIG_Ansible.zip https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_RHEL_9_V2R3_STIG_Ansible.zip
-unzip U_RHEL_9_V2R3_STIG_Ansible.zip 
+wget -O U_RHEL_9_V2R4_STIG_Ansible.zip https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_RHEL_9_V2R4_STIG_Ansible.zip
+unzip U_RHEL_9_V2R4_STIG_Ansible.zip 
 mkdir ansible
 cp rhel9STIG-ansible.zip ansible/ 
 cd ansible
@@ -128,4 +128,4 @@ vim draft-disa-remediate.yml
 oscap xccdf generate fix --profile ospp --fix-type bash /usr/share/xml/scap/ssg/content/ssg-rhel9-ds.xml > draft-disa-remediate.sh
 
 #Examine the file
-vim draf-disa-remediate.sh
+vim draft-disa-remediate.sh

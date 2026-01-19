@@ -28,11 +28,9 @@ in `/labs/automation/unit2`.
 #### Downloads
 
 The lab has been provided for convenience below:
-- <a href="../../assets/pcae/downloads/u2/u2_lab.txt" target="_blank" download>:material-download: u2_lab.txt</a>
-- <a href="../../assets/pcae/downloads/u2/u2_lab.md.txt" target="_blank" download="u2_lab.md">:material-download: u2_lab.md</a>
 
-<!-- - <a href="../../assets/pcae/downloads/u2/u2_lab.docx" target="_blank" download>:material-download: u2_lab.docx</a> -->
-<!-- - <a href="../../assets/pcae/downloads/u2/u2_lab.pdf" target="_blank" download>:material-download: u2_lab.pdf</a> -->
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u2/u2_lab.txt" target="_blank">📥 u2_lab(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u2/u2_lab.md.txt" target="_blank">📥 u2_lab(`.md`)</a>
 
 
 ## Pre-Lab (Lab Setup) 
@@ -101,9 +99,6 @@ their structure and their output.
 
 - If you would add something, how does it improve the code?
 
-
----
-
 ### Python Execution
 
 1. Run the u2_script1.py and look at what it shows you.
@@ -141,8 +136,6 @@ their structure and their output.
 - Is there anything you would add for your scripts?  
 
 - If you would add something, how does it improve the code?
-
----
 
 ### Ansible Execution
 
@@ -185,8 +178,6 @@ their structure and their output.
 - Is there anything you would add for your scripts?
 
 - If you would add something, how does it improve the code?
-
----
 
 !!! note
 

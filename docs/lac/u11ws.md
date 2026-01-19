@@ -2,8 +2,6 @@
 
 ## Instructions
 
----
-
 Fill out the worksheet as you progress through the lab and discussions.
 Hold your worksheets until the end to turn them in as a final submission packet.
 
@@ -19,8 +17,9 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/lac/downloads/u11/u11_worksheet.txt" target="_blank" download>📥 u11_worksheet(`.txt`)</a>
-- <a href="../../assets/lac/downloads/u11/u11_worksheet.docx" target="_blank" download>📥 u11_worksheet(`.docx`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u11/u11_worksheet.txt" target="_blank">📥 u11_worksheet(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u11/u11_worksheet.docx" target="_blank">📥 u11_worksheet(`.docx`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u11/u11_worksheet.pdf" target="_blank">📥 u11_worksheet(`.pdf`)</a>
 
 ### Unit 11 Recording
 
@@ -35,15 +34,15 @@ could be transposed to a `.md` file.
     allowfullscreen>
 </iframe>
 
+Link: <https://www.youtube.com/watch?v=6VOHFYkptOw>
+
 #### Discussion Post #1
 
-<blockquote>
+!!! abstract "Scenario"
 
-You’ve heard the term “loose coupling” thrown around the
-office about a new monitoring solution coming down the pike. You find a good resource and
-read the section on “Prefer Loose Coupling” <https://sre.google/workbook/monitoring/>.
-
-</blockquote>
+    You’ve heard the term “loose coupling” thrown around the
+    office about a new monitoring solution coming down the pike. You find a good resource and
+    read the section on “Prefer Loose Coupling” <https://sre.google/workbook/monitoring/>.
 
 1. What does “loose coupling” mean, if you had to summarize to your junior team
    members?
@@ -56,13 +55,11 @@ read the section on “Prefer Loose Coupling” <https://sre.google/workbook/mon
 
 #### Discussion Post #2
 
-<blockquote>
+!!! abstract "Scenario"
 
-Your HPC team is asking for more information about how CPU0
-is behaving on a set of servers. Your team has node exporter writing data out to Prometheus
-(Use this to simulate <https://promlabs.com/promql-cheat-sheet/>).
-
-</blockquote>
+    Your HPC team is asking for more information about how CPU0
+    is behaving on a set of servers. Your team has node exporter writing data out to Prometheus
+    (Use this to simulate <https://promlabs.com/promql-cheat-sheet/>).
 
 1. Can you see the usage of CPU0 and what is the query?
 
@@ -71,20 +68,13 @@ is behaving on a set of servers. Your team has node exporter writing data out to
 3. You know that CPU0 is excluded from Slurm, can you exclude that and only pull the
    user and system for the remaining CPUs and what is that query?
 
-<div class="warning">
+!!! info
 
-Submit your input by following the link below.
-
-The discussion posts are done in Discord Forums.
-
-</div>
-
-- [Link to Discussion Forum](https://discord.com/channels/611027490848374811/1365776270800977962)
+    Submit your input by following the link below. The discussion posts are done in Discord Forums.
+    [Link to Discussion Forum](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 
 ## Definitions
-
----
 
 SLO
 
@@ -108,8 +98,6 @@ Heads up Display
 
 ## Digging Deeper
 
----
-
 1. Read the rest of the chapter <https://sre.google/workbook/monitoring/>
    and note anything else of interest when it comes to monitoring and dashboarding.
 
@@ -121,8 +109,6 @@ Heads up Display
    well. <https://www.youtube.com/watch?v=54VgGHr99Qg>
 
 ## Reflection Questions
-
----
 
 1. What questions do you still have about this week?
 

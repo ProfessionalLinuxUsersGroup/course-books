@@ -16,8 +16,8 @@ The lab has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/psc/downloads/u1/u1_lab.txt" target="_blank" download>📥 u1_lab(`.txt`)</a>
-- <a href="../../assets/psc/downloads/u1/u1_lab.docx" target="_blank" download>📥 u1_lab(`.docx`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/psc/downloads/u1/u1_lab.txt" target="_blank">📥 u1_lab(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/psc/downloads/u1/u1_lab.docx" target="_blank">📥 u1_lab(`.docx`)</a>
 
 ## Module 1: Exploring System Information
 

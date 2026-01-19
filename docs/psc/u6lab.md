@@ -16,8 +16,7 @@ The lab has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/psc/downloads/u6/u6_lab.txt" target="_blank" download>📥 u6_lab(`.txt`)</a>
-- <a href="../../assets/psc/downloads/u6/u6_lab.pdf" target="_blank" download>📥 u6_lab(`.pdf`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/psc/downloads/u6/u6_lab.pdf" target="_blank">📥 u6_lab(`.pdf`)</a>
 
 ## Lab 🧪
 

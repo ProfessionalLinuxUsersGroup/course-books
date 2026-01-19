@@ -89,7 +89,7 @@ Digging Deeper
     3. Ansible API Calls: https://killercoda.com/het-tanis/course/HashicorpLabs/004-vault-read-secrets-ansible
     4. Stamping servers: https://killercoda.com/het-tanis/course/Ansible-Labs/07-Ansible-Playbook-Jinja-Templates
     5. Reporting back values: https://killercoda.com/het-tanis/course/AnsibleLabs/08-Ansible-Playbook-Jinja-Reporting
-    6. Generating CSV for management: https://killercoda.com/hettanis/course/Ansible-Labs/19-Ansible-csv-report
+    6. Generating CSV for management: https://killercoda.com/het-tanis/course/Ansible-Labs/19-Ansible-csv-report
 
 
 Reflection Questions

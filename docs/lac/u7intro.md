@@ -2,8 +2,6 @@
 
 ## Overview
 
----
-
 Managing software on a Linux system involves two essential practices: package management and patching. Together, they ensure that systems remain functional, up-to-date, and secure by handling software installation, updates, and vulnerability remediation. 
 
 - **Package Management:** the system used to install, upgrade, configure, and remove software packages while automatically resolving dependencies and maintaining system consistency.
@@ -13,8 +11,6 @@ Managing software on a Linux system involves two essential practices: package ma
 -
 
 ## Learning Objectives
-
----
 
 1. **Become Familiar with Package Management:**
     - In this unit you will see what comprises a RPM, YUM, and RPM package and how professional administrators carefully choose what is installed on a system.

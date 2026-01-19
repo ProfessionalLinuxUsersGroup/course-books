@@ -20,12 +20,10 @@
 
 The lab has been provided for convenience below:
 
-- <a href="../../assets/lac/downloads/u13/u13_lab.pdf" target="_blank" download>📥 u13_lab(`.pdf`)</a>
-- <a href="../../assets/lac/downloads/u13/u13_lab.docx" target="_blank" download>📥 u13_lab(`.docx`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u13/u13_lab.pdf" target="_blank">📥 u13_lab(`.pdf`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u13/u13_lab.docx" target="_blank">📥 u13_lab(`.docx`)</a>
 
 ## Pre-Lab Warm-Up
-
----
 
 **EXERCISES** (Warmup to quickly run through your system and familiarize yourself)
 
@@ -56,8 +54,6 @@ The lab has been provided for convenience below:
         - <https://nvd.nist.gov/vuln/search>
 
 ## Lab 🧪
-
----
 
 There will be three basic tasks for today’s labs:
 

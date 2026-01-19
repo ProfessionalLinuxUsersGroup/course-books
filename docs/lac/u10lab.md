@@ -22,12 +22,10 @@
 
 The lab has been provided for convenience below:
 
-- <a href="../../assets/lac/downloads/u10/u10_lab.pdf" target="_blank" download>📥 u10_lab(`.pdf`)</a>
-- <a href="../../assets/lac/downloads/u10/u10_lab.docx" target="_blank" download>📥 u10_lab(`.docx`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u10/u10_lab.pdf" target="_blank">📥 u10_lab(`.pdf`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u10/u10_lab.docx" target="_blank">📥 u10_lab(`.docx`)</a>
 
 ## Pre-Lab: Quick Warmup and System Checks
-
----
 
 Before installing K3s, verify system compatibility and gather initial data.
 
@@ -207,8 +205,6 @@ journalctl -xeu k3s
 - Does restarting resolve the issue?
 
 ## Conclusion
-
----
 
 At the end of this lab, you should:
 

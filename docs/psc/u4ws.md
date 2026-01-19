@@ -2,8 +2,6 @@
 
 ## Instructions
 
----
-
 Fill out this sheet as you progress through the lab and discussions. Hold your worksheets until
 the end to turn them in as a final submission packet.
 
@@ -20,23 +18,23 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/psc/downloads/u4/u4_worksheet.pdf" target="_blank" download>📥 u4_worksheet(`.pdf`)</a>
-- <a href="../../assets/psc/downloads/u4/u4_worksheet.txt" target="_blank" download>📥 u4_worksheet(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/psc/downloads/u4/u4_worksheet.txt" target="_blank">📥 u4_worksheet(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/psc/downloads/u4/u4_worksheet.pdf" target="_blank">📥 u4_worksheet(`.pdf`)</a>
 
 ### Unit 4 Recording
-
-<!-- <img src="../../assets/psc/images/under-construction.jpg" style="border-radius:2%"></img> -->
 
 <iframe
     style="width: 100%; height: 100%; border: none;
     aspect-ratio: 16/9; border-radius: 0.25rem; background:black"
-    src="https://www.youtube.com/embed/dnz92v71Tr4?si=tKBN9rcjWLBtecPO"
-    title="Security Engineering Unit 4: Bastions and Air-Gapped Systems"
+    src="https://www.youtube.com/embed/dnz92v71Tr4"
+    title="Unit 4 Recording - ProLUG Linux Security Engineering Course - Free in Discord"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen>
 </iframe>
+
+Link: <https://www.youtube.com/watch?v=dnz92v71Tr4>
 
 #### Discussion Post #1
 
@@ -61,18 +59,12 @@ Do a Google or AI search of topics around jailing a user or processes in Linux.
 2. Can you think of when you've been jailed as a Linux user?  
    If not, can you think of the useful ways to use a jail?
 
-<div class="warning">
-Submit your input by following the link below.
+!!! info
 
-The discussion posts are done in Discord threads. Click the 'Threads' icon on the top right and search for the discussion post.
-
-</div>
-
-- [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1098309490681598072)
+    Submit your input by following the link below. The discussion posts are done in Discord Forums.
+    [Link to Discussion Forum](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 ## Definitions
-
----
 
 Air-gapped
 
@@ -99,8 +91,6 @@ Namespaces
 
 ## Digging Deeper
 
----
-
 1. While this isn't, strictly speaking, an automation course there is some value in
    looking at automation of the bastion deployments. Check out this ansible code:  
    <https://github.com/het-tanis/stream_setup/blob/master/roles/bastion_deploy/tasks/main.yml>
@@ -123,8 +113,6 @@ Namespaces
    excalidraw.com.
 
 ## Reflection Questions
-
----
 
 1. Does it matter if the user knows that they are jailed? Why or why not?
 

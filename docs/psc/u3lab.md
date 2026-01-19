@@ -16,8 +16,8 @@ The lab has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.docx`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/psc/downloads/u3/u3_lab.pdf" target="_blank" download>📥 u3_lab(`.pdf`)</a>
-- <a href="../../assets/psc/downloads/u3/u3_lab.docx" target="_blank" download>📥 u3_lab(`.docx`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/psc/downloads/u3/u3_lab.pdf" target="_blank">📥 u3_lab(`.pdf`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/psc/downloads/u3/u3_lab.docx" target="_blank">📥 u3_lab(`.docx`)</a>
 
 **EXERCISES** (Warmup to quickly run through your system and familiarize yourself)
 
@@ -33,8 +33,6 @@ cat /etc/pam.d/sshd
 
 ## Pre-Lab Warm-Up
 
----
-
 Download the STIG Viewer 2.18 from - https://public.cyber.mil/stigs/downloads/
 
 <img src="../../assets/psc/images/u3/image6.png"></img>
@@ -48,8 +46,6 @@ Create a checklist from the opened STIG for RHEL 9
 <img src="../../assets/psc/images/u3/image2.png"></img>
 
 ## Lab 🧪
-
----
 
 This lab is designed to have the engineer practice securing a Linux server or service against a set of configuration standards. These standards are sometimes called benchmarks, checklists, or guidelines. The engineer will be using STIG Viewer 2.18 to complete this lab.
 

@@ -2,8 +2,6 @@
 
 ## Instructions
 
----
-
 Fill out this sheet as you progress through the lab and discussions. Hold your worksheets until
 the end to turn them in as a final submission packet.
 
@@ -21,13 +19,10 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/psc/downloads/u3/u3_worksheet.pdf" target="_blank" download>📥 u3_worksheet(`.pdf`)</a>
-- <a href="../../assets/psc/downloads/u3/u3_worksheet.txt" target="_blank" download>📥 u3_worksheet(`.txt`)</a>
-<!-- - <a href="../../assets/psc/downloads/u3/u3_worksheet.docx" target="_blank" download>📥 u3_worksheet(`.docx`)</a> -->
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/psc/downloads/u3/u3_worksheet.txt" target="_blank">📥 u3_worksheet(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/psc/downloads/u3/u3_worksheet.pdf" target="_blank">📥 u3_worksheet(`.pdf`)</a>
 
 ### Unit 3 Recording
-
-<!-- <img src="../../assets/psc/images/under-construction.jpg" style="border-radius:2%"></img> -->
 
 <iframe
     style="width: 100%; height: 100%; border: none;
@@ -39,6 +34,8 @@ could be transposed to a `.md` file.
     referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen>
 </iframe>
+
+Link: <https://www.youtube.com/watch?v=-4FhZ2q4RSo>
 
 #### Discussion Post #1
 
@@ -64,18 +61,12 @@ Read about active directory (or LDAP) configurations of Linux via `sssd` here:
     - What are they?
     - What do they seek to do with the system?
 
-<div class="warning">
-Submit your input by following the link below.
+!!! info
 
-The discussion posts are done in Discord threads. Click the 'Threads' icon on the top right and search for the discussion post.
-
-</div>
-
-- [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1098309490681598072)
+    Submit your input by following the link below. The discussion posts are done in Discord Forums.
+    [Link to Discussion Forum](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 ## Definitions
-
----
 
 PAM:
 
@@ -95,8 +86,6 @@ wheel (system group in RHEL):
 
 ## Digging Deeper
 
----
-
 1. How does `/etc/security/access.conf` come into play with pam_access?
    Read up on it here: <https://man7.org/linux/man-pages/man8/pam_access.8.html>
     - Can you find any other good resources?
@@ -106,8 +95,6 @@ wheel (system group in RHEL):
     - What is the contents of the `/etc/login.defs` file? Why do you care?
 
 ## Reflection Questions
-
----
 
 1. What questions do you still have about this week?
 

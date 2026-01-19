@@ -16,12 +16,10 @@ The lab has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.docx`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/psc/downloads/u2/u2_lab.txt" target="_blank" download>📥 u2_lab(`.txt`)</a>
-- <a href="../../assets/psc/downloads/u2/u2_lab.docx" target="_blank" download>📥 u2_lab(`.docx`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/psc/downloads/u2/u2_lab.txt" target="_blank">📥 u2_lab(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/psc/downloads/u2/u2_lab.docx" target="_blank">📥 u2_lab(`.docx`)</a>
 
 ## Pre-Lab Warm-Up
-
----
 
 **EXERCISES** (Warmup to quickly run through your system and familiarize yourself)
 
@@ -61,8 +59,6 @@ Create a checklist from the opened STIG for RHEL 9
 <img src="../../assets/psc/images/u2/image4.png"></img>
 
 ## Lab 🧪
-
----
 
 This lab is designed to have the engineer practice securing a Linux server or service against a set of configuration standards. These standards are sometimes called benchmarks, checklists, or guidelines. The engineer will be using STIG Viewer 2.18 to complete this lab.
 

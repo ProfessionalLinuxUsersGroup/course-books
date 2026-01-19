@@ -22,11 +22,8 @@
 
 The lab has been provided for convenience below:
 
-- <a href="../../assets/pcae/downloads/u4/u4_lab.txt" target="_blank" download>:material-download: u4_lab.txt</a>
-- <a href="../../assets/pcae/downloads/u4/u4_lab.md.txt" target="_blank" download="u4_lab.md">:material-download: u4_lab.md</a>
-
-<!-- - <a href="../../assets/pcae/downloads/u4/u4_lab.docx" target="_blank" download>:material-download: u4_lab.docx</a> -->
-<!-- - <a href="../../assets/pcae/downloads/u4/u4_lab.pdf" target="_blank" download>:material-download: u4_lab.pdf</a> -->
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u4/u4_lab.txt" target="_blank">📥 u4_lab(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u4/u4_lab.md.txt" target="_blank">📥 u4_lab(`.md`)</a>
 
 ## Pre-Lab (Lab Setup)
 
@@ -65,7 +62,8 @@ server you have connected to.
 !!! warning
 
     This lab is designed to be run in the killercoda environment and will take significant user tooling
-    to change over to their own environment. This is not supported in this run of the course but the learner is welcome to work with it and tool it over for that purpose as time permits.
+    to change over to their own environment. This is not supported in this run of the course but the learner is welcome 
+    to work with it and tool it over for that purpose as time permits.
 
 !!! note
 

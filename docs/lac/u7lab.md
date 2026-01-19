@@ -21,12 +21,10 @@
 
 The lab has been provided for convenience below:
 
-- <a href="../../assets/lac/downloads/u7/u7_lab.pdf" target="_blank" download>📥 u7_lab(`.pdf`)</a>
-- <a href="../../assets/lac/downloads/u7/u7_lab.docx" target="_blank" download>📥 u7_lab(`.docx`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u7/u7_lab.pdf" target="_blank">📥 u7_lab(`.pdf`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u7/u7_lab.docx" target="_blank">📥 u7_lab(`.docx`)</a>
 
 ## Pre-Lab Warm-Up
-
----
 
 A couple commands to get the noodle and fingers warmed up.
 
@@ -99,8 +97,6 @@ with precision. There are very useful tools though, and I would highly encourage
 you to examine them. <http://tldp.org/LDP/abs/html/arithexp.html>
 
 ## Lab 🧪
-
----
 
 Log into your Rocky server and become root.
 

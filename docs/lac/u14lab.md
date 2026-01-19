@@ -20,8 +20,8 @@
 
 The lab has been provided for convenience below:
 
-- <a href="../../assets/lac/downloads/u14/u14_lab.pdf" target="_blank" download>📥 u14_lab(`.pdf`)</a>
-- <a href="../../assets/lac/downloads/u14/u14_lab.docx" target="_blank" download>📥 u14_lab(`.docx`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u14/u14_lab.pdf" target="_blank">📥 u14_lab(`.pdf`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/lac/downloads/u14/u14_lab.docx" target="_blank">📥 u14_lab(`.docx`)</a>
 
 ### Warmup Exercises
 

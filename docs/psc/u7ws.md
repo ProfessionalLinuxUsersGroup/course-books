@@ -2,8 +2,6 @@
 
 ## Instructions
 
----
-
 Fill out this sheet as you progress through the lab and discussions. Hold your worksheets until
 the end to turn them in as a final submission packet.
 
@@ -19,21 +17,23 @@ The worksheet has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="../../assets/psc/downloads/u7/u7_worksheet.txt" target="_blank" download>📥 u7_worksheet(`.txt`)</a>
-- <a href="../../assets/psc/downloads/u7/u7_worksheet.pdf" target="_blank" download>📥 u7_worksheet(`.pdf`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/psc/downloads/u7/u7_worksheet.txt" target="_blank">📥 u7_worksheet(`.txt`)</a>
+- <a href="https://professionallinuxusersgroup.github.io/course-books/assets/psc/downloads/u7/u7_worksheet.pdf" target="_blank">📥 u7_worksheet(`.pdf`)</a>
 
 ### Unit 7 Recording
 
  <iframe
      style="width: 100%; height: 100%; border: none;
      aspect-ratio: 16/9; border-radius: 0.25rem; background:black"
-     src="https://www.youtube.com/embed/2yhCRQ-QmlE?si=mAZH3NRoJmnnopif"
-     title="Unit 7 Recording - Monitoring and Alerting"
+     src="https://www.youtube.com/embed/2yhCRQ-QmlE"
+     title="Unit 7 Recording - ProLUG Linux Security Engineering Course - Free in Discord"
      frameborder="0"
      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
      referrerpolicy="strict-origin-when-cross-origin"
      allowfullscreen>
  </iframe>
+
+Link: <https://www.youtube.com/watch?v=2yhCRQ-QmlE>
 
 #### Discussion Post #1
 
@@ -66,19 +66,12 @@ Read the summary at the top of:
 
 3. What is cause-based v. symptom-based and where do they belong? Do you agree?
 
-<div class="warning">
+!!! info
 
-Submit your input by following the link below.
-
-The discussion posts are done in Discord Forums.
-
-</div>
-
-- [Link to Discussion Forum](https://discord.com/channels/611027490848374811/1365776270800977962)
+    Submit your input by following the link below. The discussion posts are done in Discord Forums.
+    [Link to Discussion Forum](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 ## Definitions
-
----
 
 Telemetry
 
@@ -115,17 +108,13 @@ Monitoring for defensive operations
 
 ## Digging Deeper
 
----
-
 1. Look into Wazuh: [Security Information and Event Management (SIEM). Real Time Monitoring | Wazuh](https://wazuh.com/platform/siem/)
 
-   1. What are their major capabilities and features (what they advertise)?
-   1. What are they doing with logs that increases visibility and usefulness in the security space?
+    1. What are their major capabilities and features (what they advertise)?
+    1. What are they doing with logs that increases visibility and usefulness in the security space?
       [Log data analysis - Use cases · Wazuh documentation](https://documentation.wazuh.com/current/getting-started/use-cases/log-analysis.html)
 
 ## Reflection Questions
-
----
 
 1. What do I mean when I say that security is an art and not an engineering practice?
 
