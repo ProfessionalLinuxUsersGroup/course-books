@@ -40,7 +40,7 @@ declare -a PIP_DEPS=(
 )
 
 cleanup() {
-    [[ $REMOVE_VENV -gt 0 && -d ./venv ]] &&
+    [[ $REMOVE_VENV -gt 0 && -d ./venv ]] && 
         rm -rf ./venv &&
         printf "[INFO]: Removed virtual environment.\n"
 }
