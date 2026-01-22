@@ -125,7 +125,7 @@ Ubuntu 25.04 LXC (850MB of packages after install)
     ```
 
 === "DNF"
-    ```bash linenums="1"
+    ```bash linenums="1" title="install.sh"
     #!/bin/bash
     dnf install -y git python3 python-pip pango hostname httpd
     git clone https://github.com/ProfessionalLinuxUsersGroup/course-books
