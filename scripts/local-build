@@ -23,21 +23,23 @@
 #
 #===============================================================================
 
-printf "Setting up a local build for ProLUG MkDocs course books...\n"
-
 declare -i REMOVE_VENV=0
 declare -a PIP_DEPS=(
     "mkdocs"
+    "mkdocs-to-pdf"
     "mkdocs-material"
     "mkdocs-glightbox"
 )
 
 cleanup() {
-    [[ $REMOVE_VENV -gt 0 && -d ./venv ]] && 
+    if [[ $REMOVE_VENV -gt 0 && -d ./venv ]]; then
         rm -rf ./venv &&
         printf "[INFO]: Removed virtual environment.\n"
+    elif [[ ! -d ./venv  ]]; then
+        printf "[INFO]: Virtual environment not detected, no operations executed\n"
+    fi	
 }
-trap 'printf "Cleaning up...\n"; cleanup; exit 0;' EXIT
+trap 'cleanup; exit 0;' EXIT
 trap 'exit 130' SIGINT
 trap 'exit 129' SIGHUP
 trap 'exit 143' SIGTERM
@@ -81,7 +83,6 @@ fi
 while [[ -n $1 && $1 =~ ^- && ! $1 == '--' ]]; do
     case $1 in
         -rm|--remove-venv)
-            printf "[INFO]: Virtual environment will be removed on exit.\n"
             REMOVE_VENV=1
             shift;
             ;;
@@ -98,8 +99,18 @@ while [[ -n $1 && $1 =~ ^- && ! $1 == '--' ]]; do
 done
 [[ $1 == '--' ]] && shift;
 
+
 setup-venv(){
-    printf "Attempting to set up virtual environment...\n"
+    printf "[INFO]: Setting up a local build for the ProLUG MkDocs course books...\n"
+    printf "[INFO]: Attempting to set up virtual environment...\n"
+
+    which weasyprint >/dev/null 2>&1 || {
+        printf >&2 "[ERROR]: The mkdocs-to-pdf plugin requires the 'weasyprint' package to build properly\n"
+        printf "[INFO]: Weasyprint has OS specific dependencies and cannot be installed via pip\n"
+        printf "[INFO]: Weasyprint documentation: https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#installation\n"
+        exit 1
+    }
+
     if ! [[ -d ./venv ]]; then
         python3 -m venv venv || {
             printf >&2 "[ERROR]: Failed to set up Python virtual environment.\n\n"
@@ -117,12 +128,11 @@ setup-venv(){
 
     printf "[INFO]: Python virtual environment successfully activated.\n"
 
-    printf "[INFO]: Installing dependencies...\n"
+    printf "[INFO]: Attempting to install dependencies...\n"
     pip install -U "${PIP_DEPS[@]}" > /dev/null || {
         printf >&2 "[ERROR]: Failed to install dependencies!\n"
         return 1
     }
-    printf "[INFO]: Dependencies successfully installed.\n"
     printf "[INFO]: Virtual environment setup complete.\n"
     return 0
 }
@@ -141,13 +151,15 @@ serve-mkdocs(){
     return 0
 }
 
-setup-venv || {
-    printf >&2 "[ERROR]: Failed to set up python virtual environment!\n"
-    exit 1
-}
+if [[ $REMOVE_VENV -eq 0 ]]; then
+	setup-venv || {
+	    printf >&2 "[ERROR]: Failed to set up python virtual environment!\n"
+	    exit 1
+	}
+	serve-mkdocs || {
+		printf >&2 "[ERROR]: Ran into a problem when building/serving mkdocs site.\n"
+		exit 1
+	}
+fi
 
-serve-mkdocs || {
-    printf >&2 "[ERROR]: Ran into a problem when building/serving mkdocs site.\n"
-    exit 1
-}
 exit 0
