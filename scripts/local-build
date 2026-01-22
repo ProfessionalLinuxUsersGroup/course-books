@@ -25,6 +25,13 @@
 
 printf "Setting up a local build for ProLUG MkDocs course books...\n"
 
+which weasyprint > /dev/null || {
+	printf >&2 "[ERROR]: The mkdocs-to-pdf plugin requires the 'weasyprint' package to build properly\n"
+	printf "[INFO]: Weasyprint has OS specific dependencies and cannot be installed via pip\n"
+	printf "[INFO]: Weasyprint is available from most Linux distributions '(apt|dnf|zypper|apk) install weasyprint'\n"
+	exit 1
+}
+
 declare -i REMOVE_VENV=0
 declare -a PIP_DEPS=(
     "mkdocs"
@@ -33,7 +40,7 @@ declare -a PIP_DEPS=(
 )
 
 cleanup() {
-    [[ $REMOVE_VENV -gt 0 && -d ./venv ]] && 
+    [[ $REMOVE_VENV -gt 0 && -d ./venv ]] &&
         rm -rf ./venv &&
         printf "[INFO]: Removed virtual environment.\n"
 }

@@ -80,7 +80,7 @@ can utilize a virtual python environment with the required dependencies.
     - `httpd` or `apache2`
     - `git`
     - `weasyprint`
-    - Python 3.13+
+    - Python 3.9+
     - Python virtual environment with `mkdoc-material` required pip packages
     - a clone of the [ProLUG course-books repository](https://github.com/ProfessionalLinuxUsersGroup/course-books)
 
@@ -109,7 +109,7 @@ on the container or machine.
     apt-get update && apt-get -y install git python3.13-full hostname apache2 weasyprint
     git clone https://github.com/ProfessionalLinuxUsersGroup/course-books
     cd course-books
-    python3.13 -m venv "$PWD"
+    python3.13 -m venv venv
     source venv/bin/activate
     pip install -U pip
     pip install -U mkdocs mkdocs-material mkdocs-glightbox mkdocs-to-pdf
@@ -123,7 +123,7 @@ on the container or machine.
     dnf install -y httpd git python3.13 hostname httpd weasyprint
     git clone https://github.com/ProfessionalLinuxUsersGroup/course-books
     cd course-books
-    python3.13 -m venv "$PWD"
+    python3.13 -m venv venv
     source venv/bin/activate
     pip install -U pip
     pip install -U mkdocs mkdocs-material mkdocs-glightbox mkdocs-to-pdf
