@@ -106,7 +106,7 @@ setup-venv(){
 
     which weasyprint >/dev/null 2>&1 || {
         printf >&2 "[ERROR]: The mkdocs-to-pdf plugin requires the 'weasyprint' package to build properly\n"
-        printf "[INFO]: Weasyprint has OS specific dependencies and cannot be installed via pip\n"
+        printf "[INFO]: Weasyprint has OS specific dependencies and cannot be easily installed via pip\n"
         printf "[INFO]: Weasyprint documentation: https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#installation\n"
         exit 1
     }
