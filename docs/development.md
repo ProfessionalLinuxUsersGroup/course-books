@@ -80,7 +80,7 @@ can utilize a virtual python environment with the required dependencies.
     - `httpd` or `apache2`
     - `git`
     - `weasyprint`
-    - Python 3.13+
+    - Python 3.9+
     - Python virtual environment with `mkdoc-material` required pip packages
     - a clone of the [ProLUG course-books repository](https://github.com/ProfessionalLinuxUsersGroup/course-books)
 
@@ -103,32 +103,40 @@ source files, and deploy the website either via `httpd/apache2` or served via th
 Outside of system packages all files will be localized to the `/root/course-books` directory
 on the container or machine.
 
+Tested on:
+Rocky 10.1 LXC (550MB of packages after install)
+Ubuntu 25.04 LXC (850MB of packages after install)
+
 === "APT"
-    ```bash linenums="1"
+    ```bash linenums="1" title="install.sh"
     #!/bin/bash
-    apt-get update && apt-get -y install git python3.13-full hostname apache2 weasyprint
+    apt-get update && apt-get -y install git python3-full hostname apache2 weasyprint
     git clone https://github.com/ProfessionalLinuxUsersGroup/course-books
     cd course-books
-    python3.13 -m venv "$PWD"
+    python3 -m venv venv
     source venv/bin/activate
     pip install -U pip
     pip install -U mkdocs mkdocs-material mkdocs-glightbox mkdocs-to-pdf
-    # use mkdocs serve -a "$(hostname -I | awk '{print $1}'):8000" for live reloading after changes
-    mkdocs build -d /var/www/html/ && systemctl enable --now apache2
+    # use for live reloading after changes:
+    #   mkdocs serve -a "$(hostname -I | awk '{print $1}'):8000"
+    # use for local webserver:
+    #   mkdocs build -d /var/www/html/ && systemctl enable --now apache2
     ```
 
 === "DNF"
-    ```bash linenums="1"
+    ```bash linenums="1" title="install.sh"
     #!/bin/bash
-    dnf install -y httpd git python3.13 hostname httpd weasyprint
+    dnf install -y git python3 python-pip pango hostname httpd weasyprint
     git clone https://github.com/ProfessionalLinuxUsersGroup/course-books
     cd course-books
-    python3.13 -m venv "$PWD"
+    python3 -m venv venv
     source venv/bin/activate
     pip install -U pip
     pip install -U mkdocs mkdocs-material mkdocs-glightbox mkdocs-to-pdf
-    # use mkdocs serve -a "$(hostname -I | awk '{print $1}'):8000" for live reloading after changes
-    mkdocs build -d /var/www/html/ && systemctl enable --now httpd
+    # use for live reloading after changes:
+    #   mkdocs serve -a "$(hostname -I | awk '{print $1}'):8000"
+    # use for local webserver:
+    #   mkdocs build -d /var/www/html/ && systemctl enable --now httpd
     ```
 
 The ProLUG Linux Course Books website should now be available from your web browser either at
