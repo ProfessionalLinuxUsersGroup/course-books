@@ -42,6 +42,7 @@ https://discord.com/events/611027490848374811/1353330418669326407
 https://discord.com/invite/m6VPPD9usw
 https://discord.gg/vrbMr3ct
 https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_RHEL_9_V2R4_STIG_Ansible.zip
+https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#installation
 https://docs.ansible.com/
 https://docs.ansible.com/ansible/latest/command_guide/intro_adhoc.html
 https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html
@@ -115,6 +116,7 @@ https://github.com/ProfessionalLinuxUsersGroup/course-books/wiki/${TYPE^}-Refere
 https://github.com/ProfessionalLinuxUsersGroup/lac
 https://github.com/ProfessionalLinuxUsersGroup/pcae
 https://github.com/ProfessionalLinuxUsersGroup/psc
+https://github.com/ansible-lockdown
 https://github.com/ansible/ansible
 https://github.com/esnet/iperf
 https://github.com/fail2ban/fail2ban
@@ -136,7 +138,7 @@ https://grafana.com/docs/grafana/latest/panels-visualizations/configure-threshol
 https://grafana.com/docs/loki/latest/get-started/architecture/
 https://grafana.com/docs/loki/latest/query/analyzer/
 https://grafana.com/docs/loki/latest/reference/loki-http-api/#query-logs-within-a-range-of-time
-https://grafana.com/solutions/linux-node/monitor/
+https://grafana.com/integrations/linux-node/monitor/
 https://help.ubuntu.com/community/UFW
 https://httpd.apache.org/
 https://jvns.ca/blog/2019/06/23/a-few-debugging-resources/
@@ -156,6 +158,7 @@ https://killercoda.com/het-tanis/course/Ansible-Labs/16-Ansible-Web-Server-Env-D
 https://killercoda.com/het-tanis/course/Ansible-Labs/19-Ansible-csv-report
 https://killercoda.com/het-tanis/course/AnsibleLabs/08-Ansible-Playbook-Jinja-Reporting
 https://killercoda.com/het-tanis/course/Automation-Labs/
+https://killercoda.com/het-tanis/course/Automation-Labs/Unit10_Harden_Linux_Systems
 https://killercoda.com/het-tanis/course/Automation-Labs/Unit1_Tools
 https://killercoda.com/het-tanis/course/Automation-Labs/Unit2_Interacting_with_OS
 https://killercoda.com/het-tanis/course/Automation-Labs/Unit3_Inventories
@@ -291,6 +294,9 @@ https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads
 https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u1/u1_worksheet.md.txt
 https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u1/u1_worksheet.pdf
 https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u1/u1_worksheet.txt
+https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u10/u10_worksheet.md.txt
+https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u10/u10_worksheet.pdf
+https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u10/u10_worksheet.txt
 https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u2/u2_lab.md.txt
 https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u2/u2_lab.txt
 https://professionallinuxusersgroup.github.io/course-books/assets/pcae/downloads/u2/u2_worksheet.md.txt
@@ -435,6 +441,8 @@ https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html
 https://www.howtogeek.com/448323/what-is-markdown-and-how-do-you-use-it/
 https://www.kaggle.com/learn
 https://www.linux.org/pages/download/
+https://www.mindpointgroup.com/blog/stig-vs-cis-part-1-the-anatomy-of-baselines-and-compliance?lockdownenterprise
+https://www.mindpointgroup.com/blog/stig-vs-cis-part-2-selecting-the-best-baseline-for-your-business?lockdownenterprise
 https://www.mkdocs.org/user-guide/writing-your-docs/#writing-with-markdown
 https://www.nagios.com/solutions/linux-monitoring/
 https://www.nist.gov/
@@ -462,6 +470,7 @@ https://www.youtube.com/embed/C4dzRI_bFCQ
 https://www.youtube.com/embed/C5F6i9zDgJ4
 https://www.youtube.com/embed/ESsUM0Gz8Jk
 https://www.youtube.com/embed/F6loIx9WwGM
+https://www.youtube.com/embed/FKpkx4-lBuI
 https://www.youtube.com/embed/KycsHfZoAQs
 https://www.youtube.com/embed/LQ9aXRU3vts
 https://www.youtube.com/embed/LqvoE0UXiOo
@@ -498,6 +507,7 @@ https://www.youtube.com/watch?v=C4dzRI_bFCQ
 https://www.youtube.com/watch?v=C5F6i9zDgJ4
 https://www.youtube.com/watch?v=ESsUM0Gz8Jk
 https://www.youtube.com/watch?v=F6loIx9WwGM
+https://www.youtube.com/watch?v=FKpkx4-lBuI
 https://www.youtube.com/watch?v=KycsHfZoAQs
 https://www.youtube.com/watch?v=LQ9aXRU3vts
 https://www.youtube.com/watch?v=LqvoE0UXiOo
