@@ -303,7 +303,7 @@ def main() -> None:
     if failed_links and not parser.skip_validation:
         print(f"Failed Links: {RED}{len(failed_links)}{RESET}")
         print(f"{'-' * 20}")
-        print(f"{item[0]['link']} {RED}{item[1][1]}{RESET}" for item in failed_links)
+        print("\n".join(f"{item[0]['link']} {RED}{item[1][1]}{RESET}" for item in failed_links))
         print(f"{'-' * 20}")
         print(f"Writing report to {FAILED_REPORT_PATH}...")
         with open(FAILED_REPORT_PATH, "w", encoding="utf-8") as f_report:
