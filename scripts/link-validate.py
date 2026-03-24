@@ -126,7 +126,7 @@ def sort_file(*paths: Path) -> None:
     """Sort files for stored and ignored links to reduce git diffs."""
     for path in paths:
         if path.is_file():
-            lines = list(set(path.read_text(encoding="utf-8").splitlines()))
+            lines = set(path.read_text(encoding="utf-8").splitlines())
             if lines:
                 sorted_content = "\n".join(sorted(lines)) + "\n"
                 path.write_text(sorted_content, encoding="utf-8")
@@ -156,10 +156,10 @@ def validate_link(matched_item: dict[str, str | int | Path]) -> tuple:
     return link_status, matched_item
 
 
-def get_file_paths(arg_path):
+def get_file_paths(arg_path: Path):
     """Generator to validate globbed directories and file Paths"""
-    base_path = Path(arg_path)
-    ignored = {
+    base_path: Path = arg_path
+    ignored: set[Path] = {
         Path(P).resolve() for P in [STORAGE_PATH, IGNORED_PATH, FAILED_REPORT_PATH]
     }
 
@@ -179,15 +179,14 @@ def get_unique_links(
 ) -> list[dict]:
     """Aggregate unique URLs for link validation into dictionary for processing"""
 
-    stored_links: list = stored
-    ignored_links: list = ignored
-    file_paths: list = []
-    matched_links: list = []
-    unique_links: list = []
+    stored_links: list[str | None] = stored
+    ignored_links: list[str | None] = ignored
+    matched_links: list[dict[str, str | Path | int]] = []
+    unique_links: list[dict[str, str | Path | int]] = []
     file_matches: int = 0
     total_links: int = 0
     link_item: dict[str, str | Path | int] = {"link": "", "file": "", "line": ""}
-    file_paths = list(get_file_paths(arg_path))
+    file_paths: tuple = tuple(get_file_paths(arg_path))
 
     for path in file_paths:
         try:
@@ -301,11 +300,14 @@ def main() -> None:
         sort_file(STORAGE_PATH)
 
     if failed_links and not parser.skip_validation:
-        print(f"Failed Links: {RED}{len(failed_links)}{RESET}")
-        print(f"{'-' * 20}")
-        print("\n".join(f"{item[0]['link']} {RED}{item[1][1]}{RESET}" for item in failed_links))
-        print(f"{'-' * 20}")
-        print(f"Writing report to {FAILED_REPORT_PATH}...")
+        print(
+            f"Failed Links: {RED}{len(failed_links)}{RESET}",
+            f"{'-' * 20}",
+            f"{'\n'.join(f"{item[0]['link']} {RED}{item[1][1]}{RESET}" for item in failed_links)}"
+            f"\n{'-' * 20}",
+            f"Writing report to {FAILED_REPORT_PATH}...",
+            sep="\n"
+        )
         with open(FAILED_REPORT_PATH, "w", encoding="utf-8") as f_report:
             f_report.writelines(
                 f"{item[0]['link']}"
