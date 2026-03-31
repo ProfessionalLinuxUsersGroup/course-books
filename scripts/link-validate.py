@@ -1,4 +1,4 @@
-# v 1.9.2
+# v 1.9.5
 # Authored by Christian McKee - cmckee786@github.com
 # Attempts to validate links within ProLUG Course-Books repo
 
@@ -110,14 +110,14 @@ def cli_args() -> argparse.ArgumentParser:
     return args_parser
 
 
-def get_file_links(path: Path) -> list[str | None]:
+def get_file_links(path: Path) -> set[str | None]:
     """Populate stored/ignored links from passed path or instantiate file from path if missing"""
     if Path(path).exists():
         with open(path, "r", encoding="utf-8") as f_stored:
-            stored_links = [line.strip() for line in f_stored]
+            stored_links = {line.strip() for line in f_stored}
     else:
         with open(path, "w", encoding="utf-8"):
-            stored_links: list = []
+            stored_links: set = set()
 
     return stored_links
 
@@ -175,18 +175,18 @@ def get_file_paths(arg_path: Path):
 
 
 def get_unique_links(
-    stored: list[str | None], ignored: list[str | None], arg_path: Path
+    stored: set[str | None], ignored: set[str | None], arg_path: Path
 ) -> list[dict]:
     """Aggregate unique URLs for link validation into dictionary for processing"""
 
-    stored_links: list[str | None] = stored
-    ignored_links: list[str | None] = ignored
+    stored_links: set[str | None] = stored
+    ignored_links: set[str | None] = ignored
     matched_links: list[dict[str, str | Path | int]] = []
     unique_links: list[dict[str, str | Path | int]] = []
     file_matches: int = 0
     total_links: int = 0
     link_item: dict[str, str | Path | int] = {"link": "", "file": "", "line": ""}
-    file_paths: tuple = tuple(get_file_paths(arg_path))
+    file_paths: tuple = tuple(get_file_paths(Path(arg_path)))
 
     for path in file_paths:
         try:
@@ -240,9 +240,8 @@ def main() -> None:
     """The place we call home"""
     successful_links: list = []
     failed_links: list = []
-    storage_links: list = []
-    ignored_storage_links: list = []
-
+    storage_links: set = set()
+    ignored_storage_links: set = set()
     parser = cli_args().parse_args()
 
     if parser.path and Path(parser.path).exists():
