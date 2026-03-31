@@ -7,7 +7,7 @@ Hold your worksheets until the end to turn them in as a final submission packet.
 
 ### Resources / Important Links
 
-- [How to easily monitor your Linux server | Grafana Labs](https://grafana.com/solutions/linux-node/monitor/)
+- [How to easily monitor your Linux server | Grafana Labs](https://grafana.com/integrations/linux-node/monitor/)
 - [30 Linux System Monitoring Tools Every SysAdmin Should Know](https://www.cyberciti.biz/tips/top-linux-monitoring-tools.html)
 - [Monitoring Linux Using SNMP - Nagios](https://www.nagios.com/solutions/linux-monitoring/)
 
