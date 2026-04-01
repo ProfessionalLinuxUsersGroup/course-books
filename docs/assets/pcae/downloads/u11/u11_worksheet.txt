@@ -1,0 +1,63 @@
+# ProLUG Automation
+
+## Unit 11 Worksheet
+
+## Instructions
+
+Fill out this sheet as you progress through the lab and discussions. Hold your worksheets until
+the end to turn them in as a final submission packet.
+
+## Discussion Questions:
+
+### Unit 11 Discussion Post 1
+
+In your lab, you have patched a Warewulf image. Compare that
+against how you’ve patched running systems and think about the differences.
+
+1. Can you enumerate the differences between live system patching and image
+   patching?
+    a. What are the similarities between them?
+2. Are the types of repositories that you use different between live system patching and
+   image patching? Why or why not?
+
+### Unit 11 Discussion Post 2
+Review the images of the patching methodology that your company uses.
+
+1. Do you understand the flow well enough to talk to it with another manager?
+2. What type of testing might you do in each of the environments?
+    a. Would all the testing be the same?
+        i. If so, why?
+        ii. If not, how is it different?
+
+## Definitions/Terminology
+
+- Patching
+- Repos
+    o Software
+    o EPEL
+    o BaseOS v. Appstream (in RHEL/Rocky)
+    o Other types you can find?
+- httpd
+- patching
+- GPG Key
+- DNF/YUM
+
+## Notes During Lecture/Class
+
+### Useful tools
+
+## Lab and Assignment
+
+Unit 11 Update and Patch Systems - https://killercoda.com/het-tanis/course/Automation-Labs/Unit11_Update_and_Patch_Systems
+
+## Digging Deeper
+
+1. Read other parts of this doc for more HPC understanding:
+https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-223.ipd.pdf
+    1. What are the components on the drawing on page 3 of doc (pg. 11 in the web
+    viewer)
+
+## Reflection Questions
+
+1. What questions do you still have about this week?
+2. How are you going to use what you’ve learned in your current role?

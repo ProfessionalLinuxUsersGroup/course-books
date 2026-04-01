@@ -222,22 +222,22 @@ nav:
     #   - Intro: pcae/u10intro.md
       - Worksheet: pcae/u10ws.md
       - Lab: pcae/u10lab.md
-    # - Unit 11 - Update && Patch Systems:
+    - Unit 11 - Update && Patch Systems:
     #   - Intro: pcae/u11intro.md
-    #   - Worksheet: pcae/u11ws.md
-    #   - Lab: pcae/u11lab.md
-    # - Unit 12 - Configure Network Devices:
+      - Worksheet: pcae/u11ws.md
+      - Lab: pcae/u11lab.md
+    - Unit 12 - Configure Network Devices:
     #   - Intro: pcae/u12intro.md
-    #   - Worksheet: pcae/u12ws.md
-    #   - Lab: pcae/u12lab.md
-    # - Unit 13 - Remediating and Reporting on Drift:
+      - Worksheet: pcae/u12ws.md
+      - Lab: pcae/u12lab.md
+    - Unit 13 - Remediating and Reporting on Drift:
     #   - Intro: pcae/u13intro.md
-    #   - Worksheet: pcae/u13ws.md
-    #   - Lab: pcae/u13lab.md
-    # - Unit 14 - CI/CD Pipelines:
+      - Worksheet: pcae/u13ws.md
+      - Lab: pcae/u13lab.md
+    - Unit 14 - CI/CD Pipelines:
     #   - Intro: pcae/u14intro.md
-    #   - Worksheet: pcae/u14ws.md
-    #   - Lab: pcae/u14lab.md
+      - Worksheet: pcae/u14ws.md
+      - Lab: pcae/u14lab.md
     # - Unit 15 - Troubleshooting/Testing 1:
     #   - Intro: pcae/u15intro.md
     #   - Worksheet: pcae/u15ws.md
