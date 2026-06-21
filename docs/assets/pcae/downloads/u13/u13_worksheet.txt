@@ -1,0 +1,61 @@
+# ProLUG Automation
+
+## Unit 13 Worksheet
+
+## Instructions
+
+Fill out this sheet as you progress through the lab and discussions. Hold your worksheets until
+the end to turn them in as a final submission packet.
+
+## Discussion Questions:
+
+### Unit 13 Discussion Post 1
+
+Your management has been discussing ways to reduce errors
+in your current “wild wild west” environment. Read about configuration management here:
+https://en.wikipedia.org/wiki/Configuration_management
+
+1. What overlap of terms and concepts do you see from this week’s meeting?
+2. What are some of the standards and guidelines organizations involved with configuration management?
+    a. Do you recognize them from other IT activities?
+
+### Unit 13 Discussion Post 2
+
+Review the SRE guide to treating configurations as code. Read
+as much as you like, but focus down on the “Practical Advice” section:
+https://google.github.io/building-secure-and-reliable-systems/raw/ch14.html#treat_configuration_as_code
+
+1. What are the best practices that you can use in your configuration management adherence?
+2. What are the security threats and how can you mitigate them?
+    a. Why might it be good to know this as you design a CMDB or CI/CD pipeline?
+
+## Definitions/Terminology
+
+• CMDB
+• Configuration Management Best Practices
+• Change management
+    o Engineering Change Boards (ECBs)
+    o Change Advisory Boards (CABs)
+    o Change Windows
+▪ Downtime Windows
+
+## Notes During Lecture/Class
+
+Ansible Kubernetes core module:
+https://docs.ansible.com/projects/ansible/latest/collections/kubernetes/core/k8s_module.html
+
+### Useful tools
+
+## Lab and Assignment
+
+Unit 13 Remediating Drift - https://killercoda.com/het-tanis/course/Automation-Labs/Unit13_Remediating_Drift
+
+## Digging Deeper
+
+1. Read about how AWS, and other cloud vendors detect and remediate drift in systems.
+    1. https://docs.aws.amazon.com/systems-manager/latest/userguide/remediating-configuration-drift.html
+
+## Reflection Questions
+
+1. What questions do you still have about this week?
+2. How are you going to use what you’ve learned in your current role?

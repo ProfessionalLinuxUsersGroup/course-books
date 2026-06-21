@@ -1,0 +1,55 @@
+# ProLUG Automation
+
+## Unit 12 Worksheet
+
+## Instructions
+
+Fill out this sheet as you progress through the lab and discussions. Hold your worksheets until
+the end to turn them in as a final submission packet.
+
+## Discussion Questions:
+
+### Unit 12 Discussion Post 1
+
+You have a set of older routers that have been traditionally
+connected to and configured over ssh via the command line (CLI) in Cisco Internetwork
+Operating System (IOS). You decide to backup the current configs of all routers with
+ansible.
+
+1. How might you lay out the cisco.ios.ios_config module to backup up everything to a
+local folder on your jump server?
+
+### Unit 12 Discussion Post 2
+
+You’ve read that software defined networking (SDN) is the new
+hotness in the network engineering world. Your organization mostly uses VPC’s inside of
+AWS and you want to learn more about what SDN means in the cloud.
+
+1. Can you find some good SDN configuration blogs about the topic and prepare a couple paragraphs for a memo
+to your other engineers on the team?
+
+## Definitions/Terminology
+
+- SDN – (any related terminology)
+    o Control Plane
+
+## Notes During Lecture/Class
+
+Ansible Cisco module for interacting with the IOS.
+https://docs.ansible.com/projects/ansible/latest/collections/cisco/ios/index.html
+
+### Useful tools
+
+## Lab and Assignment
+
+Unit 12 Newtork Automation - https://killercoda.com/het-tanis/course/Automation-Labs/Unit12_Networking_Devices
+
+## Digging Deeper
+
+1. Read about a SDN tool that is useful in infrastructure
+    1. https://www.pulumi.com/guides/tags/networking/
+
+## Reflection Questions
+
+1. What questions do you still have about this week?
+2. How are you going to use what you’ve learned in your current role?

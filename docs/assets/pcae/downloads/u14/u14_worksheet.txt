@@ -1,0 +1,49 @@
+# ProLUG Automation
+
+## Unit 14 Worksheet
+
+## Instructions
+
+Fill out this sheet as you progress through the lab and discussions. Hold your worksheets until
+the end to turn them in as a final submission packet.
+
+## Discussion Questions:
+
+### Unit 14 Discussion Post 1
+
+Your management has invited you to an architecture meeting called “Technology adoption matrix
+discussion”. You’ve heard the managers talk about using Make v. Buy v. Adopt decisions for technology.
+So you decide to research it online a bit.
+
+1. What is likely to be discussed in this meeting?
+2. What are the major considerations for make v. buy v. adopt?
+3. Where are you going to go online to help you prepare for this meeting?
+
+### Unit 14 Discussion Post 2
+
+Your team has a wide variety of open source tooling that they
+use for monitoring. The structure and web of technologies has gotten too large to maintain
+and documentation for it is not able to help the junior engineers keep things running
+without tribal knowledge. You want to find a viable set of monitoring tools that are well
+supported and work together. You have found yourself here: https://landscape.cncf.io/
+
+1. What are some viable observability tools on that page?
+2. What considerations would you need to think about bringing them into your test environment?
+
+## Definitions/Terminology
+
+## Notes During Lecture/Class
+
+Ansible Kubernetes core module:
+https://docs.ansible.com/projects/ansible/latest/collections/kubernetes/core/k8s_module.html
+
+### Useful tools
+
+## Lab and Assignment
+
+Unit 14 – CI/CD Pipelines: https://killercoda.com/het-tanis/course/Automation-Labs/Unit14_CI_CD_Pipelines
+
+## Reflection Questions
+
+1. What questions do you still have about this week?
+2. How are you going to use what you’ve learned in your current role?

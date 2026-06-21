@@ -51,10 +51,12 @@ https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_templating.html
 https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_variables.html
 https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_variables.html#understanding-variable-precedence
 https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html
+https://docs.ansible.com/projects/ansible/latest/collections/cisco/ios/index.html
 https://docs.ansible.com/projects/ansible/latest/collections/community/general/chroot_connection.html
 https://docs.ansible.com/projects/ansible/latest/collections/kubernetes/core/k8s_module.html
 https://docs.aws.amazon.com/pdfs/whitepapers/latest/real-time-communication-on-aws/real-time-communication-on-aws.pdf
 https://docs.aws.amazon.com/pdfs/whitepapers/latest/real-time-communication-on-aws/real-time-communication-on-aws.pdf#high-availability-and-scalability-on-aws
+https://docs.aws.amazon.com/systems-manager/latest/userguide/remediating-configuration-drift.html
 https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs-records-examples.html
 https://docs.aws.amazon.com/wellarchitected/latest/framework/sec_detect_investigate_events_app_service_logging.html
 https://docs.docker.com/build/building/best-practices/
@@ -159,6 +161,10 @@ https://killercoda.com/het-tanis/course/Ansible-Labs/19-Ansible-csv-report
 https://killercoda.com/het-tanis/course/AnsibleLabs/08-Ansible-Playbook-Jinja-Reporting
 https://killercoda.com/het-tanis/course/Automation-Labs/
 https://killercoda.com/het-tanis/course/Automation-Labs/Unit10_Harden_Linux_Systems
+https://killercoda.com/het-tanis/course/Automation-Labs/Unit11_Update_and_Patch_Systems
+https://killercoda.com/het-tanis/course/Automation-Labs/Unit12_Networking_Devices
+https://killercoda.com/het-tanis/course/Automation-Labs/Unit13_Remediating_Drift
+https://killercoda.com/het-tanis/course/Automation-Labs/Unit14_CI_CD_Pipelines
 https://killercoda.com/het-tanis/course/Automation-Labs/Unit1_Tools
 https://killercoda.com/het-tanis/course/Automation-Labs/Unit2_Interacting_with_OS
 https://killercoda.com/het-tanis/course/Automation-Labs/Unit3_Inventories
@@ -200,6 +206,7 @@ https://kubernetes.io/docs/concepts/overview/
 https://kubernetes.io/docs/concepts/security/
 https://kubernetes.io/docs/concepts/security/pod-security-standards/
 https://kubernetes.io/docs/tasks/debug/
+https://landscape.cncf.io/
 https://landscape.cncf.io/guide#observability-and-analysis--observability
 https://leanpub.com/theprolugbigbookoflabs
 https://man7.org/linux/man-pages/man1/iostat.1.html
@@ -450,6 +457,7 @@ https://www.noaa.gov/
 https://www.open-scap.org
 https://www.openssh.com/features.html
 https://www.overleaf.com/
+https://www.pulumi.com/guides/tags/networking/
 https://www.redhat.com/en/blog/linux-user-group-management
 https://www.redhat.com/en/blog/whats-epel-and-how-do-i-use-it/
 https://www.redhat.com/sysadmin/apparmor-selinux-isolation
