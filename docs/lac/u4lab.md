@@ -123,7 +123,7 @@ pvs # What system are we running if we have physical volumes?
     # What other things can we tell with vgs and lvs?
 ```
 
-- Use `pvdisply`, `vgdisplay`, and `lvdisplay` to look at your carved up volumes.  
+- Use `pvdisplay`, `vgdisplay`, and `lvdisplay` to look at your carved up volumes.  
   Thinking back to last week's lab, what might be interesting from each of those?
 - Try a command like `lvdisplay | egrep "Path|Size"` and see what it shows.
 
