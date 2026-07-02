@@ -28,16 +28,17 @@ RESET: str = "\033[0m"
 
 # If max_workers is None or not given, it will default
 # to the number of processors on the machine, multiplied by 5
+# A lower number should prevent 429 rate limiting errors
 WORKER_COUNT = 10
 
 # Regex intended to match http(s) links unique to this project
 REGEX: str = r"(?<!\[)https?://(?![^\s]*localhost)\S+\b/?"
 PATTERN: re.Pattern = re.compile(REGEX)
 
+# TODO: Restructure dir/file structure to use hidden .{dir}/ convention
+# and logic to create such structure idempotently
 CWD: Path = Path.cwd()
-FAILED_REPORT_PATH: Path = Path(
-    f"{CWD}/failed_links.{datetime.now().strftime('%Y-%m-%d')}"
-)
+FAILED_REPORT_PATH: Path = Path(f"{CWD}/failed_links.{datetime.now().strftime('%Y-%m-%d')}")
 STORAGE_PATH: Path = Path(f"{CWD}/scripts/link-storage/successfullinks.txt")
 IGNORED_PATH: Path = Path(f"{CWD}/scripts/link-storage/ignoredlinks.txt")
 
@@ -132,7 +133,7 @@ def sort_file(*paths: Path) -> None:
                 path.write_text(sorted_content, encoding="utf-8")
 
 
-def validate_link(matched_item: dict[str, str | int | Path]) -> tuple:
+def validate_link(matched_item: dict[str, str | int | Path]) -> dict:
     """Attempt to resolve link and return error or status code for processing
     Utilizes user-agent headers to reduce false negative returns
     """
@@ -145,15 +146,16 @@ def validate_link(matched_item: dict[str, str | int | Path]) -> tuple:
     }
 
     # Link assumed successful initially
-    link_status: tuple = (0, "")
+    matched_item["validated"] = "success"
     dict_link: str = str(matched_item["link"])
 
     try:
         req = urllib.request.Request(dict_link, headers=headers)
         urllib.request.urlopen(req, timeout=7)
-    except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError) as e:
-        link_status = 1, e
-    return link_status, matched_item
+    except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError) as err:
+        matched_item["validated"] = "failed"
+        matched_item["error"] = str(err)
+    return matched_item
 
 
 def get_file_paths(arg_path: Path):
@@ -176,7 +178,7 @@ def get_file_paths(arg_path: Path):
 
 def get_unique_links(
     stored: set[str | None], ignored: set[str | None], arg_path: Path
-) -> list[dict]:
+) -> list[dict] | None:
     """Aggregate unique URLs for link validation into dictionary for processing"""
 
     stored_links: set[str | None] = stored
@@ -185,8 +187,14 @@ def get_unique_links(
     unique_links: list[dict[str, str | Path | int]] = []
     file_matches: int = 0
     total_links: int = 0
-    link_item: dict[str, str | Path | int] = {"link": "", "file": "", "line": ""}
     file_paths: tuple = tuple(get_file_paths(Path(arg_path)))
+    link_item: dict[str, str | Path | int] = {
+        "link": "",
+        "file": "",
+        "line": "",
+        "validated": "",
+        "error": "",
+    }
 
     for path in file_paths:
         try:
@@ -266,6 +274,7 @@ def main() -> None:
 
     if test_links and parser.skip_validation is False:
         # Randomize list to prevent rate limiting of similar domains
+        # TODO: Stronger sorting algorithm to maximize distance between similar domains
         random.shuffle(test_links)
         print("Attempting to resolve links for testing...")
 
@@ -277,10 +286,10 @@ def main() -> None:
 
             for i, future in enumerate(as_completed(futures), 1):
                 try:
-                    validate_return, matched_item = future.result()
-                    if validate_return[0] == 1:
-                        failed_links.append((matched_item, validate_return))
-                    elif validate_return[0] == 0:
+                    matched_item = future.result()
+                    if matched_item["validated"] == "failed":
+                        failed_links.append((matched_item))
+                    elif matched_item["validated"] == "success":
                         successful_links.append(matched_item)
                     print(
                         f"\rTesting links: {ORANGE}{i}{RESET}|{len(test_links)} "
@@ -302,17 +311,17 @@ def main() -> None:
         print(
             f"Failed Links: {RED}{len(failed_links)}{RESET}",
             f"{'-' * 20}",
-            f"{'\n'.join(f"{item[0]['link']} {RED}{item[1][1]}{RESET}" for item in failed_links)}"
+            f"{'\n'.join(f'{item['link']} {RED}{item['error']}{RESET}' for item in failed_links)}"
             f"\n{'-' * 20}",
             f"Writing report to {FAILED_REPORT_PATH}...",
-            sep="\n"
+            sep="\n",
         )
         with open(FAILED_REPORT_PATH, "w", encoding="utf-8") as f_report:
             f_report.writelines(
-                f"{item[0]['link']}"
-                f" {ORANGE}File:{item[0]['file']}{RESET}"
-                f" {BLUE}L:{item[0]['line']}{RESET}"
-                f" {RED}{item[1][1]}{RESET}\n"
+                f"{item['link']}"
+                f" {ORANGE}File:{item['file']}{RESET}"
+                f" {BLUE}L:{item['line']}{RESET}"
+                f" {RED}{item['error']}{RESET}\n"
                 for item in failed_links
             )
 
